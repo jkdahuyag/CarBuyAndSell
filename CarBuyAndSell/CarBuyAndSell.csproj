@@ -108,11 +108,18 @@
     <Compile Include="BuyViewControl.Designer.cs">
       <DependentUpon>BuyViewControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Car.cs" />
     <Compile Include="DashboardViewControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="DashboardViewControl.Designer.cs">
       <DependentUpon>DashboardViewControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Listing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Listing.Designer.cs">
+      <DependentUpon>Listing.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -122,12 +129,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SellViewControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="SellViewControl.Designer.cs">
-      <DependentUpon>SellViewControl.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserList.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -149,9 +150,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="SellViewControl.resx">
-      <DependentUpon>SellViewControl.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

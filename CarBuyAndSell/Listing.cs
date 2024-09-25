@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace CarBuyAndSell
 {
-    public partial class SellViewControl : UserControl
+    public partial class Listing : UserControl
     {
         private List<Car> cars = new List<Car>();
         private int currentPage = 1;
         private const int carsPerPage = 10;
 
-        public SellViewControl()
+        public Listing()
         {
             InitializeComponent();
 
@@ -114,24 +114,5 @@ namespace CarBuyAndSell
             //sellForm.ShowDialog();
         }
 
-        // Define the Car class
-        public class Car
-        {
-            public int ItemNo { get; set; }
-            public string BrandName { get; set; }
-            public string Model { get; set; }
-            public int Price { get; set; }
-            public string SellStatus { get; set; }
-
-            public Car(int itemNo, string brandName, string model, int price, string sellStatus)
-            {
-                ItemNo = itemNo;
-                BrandName = brandName;
-                Model = model;
-                Price = price;
-                SellStatus = sellStatus;
-            }
-        }
     }
-
 }

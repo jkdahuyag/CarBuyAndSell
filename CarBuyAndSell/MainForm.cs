@@ -47,15 +47,15 @@ namespace CarBuyAndSell
         }
 
         // Method to display Sell View
-        private void ShowSellView()
+        private void ShowListingView()
         {
             Panel contentPanel = this.Controls.Find("contentPanel", true)[0] as Panel;
             // Clear and dispose of previous controls
             ClearAndDisposeControls(contentPanel);
             // Create and add the BuyViewControl
-            SellViewControl sellView = new SellViewControl();
-            sellView.Dock = DockStyle.Fill;
-            contentPanel.Controls.Add(sellView);
+            Listing listingView = new Listing();
+            listingView.Dock = DockStyle.Fill;
+            contentPanel.Controls.Add(listingView);
 
             // Add more components for the Sell view here, such as a form to input car details.
         }
@@ -76,14 +76,14 @@ namespace CarBuyAndSell
             // Add more components for the Admin Dashboard view here.
         }
 
-        private void BuyBtn_Click(object sender, EventArgs e)
+        private void BtnVehicles_Click(object sender, EventArgs e)
         {
             ShowBuyView(); // Display Buy tab content
         }
 
-        private void SellBtn_Click(object sender, EventArgs e)
+        private void BtnListing_Click(object sender, EventArgs e)
         {
-            ShowSellView(); // Display Sell tab content
+            ShowListingView(); // Display Sell tab content
         }
 
         private void AdminBtn_Click(object sender, EventArgs e)
