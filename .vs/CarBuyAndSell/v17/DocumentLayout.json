@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\sellviewcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|c:\\users\\user\\source\\repos\\carbuyandsell\\carbuyandsell\\sellviewcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\sellviewcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -11,7 +11,7 @@
       "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\dashboardviewcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|c:\\users\\user\\source\\repos\\carbuyandsell\\carbuyandsell\\buyviewcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\buyviewcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\buyviewcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -23,11 +23,11 @@
       "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\buyviewcontrol.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|c:\\users\\user\\source\\repos\\carbuyandsell\\carbuyandsell\\sellviewcontrol.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\sellviewcontrol.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\sellviewcontrol.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|c:\\users\\user\\source\\repos\\carbuyandsell\\carbuyandsell\\sellviewcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\sellviewcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\sellviewcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -126,8 +126,7 @@
               "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\DashboardViewControl.cs [Design]",
               "RelativeToolTip": "CarBuyAndSell\\DashboardViewControl.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-24T15:08:52.705Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-09-24T15:08:52.705Z"
             },
             {
               "$type": "Document",
@@ -151,8 +150,7 @@
               "RelativeToolTip": "CarBuyAndSell\\BuyViewControl.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAAGoAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-24T14:13:13.455Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-24T14:13:13.455Z"
             },
             {
               "$type": "Document",
@@ -164,8 +162,7 @@
               "RelativeToolTip": "CarBuyAndSell\\BuyViewControl.Designer.cs",
               "ViewState": "AQIAAFoAAAAAAAAAAAAAAGEAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-24T14:13:04.837Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-24T14:13:04.837Z"
             },
             {
               "$type": "Document",
@@ -176,8 +173,7 @@
               "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\BuyViewControl.cs [Design]",
               "RelativeToolTip": "CarBuyAndSell\\BuyViewControl.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-24T14:12:57.833Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-09-24T14:12:57.833Z"
             },
             {
               "$type": "Document",
@@ -188,8 +184,7 @@
               "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\MainForm.resx",
               "RelativeToolTip": "CarBuyAndSell\\MainForm.resx",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2024-09-24T01:53:43.828Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-24T01:53:43.828Z"
             },
             {
               "$type": "Document",
@@ -214,8 +209,7 @@
               "RelativeToolTip": "CarBuyAndSell\\MainForm.cs",
               "ViewState": "AQIAAB4AAAAAAAAAAAAAADkAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-24T01:44:36.673Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-24T01:44:36.673Z"
             },
             {
               "$type": "Document",
@@ -227,8 +221,7 @@
               "RelativeToolTip": "CarBuyAndSell\\MainForm.Designer.cs",
               "ViewState": "AQIAAFwAAAAAAAAAAAAgwG8AAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-24T01:44:28.623Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-24T01:44:28.623Z"
             },
             {
               "$type": "Document",
@@ -251,8 +244,7 @@
               "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\MainForm.cs [Design]",
               "RelativeToolTip": "CarBuyAndSell\\MainForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-22T04:12:07.315Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-09-22T04:12:07.315Z"
             }
           ]
         }
