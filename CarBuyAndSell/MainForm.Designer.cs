@@ -76,10 +76,10 @@ namespace CarBuyAndSell
             this.btnUserList.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnUserList.Location = new System.Drawing.Point(0, 153);
             this.btnUserList.Name = "btnUserList";
-            this.btnUserList.Size = new System.Drawing.Size(194, 57);
+            this.btnUserList.Size = new System.Drawing.Size(194, 50);
             this.btnUserList.TabIndex = 0;
             this.btnUserList.Text = "User List";
-            this.btnUserList.Click += new System.EventHandler(this.BtnVehicles_Click);
+            this.btnUserList.Click += new System.EventHandler(this.BtnUserList_Click);
             // 
             // btnVehicles
             // 
@@ -96,7 +96,7 @@ namespace CarBuyAndSell
             this.btnListing.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnListing.Location = new System.Drawing.Point(0, 51);
             this.btnListing.Name = "btnListing";
-            this.btnListing.Size = new System.Drawing.Size(194, 52);
+            this.btnListing.Size = new System.Drawing.Size(194, 50);
             this.btnListing.TabIndex = 1;
             this.btnListing.Text = "My Listing";
             this.btnListing.Click += new System.EventHandler(this.BtnListing_Click);
@@ -106,7 +106,7 @@ namespace CarBuyAndSell
             this.adminBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.adminBtn.Location = new System.Drawing.Point(0, 0);
             this.adminBtn.Name = "adminBtn";
-            this.adminBtn.Size = new System.Drawing.Size(194, 51);
+            this.adminBtn.Size = new System.Drawing.Size(194, 50);
             this.adminBtn.TabIndex = 2;
             this.adminBtn.Text = "Admin Dashboard";
             this.adminBtn.Click += new System.EventHandler(this.AdminBtn_Click);

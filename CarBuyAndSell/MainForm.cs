@@ -32,6 +32,18 @@ namespace CarBuyAndSell
             }
         }
 
+        private void ShowUserListView()
+        {
+            Panel contentPanel = this.Controls.Find("contentPanel", true)[0] as Panel;
+
+            // Clear and dispose of previous controls
+            ClearAndDisposeControls(contentPanel);
+
+            // Create and add the BuyViewControl
+            UserList userListView = new UserList();
+            userListView.Dock = DockStyle.Fill;
+            contentPanel.Controls.Add(userListView);
+        }
         // Method to display Buy View
         private void ShowBuyView()
         {
@@ -75,6 +87,13 @@ namespace CarBuyAndSell
 
             // Add more components for the Admin Dashboard view here.
         }
+
+
+        private void BtnUserList_Click(object sender, EventArgs e)
+        {
+            ShowUserListView();
+        }
+
 
         private void BtnVehicles_Click(object sender, EventArgs e)
         {
