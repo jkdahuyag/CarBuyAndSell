@@ -76,14 +76,12 @@ namespace CarBuyAndSell
         private void ShowAdminDashboardView()
         {
             Panel contentPanel = this.Controls.Find("contentPanel", true)[0] as Panel;
-            contentPanel.Controls.Clear(); // Clear current content
-
-            Label adminLabel = new Label();
-            adminLabel.Text = "This is the Admin Dashboard";
-            adminLabel.AutoSize = true;
-            adminLabel.Padding = new Padding(10);
-            adminLabel.BorderStyle = BorderStyle.FixedSingle;
-            contentPanel.Controls.Add(adminLabel);
+            // Clear and dispose of previous controls
+            ClearAndDisposeControls(contentPanel);
+            // Create and add the BuyViewControl
+            DashboardViewControl dashboardView = new DashboardViewControl();
+            dashboardView.Dock = DockStyle.Fill;
+            contentPanel.Controls.Add(dashboardView);
 
             // Add more components for the Admin Dashboard view here.
         }
