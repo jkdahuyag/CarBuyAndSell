@@ -96,7 +96,7 @@ namespace CarBuyAndSell
             this.adminBtn.Name = "adminBtn";
             this.adminBtn.Size = new System.Drawing.Size(194, 23);
             this.adminBtn.TabIndex = 2;
-            this.adminBtn.Text = "Admin Dashboard";
+            this.adminBtn.Text = "Admin Dashboards";
             this.adminBtn.Click += new System.EventHandler(this.AdminBtn_Click);
             // 
             // contentPanel
