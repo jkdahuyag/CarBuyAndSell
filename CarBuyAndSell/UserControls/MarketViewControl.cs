@@ -1,5 +1,4 @@
-﻿using ReaLTaiizor;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,13 +10,13 @@ using System.Windows.Forms;
 
 namespace CarBuyAndSell
 {
-    public partial class BuyViewControl : UserControl
+    public partial class MarketViewControl : UserControl
     {
         private List<string> cars = new List<string>();
         private int currentPage = 1;
         private const int carsPerPage = 10;
 
-        public BuyViewControl()
+        public MarketViewControl()
         {
             InitializeComponent();
 
@@ -39,7 +38,7 @@ namespace CarBuyAndSell
             LoadCars();
             DisplayCars();
         }
-        
+
         // Event handler to set the placeholder text
         private void SetPlaceholder(object sender = null, EventArgs e = null)
         {
@@ -129,7 +128,7 @@ namespace CarBuyAndSell
             lastPageBtn.Enabled = currentPage < totalPages;
 
             pageLabel.Text = $"Page {currentPage} of {totalPages}";
-           // pageSelector.Maximum = totalPages;
+            // pageSelector.Maximum = totalPages;
             //pageSelector.Value = currentPage;
         }
 
@@ -163,12 +162,5 @@ namespace CarBuyAndSell
             currentPage = (cars.Count + carsPerPage - 1) / carsPerPage;
             DisplayCars();
         }
-
-        //private void PageSelector_ValueChanged(object sender, EventArgs e)
-        //{
-        //    currentPage = (int)pageSelector.Value;
-        //    DisplayCars();
-        //}
     }
-
 }

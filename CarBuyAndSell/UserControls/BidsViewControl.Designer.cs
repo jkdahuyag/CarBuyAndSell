@@ -2,7 +2,7 @@
 
 namespace CarBuyAndSell
 {
-    partial class SellViewControl
+    partial class BidsViewControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,6 +30,8 @@ namespace CarBuyAndSell
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.mainLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.searchPanel = new System.Windows.Forms.Panel();
             this.searchBox = new System.Windows.Forms.TextBox();
@@ -265,8 +267,6 @@ namespace CarBuyAndSell
         }
 
         #endregion
-
-
         private TextBox searchBox;
         private Button searchButton, sellButton;
         private DataGridView carsDataGridView;

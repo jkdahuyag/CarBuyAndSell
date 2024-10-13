@@ -42,5 +42,6 @@ C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\bin\Debug\System.Numerics
 C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\obj\Debug\CarBuyAn.D5A11C03.Up2Date
-C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\obj\Debug\CarBuyAndSell.BuyViewControl.resources
-C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\obj\Debug\CarBuyAndSell.SellViewControl.resources
+C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\obj\Debug\CarBuyAndSell.DashboardViewControl.resources
+C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\obj\Debug\CarBuyAndSell.LoginForm.resources
+C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\obj\Debug\CarBuyAndSell.VehiclesViewControl.resources
