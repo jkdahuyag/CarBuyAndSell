@@ -12,25 +12,14 @@ namespace CarBuyAndSell
 {
     public partial class MainForm : Form
     {
-        private List<string> cars = new List<string>();
-        private int currentPage = 1;
-        private const int carsPerPage = 10;
 
         public MainForm()
         {
             InitializeComponent();
-            LoadCars();
-            ShowBuyView();
+            btnVehicles.Select();
+            ShowVehiclesView();
         }
 
-
-        private void LoadCars()
-        {
-            for (int i = 1; i <= 100; i++)
-            {
-                cars.Add("Car " + i);
-            }
-        }
 
         private void ShowUserListView()
         {
@@ -43,13 +32,13 @@ namespace CarBuyAndSell
             contentPanel.Controls.Add(userListView);
         }
 
-        private void ShowBuyView()
+        private void ShowVehiclesView()
         {
             Panel contentPanel = this.Controls.Find("contentPanel", true)[0] as Panel;
 
             ClearAndDisposeControls(contentPanel);
 
-            BuyViewControl buyView = new BuyViewControl();
+            VehiclesViewControl buyView = new VehiclesViewControl();
             buyView.Dock = DockStyle.Fill;
             contentPanel.Controls.Add(buyView);
         }
@@ -76,60 +65,6 @@ namespace CarBuyAndSell
             contentPanel.Controls.Add(dashboardView);
         }
 
-        private void BtnUserList_Click(object sender, EventArgs e)
-        {
-            ShowUserListView();
-        }
-
-
-        private void BtnVehicles_Click(object sender, EventArgs e)
-        {
-            ShowBuyView(); // Display Buy tab content
-        }
-
-        private void BtnListing_Click(object sender, EventArgs e)
-        {
-            ShowListingView(); // Display Sell tab content
-        }
-
-        private void BtnAdmin_Click(object sender, EventArgs e)
-        {
-            ShowAdminDashboardView(); // Display Admin Dashboard content
-        }
-
-        private void PrevPageBtn_Click(object sender, EventArgs e)
-        {
-            if (currentPage > 1)
-            {
-                currentPage--;
-                ShowBuyView(); // Repopulate the Buy view with previous page
-            }
-        }
-
-        private void NextPageBtn_Click(object sender, EventArgs e)
-        {
-            if (currentPage < (cars.Count + carsPerPage - 1) / carsPerPage)
-            {
-                currentPage++;
-                ShowBuyView(); // Repopulate the Buy view with next page
-            }
-        }
-
-        // Helper function to safely clear and dispose controls
-        private void ClearAndDisposeControls(Control parent)
-        {
-            foreach (Control ctrl in parent.Controls)
-            {
-                ctrl.Dispose(); // Ensure controls are disposed
-            }
-            parent.Controls.Clear(); // Clear all controls
-        }
-
-        private void BtnMarket_Click(object sender, EventArgs e)
-        {
-            ShowMarketView();
-        }
-
         private void ShowMarketView()
         {
             Panel contentPanel = this.Controls.Find("contentPanel", true)[0] as Panel;
@@ -139,11 +74,6 @@ namespace CarBuyAndSell
             MarketViewControl marketView = new MarketViewControl();
             marketView.Dock = DockStyle.Fill;
             contentPanel.Controls.Add(marketView);
-        }
-
-        private void BtnBid_Click(object sender, EventArgs e)
-        {
-            ShowBidView();
         }
 
         private void ShowBidView()
@@ -157,9 +87,52 @@ namespace CarBuyAndSell
             contentPanel.Controls.Add(bidView);
         }
 
+        private void BtnMarket_Click(object sender, EventArgs e)
+        {
+            ShowMarketView();
+        }
+
+        
+        private void BtnBid_Click(object sender, EventArgs e)
+        {
+            ShowBidView();
+        }
+
+        
+        private void BtnUserList_Click(object sender, EventArgs e)
+        {
+            ShowUserListView();
+        }
+
+
+        private void BtnVehicles_Click(object sender, EventArgs e)
+        {
+            ShowVehiclesView();
+        }
+
+        private void BtnListing_Click(object sender, EventArgs e)
+        {
+            ShowListingView();
+        }
+
+        private void BtnAdmin_Click(object sender, EventArgs e)
+        {
+            ShowAdminDashboardView();
+        }
+
+
+        // Helper function to safely clear and dispose controls
+        private void ClearAndDisposeControls(Control parent)
+        {
+            foreach (Control ctrl in parent.Controls)
+            {
+                ctrl.Dispose();
+            }
+            parent.Controls.Clear();
+        }
+
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            // If the main form is closed, close the entire application
             Application.Exit();
         }
     }

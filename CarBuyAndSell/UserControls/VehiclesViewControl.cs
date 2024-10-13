@@ -11,13 +11,13 @@ using System.Windows.Forms;
 
 namespace CarBuyAndSell
 {
-    public partial class BuyViewControl : UserControl
+    public partial class VehiclesViewControl : UserControl
     {
         private List<string> cars = new List<string>();
         private int currentPage = 1;
         private const int carsPerPage = 10;
 
-        public BuyViewControl()
+        public VehiclesViewControl()
         {
             InitializeComponent();
 

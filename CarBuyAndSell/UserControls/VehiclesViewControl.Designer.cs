@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace CarBuyAndSell
 {
-    partial class BuyViewControl
+    partial class VehiclesViewControl
     {
         /// <summary> 
         /// Required designer variable.

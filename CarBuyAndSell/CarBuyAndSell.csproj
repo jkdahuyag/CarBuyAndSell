@@ -108,11 +108,11 @@
     <Compile Include="UserControls\BidsViewControl.Designer.cs">
       <DependentUpon>BidsViewControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\BuyViewControl.cs">
+    <Compile Include="UserControls\VehiclesViewControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\BuyViewControl.Designer.cs">
-      <DependentUpon>BuyViewControl.cs</DependentUpon>
+    <Compile Include="UserControls\VehiclesViewControl.Designer.cs">
+      <DependentUpon>VehiclesViewControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Car.cs" />
     <Compile Include="UserControls\DashboardViewControl.cs">
@@ -153,8 +153,8 @@
     <Compile Include="UserControls\UserList.Designer.cs">
       <DependentUpon>UserList.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UserControls\BuyViewControl.resx">
-      <DependentUpon>BuyViewControl.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\VehiclesViewControl.resx">
+      <DependentUpon>VehiclesViewControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\DashboardViewControl.resx">
       <DependentUpon>DashboardViewControl.cs</DependentUpon>
