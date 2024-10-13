@@ -2,7 +2,7 @@
 
 namespace CarBuyAndSell
 {
-    partial class Listing
+    partial class ListingViewControl
     {
         /// <summary> 
         /// Required designer variable.

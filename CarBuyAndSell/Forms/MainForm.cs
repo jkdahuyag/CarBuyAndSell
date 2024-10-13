@@ -27,7 +27,7 @@ namespace CarBuyAndSell
 
             ClearAndDisposeControls(contentPanel);
 
-            UserList userListView = new UserList();
+            UsersViewControl userListView = new UsersViewControl();
             userListView.Dock = DockStyle.Fill;
             contentPanel.Controls.Add(userListView);
         }
@@ -49,7 +49,7 @@ namespace CarBuyAndSell
 
             ClearAndDisposeControls(contentPanel);
 
-            Listing listingView = new Listing();
+            ListingViewControl listingView = new ListingViewControl();
             listingView.Dock = DockStyle.Fill;
             contentPanel.Controls.Add(listingView);
         }
