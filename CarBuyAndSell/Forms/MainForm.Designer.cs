@@ -36,7 +36,9 @@ namespace CarBuyAndSell
             this.sideNav = new System.Windows.Forms.Panel();
             this.btnUserList = new System.Windows.Forms.Button();
             this.btnVehicles = new System.Windows.Forms.Button();
+            this.btnBid = new System.Windows.Forms.Button();
             this.btnListing = new System.Windows.Forms.Button();
+            this.btnMarket = new System.Windows.Forms.Button();
             this.adminBtn = new System.Windows.Forms.Button();
             this.contentPanel = new System.Windows.Forms.Panel();
             this.mainLayout.SuspendLayout();
@@ -63,7 +65,9 @@ namespace CarBuyAndSell
             this.sideNav.BackColor = System.Drawing.Color.LightGray;
             this.sideNav.Controls.Add(this.btnUserList);
             this.sideNav.Controls.Add(this.btnVehicles);
+            this.sideNav.Controls.Add(this.btnBid);
             this.sideNav.Controls.Add(this.btnListing);
+            this.sideNav.Controls.Add(this.btnMarket);
             this.sideNav.Controls.Add(this.adminBtn);
             this.sideNav.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sideNav.Location = new System.Drawing.Point(3, 3);
@@ -74,32 +78,54 @@ namespace CarBuyAndSell
             // btnUserList
             // 
             this.btnUserList.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnUserList.Location = new System.Drawing.Point(0, 153);
+            this.btnUserList.Location = new System.Drawing.Point(0, 250);
             this.btnUserList.Name = "btnUserList";
             this.btnUserList.Size = new System.Drawing.Size(194, 50);
-            this.btnUserList.TabIndex = 0;
+            this.btnUserList.TabIndex = 14;
             this.btnUserList.Text = "User List";
             this.btnUserList.Click += new System.EventHandler(this.BtnUserList_Click);
             // 
             // btnVehicles
             // 
             this.btnVehicles.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnVehicles.Location = new System.Drawing.Point(0, 103);
+            this.btnVehicles.Location = new System.Drawing.Point(0, 200);
             this.btnVehicles.Name = "btnVehicles";
             this.btnVehicles.Size = new System.Drawing.Size(194, 50);
-            this.btnVehicles.TabIndex = 0;
+            this.btnVehicles.TabIndex = 15;
             this.btnVehicles.Text = "Vehicles";
             this.btnVehicles.Click += new System.EventHandler(this.BtnVehicles_Click);
+            // 
+            // btnBid
+            // 
+            this.btnBid.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBid.Location = new System.Drawing.Point(0, 150);
+            this.btnBid.Name = "btnBid";
+            this.btnBid.Size = new System.Drawing.Size(194, 50);
+            this.btnBid.TabIndex = 13;
+            this.btnBid.Text = "Bids";
+            this.btnBid.UseCompatibleTextRendering = true;
+            this.btnBid.Click += new System.EventHandler(this.BtnBid_Click);
             // 
             // btnListing
             // 
             this.btnListing.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnListing.Location = new System.Drawing.Point(0, 51);
+            this.btnListing.Location = new System.Drawing.Point(0, 100);
             this.btnListing.Name = "btnListing";
             this.btnListing.Size = new System.Drawing.Size(194, 50);
-            this.btnListing.TabIndex = 1;
+            this.btnListing.TabIndex = 12;
             this.btnListing.Text = "My Listing";
             this.btnListing.Click += new System.EventHandler(this.BtnListing_Click);
+            // 
+            // btnMarket
+            // 
+            this.btnMarket.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMarket.Location = new System.Drawing.Point(0, 50);
+            this.btnMarket.Name = "btnMarket";
+            this.btnMarket.Size = new System.Drawing.Size(194, 50);
+            this.btnMarket.TabIndex = 11;
+            this.btnMarket.Text = "Market";
+            this.btnMarket.UseCompatibleTextRendering = true;
+            this.btnMarket.Click += new System.EventHandler(this.BtnMarket_Click);
             // 
             // adminBtn
             // 
@@ -107,9 +133,9 @@ namespace CarBuyAndSell
             this.adminBtn.Location = new System.Drawing.Point(0, 0);
             this.adminBtn.Name = "adminBtn";
             this.adminBtn.Size = new System.Drawing.Size(194, 50);
-            this.adminBtn.TabIndex = 2;
+            this.adminBtn.TabIndex = 10;
             this.adminBtn.Text = "Admin Dashboard";
-            this.adminBtn.Click += new System.EventHandler(this.AdminBtn_Click);
+            this.adminBtn.Click += new System.EventHandler(this.BtnAdmin_Click);
             // 
             // contentPanel
             // 
@@ -125,6 +151,7 @@ namespace CarBuyAndSell
             this.Controls.Add(this.mainLayout);
             this.Name = "MainForm";
             this.Text = "Car Selling App";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.mainLayout.ResumeLayout(false);
             this.sideNav.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -135,16 +162,18 @@ namespace CarBuyAndSell
         #endregion
 
         private Panel sideNav;
-        private Button btnVehicles;
-        private Button btnListing;
-        private Button btnUserList;
-        private Button adminBtn;
         private Panel carPanel;
         private Button prevPageBtn;
         private Button nextPageBtn;
         private TableLayoutPanel mainLayout;
         private TableLayoutPanel paginationLayout;
         private Panel contentPanel;
+        private Button btnUserList;
+        private Button btnVehicles;
+        private Button btnBid;
+        private Button btnListing;
+        private Button btnMarket;
+        private Button adminBtn;
     }
 }
 

@@ -36,56 +36,45 @@ namespace CarBuyAndSell
         {
             Panel contentPanel = this.Controls.Find("contentPanel", true)[0] as Panel;
 
-            // Clear and dispose of previous controls
             ClearAndDisposeControls(contentPanel);
 
-            // Create and add the BuyViewControl
             UserList userListView = new UserList();
             userListView.Dock = DockStyle.Fill;
             contentPanel.Controls.Add(userListView);
         }
-        // Method to display Buy View
+
         private void ShowBuyView()
         {
             Panel contentPanel = this.Controls.Find("contentPanel", true)[0] as Panel;
 
-            // Clear and dispose of previous controls
             ClearAndDisposeControls(contentPanel);
 
-            // Create and add the BuyViewControl
             BuyViewControl buyView = new BuyViewControl();
             buyView.Dock = DockStyle.Fill;
             contentPanel.Controls.Add(buyView);
         }
 
-        // Method to display Sell View
         private void ShowListingView()
         {
             Panel contentPanel = this.Controls.Find("contentPanel", true)[0] as Panel;
-            // Clear and dispose of previous controls
+
             ClearAndDisposeControls(contentPanel);
-            // Create and add the BuyViewControl
+
             Listing listingView = new Listing();
             listingView.Dock = DockStyle.Fill;
             contentPanel.Controls.Add(listingView);
-
-            // Add more components for the Sell view here, such as a form to input car details.
         }
 
-        // Method to display Admin Dashboard View
         private void ShowAdminDashboardView()
         {
             Panel contentPanel = this.Controls.Find("contentPanel", true)[0] as Panel;
-            // Clear and dispose of previous controls
+
             ClearAndDisposeControls(contentPanel);
-            // Create and add the BuyViewControl
+
             DashboardViewControl dashboardView = new DashboardViewControl();
             dashboardView.Dock = DockStyle.Fill;
             contentPanel.Controls.Add(dashboardView);
-
-            // Add more components for the Admin Dashboard view here.
         }
-
 
         private void BtnUserList_Click(object sender, EventArgs e)
         {
@@ -103,7 +92,7 @@ namespace CarBuyAndSell
             ShowListingView(); // Display Sell tab content
         }
 
-        private void AdminBtn_Click(object sender, EventArgs e)
+        private void BtnAdmin_Click(object sender, EventArgs e)
         {
             ShowAdminDashboardView(); // Display Admin Dashboard content
         }
@@ -134,6 +123,44 @@ namespace CarBuyAndSell
                 ctrl.Dispose(); // Ensure controls are disposed
             }
             parent.Controls.Clear(); // Clear all controls
+        }
+
+        private void BtnMarket_Click(object sender, EventArgs e)
+        {
+            ShowMarketView();
+        }
+
+        private void ShowMarketView()
+        {
+            Panel contentPanel = this.Controls.Find("contentPanel", true)[0] as Panel;
+
+            ClearAndDisposeControls(contentPanel);
+
+            MarketViewControl marketView = new MarketViewControl();
+            marketView.Dock = DockStyle.Fill;
+            contentPanel.Controls.Add(marketView);
+        }
+
+        private void BtnBid_Click(object sender, EventArgs e)
+        {
+            ShowBidView();
+        }
+
+        private void ShowBidView()
+        {
+            Panel contentPanel = this.Controls.Find("contentPanel", true)[0] as Panel;
+
+            ClearAndDisposeControls(contentPanel);
+
+            BidsViewControl bidView = new BidsViewControl();
+            bidView.Dock = DockStyle.Fill;
+            contentPanel.Controls.Add(bidView);
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // If the main form is closed, close the entire application
+            Application.Exit();
         }
     }
 }

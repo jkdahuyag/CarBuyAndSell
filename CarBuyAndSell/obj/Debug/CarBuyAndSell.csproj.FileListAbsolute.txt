@@ -44,3 +44,4 @@ C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\bin\Debug\System.Threadin
 C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\obj\Debug\CarBuyAn.D5A11C03.Up2Date
 C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\obj\Debug\CarBuyAndSell.BuyViewControl.resources
 C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\obj\Debug\CarBuyAndSell.DashboardViewControl.resources
+C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\obj\Debug\CarBuyAndSell.LoginForm.resources
