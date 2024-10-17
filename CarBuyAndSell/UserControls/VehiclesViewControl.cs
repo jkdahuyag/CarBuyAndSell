@@ -1,9 +1,12 @@
-﻿using ReaLTaiizor;
+﻿using CarBuyAndSell.Forms;
+using MySql.Data.MySqlClient;
+using ReaLTaiizor;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +16,8 @@ namespace CarBuyAndSell
 {
     public partial class VehiclesViewControl : UserControl
     {
+
+        GlobalProcedure globalProcedure = new GlobalProcedure();
         private List<string> cars = new List<string>();
         private int currentPage = 1;
         private const int carsPerPage = 10;
@@ -20,22 +25,19 @@ namespace CarBuyAndSell
         public VehiclesViewControl()
         {
             InitializeComponent();
+            if (!this.globalProcedure.fncConnectToDatabase())
+                MessageBox.Show("Not Connected");
 
-            // Simulate placeholder text
             SetPlaceholder();
             searchBox.Enter += RemovePlaceholder;
             searchBox.Leave += SetPlaceholder;
-
             searchButton.Click += SearchButton_Click;
-
             prevPageBtn.Click += PrevPageBtn_Click;
-
             nextPageBtn.Click += NextPageBtn_Click;
             firstPageBtn.Click += FirstPageBtn_Click;
             lastPageBtn.Click += LastPageBtn_Click;
 
             //pageSelector.ValueChanged += PageSelector_ValueChanged;
-            // Load data and display initial car list
             LoadCars();
             DisplayCars();
         }
@@ -50,7 +52,6 @@ namespace CarBuyAndSell
             }
         }
 
-        // Event handler to remove the placeholder text when user starts typing
         private void RemovePlaceholder(object sender, EventArgs e)
         {
             if (searchBox.Text == "Search...")
@@ -61,21 +62,18 @@ namespace CarBuyAndSell
         }
         private void SearchButton_Click(object sender, EventArgs e)
         {
-            // Get the search query from the searchBox
             string searchQuery = searchBox.Text.ToLower();
-            SearchCars(searchQuery); // Implement search logic
+            SearchCars(searchQuery); 
         }
 
         private void SearchCars(string searchQuery)
         {
-            // Filter the car list based on the search query
             List<string> filteredCars = cars
                 .Where(car => car.ToLower().Contains(searchQuery))
                 .ToList();
 
             if (filteredCars.Count > 0)
             {
-                // Replace the original car list with the filtered list
                 cars = filteredCars;
                 currentPage = 1; // Reset to the first page
                 DisplayCars();
@@ -93,30 +91,113 @@ namespace CarBuyAndSell
             }
         }
 
-        // Display cars in 5 columns, 2 rows (10 cars per page)
         private void DisplayCars()
         {
-            carTableLayoutPanel.Controls.Clear(); // Clear previous cars
+            carTableLayoutPanel.Controls.Clear(); 
 
-            int start = (currentPage - 1) * carsPerPage;
-            int end = Math.Min(start + carsPerPage, cars.Count);
-
-            for (int i = start; i < end; i++)
+            try
             {
-                System.Windows.Forms.GroupBox carCard = new System.Windows.Forms.GroupBox();
-                carCard.Text = cars[i];
-                carCard.Padding = new Padding(10);
-                carCard.Dock = DockStyle.Fill;
+                MySqlCommand gProcCmd = globalProcedure.sqlCommand;
 
-                Label carDetails = new Label();
-                carDetails.Text = $"Car details for {cars[i]}";
-                carDetails.AutoSize = true;
-                carCard.Controls.Add(carDetails);
+                this.globalProcedure.sqlBuyAndSellAdapter = new MySqlDataAdapter();
+                this.globalProcedure.datBuyAndSell = new DataTable();
 
-                carTableLayoutPanel.Controls.Add(carCard);
+                gProcCmd.Parameters.Clear();
+                gProcCmd.CommandText = "procGetAllVehicles";
+                gProcCmd.CommandType = CommandType.StoredProcedure;
+                gProcCmd.Parameters.AddWithValue("@p_page", currentPage);
+                gProcCmd.Parameters.AddWithValue("@p_page_size", carsPerPage);
+                this.globalProcedure.sqlBuyAndSellAdapter.SelectCommand = this.globalProcedure.sqlCommand;
+                this.globalProcedure.datBuyAndSell.Clear();
+                this.globalProcedure.sqlBuyAndSellAdapter.Fill(this.globalProcedure.datBuyAndSell);
+
+                if (globalProcedure.datBuyAndSell.Rows.Count > 0)
+                {
+                    DataTable dataTable = globalProcedure.datBuyAndSell;
+                    int totalRecords = globalProcedure.datBuyAndSell.Rows.Count;
+                    for (int i = 0; i < totalRecords; i++)
+                    {
+                        var car = dataTable.Rows[i];
+                        System.Windows.Forms.Panel cardPanel = new System.Windows.Forms.Panel
+                        {
+                            BorderStyle = BorderStyle.FixedSingle,
+                            Margin = new Padding(5),
+                            Dock = DockStyle.Fill
+                        };
+
+                        PictureBox carImage = new PictureBox
+                        {
+                            SizeMode = PictureBoxSizeMode.StretchImage,
+                            Dock = DockStyle.Top,
+                            Image = LoadCarImage("") // Load car image from path
+                        };
+                        cardPanel.Controls.Add(carImage);
+
+                        Label lblOwner = new Label
+                        {
+                            Text = "Owner: " + car["owner_name"],
+                            Dock = DockStyle.Bottom,
+                            TextAlign = ContentAlignment.MiddleCenter,
+                            Padding = new Padding(0, 5, 0, 0)
+                        };
+                        cardPanel.Controls.Add(lblOwner);
+
+                        Label lblBrand = new Label
+                        {
+                            Text = "Brand: " + car["brand_name"],
+                            Dock = DockStyle.Bottom,
+                            TextAlign = ContentAlignment.MiddleCenter,
+                            Padding = new Padding(0, 5, 0, 0)
+                        };
+                        cardPanel.Controls.Add(lblBrand);
+
+                        Label lblModel = new Label
+                        {
+                            Text = "Model: " + car["model"],
+                            Dock = DockStyle.Bottom,
+                            TextAlign = ContentAlignment.MiddleCenter,
+                            Padding = new Padding(0, 5, 0, 0)
+                        };
+                        cardPanel.Controls.Add(lblModel);
+                        cardPanel.Click += ShowVehicleDetails(int.Parse(car["vehicle_id"].ToString()));
+                        // Add the card to the grid
+                        carTableLayoutPanel.Controls.Add(cardPanel);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Record not found!");
+                }
+
+                this.globalProcedure.sqlBuyAndSellAdapter.Dispose();
+                this.globalProcedure.datBuyAndSell.Dispose();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
 
+
+            
+
             UpdatePaginationButtons();
+        }
+
+        private EventHandler ShowVehicleDetails(int vehicleId)
+        {
+            return (sender, e) =>
+            {
+                // Get the vehicle ID from the card
+                // Open the vehicle details form
+                VehicleDetailsForm vehicleDetailsForm = new VehicleDetailsForm(vehicleId);
+                vehicleDetailsForm.Show();
+            };  
+        }
+
+        private void BtnAddVehicle_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void UpdatePaginationButtons()
@@ -164,11 +245,17 @@ namespace CarBuyAndSell
             DisplayCars();
         }
 
-        //private void PageSelector_ValueChanged(object sender, EventArgs e)
-        //{
-        //    currentPage = (int)pageSelector.Value;
-        //    DisplayCars();
-        //}
+        private Image LoadCarImage(string imagePath)
+        {
+            if (File.Exists(imagePath))
+            {
+                return Image.FromFile(imagePath);
+            }
+            else
+            {
+                // Return a default image if no image is found
+                return Properties.Resources.DefaultVehicleImage;
+            }
+        }
     }
-
 }

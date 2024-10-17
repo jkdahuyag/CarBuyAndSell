@@ -37,6 +37,7 @@ namespace CarBuyAndSell
             this.searchButton = new System.Windows.Forms.Button();
             this.carTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.paginationPanel = new System.Windows.Forms.Panel();
+            this.btnAddVehicle = new System.Windows.Forms.Button();
             this.firstPageBtn = new System.Windows.Forms.Button();
             this.prevPageBtn = new System.Windows.Forms.Button();
             this.pageLabel = new System.Windows.Forms.Label();
@@ -111,6 +112,7 @@ namespace CarBuyAndSell
             // 
             // paginationPanel
             // 
+            this.paginationPanel.Controls.Add(this.btnAddVehicle);
             this.paginationPanel.Controls.Add(this.firstPageBtn);
             this.paginationPanel.Controls.Add(this.prevPageBtn);
             this.paginationPanel.Controls.Add(this.pageLabel);
@@ -121,6 +123,16 @@ namespace CarBuyAndSell
             this.paginationPanel.Name = "paginationPanel";
             this.paginationPanel.Size = new System.Drawing.Size(776, 44);
             this.paginationPanel.TabIndex = 2;
+            // 
+            // btnAddVehicle
+            // 
+            this.btnAddVehicle.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnAddVehicle.Location = new System.Drawing.Point(0, 0);
+            this.btnAddVehicle.Name = "btnAddVehicle";
+            this.btnAddVehicle.Size = new System.Drawing.Size(150, 44);
+            this.btnAddVehicle.TabIndex = 4;
+            this.btnAddVehicle.Text = "Add Vehicle";
+            this.btnAddVehicle.Click += new System.EventHandler(this.BtnAddVehicle_Click);
             // 
             // firstPageBtn
             // 
@@ -170,12 +182,12 @@ namespace CarBuyAndSell
             this.lastPageBtn.TabIndex = 3;
             this.lastPageBtn.Text = "Last >>";
             // 
-            // BuyViewControl
+            // VehiclesViewControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.mainLayoutPanel);
-            this.Name = "BuyViewControl";
+            this.Name = "VehiclesViewControl";
             this.Size = new System.Drawing.Size(782, 553);
             this.mainLayoutPanel.ResumeLayout(false);
             this.searchPanel.ResumeLayout(false);
@@ -196,5 +208,6 @@ namespace CarBuyAndSell
         private TableLayoutPanel mainLayoutPanel;
         private System.Windows.Forms.Panel searchPanel;
         private System.Windows.Forms.Panel paginationPanel;
+        private System.Windows.Forms.Button btnAddVehicle;
     }
 }

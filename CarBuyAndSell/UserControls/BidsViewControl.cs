@@ -67,7 +67,7 @@ namespace CarBuyAndSell
 
         private void SearchButton_Click(object sender, EventArgs e)
         {
-            // Implement search functionality here
+           
         }
 
         private void FirstPageBtn_Click(object sender, EventArgs e)
@@ -105,13 +105,6 @@ namespace CarBuyAndSell
         {
             currentPage = (int)pageSelector.Value;
             DisplayCars();
-        }
-
-        private void SellButton_Click(object sender, EventArgs e)
-        {
-            // Open the Sell Form
-            //SellForm sellForm = new SellForm();
-            //sellForm.ShowDialog();
         }
     }
 }

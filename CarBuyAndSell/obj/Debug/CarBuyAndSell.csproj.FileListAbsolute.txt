@@ -45,3 +45,4 @@ C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\obj\Debug\CarBuyAn.D5A11C
 C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\obj\Debug\CarBuyAndSell.DashboardViewControl.resources
 C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\obj\Debug\CarBuyAndSell.LoginForm.resources
 C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\obj\Debug\CarBuyAndSell.VehiclesViewControl.resources
+C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\obj\Debug\CarBuyAndSell.Forms.VehicleDetailsForm.resources
