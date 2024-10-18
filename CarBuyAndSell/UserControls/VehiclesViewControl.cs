@@ -25,7 +25,7 @@ namespace CarBuyAndSell
         public VehiclesViewControl()
         {
             InitializeComponent();
-            if (!this.globalProcedure.fncConnectToDatabase())
+            if (!this.globalProcedure.FncConnectToDatabase())
                 MessageBox.Show("Not Connected");
 
             SetPlaceholder();
@@ -99,7 +99,7 @@ namespace CarBuyAndSell
             {
                 MySqlCommand gProcCmd = globalProcedure.sqlCommand;
 
-                this.globalProcedure.sqlBuyAndSellAdapter = new MySqlDataAdapter();
+                this.globalProcedure.sqlAdapter = new MySqlDataAdapter();
                 this.globalProcedure.datBuyAndSell = new DataTable();
 
                 gProcCmd.Parameters.Clear();
@@ -107,9 +107,9 @@ namespace CarBuyAndSell
                 gProcCmd.CommandType = CommandType.StoredProcedure;
                 gProcCmd.Parameters.AddWithValue("@p_page", currentPage);
                 gProcCmd.Parameters.AddWithValue("@p_page_size", carsPerPage);
-                this.globalProcedure.sqlBuyAndSellAdapter.SelectCommand = this.globalProcedure.sqlCommand;
+                this.globalProcedure.sqlAdapter.SelectCommand = this.globalProcedure.sqlCommand;
                 this.globalProcedure.datBuyAndSell.Clear();
-                this.globalProcedure.sqlBuyAndSellAdapter.Fill(this.globalProcedure.datBuyAndSell);
+                this.globalProcedure.sqlAdapter.Fill(this.globalProcedure.datBuyAndSell);
 
                 if (globalProcedure.datBuyAndSell.Rows.Count > 0)
                 {
@@ -129,7 +129,7 @@ namespace CarBuyAndSell
                         {
                             SizeMode = PictureBoxSizeMode.StretchImage,
                             Dock = DockStyle.Top,
-                            Image = LoadCarImage("") // Load car image from path
+                            Image = LoadCarImage("")
                         };
                         cardPanel.Controls.Add(carImage);
 
@@ -169,7 +169,7 @@ namespace CarBuyAndSell
                     MessageBox.Show("Record not found!");
                 }
 
-                this.globalProcedure.sqlBuyAndSellAdapter.Dispose();
+                this.globalProcedure.sqlAdapter.Dispose();
                 this.globalProcedure.datBuyAndSell.Dispose();
 
             }

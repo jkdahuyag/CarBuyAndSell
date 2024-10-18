@@ -9,7 +9,7 @@ namespace CarBuyAndSell.Models
     public class User
     {
         public int UserId { get; set; }
-        public int Role { get; set; }
+        public int RoleId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Address { get; set; }
@@ -20,7 +20,7 @@ namespace CarBuyAndSell.Models
         public User(int userId, int role, string firstName, string lastName, string address, string username, string password, string number)
         {
             UserId = userId;
-            Role = role;
+            RoleId = role;
             FirstName = firstName;
             LastName = lastName;
             Address = address;

@@ -20,7 +20,7 @@ namespace CarBuyAndSell.Forms
         {
             InitializeComponent();
             _vehicleId = vehicleId;
-            if (!this.globalProcedure.fncConnectToDatabase())
+            if (!this.globalProcedure.FncConnectToDatabase())
                 MessageBox.Show("Not Connected");
             LoadVehicleDetails();
         }
@@ -31,16 +31,16 @@ namespace CarBuyAndSell.Forms
             {
                 MySqlCommand gProcCmd = globalProcedure.sqlCommand;
 
-                this.globalProcedure.sqlBuyAndSellAdapter = new MySqlDataAdapter();
+                this.globalProcedure.sqlAdapter = new MySqlDataAdapter();
                 this.globalProcedure.datBuyAndSell = new DataTable();
 
                 gProcCmd.Parameters.Clear();
                 gProcCmd.CommandText = "procGetVehicleById";
                 gProcCmd.CommandType = CommandType.StoredProcedure;
                 gProcCmd.Parameters.AddWithValue("@p_vehicle_id", _vehicleId);
-                this.globalProcedure.sqlBuyAndSellAdapter.SelectCommand = this.globalProcedure.sqlCommand;
+                this.globalProcedure.sqlAdapter.SelectCommand = this.globalProcedure.sqlCommand;
                 this.globalProcedure.datBuyAndSell.Clear();
-                this.globalProcedure.sqlBuyAndSellAdapter.Fill(this.globalProcedure.datBuyAndSell);
+                this.globalProcedure.sqlAdapter.Fill(this.globalProcedure.datBuyAndSell);
 
                 if (globalProcedure.datBuyAndSell.Rows.Count > 0)
                 {
@@ -63,7 +63,7 @@ namespace CarBuyAndSell.Forms
                     MessageBox.Show("Record not found!");
                 }
 
-                this.globalProcedure.sqlBuyAndSellAdapter.Dispose();
+                this.globalProcedure.sqlAdapter.Dispose();
                 this.globalProcedure.datBuyAndSell.Dispose();
 
             }

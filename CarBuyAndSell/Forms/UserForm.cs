@@ -26,12 +26,12 @@ namespace CarBuyAndSell.Forms
 
         private void LoadFormData()
         {
-            //cmbRole.DataSource = GetRoles(); // e.g., list of roles (Admin, User, etc.)
+            //cmbRole.DataSource = GetRoles();
 
             // If editing, load user data
             if (_isEditMode)
             {
-                cmbRole.SelectedItem = _user.Role;
+                cmbRole.SelectedItem = _user.RoleId;
                 txtFirstName.Text = _user.FirstName;
                 txtLastName.Text = _user.LastName;
                 txtAddress.Text = _user.Address;
@@ -84,7 +84,7 @@ namespace CarBuyAndSell.Forms
 
         private void UpdateUser()
         {
-            _user.Role = (int)cmbRole.SelectedValue;
+            _user.RoleId = (int)cmbRole.SelectedValue;
             _user.FirstName = txtFirstName.Text;
             _user.LastName = txtLastName.Text;
             _user.Address = txtAddress.Text;
