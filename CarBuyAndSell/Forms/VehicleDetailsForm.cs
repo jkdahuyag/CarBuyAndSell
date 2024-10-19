@@ -1,4 +1,5 @@
-﻿using CarBuyAndSell.Models;
+﻿using CarBuyAndSell.Dto;
+using CarBuyAndSell.Models;
 using CarBuyAndSell.Properties;
 using MySql.Data.MySqlClient;
 using System;
@@ -28,7 +29,7 @@ namespace CarBuyAndSell.Forms
 
         private void LoadVehicleDetails()
         {
-            List<Vehicle> vehicles = globalProcedure.FncGetVehicles();
+            List<VehicleDto> vehicles = globalProcedure.ProcGetVehicleById(_vehicleId);
 
                 if (vehicles.Count > 0)
                 {
@@ -36,13 +37,13 @@ namespace CarBuyAndSell.Forms
                     vehiclePictureBox.Image = Resources.DefaultVehicleImage;
 
                     // Set vehicle details
-                    lblBrandName.Text = $"Brand: {vehic}";
-                    lblModel.Text = $"Model: {dataTable.Rows[0]["brand_name"].ToString()}";
-                    lblOwner.Text = $"Owner: {dataTable.Rows[0]["owner_name"].ToString()}";
-                    lblMileage.Text = $"Mileage: {dataTable.Rows[0]["mileage"].ToString()} km";
-                    lblCondition.Text = $"Condition: {dataTable.Rows[0]["condition_name"].ToString()}";
-                    lblManufactureYear.Text = $"Manufacture Year: {dataTable.Rows[0]["manufacture_year"].ToString()}";
-                    lblPlateNumber.Text = $"Plate Number: {dataTable.Rows[0]["plate_number"].ToString()}";
+                    lblBrandName.Text = $"Brand: {vehicles[0].BrandName}";
+                    lblModel.Text = $"Model: {vehicles[0].Model}";
+                    lblOwner.Text = $"Owner: {vehicles[0].OwnerName}";
+                    lblMileage.Text = $"Mileage: {vehicles[0].Mileage} km";
+                    lblCondition.Text = $"Condition: {vehicles[0].ConditionName}";
+                    lblManufactureYear.Text = $"Manufacture Year: {vehicles[0].ManufactureYear.Year}";
+                    lblPlateNumber.Text = $"Plate Number: {vehicles[0].PlateNumber}";
                 }
            
 
