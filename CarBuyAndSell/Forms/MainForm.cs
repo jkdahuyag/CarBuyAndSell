@@ -135,6 +135,11 @@ namespace CarBuyAndSell
         {
             Application.Exit();
         }
+
+        private void lblAppName_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

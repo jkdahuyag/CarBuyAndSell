@@ -133,6 +133,12 @@
     <Compile Include="Dto\TransactionDto.cs" />
     <Compile Include="Dto\UserDto.cs" />
     <Compile Include="Dto\VehicleDto.cs" />
+    <Compile Include="Forms\MainFormDupe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainFormDupe.Designer.cs">
+      <DependentUpon>MainFormDupe.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\TransactionForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -259,6 +265,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\pngwing.com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monitor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping-cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\car.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\auction.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transfer.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
