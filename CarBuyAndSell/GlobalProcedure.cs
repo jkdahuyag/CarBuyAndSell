@@ -1,4 +1,5 @@
-﻿using CarBuyAndSell.Models;
+﻿using CarBuyAndSell.Dto;
+using CarBuyAndSell.Models;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -66,7 +67,7 @@ namespace CarBuyAndSell
             }
             return false;
         }
-        private int FncGetTotalRecords()
+        private int ProcGetTotalRecords()
         {
             return this.datCarBuyAndSellMgr.Rows.Count;
         }
@@ -110,9 +111,9 @@ namespace CarBuyAndSell
         // -----------------------------------
         // Users
         // -----------------------------------
-        public List<User> FncGetUsers(int pageNum, int pageSize)
+        public List<UserDto> ProcGetUsers(int pageNum, int pageSize)
         {
-            List<User> list = new List<User>();
+            List<UserDto> list = new List<UserDto>();
             Dictionary<string, object> parameters = new Dictionary<string, object>
             {
                 { "@p_page", pageNum },
@@ -122,12 +123,12 @@ namespace CarBuyAndSell
 
             if (this.datCarBuyAndSellMgr.Rows.Count > 0)
             {
-                for (int row = 0; row < FncGetTotalRecords(); row++)
+                for (int row = 0; row < datCarBuyAndSellMgr.Rows.Count; row++)
                 {
                     var dataRow = this.datCarBuyAndSellMgr.Rows[row];
-                    list.Add(new Models.User(
+                    list.Add(new UserDto(
                         int.Parse(dataRow["user_id"].ToString()),
-                        int.Parse(dataRow["role"].ToString()),
+                        dataRow["role"].ToString(),
                         dataRow["first_name"].ToString(),
                         dataRow["last_name"].ToString(),
                         dataRow["address"].ToString(),
@@ -146,7 +147,53 @@ namespace CarBuyAndSell
             return list;
         }
 
-        public bool FncInsertUser(User user)
+        public List<UserDto> FncSearchUsersByName(string name, int pageSize, int page)
+        {
+            List<UserDto> list = new List<UserDto>();
+            try
+            {
+                Dictionary<string, object> parameters = new Dictionary<string, object>
+                {
+                    { "@p_search_keyword", name },
+                    { "@p_page_size", pageSize },
+                    { "@p_page", page }
+                };
+                ExecuteStoredProcedure("procSearchUsersByName", parameters);
+
+                if (this.datCarBuyAndSellMgr.Rows.Count > 0)
+                {
+                    for (int row = 0; row < datCarBuyAndSellMgr.Rows.Count; row++)
+                    {
+                        var dataRow = this.datCarBuyAndSellMgr.Rows[row];
+                        list.Add(new UserDto(
+                        int.Parse(dataRow["user_id"].ToString()),
+                        dataRow["role"].ToString(),
+                        dataRow["first_name"].ToString(),
+                        dataRow["last_name"].ToString(),
+                        dataRow["address"].ToString(),
+                        dataRow["username"].ToString(),
+                        dataRow["password"].ToString(),
+                        dataRow["number"].ToString()
+                        ));
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No users found.");
+                }
+
+                ClearData();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return list;
+        }
+
+
+
+        public bool ProcInsertUser(User user)
         {
             try
             {
@@ -170,7 +217,7 @@ namespace CarBuyAndSell
             }
         }
 
-        public bool FncUpdateUser(User user)
+        public bool ProcUpdateUser(User user)
         {
             try
             {
@@ -195,7 +242,7 @@ namespace CarBuyAndSell
             }
         }
 
-        public bool FncDeleteUser(int userId)
+        public bool ProcDeleteUser(int userId)
         {
             try
             {
@@ -211,11 +258,124 @@ namespace CarBuyAndSell
         }
 
         // -----------------------------------
+        // Vehicles
+        // -----------------------------------
+        public List<VehicleDto> ProcGetVehicles(int pageNum, int pageSize)
+        {
+            List<VehicleDto> list = new List<VehicleDto>();
+
+            Dictionary<string, object> parameters = new Dictionary<string, object>
+            {
+                { "@p_page", pageNum },
+                { "@p_page_size", pageSize }
+            };
+            ExecuteStoredProcedure("proc_select_all_vehicles");
+
+            if (this.datCarBuyAndSellMgr.Rows.Count > 0)
+            {
+                for (int row = 0; row < datCarBuyAndSellMgr.Rows.Count; row++)
+                {
+                    var dataRow = this.datCarBuyAndSellMgr.Rows[row];
+                    list.Add(new VehicleDto(
+                        int.Parse(dataRow["vehicle_id"].ToString()),
+                        dataRow["brand_name"].ToString(),
+                        dataRow["transmission_type_name"].ToString(),
+                        dataRow["condition_name"].ToString(),
+                        dataRow["owner_name"].ToString(),
+                        dataRow["model"].ToString(),
+                        DateTime.Parse(dataRow["manufacture_year"].ToString()),
+                        dataRow["plate_number"].ToString(),
+                        double.Parse(dataRow["mileage"].ToString())
+                    ));
+                }
+            }
+            else
+            {
+                MessageBox.Show("No vehicles found.");
+            }
+
+            ClearData();
+            return list;
+        }
+
+        public bool ProcInsertVehicle(Vehicle vehicle)
+        {
+            try
+            {
+                Dictionary<string, object> parameters = new Dictionary<string, object>
+            {
+                { "@brand_id", vehicle.BrandId },
+                { "@condition_id", vehicle.ConditionId },
+                { "@transmission_type_id", vehicle.TransmissionTypeId },
+                { "@status_id", vehicle.StatusId },
+                { "@location_stored", vehicle.LocationStored },
+                { "@model", vehicle.Model },
+                { "@manufacture_year", vehicle.ManufactureYear },
+                { "@plate_number", vehicle.PlateNumber },
+                { "@date_listed", vehicle.DateListed },
+                { "@mileage", vehicle.Mileage },
+                { "@owner_id", vehicle.OwnerId }
+            };
+                ExecuteStoredProcedure("proc_insert_vehicle", parameters);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
+
+        public bool ProcUpdateVehicle(Vehicle vehicle)
+        {
+            try
+            {
+                Dictionary<string, object> parameters = new Dictionary<string, object>
+            {
+                { "@vehicle_id", vehicle.VehicleId },
+                { "@brand_id", vehicle.BrandId },
+                { "@condition_id", vehicle.ConditionId },
+                { "@transmission_type_id", vehicle.TransmissionTypeId },
+                { "@status_id", vehicle.StatusId },
+                { "@location_stored", vehicle.LocationStored },
+                { "@model", vehicle.Model },
+                { "@manufacture_year", vehicle.ManufactureYear },
+                { "@plate_number", vehicle.PlateNumber },
+                { "@date_listed", vehicle.DateListed },
+                { "@mileage", vehicle.Mileage },
+                { "@owner_id", vehicle.OwnerId }
+            };
+                ExecuteStoredProcedure("proc_update_vehicle", parameters);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
+
+        public bool ProcDeleteVehicle(int vehicleId)
+        {
+            try
+            {
+                Dictionary<string, object> parameters = new Dictionary<string, object> { { "@vehicle_id", vehicleId } };
+                ExecuteStoredProcedure("proc_delete_vehicle", parameters);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
+        // -----------------------------------
         // Bids
         // -----------------------------------
-        public List<Bid> FncGetBids(int pageNum, int pageSize)
+        public List<BidDto> ProcGetBids(int pageNum, int pageSize)
         {
-            List<Bid> list = new List<Bid>();
+            List<BidDto> list = new List<BidDto>();
+
             Dictionary<string, object> parameters = new Dictionary<string, object>
             {
                 { "@p_page", pageNum },
@@ -225,12 +385,13 @@ namespace CarBuyAndSell
 
             if (this.datCarBuyAndSellMgr.Rows.Count > 0)
             {
-                for (int row = 0; row < FncGetTotalRecords(); row++)
+                for (int row = 0; row < datCarBuyAndSellMgr.Rows.Count; row++)
                 {
                     var dataRow = this.datCarBuyAndSellMgr.Rows[row];
-                    list.Add(new Bid(
+                    list.Add(new BidDto(
                         int.Parse(dataRow["bid_id"].ToString()),
-                        int.Parse(dataRow["user_id"].ToString()),
+                        dataRow["first_name"].ToString(),
+                        dataRow["last_name"].ToString(),
                         int.Parse(dataRow["listing_id"].ToString()),
                         double.Parse(dataRow["bid_amount"].ToString()),
                         DateTime.Parse(dataRow["bid_date"].ToString())
@@ -246,7 +407,50 @@ namespace CarBuyAndSell
             return list;
         }
 
-        public bool FncInsertBid(Bid bid)
+        public List<BidDto> FncGetBidById(int bidId, int pageSize, int page)
+        {
+            List<BidDto> list = new List<BidDto>();
+            try
+            {
+                Dictionary<string, object> parameters = new Dictionary<string, object>
+        {
+            { "@bid_id", bidId },
+            { "@p_page_size", pageSize },
+            { "@p_page", page }
+        };
+                ExecuteStoredProcedure("procGetBidById", parameters);
+
+                if (this.datCarBuyAndSellMgr.Rows.Count > 0)
+                {
+                    for (int row = 0; row < datCarBuyAndSellMgr.Rows.Count; row++)
+                    {
+                        var dataRow = this.datCarBuyAndSellMgr.Rows[row];
+                        list.Add(new BidDto(
+                            int.Parse(dataRow["bid_id"].ToString()),
+                            dataRow["first_name"].ToString(),
+                            dataRow["last_name"].ToString(),
+                            int.Parse(dataRow["listing_id"].ToString()),
+                            double.Parse(dataRow["bid_amount"].ToString()),
+                            DateTime.Parse(dataRow["bid_date"].ToString())
+                        ));
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Bid not found.");
+                }
+
+                ClearData();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return list;
+        }
+
+
+        public bool ProcInsertBid(Bid bid)
         {
             try
             {
@@ -267,7 +471,7 @@ namespace CarBuyAndSell
             }
         }
 
-        public bool FncDeleteBid(int bidId)
+        public bool ProcDeleteBid(int bidId)
         {
             try
             {
@@ -285,14 +489,14 @@ namespace CarBuyAndSell
         // -----------------------------------
         // Brands
         // -----------------------------------
-        public List<Brand> FncGetBrands()
+        public List<Brand> ProcGetBrands()
         {
             List<Brand> list = new List<Brand>();
             ExecuteStoredProcedure("proc_select_all_brands");
 
             if (this.datCarBuyAndSellMgr.Rows.Count > 0)
             {
-                for (int row = 0; row < FncGetTotalRecords(); row++)
+                for (int row = 0; row < datCarBuyAndSellMgr.Rows.Count; row++)
                 {
                     var dataRow = this.datCarBuyAndSellMgr.Rows[row];
                     list.Add(new Brand(
@@ -309,6 +513,330 @@ namespace CarBuyAndSell
             ClearData();
             return list;
         }
+        public List<Brand> FncGetBrandById(int brandId, int pageSize, int page)
+        {
+            List<Brand> list = new List<Brand>();
+            try
+            {
+                Dictionary<string, object> parameters = new Dictionary<string, object>
+                {
+                    { "@brand_id", brandId },
+                    { "@p_page_size", pageSize },
+                    { "@p_page", page }
+                };
+                ExecuteStoredProcedure("procGetBrandById", parameters);
 
+                if (this.datCarBuyAndSellMgr.Rows.Count > 0)
+                {
+                    for (int row = 0; row < datCarBuyAndSellMgr.Rows.Count; row++)
+                    {
+                        var dataRow = this.datCarBuyAndSellMgr.Rows[row];
+                        list.Add(new Brand(
+                            int.Parse(dataRow["brand_id"].ToString()),
+                            dataRow["brand_name"].ToString()
+                        ));
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Brand not found.");
+                }
+
+                ClearData();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return list;
+        }
+
+        // -----------------------------------
+        // Listings
+        // -----------------------------------
+        public List<ListingDto> ProcGetListings(int pageNum, int pageSize)
+        {
+            List<ListingDto> list = new List<ListingDto>();
+
+            Dictionary<string, object> parameters = new Dictionary<string, object>
+            {
+                { "@p_page", pageNum },
+                { "@p_page_size", pageSize }
+            };
+            ExecuteStoredProcedure("proc_select_all_listings");
+
+            if (this.datCarBuyAndSellMgr.Rows.Count > 0)
+            {
+                for (int row = 0; row < datCarBuyAndSellMgr.Rows.Count; row++)
+                {
+                    var dataRow = this.datCarBuyAndSellMgr.Rows[row];
+                    list.Add(new ListingDto(
+                        int.Parse(dataRow["listing_id"].ToString()),
+                        int.Parse(dataRow["vehicle_id"].ToString()),
+                        DateTime.Parse(dataRow["listing_date"].ToString()),
+                        double.Parse(dataRow["asking_price"].ToString()),
+                        DateTime.Parse(dataRow["listing_expiry"].ToString()),
+                        dataRow["description"].ToString(),
+                        dataRow["first_name"].ToString(),
+                        dataRow["last_name"].ToString(),
+                        dataRow["status_name"].ToString()
+                    ));
+                }
+            }
+            else
+            {
+                MessageBox.Show("No listings found.");
+            }
+
+            ClearData();
+            return list;
+        }
+
+        public bool ProcInsertListing(Listing listing)
+        {
+            try
+            {
+                Dictionary<string, object> parameters = new Dictionary<string, object>
+                {
+                    { "@vehicle_id", listing.VehicleId },
+                    { "@seller_id", listing.UserId },
+                    { "@starting_price", listing.AskingPrice },
+                    { "@listing_date", listing.DateListed }
+                };
+                ExecuteStoredProcedure("proc_insert_listing", parameters);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
+
+        public bool ProcDeleteListing(int listingId)
+        {
+            try
+            {
+                Dictionary<string, object> parameters = new Dictionary<string, object> { { "@listing_id", listingId } };
+                ExecuteStoredProcedure("proc_delete_listing", parameters);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
+
+        // -----------------------------------
+        // Transactions
+        // -----------------------------------
+        public List<TransactionDto> ProcGetTransactions(int pageNum, int pageSize)
+        {
+            List<TransactionDto> list = new List<TransactionDto>();
+
+            Dictionary<string, object> parameters = new Dictionary<string, object>
+            {
+                { "@p_page", pageNum },
+                { "@p_page_size", pageSize }
+            };
+            ExecuteStoredProcedure("proc_select_all_transactions");
+
+            if (this.datCarBuyAndSellMgr.Rows.Count > 0)
+            {
+                for (int row = 0; row < datCarBuyAndSellMgr.Rows.Count; row++)
+                {
+                    var dataRow = this.datCarBuyAndSellMgr.Rows[row];
+                    list.Add(new TransactionDto(
+                        int.Parse(dataRow["transaction_id"].ToString()),
+                        dataRow["buyer_first_name"].ToString(),
+                        dataRow["buyer_last_name"].ToString(),
+                        dataRow["seller_first_name"].ToString(),
+                        dataRow["seller_last_name"].ToString(),
+                        double.Parse(dataRow["amount"].ToString()),
+                        DateTime.Parse(dataRow["transaction_date"].ToString()),
+                        dataRow["payment_method_name"].ToString()
+                    ));
+                }
+            }
+            else
+            {
+                MessageBox.Show("No transactions found.");
+            }
+
+            ClearData();
+            return list;
+        }
+
+        public List<TransactionDto> FncGetTransactionById(int transactionId, int pageSize, int page)
+        {
+            List<TransactionDto> list = new List<TransactionDto>();
+            try
+            {
+                Dictionary<string, object> parameters = new Dictionary<string, object>
+                {
+                    { "@transaction_id", transactionId },
+                    { "@p_page_size", pageSize },
+                    { "@p_page", page }
+                };
+                ExecuteStoredProcedure("procGetTransactionById", parameters);
+
+                if (this.datCarBuyAndSellMgr.Rows.Count > 0)
+                {
+                    for (int row = 0; row < datCarBuyAndSellMgr.Rows.Count; row++)
+                    {
+                        var dataRow = this.datCarBuyAndSellMgr.Rows[row];
+                            list.Add(new TransactionDto(
+                            int.Parse(dataRow["transaction_id"].ToString()),
+                            dataRow["buyer_first_name"].ToString(),
+                            dataRow["buyer_last_name"].ToString(),
+                            dataRow["seller_first_name"].ToString(),
+                            dataRow["seller_last_name"].ToString(),
+                            double.Parse(dataRow["amount"].ToString()),
+                            DateTime.Parse(dataRow["transaction_date"].ToString()),
+                            dataRow["payment_method_name"].ToString()
+                        ));
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Transaction not found.");
+                }
+
+                ClearData();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return list;
+        }
+
+        public List<TransactionDto> FncGetTransactionsByDate(DateTime startDate, DateTime endDate, int pageSize, int page)
+        {
+            List<TransactionDto> list = new List<TransactionDto>();
+            try
+            {
+                Dictionary<string, object> parameters = new Dictionary<string, object>
+                {
+                    { "@start_date", startDate },
+                    { "@end_date", endDate },
+                    { "@p_page_size", pageSize },
+                    { "@p_page", page }
+                };
+                ExecuteStoredProcedure("procGetTransactionsByDate", parameters);
+
+                if (this.datCarBuyAndSellMgr.Rows.Count > 0)
+                {
+                    for (int row = 0; row < datCarBuyAndSellMgr.Rows.Count; row++)
+                    {
+                        var dataRow = this.datCarBuyAndSellMgr.Rows[row];
+                        list.Add(new TransactionDto(
+                            int.Parse(dataRow["transaction_id"].ToString()),
+                            dataRow["buyer_first_name"].ToString(),
+                            dataRow["buyer_last_name"].ToString(),
+                            dataRow["seller_first_name"].ToString(),
+                            dataRow["seller_last_name"].ToString(),
+                            double.Parse(dataRow["amount"].ToString()),
+                            DateTime.Parse(dataRow["transaction_date"].ToString()),
+                            dataRow["payment_method_name"].ToString()
+                        ));
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No transactions found.");
+                }
+
+                ClearData();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return list;
+        }
+
+        public List<TransactionDto> FncGetTransactionsByNameOfUser(string userName, int pageSize, int page)
+        {
+            List<TransactionDto> list = new List<TransactionDto>();
+            try
+            {
+                Dictionary<string, object> parameters = new Dictionary<string, object>
+                {
+                    { "@user_name", userName },
+                    { "@p_page_size", pageSize },
+                    { "@p_page", page }
+                };
+                ExecuteStoredProcedure("procGetTransactionsByNameOfUser", parameters);
+
+                if (this.datCarBuyAndSellMgr.Rows.Count > 0)
+                {
+                    for (int row = 0; row < datCarBuyAndSellMgr.Rows.Count; row++)
+                    {
+                        var dataRow = this.datCarBuyAndSellMgr.Rows[row];
+                        list.Add(new TransactionDto(
+                            int.Parse(dataRow["transaction_id"].ToString()),
+                            dataRow["buyer_first_name"].ToString(),
+                            dataRow["buyer_last_name"].ToString(),
+                            dataRow["seller_first_name"].ToString(),
+                            dataRow["seller_last_name"].ToString(),
+                            double.Parse(dataRow["amount"].ToString()),
+                            DateTime.Parse(dataRow["transaction_date"].ToString()),
+                            dataRow["payment_method_name"].ToString()
+                        ));
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No transactions found.");
+                }
+
+                ClearData();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return list;
+        }
+
+        public bool ProcInsertTransaction(Transaction transaction)
+        {
+            try
+            {
+                Dictionary<string, object> parameters = new Dictionary<string, object>
+                {
+                    { "@seller_id", transaction.SellerId },
+                    { "@buyer_id", transaction.BuyerId },
+                    { "@vehicle_id", transaction.VehicleId },
+                    { "@date", transaction.TransactionDate },
+                    { "@sale_price", transaction.SalePrice },
+                    { "@payment_method_id", transaction.PaymentMethodId }
+                };
+                ExecuteStoredProcedure("proc_insert_transaction", parameters);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
+
+        public bool ProcDeleteTransaction(int transactionId)
+        {
+            try
+            {
+                Dictionary<string, object> parameters = new Dictionary<string, object> { { "@transaction_id", transactionId } };
+                ExecuteStoredProcedure("proc_delete_transaction", parameters);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
     }
 }

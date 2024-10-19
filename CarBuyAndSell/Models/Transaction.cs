@@ -12,20 +12,18 @@ namespace CarBuyAndSell.Models
         public int SellerId { get; set; }
         public int BuyerId { get; set; }
         public int VehicleId { get; set; }
-        public DateTime Date { get; set; }
-        public decimal SalePrice { get; set; }
-        public decimal Profit { get; set; }
+        public DateTime TransactionDate { get; set; }
+        public double SalePrice { get; set; }
         public int PaymentMethodId { get; set; }
 
-        public Transaction(int transactionId, int sellerId, int buyerId, int vehicleId, DateTime date, decimal salePrice, decimal profit, int paymentMethodId)
+        public Transaction(int transactionId, int sellerId, int buyerId, int vehicleId, DateTime transactionDate, double salePrice, int paymentMethodId)
         {
             TransactionId = transactionId;
             SellerId = sellerId;
             BuyerId = buyerId;
             VehicleId = vehicleId;
-            Date = date;
+            TransactionDate = transactionDate;
             SalePrice = salePrice;
-            Profit = profit;
             PaymentMethodId = paymentMethodId;
         }
     }

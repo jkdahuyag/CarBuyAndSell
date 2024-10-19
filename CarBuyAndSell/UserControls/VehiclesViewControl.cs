@@ -1,4 +1,6 @@
-﻿using CarBuyAndSell.Forms;
+﻿using CarBuyAndSell.Dto;
+using CarBuyAndSell.Forms;
+using CarBuyAndSell.Models;
 using MySql.Data.MySqlClient;
 using ReaLTaiizor;
 using System;
@@ -41,7 +43,7 @@ namespace CarBuyAndSell
             LoadCars();
             DisplayCars();
         }
-        
+
         // Event handler to set the placeholder text
         private void SetPlaceholder(object sender = null, EventArgs e = null)
         {
@@ -63,7 +65,7 @@ namespace CarBuyAndSell
         private void SearchButton_Click(object sender, EventArgs e)
         {
             string searchQuery = searchBox.Text.ToLower();
-            SearchCars(searchQuery); 
+            SearchCars(searchQuery);
         }
 
         private void SearchCars(string searchQuery)
@@ -93,106 +95,83 @@ namespace CarBuyAndSell
 
         private void DisplayCars()
         {
-            carTableLayoutPanel.Controls.Clear(); 
+            carTableLayoutPanel.Controls.Clear();
 
-            try
+            List<VehicleDto> vehicles = globalProcedure.ProcGetVehicles(currentPage,carsPerPage);
+            int totalRecords = vehicles.Count;
+            if (totalRecords > 0)
             {
-                MySqlCommand gProcCmd = globalProcedure.sqlCommand;
-
-                this.globalProcedure.sqlAdapter = new MySqlDataAdapter();
-                this.globalProcedure.datBuyAndSell = new DataTable();
-
-                gProcCmd.Parameters.Clear();
-                gProcCmd.CommandText = "procGetAllVehicles";
-                gProcCmd.CommandType = CommandType.StoredProcedure;
-                gProcCmd.Parameters.AddWithValue("@p_page", currentPage);
-                gProcCmd.Parameters.AddWithValue("@p_page_size", carsPerPage);
-                this.globalProcedure.sqlAdapter.SelectCommand = this.globalProcedure.sqlCommand;
-                this.globalProcedure.datBuyAndSell.Clear();
-                this.globalProcedure.sqlAdapter.Fill(this.globalProcedure.datBuyAndSell);
-
-                if (globalProcedure.datBuyAndSell.Rows.Count > 0)
+                for (int i = 0; i < totalRecords; i++)
                 {
-                    DataTable dataTable = globalProcedure.datBuyAndSell;
-                    int totalRecords = globalProcedure.datBuyAndSell.Rows.Count;
-                    for (int i = 0; i < totalRecords; i++)
+                    var car = vehicles[i];
+                    System.Windows.Forms.Panel cardPanel = new System.Windows.Forms.Panel
                     {
-                        var car = dataTable.Rows[i];
-                        System.Windows.Forms.Panel cardPanel = new System.Windows.Forms.Panel
-                        {
-                            BorderStyle = BorderStyle.FixedSingle,
-                            Margin = new Padding(5),
-                            Dock = DockStyle.Fill
-                        };
+                        BorderStyle = BorderStyle.FixedSingle,
+                        Margin = new Padding(5),
+                        Dock = DockStyle.Fill
+                    };
 
-                        PictureBox carImage = new PictureBox
-                        {
-                            SizeMode = PictureBoxSizeMode.StretchImage,
-                            Dock = DockStyle.Top,
-                            Image = LoadCarImage("")
-                        };
-                        cardPanel.Controls.Add(carImage);
+                    PictureBox carImage = new PictureBox
+                    {
+                        SizeMode = PictureBoxSizeMode.StretchImage,
+                        Dock = DockStyle.Top,
+                        Image = LoadCarImage("")
+                    };
+                    cardPanel.Controls.Add(carImage);
 
-                        Label lblOwner = new Label
-                        {
-                            Text = "Owner: " + car["owner_name"],
-                            Dock = DockStyle.Bottom,
-                            TextAlign = ContentAlignment.MiddleCenter,
-                            Padding = new Padding(0, 5, 0, 0)
-                        };
-                        cardPanel.Controls.Add(lblOwner);
+                    Label lblOwner = new Label
+                    {
+                        Text = "Owner: " + car.OwnerName,
+                        Dock = DockStyle.Bottom,
+                        TextAlign = ContentAlignment.MiddleCenter,
+                        Padding = new Padding(0, 5, 0, 0)
+                    };
+                    cardPanel.Controls.Add(lblOwner);
 
-                        Label lblBrand = new Label
-                        {
-                            Text = "Brand: " + car["brand_name"],
-                            Dock = DockStyle.Bottom,
-                            TextAlign = ContentAlignment.MiddleCenter,
-                            Padding = new Padding(0, 5, 0, 0)
-                        };
-                        cardPanel.Controls.Add(lblBrand);
+                    Label lblBrand = new Label
+                    {
+                        Text = "Brand: " + car.BrandName,
+                        Dock = DockStyle.Bottom,
+                        TextAlign = ContentAlignment.MiddleCenter,
+                        Padding = new Padding(0, 5, 0, 0)
+                    };
+                    cardPanel.Controls.Add(lblBrand);
 
-                        Label lblModel = new Label
-                        {
-                            Text = "Model: " + car["model"],
-                            Dock = DockStyle.Bottom,
-                            TextAlign = ContentAlignment.MiddleCenter,
-                            Padding = new Padding(0, 5, 0, 0)
-                        };
-                        cardPanel.Controls.Add(lblModel);
-                        cardPanel.Click += ShowVehicleDetails(int.Parse(car["vehicle_id"].ToString()));
-                        // Add the card to the grid
-                        carTableLayoutPanel.Controls.Add(cardPanel);
-                    }
+                    Label lblModel = new Label
+                    {
+                        Text = "Model: " + car.Model,
+                        Dock = DockStyle.Bottom,
+                        TextAlign = ContentAlignment.MiddleCenter,
+                        Padding = new Padding(0, 5, 0, 0)
+                    };
+                    cardPanel.Controls.Add(lblModel);
+                    cardPanel.Click += ShowVehicleDetails(car.VehicleId);
+                    // Add the card to the grid
+                    carTableLayoutPanel.Controls.Add(cardPanel);
                 }
-                else
-                {
-                    MessageBox.Show("Record not found!");
-                }
-
-                this.globalProcedure.sqlAdapter.Dispose();
-                this.globalProcedure.datBuyAndSell.Dispose();
-
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Record not found!");
             }
 
-
-            
+            this.globalProcedure.sqlAdapter.Dispose();
+            this.globalProcedure.datCarBuyAndSellMgr.Dispose();
 
             UpdatePaginationButtons();
+
         }
+
+
+
 
         private EventHandler ShowVehicleDetails(int vehicleId)
         {
             return (sender, e) =>
             {
-                // Get the vehicle ID from the card
-                // Open the vehicle details form
                 VehicleDetailsForm vehicleDetailsForm = new VehicleDetailsForm(vehicleId);
                 vehicleDetailsForm.Show();
-            };  
+            };
         }
 
         private void BtnAddVehicle_Click(object sender, EventArgs e)
@@ -210,7 +189,7 @@ namespace CarBuyAndSell
             lastPageBtn.Enabled = currentPage < totalPages;
 
             pageLabel.Text = $"Page {currentPage} of {totalPages}";
-           // pageSelector.Maximum = totalPages;
+            // pageSelector.Maximum = totalPages;
             //pageSelector.Value = currentPage;
         }
 

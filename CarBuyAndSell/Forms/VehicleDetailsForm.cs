@@ -1,4 +1,5 @@
-﻿using CarBuyAndSell.Properties;
+﻿using CarBuyAndSell.Models;
+using CarBuyAndSell.Properties;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -27,30 +28,15 @@ namespace CarBuyAndSell.Forms
 
         private void LoadVehicleDetails()
         {
-            try
-            {
-                MySqlCommand gProcCmd = globalProcedure.sqlCommand;
+            List<Vehicle> vehicles = globalProcedure.FncGetVehicles();
 
-                this.globalProcedure.sqlAdapter = new MySqlDataAdapter();
-                this.globalProcedure.datBuyAndSell = new DataTable();
-
-                gProcCmd.Parameters.Clear();
-                gProcCmd.CommandText = "procGetVehicleById";
-                gProcCmd.CommandType = CommandType.StoredProcedure;
-                gProcCmd.Parameters.AddWithValue("@p_vehicle_id", _vehicleId);
-                this.globalProcedure.sqlAdapter.SelectCommand = this.globalProcedure.sqlCommand;
-                this.globalProcedure.datBuyAndSell.Clear();
-                this.globalProcedure.sqlAdapter.Fill(this.globalProcedure.datBuyAndSell);
-
-                if (globalProcedure.datBuyAndSell.Rows.Count > 0)
+                if (vehicles.Count > 0)
                 {
-                    DataTable dataTable = globalProcedure.datBuyAndSell;
-
                     // Load the vehicle image
                     vehiclePictureBox.Image = Resources.DefaultVehicleImage;
 
                     // Set vehicle details
-                    lblBrandName.Text = $"Brand: {dataTable.Rows[0]["brand_name"].ToString()}";
+                    lblBrandName.Text = $"Brand: {vehic}";
                     lblModel.Text = $"Model: {dataTable.Rows[0]["brand_name"].ToString()}";
                     lblOwner.Text = $"Owner: {dataTable.Rows[0]["owner_name"].ToString()}";
                     lblMileage.Text = $"Mileage: {dataTable.Rows[0]["mileage"].ToString()} km";
@@ -58,19 +44,7 @@ namespace CarBuyAndSell.Forms
                     lblManufactureYear.Text = $"Manufacture Year: {dataTable.Rows[0]["manufacture_year"].ToString()}";
                     lblPlateNumber.Text = $"Plate Number: {dataTable.Rows[0]["plate_number"].ToString()}";
                 }
-                else
-                {
-                    MessageBox.Show("Record not found!");
-                }
-
-                this.globalProcedure.sqlAdapter.Dispose();
-                this.globalProcedure.datBuyAndSell.Dispose();
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+           
 
         }
     }
