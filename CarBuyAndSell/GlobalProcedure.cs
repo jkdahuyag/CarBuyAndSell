@@ -128,7 +128,7 @@ namespace CarBuyAndSell
                     var dataRow = this.datCarBuyAndSellMgr.Rows[row];
                     list.Add(new UserDto(
                         int.Parse(dataRow["user_id"].ToString()),
-                        dataRow["role"].ToString(),
+                        dataRow["role_name"].ToString(),
                         dataRow["first_name"].ToString(),
                         dataRow["last_name"].ToString(),
                         dataRow["address"].ToString(),
@@ -167,7 +167,7 @@ namespace CarBuyAndSell
                         var dataRow = this.datCarBuyAndSellMgr.Rows[row];
                         list.Add(new UserDto(
                         int.Parse(dataRow["user_id"].ToString()),
-                        dataRow["role"].ToString(),
+                        dataRow["role_name"].ToString(),
                         dataRow["first_name"].ToString(),
                         dataRow["last_name"].ToString(),
                         dataRow["address"].ToString(),
@@ -209,7 +209,7 @@ namespace CarBuyAndSell
                         var dataRow = this.datCarBuyAndSellMgr.Rows[row];
                         list.Add(new UserDto(
                             int.Parse(dataRow["user_id"].ToString()),
-                            dataRow["role"].ToString(),
+                            dataRow["role_name"].ToString(),
                             dataRow["first_name"].ToString(),
                             dataRow["last_name"].ToString(),
                             dataRow["address"].ToString(),
@@ -307,6 +307,7 @@ namespace CarBuyAndSell
 
             Dictionary<string, object> parameters = new Dictionary<string, object>
             {
+                { "@p_user_id", LoginInfo.UserId },
                 { "@p_page", pageNum },
                 { "@p_page_size", pageSize }
             };
@@ -463,6 +464,7 @@ namespace CarBuyAndSell
 
             Dictionary<string, object> parameters = new Dictionary<string, object>
             {
+                { "@p_user_id", LoginInfo.UserId },
                 { "@p_page", pageNum },
                 { "@p_page_size", pageSize }
             };
@@ -641,6 +643,7 @@ namespace CarBuyAndSell
 
             Dictionary<string, object> parameters = new Dictionary<string, object>
             {
+                { "@p_user_id", LoginInfo.UserId },
                 { "@p_page", pageNum },
                 { "@p_page_size", pageSize }
             };
@@ -768,6 +771,7 @@ namespace CarBuyAndSell
 
             Dictionary<string, object> parameters = new Dictionary<string, object>
             {
+                { "@p_user_id", LoginInfo.UserId },
                 { "@p_page", pageNum },
                 { "@p_page_size", pageSize }
             };

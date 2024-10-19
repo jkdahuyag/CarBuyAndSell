@@ -41,6 +41,12 @@ namespace CarBuyAndSell
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.tblLayoutMainDivider = new System.Windows.Forms.TableLayoutPanel();
+            this.pnlHeader = new Bunifu.UI.WinForms.BunifuPanel();
+            this.tblLayoutContentSide = new System.Windows.Forms.TableLayoutPanel();
+            this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.lblViewName = new Bunifu.UI.WinForms.BunifuLabel();
+            this.pnlUserControl = new Bunifu.UI.WinForms.BunifuPanel();
+            this.tblLayoutSideNavPartition = new System.Windows.Forms.TableLayoutPanel();
             this.pnlSideBar = new Bunifu.UI.WinForms.BunifuPanel();
             this.btnUsers = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnTransactions = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -51,18 +57,17 @@ namespace CarBuyAndSell
             this.btnDashboard = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.pnlLogo = new Bunifu.UI.WinForms.BunifuPanel();
             this.lblAppName = new Bunifu.UI.WinForms.BunifuLabel();
-            this.pnlHeader = new Bunifu.UI.WinForms.BunifuPanel();
-            this.tblLayoutContentSide = new System.Windows.Forms.TableLayoutPanel();
-            this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.lblViewName = new Bunifu.UI.WinForms.BunifuLabel();
-            this.pnlUserControl = new Bunifu.UI.WinForms.BunifuPanel();
+            this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.lblHeader = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuShadowPanel1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.tblLayoutMainDivider.SuspendLayout();
-            this.pnlSideBar.SuspendLayout();
-            this.pnlLogo.SuspendLayout();
             this.pnlHeader.SuspendLayout();
             this.tblLayoutContentSide.SuspendLayout();
             this.bunifuPanel2.SuspendLayout();
+            this.pnlUserControl.SuspendLayout();
+            this.tblLayoutSideNavPartition.SuspendLayout();
+            this.pnlSideBar.SuspendLayout();
+            this.pnlLogo.SuspendLayout();
             this.SuspendLayout();
             // 
             // tblLayoutMainDivider
@@ -70,8 +75,8 @@ namespace CarBuyAndSell
             this.tblLayoutMainDivider.ColumnCount = 2;
             this.tblLayoutMainDivider.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 277F));
             this.tblLayoutMainDivider.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tblLayoutMainDivider.Controls.Add(this.pnlSideBar, 0, 0);
             this.tblLayoutMainDivider.Controls.Add(this.pnlHeader, 1, 0);
+            this.tblLayoutMainDivider.Controls.Add(this.tblLayoutSideNavPartition, 0, 0);
             this.tblLayoutMainDivider.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblLayoutMainDivider.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tblLayoutMainDivider.Location = new System.Drawing.Point(0, 0);
@@ -81,6 +86,104 @@ namespace CarBuyAndSell
             this.tblLayoutMainDivider.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 66F));
             this.tblLayoutMainDivider.Size = new System.Drawing.Size(982, 578);
             this.tblLayoutMainDivider.TabIndex = 0;
+            // 
+            // pnlHeader
+            // 
+            this.pnlHeader.BackgroundColor = System.Drawing.Color.MintCream;
+            this.pnlHeader.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlHeader.BackgroundImage")));
+            this.pnlHeader.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlHeader.BorderColor = System.Drawing.Color.Transparent;
+            this.pnlHeader.BorderRadius = 0;
+            this.pnlHeader.BorderThickness = 0;
+            this.pnlHeader.Controls.Add(this.tblLayoutContentSide);
+            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlHeader.Location = new System.Drawing.Point(277, 0);
+            this.pnlHeader.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlHeader.Name = "pnlHeader";
+            this.pnlHeader.ShowBorders = true;
+            this.pnlHeader.Size = new System.Drawing.Size(705, 578);
+            this.pnlHeader.TabIndex = 1;
+            // 
+            // tblLayoutContentSide
+            // 
+            this.tblLayoutContentSide.ColumnCount = 1;
+            this.tblLayoutContentSide.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tblLayoutContentSide.Controls.Add(this.bunifuPanel2, 0, 0);
+            this.tblLayoutContentSide.Controls.Add(this.pnlUserControl, 0, 1);
+            this.tblLayoutContentSide.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tblLayoutContentSide.Location = new System.Drawing.Point(0, 0);
+            this.tblLayoutContentSide.Margin = new System.Windows.Forms.Padding(0);
+            this.tblLayoutContentSide.Name = "tblLayoutContentSide";
+            this.tblLayoutContentSide.RowCount = 2;
+            this.tblLayoutContentSide.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tblLayoutContentSide.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tblLayoutContentSide.Size = new System.Drawing.Size(705, 578);
+            this.tblLayoutContentSide.TabIndex = 0;
+            // 
+            // bunifuPanel2
+            // 
+            this.bunifuPanel2.BackgroundColor = System.Drawing.Color.Transparent;
+            this.bunifuPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel2.BackgroundImage")));
+            this.bunifuPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuPanel2.BorderColor = System.Drawing.Color.Transparent;
+            this.bunifuPanel2.BorderRadius = 0;
+            this.bunifuPanel2.BorderThickness = 0;
+            this.bunifuPanel2.Controls.Add(this.lblViewName);
+            this.bunifuPanel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bunifuPanel2.Location = new System.Drawing.Point(0, 0);
+            this.bunifuPanel2.Margin = new System.Windows.Forms.Padding(0);
+            this.bunifuPanel2.Name = "bunifuPanel2";
+            this.bunifuPanel2.ShowBorders = true;
+            this.bunifuPanel2.Size = new System.Drawing.Size(705, 78);
+            this.bunifuPanel2.TabIndex = 2;
+            // 
+            // lblViewName
+            // 
+            this.lblViewName.AllowParentOverrides = false;
+            this.lblViewName.AutoEllipsis = false;
+            this.lblViewName.CursorType = null;
+            this.lblViewName.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblViewName.Location = new System.Drawing.Point(40, 20);
+            this.lblViewName.Name = "lblViewName";
+            this.lblViewName.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblViewName.Size = new System.Drawing.Size(85, 29);
+            this.lblViewName.TabIndex = 0;
+            this.lblViewName.Text = "Market";
+            this.lblViewName.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblViewName.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // pnlUserControl
+            // 
+            this.pnlUserControl.BackgroundColor = System.Drawing.Color.Transparent;
+            this.pnlUserControl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlUserControl.BackgroundImage")));
+            this.pnlUserControl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlUserControl.BorderColor = System.Drawing.Color.Transparent;
+            this.pnlUserControl.BorderRadius = 0;
+            this.pnlUserControl.BorderThickness = 0;
+            this.pnlUserControl.Controls.Add(this.bunifuShadowPanel1);
+            this.pnlUserControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlUserControl.Location = new System.Drawing.Point(40, 83);
+            this.pnlUserControl.Margin = new System.Windows.Forms.Padding(40, 5, 40, 15);
+            this.pnlUserControl.Name = "pnlUserControl";
+            this.pnlUserControl.ShowBorders = true;
+            this.pnlUserControl.Size = new System.Drawing.Size(625, 480);
+            this.pnlUserControl.TabIndex = 3;
+            // 
+            // tblLayoutSideNavPartition
+            // 
+            this.tblLayoutSideNavPartition.ColumnCount = 1;
+            this.tblLayoutSideNavPartition.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tblLayoutSideNavPartition.Controls.Add(this.pnlSideBar, 0, 0);
+            this.tblLayoutSideNavPartition.Controls.Add(this.bunifuPanel1, 0, 1);
+            this.tblLayoutSideNavPartition.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tblLayoutSideNavPartition.Location = new System.Drawing.Point(0, 0);
+            this.tblLayoutSideNavPartition.Margin = new System.Windows.Forms.Padding(0);
+            this.tblLayoutSideNavPartition.Name = "tblLayoutSideNavPartition";
+            this.tblLayoutSideNavPartition.RowCount = 2;
+            this.tblLayoutSideNavPartition.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tblLayoutSideNavPartition.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tblLayoutSideNavPartition.Size = new System.Drawing.Size(277, 578);
+            this.tblLayoutSideNavPartition.TabIndex = 2;
             // 
             // pnlSideBar
             // 
@@ -102,10 +205,10 @@ namespace CarBuyAndSell
             this.pnlSideBar.Location = new System.Drawing.Point(0, 0);
             this.pnlSideBar.Margin = new System.Windows.Forms.Padding(0);
             this.pnlSideBar.Name = "pnlSideBar";
-            this.pnlSideBar.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.pnlSideBar.Padding = new System.Windows.Forms.Padding(20, 20, 20, 0);
             this.pnlSideBar.ShowBorders = true;
-            this.pnlSideBar.Size = new System.Drawing.Size(277, 578);
-            this.pnlSideBar.TabIndex = 0;
+            this.pnlSideBar.Size = new System.Drawing.Size(277, 498);
+            this.pnlSideBar.TabIndex = 1;
             // 
             // btnUsers
             // 
@@ -157,7 +260,8 @@ namespace CarBuyAndSell
             this.btnUsers.IdleIconLeftImage = global::CarBuyAndSell.Properties.Resources.group;
             this.btnUsers.IdleIconRightImage = null;
             this.btnUsers.IndicateFocus = false;
-            this.btnUsers.Location = new System.Drawing.Point(20, 388);
+            this.btnUsers.Location = new System.Drawing.Point(20, 408);
+            this.btnUsers.Margin = new System.Windows.Forms.Padding(5);
             this.btnUsers.Name = "btnUsers";
             this.btnUsers.OnDisabledState.BorderColor = System.Drawing.Color.Transparent;
             this.btnUsers.OnDisabledState.BorderRadius = 0;
@@ -171,8 +275,8 @@ namespace CarBuyAndSell
             this.btnUsers.onHoverState.BorderRadius = 0;
             this.btnUsers.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnUsers.onHoverState.BorderThickness = 0;
-            this.btnUsers.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
-            this.btnUsers.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnUsers.onHoverState.FillColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnUsers.onHoverState.ForeColor = System.Drawing.SystemColors.MenuText;
             this.btnUsers.onHoverState.IconLeftImage = null;
             this.btnUsers.onHoverState.IconRightImage = null;
             this.btnUsers.OnIdleState.BorderColor = System.Drawing.Color.Transparent;
@@ -187,7 +291,7 @@ namespace CarBuyAndSell
             this.btnUsers.OnPressedState.BorderRadius = 0;
             this.btnUsers.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnUsers.OnPressedState.BorderThickness = 0;
-            this.btnUsers.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnUsers.OnPressedState.FillColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnUsers.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnUsers.OnPressedState.IconLeftImage = null;
             this.btnUsers.OnPressedState.IconRightImage = null;
@@ -249,7 +353,8 @@ namespace CarBuyAndSell
             this.btnTransactions.IdleIconLeftImage = global::CarBuyAndSell.Properties.Resources.transfer;
             this.btnTransactions.IdleIconRightImage = null;
             this.btnTransactions.IndicateFocus = false;
-            this.btnTransactions.Location = new System.Drawing.Point(20, 333);
+            this.btnTransactions.Location = new System.Drawing.Point(20, 353);
+            this.btnTransactions.Margin = new System.Windows.Forms.Padding(5);
             this.btnTransactions.Name = "btnTransactions";
             this.btnTransactions.OnDisabledState.BorderColor = System.Drawing.Color.Transparent;
             this.btnTransactions.OnDisabledState.BorderRadius = 0;
@@ -263,8 +368,8 @@ namespace CarBuyAndSell
             this.btnTransactions.onHoverState.BorderRadius = 0;
             this.btnTransactions.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnTransactions.onHoverState.BorderThickness = 0;
-            this.btnTransactions.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
-            this.btnTransactions.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnTransactions.onHoverState.FillColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnTransactions.onHoverState.ForeColor = System.Drawing.SystemColors.MenuText;
             this.btnTransactions.onHoverState.IconLeftImage = null;
             this.btnTransactions.onHoverState.IconRightImage = null;
             this.btnTransactions.OnIdleState.BorderColor = System.Drawing.Color.Transparent;
@@ -279,7 +384,7 @@ namespace CarBuyAndSell
             this.btnTransactions.OnPressedState.BorderRadius = 0;
             this.btnTransactions.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnTransactions.OnPressedState.BorderThickness = 0;
-            this.btnTransactions.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnTransactions.OnPressedState.FillColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnTransactions.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnTransactions.OnPressedState.IconLeftImage = null;
             this.btnTransactions.OnPressedState.IconRightImage = null;
@@ -341,7 +446,8 @@ namespace CarBuyAndSell
             this.btnBids.IdleIconLeftImage = global::CarBuyAndSell.Properties.Resources.bid;
             this.btnBids.IdleIconRightImage = null;
             this.btnBids.IndicateFocus = false;
-            this.btnBids.Location = new System.Drawing.Point(20, 278);
+            this.btnBids.Location = new System.Drawing.Point(20, 298);
+            this.btnBids.Margin = new System.Windows.Forms.Padding(5);
             this.btnBids.Name = "btnBids";
             this.btnBids.OnDisabledState.BorderColor = System.Drawing.Color.Transparent;
             this.btnBids.OnDisabledState.BorderRadius = 0;
@@ -355,8 +461,8 @@ namespace CarBuyAndSell
             this.btnBids.onHoverState.BorderRadius = 0;
             this.btnBids.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnBids.onHoverState.BorderThickness = 0;
-            this.btnBids.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
-            this.btnBids.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnBids.onHoverState.FillColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnBids.onHoverState.ForeColor = System.Drawing.SystemColors.MenuText;
             this.btnBids.onHoverState.IconLeftImage = null;
             this.btnBids.onHoverState.IconRightImage = null;
             this.btnBids.OnIdleState.BorderColor = System.Drawing.Color.Transparent;
@@ -371,7 +477,7 @@ namespace CarBuyAndSell
             this.btnBids.OnPressedState.BorderRadius = 0;
             this.btnBids.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnBids.OnPressedState.BorderThickness = 0;
-            this.btnBids.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnBids.OnPressedState.FillColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnBids.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnBids.OnPressedState.IconLeftImage = null;
             this.btnBids.OnPressedState.IconRightImage = null;
@@ -433,7 +539,8 @@ namespace CarBuyAndSell
             this.btnListings.IdleIconLeftImage = global::CarBuyAndSell.Properties.Resources.list;
             this.btnListings.IdleIconRightImage = null;
             this.btnListings.IndicateFocus = false;
-            this.btnListings.Location = new System.Drawing.Point(20, 223);
+            this.btnListings.Location = new System.Drawing.Point(20, 243);
+            this.btnListings.Margin = new System.Windows.Forms.Padding(5);
             this.btnListings.Name = "btnListings";
             this.btnListings.OnDisabledState.BorderColor = System.Drawing.Color.Transparent;
             this.btnListings.OnDisabledState.BorderRadius = 0;
@@ -447,8 +554,8 @@ namespace CarBuyAndSell
             this.btnListings.onHoverState.BorderRadius = 0;
             this.btnListings.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnListings.onHoverState.BorderThickness = 0;
-            this.btnListings.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
-            this.btnListings.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnListings.onHoverState.FillColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnListings.onHoverState.ForeColor = System.Drawing.SystemColors.MenuText;
             this.btnListings.onHoverState.IconLeftImage = null;
             this.btnListings.onHoverState.IconRightImage = null;
             this.btnListings.OnIdleState.BorderColor = System.Drawing.Color.Transparent;
@@ -463,7 +570,7 @@ namespace CarBuyAndSell
             this.btnListings.OnPressedState.BorderRadius = 0;
             this.btnListings.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnListings.OnPressedState.BorderThickness = 0;
-            this.btnListings.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnListings.OnPressedState.FillColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnListings.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnListings.OnPressedState.IconLeftImage = null;
             this.btnListings.OnPressedState.IconRightImage = null;
@@ -525,7 +632,8 @@ namespace CarBuyAndSell
             this.btnVehicles.IdleIconLeftImage = global::CarBuyAndSell.Properties.Resources.car;
             this.btnVehicles.IdleIconRightImage = null;
             this.btnVehicles.IndicateFocus = false;
-            this.btnVehicles.Location = new System.Drawing.Point(20, 168);
+            this.btnVehicles.Location = new System.Drawing.Point(20, 188);
+            this.btnVehicles.Margin = new System.Windows.Forms.Padding(5);
             this.btnVehicles.Name = "btnVehicles";
             this.btnVehicles.OnDisabledState.BorderColor = System.Drawing.Color.Transparent;
             this.btnVehicles.OnDisabledState.BorderRadius = 0;
@@ -539,8 +647,8 @@ namespace CarBuyAndSell
             this.btnVehicles.onHoverState.BorderRadius = 0;
             this.btnVehicles.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnVehicles.onHoverState.BorderThickness = 0;
-            this.btnVehicles.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
-            this.btnVehicles.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnVehicles.onHoverState.FillColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnVehicles.onHoverState.ForeColor = System.Drawing.SystemColors.MenuText;
             this.btnVehicles.onHoverState.IconLeftImage = null;
             this.btnVehicles.onHoverState.IconRightImage = null;
             this.btnVehicles.OnIdleState.BorderColor = System.Drawing.Color.Transparent;
@@ -555,7 +663,7 @@ namespace CarBuyAndSell
             this.btnVehicles.OnPressedState.BorderRadius = 0;
             this.btnVehicles.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnVehicles.OnPressedState.BorderThickness = 0;
-            this.btnVehicles.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnVehicles.OnPressedState.FillColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnVehicles.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnVehicles.OnPressedState.IconLeftImage = null;
             this.btnVehicles.OnPressedState.IconRightImage = null;
@@ -617,7 +725,8 @@ namespace CarBuyAndSell
             this.btnMarket.IdleIconLeftImage = global::CarBuyAndSell.Properties.Resources.shopping_cart;
             this.btnMarket.IdleIconRightImage = null;
             this.btnMarket.IndicateFocus = false;
-            this.btnMarket.Location = new System.Drawing.Point(20, 113);
+            this.btnMarket.Location = new System.Drawing.Point(20, 133);
+            this.btnMarket.Margin = new System.Windows.Forms.Padding(5);
             this.btnMarket.Name = "btnMarket";
             this.btnMarket.OnDisabledState.BorderColor = System.Drawing.Color.Transparent;
             this.btnMarket.OnDisabledState.BorderRadius = 0;
@@ -631,8 +740,8 @@ namespace CarBuyAndSell
             this.btnMarket.onHoverState.BorderRadius = 0;
             this.btnMarket.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnMarket.onHoverState.BorderThickness = 0;
-            this.btnMarket.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
-            this.btnMarket.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnMarket.onHoverState.FillColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnMarket.onHoverState.ForeColor = System.Drawing.SystemColors.MenuText;
             this.btnMarket.onHoverState.IconLeftImage = null;
             this.btnMarket.onHoverState.IconRightImage = null;
             this.btnMarket.OnIdleState.BorderColor = System.Drawing.Color.Transparent;
@@ -647,7 +756,7 @@ namespace CarBuyAndSell
             this.btnMarket.OnPressedState.BorderRadius = 0;
             this.btnMarket.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnMarket.OnPressedState.BorderThickness = 0;
-            this.btnMarket.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnMarket.OnPressedState.FillColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnMarket.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnMarket.OnPressedState.IconLeftImage = null;
             this.btnMarket.OnPressedState.IconRightImage = null;
@@ -709,7 +818,8 @@ namespace CarBuyAndSell
             this.btnDashboard.IdleIconLeftImage = global::CarBuyAndSell.Properties.Resources.monitor;
             this.btnDashboard.IdleIconRightImage = null;
             this.btnDashboard.IndicateFocus = false;
-            this.btnDashboard.Location = new System.Drawing.Point(20, 58);
+            this.btnDashboard.Location = new System.Drawing.Point(20, 78);
+            this.btnDashboard.Margin = new System.Windows.Forms.Padding(5);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.OnDisabledState.BorderColor = System.Drawing.Color.Transparent;
             this.btnDashboard.OnDisabledState.BorderRadius = 0;
@@ -723,8 +833,8 @@ namespace CarBuyAndSell
             this.btnDashboard.onHoverState.BorderRadius = 0;
             this.btnDashboard.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnDashboard.onHoverState.BorderThickness = 0;
-            this.btnDashboard.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
-            this.btnDashboard.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnDashboard.onHoverState.FillColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnDashboard.onHoverState.ForeColor = System.Drawing.SystemColors.MenuText;
             this.btnDashboard.onHoverState.IconLeftImage = null;
             this.btnDashboard.onHoverState.IconRightImage = null;
             this.btnDashboard.OnIdleState.BorderColor = System.Drawing.Color.Transparent;
@@ -739,7 +849,7 @@ namespace CarBuyAndSell
             this.btnDashboard.OnPressedState.BorderRadius = 0;
             this.btnDashboard.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnDashboard.OnPressedState.BorderThickness = 0;
-            this.btnDashboard.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnDashboard.OnPressedState.FillColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnDashboard.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnDashboard.OnPressedState.IconLeftImage = null;
             this.btnDashboard.OnPressedState.IconRightImage = null;
@@ -761,7 +871,7 @@ namespace CarBuyAndSell
             this.pnlLogo.BorderThickness = 0;
             this.pnlLogo.Controls.Add(this.lblAppName);
             this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlLogo.Location = new System.Drawing.Point(20, 0);
+            this.pnlLogo.Location = new System.Drawing.Point(20, 20);
             this.pnlLogo.Margin = new System.Windows.Forms.Padding(0);
             this.pnlLogo.Name = "pnlLogo";
             this.pnlLogo.ShowBorders = true;
@@ -774,97 +884,31 @@ namespace CarBuyAndSell
             this.lblAppName.AutoEllipsis = false;
             this.lblAppName.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblAppName.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lblAppName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblAppName.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAppName.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAppName.Location = new System.Drawing.Point(0, 0);
             this.lblAppName.Name = "lblAppName";
             this.lblAppName.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblAppName.Size = new System.Drawing.Size(194, 29);
+            this.lblAppName.Size = new System.Drawing.Size(128, 19);
             this.lblAppName.TabIndex = 0;
             this.lblAppName.Text = "Cargadong Car";
             this.lblAppName.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblAppName.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            this.lblAppName.Click += new System.EventHandler(this.lblAppName_Click);
             // 
-            // pnlHeader
+            // bunifuPanel1
             // 
-            this.pnlHeader.BackgroundColor = System.Drawing.Color.MintCream;
-            this.pnlHeader.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlHeader.BackgroundImage")));
-            this.pnlHeader.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlHeader.BorderColor = System.Drawing.Color.Transparent;
-            this.pnlHeader.BorderRadius = 0;
-            this.pnlHeader.BorderThickness = 0;
-            this.pnlHeader.Controls.Add(this.tblLayoutContentSide);
-            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlHeader.Location = new System.Drawing.Point(277, 0);
-            this.pnlHeader.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.ShowBorders = true;
-            this.pnlHeader.Size = new System.Drawing.Size(705, 578);
-            this.pnlHeader.TabIndex = 1;
-            // 
-            // tblLayoutContentSide
-            // 
-            this.tblLayoutContentSide.ColumnCount = 1;
-            this.tblLayoutContentSide.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tblLayoutContentSide.Controls.Add(this.bunifuPanel2, 0, 0);
-            this.tblLayoutContentSide.Controls.Add(this.pnlUserControl, 0, 1);
-            this.tblLayoutContentSide.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tblLayoutContentSide.Location = new System.Drawing.Point(0, 0);
-            this.tblLayoutContentSide.Margin = new System.Windows.Forms.Padding(0);
-            this.tblLayoutContentSide.Name = "tblLayoutContentSide";
-            this.tblLayoutContentSide.RowCount = 2;
-            this.tblLayoutContentSide.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tblLayoutContentSide.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tblLayoutContentSide.Size = new System.Drawing.Size(705, 578);
-            this.tblLayoutContentSide.TabIndex = 0;
-            // 
-            // bunifuPanel2
-            // 
-            this.bunifuPanel2.BackgroundColor = System.Drawing.Color.Transparent;
-            this.bunifuPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel2.BackgroundImage")));
-            this.bunifuPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel2.BorderColor = System.Drawing.Color.Transparent;
-            this.bunifuPanel2.BorderRadius = 0;
-            this.bunifuPanel2.BorderThickness = 0;
-            this.bunifuPanel2.Controls.Add(this.lblViewName);
-            this.bunifuPanel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuPanel2.Location = new System.Drawing.Point(0, 0);
-            this.bunifuPanel2.Margin = new System.Windows.Forms.Padding(0);
-            this.bunifuPanel2.Name = "bunifuPanel2";
-            this.bunifuPanel2.ShowBorders = true;
-            this.bunifuPanel2.Size = new System.Drawing.Size(705, 58);
-            this.bunifuPanel2.TabIndex = 2;
-            // 
-            // lblViewName
-            // 
-            this.lblViewName.AllowParentOverrides = false;
-            this.lblViewName.AutoEllipsis = false;
-            this.lblViewName.CursorType = null;
-            this.lblViewName.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblViewName.Location = new System.Drawing.Point(86, 15);
-            this.lblViewName.Name = "lblViewName";
-            this.lblViewName.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblViewName.Size = new System.Drawing.Size(85, 29);
-            this.lblViewName.TabIndex = 0;
-            this.lblViewName.Text = "Market";
-            this.lblViewName.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblViewName.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // pnlUserControl
-            // 
-            this.pnlUserControl.BackgroundColor = System.Drawing.Color.Transparent;
-            this.pnlUserControl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlUserControl.BackgroundImage")));
-            this.pnlUserControl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlUserControl.BorderColor = System.Drawing.Color.Transparent;
-            this.pnlUserControl.BorderRadius = 0;
-            this.pnlUserControl.BorderThickness = 0;
-            this.pnlUserControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlUserControl.Location = new System.Drawing.Point(3, 61);
-            this.pnlUserControl.Name = "pnlUserControl";
-            this.pnlUserControl.ShowBorders = true;
-            this.pnlUserControl.Size = new System.Drawing.Size(699, 514);
-            this.pnlUserControl.TabIndex = 3;
+            this.bunifuPanel1.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
+            this.bunifuPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel1.BackgroundImage")));
+            this.bunifuPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
+            this.bunifuPanel1.BorderRadius = 3;
+            this.bunifuPanel1.BorderThickness = 1;
+            this.bunifuPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bunifuPanel1.Location = new System.Drawing.Point(0, 498);
+            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(0);
+            this.bunifuPanel1.Name = "bunifuPanel1";
+            this.bunifuPanel1.ShowBorders = true;
+            this.bunifuPanel1.Size = new System.Drawing.Size(277, 80);
+            this.bunifuPanel1.TabIndex = 2;
             // 
             // lblHeader
             // 
@@ -881,21 +925,44 @@ namespace CarBuyAndSell
             this.lblHeader.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblHeader.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
+            // bunifuShadowPanel1
+            // 
+            this.bunifuShadowPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuShadowPanel1.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.bunifuShadowPanel1.BorderRadius = 1;
+            this.bunifuShadowPanel1.BorderThickness = 1;
+            this.bunifuShadowPanel1.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
+            this.bunifuShadowPanel1.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
+            this.bunifuShadowPanel1.Location = new System.Drawing.Point(3, 50);
+            this.bunifuShadowPanel1.Name = "bunifuShadowPanel1";
+            this.bunifuShadowPanel1.PanelColor = System.Drawing.Color.WhiteSmoke;
+            this.bunifuShadowPanel1.PanelColor2 = System.Drawing.Color.WhiteSmoke;
+            this.bunifuShadowPanel1.ShadowColor = System.Drawing.Color.DarkGray;
+            this.bunifuShadowPanel1.ShadowDept = 2;
+            this.bunifuShadowPanel1.ShadowDepth = 5;
+            this.bunifuShadowPanel1.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
+            this.bunifuShadowPanel1.ShadowTopLeftVisible = false;
+            this.bunifuShadowPanel1.Size = new System.Drawing.Size(300, 230);
+            this.bunifuShadowPanel1.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
+            this.bunifuShadowPanel1.TabIndex = 0;
+            // 
             // MainForm
             // 
             this.ClientSize = new System.Drawing.Size(982, 578);
             this.Controls.Add(this.tblLayoutMainDivider);
             this.Name = "MainForm";
-            this.Text = "Car Selling App";
+            this.Text = "Cargadong Car";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.tblLayoutMainDivider.ResumeLayout(false);
-            this.pnlSideBar.ResumeLayout(false);
-            this.pnlLogo.ResumeLayout(false);
-            this.pnlLogo.PerformLayout();
             this.pnlHeader.ResumeLayout(false);
             this.tblLayoutContentSide.ResumeLayout(false);
             this.bunifuPanel2.ResumeLayout(false);
             this.bunifuPanel2.PerformLayout();
+            this.pnlUserControl.ResumeLayout(false);
+            this.tblLayoutSideNavPartition.ResumeLayout(false);
+            this.pnlSideBar.ResumeLayout(false);
+            this.pnlLogo.ResumeLayout(false);
+            this.pnlLogo.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -907,22 +974,25 @@ namespace CarBuyAndSell
         private Button nextPageBtn;
         private TableLayoutPanel paginationLayout;
         private TableLayoutPanel tblLayoutMainDivider;
-        private Bunifu.UI.WinForms.BunifuPanel pnlSideBar;
         private Bunifu.UI.WinForms.BunifuPanel pnlHeader;
-        private Bunifu.UI.WinForms.BunifuPanel pnlLogo;
-        private Bunifu.UI.WinForms.BunifuLabel lblAppName;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnDashboard;
+        private TableLayoutPanel tblLayoutContentSide;
+        private Bunifu.UI.WinForms.BunifuLabel lblHeader;
+        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel2;
+        private Bunifu.UI.WinForms.BunifuLabel lblViewName;
+        private Bunifu.UI.WinForms.BunifuPanel pnlUserControl;
+        private TableLayoutPanel tblLayoutSideNavPartition;
+        private Bunifu.UI.WinForms.BunifuPanel pnlSideBar;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnUsers;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnTransactions;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnBids;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnListings;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnVehicles;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnMarket;
-        private TableLayoutPanel tblLayoutContentSide;
-        private Bunifu.UI.WinForms.BunifuLabel lblHeader;
-        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel2;
-        private Bunifu.UI.WinForms.BunifuLabel lblViewName;
-        private Bunifu.UI.WinForms.BunifuPanel pnlUserControl;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnDashboard;
+        private Bunifu.UI.WinForms.BunifuPanel pnlLogo;
+        private Bunifu.UI.WinForms.BunifuLabel lblAppName;
+        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
+        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel1;
     }
 }
 

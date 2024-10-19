@@ -23,68 +23,82 @@ namespace CarBuyAndSell
 
         private void ShowUserListView()
         {
-            Panel contentPanel = this.Controls.Find("contentPanel", true)[0] as Panel;
-
-            ClearAndDisposeControls(contentPanel);
+            Panel pnlUserControl = this.Controls.Find("pnlUserControl", true)[0] as Panel;
+            lblHeader.Text = "User List";
+            ClearAndDisposeControls(pnlUserControl);
 
             UsersViewControl userListView = new UsersViewControl();
             userListView.Dock = DockStyle.Fill;
-            contentPanel.Controls.Add(userListView);
+            pnlUserControl.Controls.Add(userListView);
         }
 
         private void ShowVehiclesView()
         {
-            Panel contentPanel = this.Controls.Find("contentPanel", true)[0] as Panel;
+            Panel pnlUserControl = this.Controls.Find("pnlUserControl", true)[0] as Panel;
+            // if admin 
+            // lblHeader.Text = "Vehicles";
+            // else
+            lblHeader.Text = "My Vehicles";
 
-            ClearAndDisposeControls(contentPanel);
+            ClearAndDisposeControls(pnlUserControl);
 
             VehiclesViewControl buyView = new VehiclesViewControl();
             buyView.Dock = DockStyle.Fill;
-            contentPanel.Controls.Add(buyView);
+            pnlUserControl.Controls.Add(buyView);
         }
 
         private void ShowListingView()
         {
-            Panel contentPanel = this.Controls.Find("contentPanel", true)[0] as Panel;
+            Panel pnlUserControl = this.Controls.Find("pnlUserControl", true)[0] as Panel;
+            // if admin 
+            // lblHeader.Text = "Listings";
+            // else
+            lblHeader.Text = "My Listings";
 
-            ClearAndDisposeControls(contentPanel);
+            ClearAndDisposeControls(pnlUserControl);
 
             ListingViewControl listingView = new ListingViewControl();
             listingView.Dock = DockStyle.Fill;
-            contentPanel.Controls.Add(listingView);
+            pnlUserControl.Controls.Add(listingView);
         }
 
         private void ShowAdminDashboardView()
         {
-            Panel contentPanel = this.Controls.Find("contentPanel", true)[0] as Panel;
+            Panel pnlUserControl = this.Controls.Find("pnlUserControl", true)[0] as Panel;
+            lblHeader.Text = "Dashboard";
 
-            ClearAndDisposeControls(contentPanel);
+            ClearAndDisposeControls(pnlUserControl);
 
             DashboardViewControl dashboardView = new DashboardViewControl();
             dashboardView.Dock = DockStyle.Fill;
-            contentPanel.Controls.Add(dashboardView);
+            pnlUserControl.Controls.Add(dashboardView);
         }
 
         private void ShowMarketView()
         {
-            Panel contentPanel = this.Controls.Find("contentPanel", true)[0] as Panel;
+            Panel pnlUserControl = this.Controls.Find("pnlUserControl", true)[0] as Panel;
+            lblHeader.Text = "Market";
 
-            ClearAndDisposeControls(contentPanel);
+            ClearAndDisposeControls(pnlUserControl);
 
             MarketViewControl marketView = new MarketViewControl();
             marketView.Dock = DockStyle.Fill;
-            contentPanel.Controls.Add(marketView);
+            pnlUserControl.Controls.Add(marketView);
         }
 
         private void ShowBidView()
         {
-            Panel contentPanel = this.Controls.Find("contentPanel", true)[0] as Panel;
+            Panel pnlUserControl = this.Controls.Find("pnlUserControl", true)[0] as Panel;
+            // if admin 
+            // lblHeader.Text = "Bids";
+            // else
+            lblHeader.Text = "My Bids";
 
-            ClearAndDisposeControls(contentPanel);
+            ClearAndDisposeControls(pnlUserControl);
 
             BidsViewControl bidView = new BidsViewControl();
             bidView.Dock = DockStyle.Fill;
-            contentPanel.Controls.Add(bidView);
+            pnlUserControl.Controls.Add(bidView);
         }
 
         private void BtnMarket_Click(object sender, EventArgs e)
