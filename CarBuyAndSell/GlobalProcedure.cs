@@ -843,7 +843,7 @@ namespace CarBuyAndSell
         // -----------------------------------
         // Listings
         // -----------------------------------
-        public List<ListingDto> ProcGetListings(int pageNum, int pageSize)
+        public List<ListingDto> ProcGetListings(int pageNum, int pageSize, bool isMarket)
         {
             List<ListingDto> list = new List<ListingDto>();
 
@@ -853,6 +853,12 @@ namespace CarBuyAndSell
                 { "@p_page", pageNum },
                 { "@p_page_size", pageSize }
             };
+
+            if (isMarket)
+            {
+                parameters["@p_user_id"] = 1;
+            }
+
             ExecuteStoredProcedure("procGetAllListings", parameters);
 
             if (this.datCarBuyAndSellMgr.Rows.Count > 0)

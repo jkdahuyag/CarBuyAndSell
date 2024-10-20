@@ -169,11 +169,11 @@ namespace CarBuyAndSell
             this.pnlUserControl.Controls.Add(this.bunifuShadowPanel2);
             this.pnlUserControl.Controls.Add(this.bunifuShadowPanel1);
             this.pnlUserControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlUserControl.Location = new System.Drawing.Point(40, 83);
-            this.pnlUserControl.Margin = new System.Windows.Forms.Padding(40, 5, 40, 15);
+            this.pnlUserControl.Location = new System.Drawing.Point(20, 83);
+            this.pnlUserControl.Margin = new System.Windows.Forms.Padding(20, 5, 20, 15);
             this.pnlUserControl.Name = "pnlUserControl";
             this.pnlUserControl.ShowBorders = true;
-            this.pnlUserControl.Size = new System.Drawing.Size(625, 480);
+            this.pnlUserControl.Size = new System.Drawing.Size(665, 480);
             this.pnlUserControl.TabIndex = 3;
             // 
             // bunifuVScrollBar1

@@ -128,6 +128,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cards\ListingCardView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cards\ListingCardView.Designer.cs">
+      <DependentUpon>ListingCardView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cards\VehicleCardView.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -139,6 +145,12 @@
     <Compile Include="Dto\TransactionDto.cs" />
     <Compile Include="Dto\UserDto.cs" />
     <Compile Include="Dto\VehicleDto.cs" />
+    <Compile Include="Forms\BidForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BidForm.Designer.cs">
+      <DependentUpon>BidForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ListingForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +191,18 @@
     <Compile Include="Models\Transaction.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\Vehicle.cs" />
+    <Compile Include="Row Instance\ListingDataRowInstance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Row Instance\ListingDataRowInstance.Designer.cs">
+      <DependentUpon>ListingDataRowInstance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Row Instance\TransactionDataRowInstance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Row Instance\TransactionDataRowInstance.Designer.cs">
+      <DependentUpon>TransactionDataRowInstance.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\BidsViewControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -235,14 +259,35 @@
     <Compile Include="UserControls\UsersViewControl.Designer.cs">
       <DependentUpon>UsersViewControl.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Cards\ListingCardView.resx">
+      <DependentUpon>ListingCardView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cards\VehicleCardView.resx">
       <DependentUpon>VehicleCardView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\VehicleDetailsForm.resx">
       <DependentUpon>VehicleDetailsForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Row Instance\ListingDataRowInstance.resx">
+      <DependentUpon>ListingDataRowInstance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Row Instance\TransactionDataRowInstance.resx">
+      <DependentUpon>TransactionDataRowInstance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\BidsViewControl.resx">
+      <DependentUpon>BidsViewControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ListingViewControl.resx">
+      <DependentUpon>ListingViewControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MarketViewControl.resx">
+      <DependentUpon>MarketViewControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\TransactionsViewControl.resx">
       <DependentUpon>TransactionsViewControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UsersViewControl.resx">
+      <DependentUpon>UsersViewControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\VehiclesViewControl.resx">
       <DependentUpon>VehiclesViewControl.cs</DependentUpon>

@@ -38,12 +38,12 @@ namespace CarBuyAndSell
             this.searchBox = new System.Windows.Forms.TextBox();
             this.searchButton = new System.Windows.Forms.Button();
             this.paginationPanel = new System.Windows.Forms.Panel();
-            this.btnAddVehicle = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.firstPageBtn = new System.Windows.Forms.Button();
             this.prevPageBtn = new System.Windows.Forms.Button();
             this.pageLabel = new System.Windows.Forms.Label();
             this.nextPageBtn = new System.Windows.Forms.Button();
             this.lastPageBtn = new System.Windows.Forms.Button();
+            this.btnAddVehicle = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.pnlVehicles = new Bunifu.UI.WinForms.BunifuPanel();
             this.flwVehicles = new System.Windows.Forms.FlowLayoutPanel();
@@ -57,7 +57,7 @@ namespace CarBuyAndSell
             // mainLayoutPanel
             // 
             this.mainLayoutPanel.ColumnCount = 1;
-            this.mainLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.mainLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 782F));
             this.mainLayoutPanel.Controls.Add(this.searchPanel, 0, 0);
             this.mainLayoutPanel.Controls.Add(this.paginationPanel, 0, 2);
             this.mainLayoutPanel.Controls.Add(this.bunifuPanel1, 0, 1);
@@ -113,6 +113,59 @@ namespace CarBuyAndSell
             this.paginationPanel.Name = "paginationPanel";
             this.paginationPanel.Size = new System.Drawing.Size(776, 44);
             this.paginationPanel.TabIndex = 2;
+            // 
+            // firstPageBtn
+            // 
+            this.firstPageBtn.Dock = System.Windows.Forms.DockStyle.Right;
+            this.firstPageBtn.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.firstPageBtn.Location = new System.Drawing.Point(376, 0);
+            this.firstPageBtn.Name = "firstPageBtn";
+            this.firstPageBtn.Size = new System.Drawing.Size(75, 44);
+            this.firstPageBtn.TabIndex = 0;
+            this.firstPageBtn.Text = "<< First";
+            // 
+            // prevPageBtn
+            // 
+            this.prevPageBtn.Dock = System.Windows.Forms.DockStyle.Right;
+            this.prevPageBtn.Enabled = false;
+            this.prevPageBtn.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prevPageBtn.Location = new System.Drawing.Point(451, 0);
+            this.prevPageBtn.Name = "prevPageBtn";
+            this.prevPageBtn.Size = new System.Drawing.Size(75, 44);
+            this.prevPageBtn.TabIndex = 0;
+            this.prevPageBtn.Text = "Previous";
+            // 
+            // pageLabel
+            // 
+            this.pageLabel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pageLabel.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pageLabel.Location = new System.Drawing.Point(526, 0);
+            this.pageLabel.Name = "pageLabel";
+            this.pageLabel.Size = new System.Drawing.Size(100, 44);
+            this.pageLabel.TabIndex = 1;
+            this.pageLabel.Text = "Page 0 of 10";
+            this.pageLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // nextPageBtn
+            // 
+            this.nextPageBtn.Dock = System.Windows.Forms.DockStyle.Right;
+            this.nextPageBtn.Enabled = false;
+            this.nextPageBtn.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nextPageBtn.Location = new System.Drawing.Point(626, 0);
+            this.nextPageBtn.Name = "nextPageBtn";
+            this.nextPageBtn.Size = new System.Drawing.Size(75, 44);
+            this.nextPageBtn.TabIndex = 1;
+            this.nextPageBtn.Text = "Next";
+            // 
+            // lastPageBtn
+            // 
+            this.lastPageBtn.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lastPageBtn.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lastPageBtn.Location = new System.Drawing.Point(701, 0);
+            this.lastPageBtn.Name = "lastPageBtn";
+            this.lastPageBtn.Size = new System.Drawing.Size(75, 44);
+            this.lastPageBtn.TabIndex = 3;
+            this.lastPageBtn.Text = "Last >>";
             // 
             // btnAddVehicle
             // 
@@ -205,59 +258,6 @@ namespace CarBuyAndSell
             this.btnAddVehicle.TextMarginLeft = 0;
             this.btnAddVehicle.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnAddVehicle.UseDefaultRadiusAndThickness = true;
-            // 
-            // firstPageBtn
-            // 
-            this.firstPageBtn.Dock = System.Windows.Forms.DockStyle.Right;
-            this.firstPageBtn.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.firstPageBtn.Location = new System.Drawing.Point(376, 0);
-            this.firstPageBtn.Name = "firstPageBtn";
-            this.firstPageBtn.Size = new System.Drawing.Size(75, 44);
-            this.firstPageBtn.TabIndex = 0;
-            this.firstPageBtn.Text = "<< First";
-            // 
-            // prevPageBtn
-            // 
-            this.prevPageBtn.Dock = System.Windows.Forms.DockStyle.Right;
-            this.prevPageBtn.Enabled = false;
-            this.prevPageBtn.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.prevPageBtn.Location = new System.Drawing.Point(451, 0);
-            this.prevPageBtn.Name = "prevPageBtn";
-            this.prevPageBtn.Size = new System.Drawing.Size(75, 44);
-            this.prevPageBtn.TabIndex = 0;
-            this.prevPageBtn.Text = "Previous";
-            // 
-            // pageLabel
-            // 
-            this.pageLabel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pageLabel.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pageLabel.Location = new System.Drawing.Point(526, 0);
-            this.pageLabel.Name = "pageLabel";
-            this.pageLabel.Size = new System.Drawing.Size(100, 44);
-            this.pageLabel.TabIndex = 1;
-            this.pageLabel.Text = "Page 0 of 10";
-            this.pageLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // nextPageBtn
-            // 
-            this.nextPageBtn.Dock = System.Windows.Forms.DockStyle.Right;
-            this.nextPageBtn.Enabled = false;
-            this.nextPageBtn.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nextPageBtn.Location = new System.Drawing.Point(626, 0);
-            this.nextPageBtn.Name = "nextPageBtn";
-            this.nextPageBtn.Size = new System.Drawing.Size(75, 44);
-            this.nextPageBtn.TabIndex = 1;
-            this.nextPageBtn.Text = "Next";
-            // 
-            // lastPageBtn
-            // 
-            this.lastPageBtn.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lastPageBtn.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lastPageBtn.Location = new System.Drawing.Point(701, 0);
-            this.lastPageBtn.Name = "lastPageBtn";
-            this.lastPageBtn.Size = new System.Drawing.Size(75, 44);
-            this.lastPageBtn.TabIndex = 3;
-            this.lastPageBtn.Text = "Last >>";
             // 
             // bunifuPanel1
             // 
