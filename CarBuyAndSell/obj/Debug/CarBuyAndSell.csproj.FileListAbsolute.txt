@@ -62,3 +62,4 @@ C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\bin\Debug\System.Text.Enc
 C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\bin\Debug\System.Text.Json.xml
 C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\bin\Debug\System.ValueTuple.xml
 C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\obj\Debug\CarBuyAndSell.UserControls.TransactionsViewControl.resources
+C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\obj\Debug\CarBuyAndSell.Cards.VehicleCardView.resources

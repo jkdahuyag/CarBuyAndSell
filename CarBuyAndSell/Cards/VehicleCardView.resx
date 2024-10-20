@@ -120,11 +120,17 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnSell.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAARgAAAAnCAYAAADU1VdAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACpSURBVHhe7dShAYAwAMAwLtnL8B9n4Dc4AAd1EVH13cYx
-        z3GsBfCveT6DeQsA3xkMkDEYIGMwQMZggIzBABmDATIGA2QMBsgYDJAxGCBjMEDGYICMwQAZgwEyBgNk
-        DAbIGAyQMRggYzBAxmCAjMEAGYMBMgYDZAwGyBgMkDEYIGMwQMZggIzBABmDATIGA2QMBsgYDJAxGCBj
-        MEDGYIDMNvZ5vQWAT/Z53Sdq/xrmD6UxAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAUAAAAAnCAYAAAB+FpH8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIkSURBVHhe7dyxThwxEIBhl5SUFOs1JY+QkjJlSso0vEUK
+        HiCKvSt6HiBSOqRUSKkor6CPdAVN0AkQEZEO3ThjbqOIZIhScvY/0letb+l+2ecT7rkJJ3mrS3LQD3La
+        J5n5JFd9yhkAXrJ1q2TWRznzMb8NMW9PWfu/6QZ5rS9Y6IturT8AAJvAR7nTjl1rDA+nvD0/pZS64/vk
+        B/2A8TIA2EQ+5Rvd1J2H47wz5e7plPhpLeddXC2tFwDAptPN3Vxbtztl7/eUnR/xA1A/mU3ZW0/5zo9j
+        L4AW+LT67od89Bi/cttbLjyshQBQJ1mEMe+5ck1cbkrsRQBQH90FPmgEoyu/lbEWAEDNdOP31WkFL62H
+        AFAzn+ShBPDeeggAtdMA2g8AoHYEEECzCCCAZhFAAM0igACaRQABNIsAAmgWAQTQLAIIoFkEEECzCCCA
+        ZhFAAM0igACaRQABNIsAAmgWAQTQLAIIoFmu/Fto6wEA1K4E8Mp6AAC10yOwnFsPAKBucun6Ud75QX7Y
+        CwCgTiHJRxdi3tVj8LW1AAAqddPF/MaV8VHeqztjEQBUpYurpR5/Pz/Gr0w4yVt9lAtrMQDURE+83/Tk
+        uz3lbz1hzHvcCAOoWUiy0PjtT9l7OmGQV3oUnusWkUsRANXoPqyW087Pjt+vKcdhP8qoZ2QuRgBsPA3f
+        rfbsy1/H3n9NKWW5Jl5/2H4xALxcct8PctolOZiy9sc49xNTD2oCZv1hRwAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="pcBoxVehicleImage.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

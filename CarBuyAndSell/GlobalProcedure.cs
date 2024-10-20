@@ -386,7 +386,9 @@ namespace CarBuyAndSell
                         dataRow["model"].ToString(),
                         DateTime.Parse(dataRow["manufacture_year"].ToString()),
                         dataRow["plate_number"].ToString(),
-                        double.Parse(dataRow["mileage"].ToString())
+                        double.Parse(dataRow["mileage"].ToString()),
+                        double.Parse(dataRow["market_value"].ToString()),
+                        dataRow["file_name"].ToString()
                     ));
                 }
             }
@@ -424,7 +426,9 @@ namespace CarBuyAndSell
                             dataRow["model"].ToString(),
                             DateTime.Parse(dataRow["manufacture_year"].ToString()),
                             dataRow["plate_number"].ToString(),
-                            double.Parse(dataRow["mileage"].ToString())
+                            double.Parse(dataRow["mileage"].ToString()),
+                            double.Parse(dataRow["market_value"].ToString()),
+                            dataRow["file_name"].ToString()
                         ));
                     }
                 }
@@ -489,7 +493,9 @@ namespace CarBuyAndSell
                             dataRow["model"].ToString(),
                             DateTime.Parse(dataRow["manufacture_year"].ToString()),
                             dataRow["plate_number"].ToString(),
-                            double.Parse(dataRow["mileage"].ToString())
+                            double.Parse(dataRow["mileage"].ToString()),
+                            double.Parse(dataRow["market_value"].ToString()),
+                            dataRow["file_name"].ToString()
                         ));
                     }
                 }
@@ -605,7 +611,8 @@ namespace CarBuyAndSell
                         dataRow["last_name"].ToString(),
                         int.Parse(dataRow["listing_id"].ToString()),
                         double.Parse(dataRow["bid_amount"].ToString()),
-                        DateTime.Parse(dataRow["bid_date"].ToString())
+                        DateTime.Parse(dataRow["bid_date"].ToString()),
+                        int.Parse(dataRow["bidder_id"].ToString())
                     ));
                 }
             }
@@ -640,7 +647,8 @@ namespace CarBuyAndSell
                             dataRow["last_name"].ToString(),
                             int.Parse(dataRow["listing_id"].ToString()),
                             double.Parse(dataRow["bid_amount"].ToString()),
-                            DateTime.Parse(dataRow["bid_date"].ToString())
+                            DateTime.Parse(dataRow["bid_date"].ToString()),
+                            int.Parse(dataRow["bidder_id"].ToString())
                         ));
                     }
                 }
@@ -702,7 +710,8 @@ namespace CarBuyAndSell
                             dataRow["last_name"].ToString(),
                             int.Parse(dataRow["listing_id"].ToString()),
                             double.Parse(dataRow["bid_amount"].ToString()),
-                            DateTime.Parse(dataRow["bid_date"].ToString())
+                            DateTime.Parse(dataRow["bid_date"].ToString()),
+                            int.Parse(dataRow["bidder_id"].ToString())
                         ));
                     }
                 }
@@ -860,7 +869,8 @@ namespace CarBuyAndSell
                         dataRow["description"].ToString(),
                         dataRow["first_name"].ToString(),
                         dataRow["last_name"].ToString(),
-                        dataRow["status_name"].ToString()
+                        dataRow["status_name"].ToString(),
+                        int.Parse(dataRow["owner_id"].ToString())
                     ));
                 }
             }
@@ -903,7 +913,8 @@ namespace CarBuyAndSell
                             dataRow["description"].ToString(),
                             dataRow["first_name"].ToString(),
                             dataRow["last_name"].ToString(),
-                            dataRow["status_name"].ToString()
+                            dataRow["status_name"].ToString(),
+                            int.Parse(dataRow["owner_id"].ToString())
                         ));
                     }
                 }
@@ -969,7 +980,8 @@ namespace CarBuyAndSell
                             dataRow["description"].ToString(),
                             dataRow["first_name"].ToString(),
                             dataRow["last_name"].ToString(),
-                            dataRow["status_name"].ToString()
+                            dataRow["status_name"].ToString(),
+                            int.Parse(dataRow["owner_id"].ToString())
                         ));
                     }
                 }
@@ -1051,7 +1063,9 @@ namespace CarBuyAndSell
                         dataRow["seller_last_name"].ToString(),
                         double.Parse(dataRow["amount"].ToString()),
                         DateTime.Parse(dataRow["transaction_date"].ToString()),
-                        dataRow["payment_method_name"].ToString()
+                        dataRow["payment_method_name"].ToString(),
+                        int.Parse(dataRow["buyer_id"].ToString()),
+                        int.Parse(dataRow["seller_id"].ToString())
                     ));
                 }
             }
@@ -1090,7 +1104,9 @@ namespace CarBuyAndSell
                             dataRow["seller_last_name"].ToString(),
                             double.Parse(dataRow["amount"].ToString()),
                             DateTime.Parse(dataRow["transaction_date"].ToString()),
-                            dataRow["payment_method_name"].ToString()
+                            dataRow["payment_method_name"].ToString(),
+                            int.Parse(dataRow["buyer_id"].ToString()),
+                            int.Parse(dataRow["seller_id"].ToString())
                         ));
                     }
                 }
@@ -1135,7 +1151,9 @@ namespace CarBuyAndSell
                             dataRow["seller_last_name"].ToString(),
                             double.Parse(dataRow["amount"].ToString()),
                             DateTime.Parse(dataRow["transaction_date"].ToString()),
-                            dataRow["payment_method_name"].ToString()
+                            dataRow["payment_method_name"].ToString(),
+                            int.Parse(dataRow["buyer_id"].ToString()),
+                            int.Parse(dataRow["seller_id"].ToString())
                         ));
                     }
                 }
@@ -1179,7 +1197,9 @@ namespace CarBuyAndSell
                             dataRow["seller_last_name"].ToString(),
                             double.Parse(dataRow["amount"].ToString()),
                             DateTime.Parse(dataRow["transaction_date"].ToString()),
-                            dataRow["payment_method_name"].ToString()
+                            dataRow["payment_method_name"].ToString(),
+                            int.Parse(dataRow["buyer_id"].ToString()),
+                            int.Parse(dataRow["seller_id"].ToString())
                         ));
                     }
                 }
@@ -1243,7 +1263,9 @@ namespace CarBuyAndSell
                             dataRow["seller_last_name"].ToString(),
                             double.Parse(dataRow["amount"].ToString()),
                             DateTime.Parse(dataRow["transaction_date"].ToString()),
-                            dataRow["payment_method_name"].ToString()
+                            dataRow["payment_method_name"].ToString(),
+                            int.Parse(dataRow["buyer_id"].ToString()),
+                            int.Parse(dataRow["seller_id"].ToString())
                         ));
                     }
                 }

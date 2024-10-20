@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace CarBuyAndSell.Forms
 {
-    public partial class VehicleForm : Form
+    public partial class ListingForm : Form
     {
-        public VehicleForm(VehicleDto vehicle)
+        public ListingForm(VehicleDto vehicle)
         {
             InitializeComponent();
         }

@@ -1,4 +1,5 @@
-﻿using CarBuyAndSell.Dto;
+﻿using CarBuyAndSell.Cards;
+using CarBuyAndSell.Dto;
 using CarBuyAndSell.Forms;
 using CarBuyAndSell.Models;
 using MySql.Data.MySqlClient;
@@ -18,7 +19,6 @@ namespace CarBuyAndSell
 {
     public partial class VehiclesViewControl : UserControl
     {
-
         GlobalProcedure globalProcedure = new GlobalProcedure();
         private List<VehicleDto> cars = new List<VehicleDto>();
         private int totalRecords = 0;
@@ -32,9 +32,6 @@ namespace CarBuyAndSell
             initial = true;
             if (!this.globalProcedure.FncConnectToDatabase())
                 MessageBox.Show("Not Connected");
-
-            carTableLayoutPanel.ColumnCount = this.Width / 310;
-            carTableLayoutPanel.RowCount = (cars.Count + carTableLayoutPanel.ColumnCount - 1) / carTableLayoutPanel.ColumnCount;
 
             cars = globalProcedure.ProcGetVehicles(currentPage, carsPerPage);
             totalRecords = globalProcedure.ProcCountVehicles(searchBox.Text.ToLower());
@@ -96,57 +93,16 @@ namespace CarBuyAndSell
 
         private void DisplayCars()
         {
-            carTableLayoutPanel.Controls.Clear();
+            flwVehicles.Controls.Clear();
 
             if (cars.Count > 0)
             {
                 for (int i = 0; i < cars.Count; i++)
                 {
                     var car = cars[i];
-                    System.Windows.Forms.Panel cardPanel = new System.Windows.Forms.Panel
-                    {
-                        BorderStyle = BorderStyle.FixedSingle,
-                        Margin = new Padding(5),
-                        Dock = DockStyle.Fill
-                    };
-
-                    PictureBox carImage = new PictureBox
-                    {
-                        SizeMode = PictureBoxSizeMode.StretchImage,
-                        Dock = DockStyle.Top,
-                        Image = LoadCarImage("")
-                    };
-                    cardPanel.Controls.Add(carImage);
-
-                    Label lblOwner = new Label
-                    {
-                        Text = "Owner: " + car.OwnerName,
-                        Dock = DockStyle.Bottom,
-                        TextAlign = ContentAlignment.MiddleCenter,
-                        Padding = new Padding(0, 5, 0, 0)
-                    };
-                    cardPanel.Controls.Add(lblOwner);
-
-                    Label lblBrand = new Label
-                    {
-                        Text = "Brand: " + car.BrandName,
-                        Dock = DockStyle.Bottom,
-                        TextAlign = ContentAlignment.MiddleCenter,
-                        Padding = new Padding(0, 5, 0, 0)
-                    };
-                    cardPanel.Controls.Add(lblBrand);
-
-                    Label lblModel = new Label
-                    {
-                        Text = "Model: " + car.Model,
-                        Dock = DockStyle.Bottom,
-                        TextAlign = ContentAlignment.MiddleCenter,
-                        Padding = new Padding(0, 5, 0, 0)
-                    };
-                    cardPanel.Controls.Add(lblModel);
-                    cardPanel.Click += ShowVehicleDetails(car.VehicleId);
+                    VehicleCardView cardPanel = new VehicleCardView(car);
                     // Add the card to the grid
-                    carTableLayoutPanel.Controls.Add(cardPanel);
+                    flwVehicles.Controls.Add(cardPanel);
                 }
             }
             else
@@ -159,18 +115,6 @@ namespace CarBuyAndSell
 
             UpdatePaginationButtons();
 
-        }
-
-
-
-
-        private EventHandler ShowVehicleDetails(int vehicleId)
-        {
-            return (sender, e) =>
-            {
-                VehicleDetailsForm vehicleDetailsForm = new VehicleDetailsForm(vehicleId);
-                vehicleDetailsForm.Show();
-            };
         }
 
         private void BtnAddVehicle_Click(object sender, EventArgs e)
@@ -234,12 +178,6 @@ namespace CarBuyAndSell
                 // Return a default image if no image is found
                 return Properties.Resources.DefaultVehicleImage;
             }
-        }
-
-        private void UsrCtrlResize(object sender, EventArgs e)
-        {
-            carTableLayoutPanel.ColumnCount = this.Width / 310;
-            carTableLayoutPanel.RowCount = (cars.Count + carTableLayoutPanel.ColumnCount - 1)/ carTableLayoutPanel.ColumnCount;
         }
     }
 }

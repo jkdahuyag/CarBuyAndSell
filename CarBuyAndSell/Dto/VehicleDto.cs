@@ -13,8 +13,10 @@ namespace CarBuyAndSell.Dto
         public DateTime ManufactureYear { get; set; }
         public string PlateNumber { get; set; }
         public double Mileage { get; set; }
+        public double MarketValue { get; set; }
+        public string FileName { get; set; }
 
-        public VehicleDto(int vehicleId, string brandName, string transmissionTypeName, string conditionName, string ownerName, string model, DateTime manufactureYear, string plateNumber, double mileage)
+        public VehicleDto(int vehicleId, string brandName, string transmissionTypeName, string conditionName, string ownerName, string model, DateTime manufactureYear, string plateNumber, double mileage, double marketValue, string fileName)
         {
             VehicleId = vehicleId;
             BrandName = brandName;
@@ -25,6 +27,8 @@ namespace CarBuyAndSell.Dto
             ManufactureYear = manufactureYear;
             PlateNumber = plateNumber;
             Mileage = mileage;
+            MarketValue = marketValue;
+            FileName = fileName;
         }
     }
 }

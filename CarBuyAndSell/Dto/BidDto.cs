@@ -9,13 +9,14 @@ namespace CarBuyAndSell.Dto
     public class BidDto
     {
         public int BidId { get; set; }
+        public int BidderId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public int ListingId { get; set; }
         public double BidAmount { get; set; }
         public DateTime BidDate { get; set; }
 
-        public BidDto(int bidId, string firstName, string lastName, int listingId, double bidAmount, DateTime bidDate)
+        public BidDto(int bidId, string firstName, string lastName, int listingId, double bidAmount, DateTime bidDate, int bidderId)
         {
             BidId = bidId;
             FirstName = firstName;
@@ -23,6 +24,7 @@ namespace CarBuyAndSell.Dto
             ListingId = listingId;
             BidAmount = bidAmount;
             BidDate = bidDate;
+            BidderId = bidderId;
         }
     }
 }

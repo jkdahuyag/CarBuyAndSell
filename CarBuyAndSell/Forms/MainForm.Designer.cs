@@ -40,16 +40,19 @@ namespace CarBuyAndSell
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.tblLayoutMainDivider = new System.Windows.Forms.TableLayoutPanel();
             this.pnlHeader = new Bunifu.UI.WinForms.BunifuPanel();
             this.tblLayoutContentSide = new System.Windows.Forms.TableLayoutPanel();
             this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
             this.lblViewName = new Bunifu.UI.WinForms.BunifuLabel();
             this.pnlUserControl = new Bunifu.UI.WinForms.BunifuPanel();
+            this.bunifuVScrollBar1 = new Bunifu.UI.WinForms.BunifuVScrollBar();
             this.bunifuShadowPanel2 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.bunifuShadowPanel1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.tblLayoutSideNavPartition = new System.Windows.Forms.TableLayoutPanel();
             this.pnlSideBar = new Bunifu.UI.WinForms.BunifuPanel();
+            this.btnLogout = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnUsers = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnTransactions = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnBids = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -59,9 +62,7 @@ namespace CarBuyAndSell
             this.btnDashboard = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.pnlLogo = new Bunifu.UI.WinForms.BunifuPanel();
             this.lblAppName = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.lblHeader = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuVScrollBar1 = new Bunifu.UI.WinForms.BunifuVScrollBar();
             this.tblLayoutMainDivider.SuspendLayout();
             this.pnlHeader.SuspendLayout();
             this.tblLayoutContentSide.SuspendLayout();
@@ -175,6 +176,45 @@ namespace CarBuyAndSell
             this.pnlUserControl.Size = new System.Drawing.Size(625, 480);
             this.pnlUserControl.TabIndex = 3;
             // 
+            // bunifuVScrollBar1
+            // 
+            this.bunifuVScrollBar1.AllowCursorChanges = true;
+            this.bunifuVScrollBar1.AllowHomeEndKeysDetection = false;
+            this.bunifuVScrollBar1.AllowIncrementalClickMoves = true;
+            this.bunifuVScrollBar1.AllowMouseDownEffects = true;
+            this.bunifuVScrollBar1.AllowMouseHoverEffects = true;
+            this.bunifuVScrollBar1.AllowScrollingAnimations = true;
+            this.bunifuVScrollBar1.AllowScrollKeysDetection = true;
+            this.bunifuVScrollBar1.AllowScrollOptionsMenu = true;
+            this.bunifuVScrollBar1.AllowShrinkingOnFocusLost = false;
+            this.bunifuVScrollBar1.BackgroundColor = System.Drawing.Color.Silver;
+            this.bunifuVScrollBar1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuVScrollBar1.BackgroundImage")));
+            this.bunifuVScrollBar1.BindingContainer = this.pnlUserControl;
+            this.bunifuVScrollBar1.BorderColor = System.Drawing.Color.Silver;
+            this.bunifuVScrollBar1.BorderRadius = 14;
+            this.bunifuVScrollBar1.BorderThickness = 1;
+            this.bunifuVScrollBar1.DurationBeforeShrink = 2000;
+            this.bunifuVScrollBar1.LargeChange = 10;
+            this.bunifuVScrollBar1.Location = new System.Drawing.Point(615, 50);
+            this.bunifuVScrollBar1.Maximum = 100;
+            this.bunifuVScrollBar1.Minimum = 0;
+            this.bunifuVScrollBar1.MinimumThumbLength = 18;
+            this.bunifuVScrollBar1.Name = "bunifuVScrollBar1";
+            this.bunifuVScrollBar1.OnDisable.ScrollBarBorderColor = System.Drawing.Color.Silver;
+            this.bunifuVScrollBar1.OnDisable.ScrollBarColor = System.Drawing.Color.Transparent;
+            this.bunifuVScrollBar1.OnDisable.ThumbColor = System.Drawing.Color.Silver;
+            this.bunifuVScrollBar1.ScrollBarBorderColor = System.Drawing.Color.Silver;
+            this.bunifuVScrollBar1.ScrollBarColor = System.Drawing.Color.Silver;
+            this.bunifuVScrollBar1.ShrinkSizeLimit = 3;
+            this.bunifuVScrollBar1.Size = new System.Drawing.Size(10, 365);
+            this.bunifuVScrollBar1.SmallChange = 1;
+            this.bunifuVScrollBar1.TabIndex = 2;
+            this.bunifuVScrollBar1.ThumbColor = System.Drawing.Color.Gray;
+            this.bunifuVScrollBar1.ThumbLength = 36;
+            this.bunifuVScrollBar1.ThumbMargin = 1;
+            this.bunifuVScrollBar1.ThumbStyle = Bunifu.UI.WinForms.BunifuVScrollBar.ThumbStyles.Proportional;
+            this.bunifuVScrollBar1.Value = 0;
+            // 
             // bunifuShadowPanel2
             // 
             this.bunifuShadowPanel2.BackColor = System.Drawing.Color.Transparent;
@@ -222,14 +262,12 @@ namespace CarBuyAndSell
             this.tblLayoutSideNavPartition.ColumnCount = 1;
             this.tblLayoutSideNavPartition.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tblLayoutSideNavPartition.Controls.Add(this.pnlSideBar, 0, 0);
-            this.tblLayoutSideNavPartition.Controls.Add(this.bunifuPanel1, 0, 1);
             this.tblLayoutSideNavPartition.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblLayoutSideNavPartition.Location = new System.Drawing.Point(0, 0);
             this.tblLayoutSideNavPartition.Margin = new System.Windows.Forms.Padding(0);
             this.tblLayoutSideNavPartition.Name = "tblLayoutSideNavPartition";
-            this.tblLayoutSideNavPartition.RowCount = 2;
+            this.tblLayoutSideNavPartition.RowCount = 1;
             this.tblLayoutSideNavPartition.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tblLayoutSideNavPartition.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.tblLayoutSideNavPartition.Size = new System.Drawing.Size(277, 578);
             this.tblLayoutSideNavPartition.TabIndex = 2;
             // 
@@ -241,6 +279,7 @@ namespace CarBuyAndSell
             this.pnlSideBar.BorderColor = System.Drawing.Color.Transparent;
             this.pnlSideBar.BorderRadius = 0;
             this.pnlSideBar.BorderThickness = 0;
+            this.pnlSideBar.Controls.Add(this.btnLogout);
             this.pnlSideBar.Controls.Add(this.btnUsers);
             this.pnlSideBar.Controls.Add(this.btnTransactions);
             this.pnlSideBar.Controls.Add(this.btnBids);
@@ -256,8 +295,101 @@ namespace CarBuyAndSell
             this.pnlSideBar.Name = "pnlSideBar";
             this.pnlSideBar.Padding = new System.Windows.Forms.Padding(20, 20, 20, 0);
             this.pnlSideBar.ShowBorders = true;
-            this.pnlSideBar.Size = new System.Drawing.Size(277, 498);
+            this.pnlSideBar.Size = new System.Drawing.Size(277, 578);
             this.pnlSideBar.TabIndex = 1;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.AllowAnimations = true;
+            this.btnLogout.AllowMouseEffects = true;
+            this.btnLogout.AllowToggling = false;
+            this.btnLogout.AnimationSpeed = 200;
+            this.btnLogout.AutoGenerateColors = false;
+            this.btnLogout.AutoRoundBorders = false;
+            this.btnLogout.AutoSizeLeftIcon = true;
+            this.btnLogout.AutoSizeRightIcon = true;
+            this.btnLogout.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogout.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            this.btnLogout.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLogout.BackgroundImage")));
+            this.btnLogout.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnLogout.ButtonText = "Logout";
+            this.btnLogout.ButtonTextMarginLeft = 0;
+            this.btnLogout.ColorContrastOnClick = 45;
+            this.btnLogout.ColorContrastOnHover = 45;
+            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btnLogout.CustomizableEdges = borderEdges1;
+            this.btnLogout.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnLogout.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnLogout.DisabledFillColor = System.Drawing.Color.Empty;
+            this.btnLogout.DisabledForecolor = System.Drawing.Color.Empty;
+            this.btnLogout.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.btnLogout.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.btnLogout.IconLeft = global::CarBuyAndSell.Properties.Resources.log_out;
+            this.btnLogout.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogout.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnLogout.IconLeftPadding = new System.Windows.Forms.Padding(40, 3, 3, 3);
+            this.btnLogout.IconMarginLeft = 11;
+            this.btnLogout.IconPadding = 10;
+            this.btnLogout.IconRight = null;
+            this.btnLogout.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLogout.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnLogout.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnLogout.IconSize = 25;
+            this.btnLogout.IdleBorderColor = System.Drawing.Color.Empty;
+            this.btnLogout.IdleBorderRadius = 0;
+            this.btnLogout.IdleBorderThickness = 0;
+            this.btnLogout.IdleFillColor = System.Drawing.Color.Empty;
+            this.btnLogout.IdleIconLeftImage = global::CarBuyAndSell.Properties.Resources.log_out;
+            this.btnLogout.IdleIconRightImage = null;
+            this.btnLogout.IndicateFocus = false;
+            this.btnLogout.Location = new System.Drawing.Point(20, 508);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(5);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.OnDisabledState.BorderColor = System.Drawing.Color.Transparent;
+            this.btnLogout.OnDisabledState.BorderRadius = 0;
+            this.btnLogout.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnLogout.OnDisabledState.BorderThickness = 0;
+            this.btnLogout.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnLogout.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnLogout.OnDisabledState.IconLeftImage = null;
+            this.btnLogout.OnDisabledState.IconRightImage = null;
+            this.btnLogout.onHoverState.BorderColor = System.Drawing.Color.Transparent;
+            this.btnLogout.onHoverState.BorderRadius = 0;
+            this.btnLogout.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnLogout.onHoverState.BorderThickness = 0;
+            this.btnLogout.onHoverState.FillColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnLogout.onHoverState.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.btnLogout.onHoverState.IconLeftImage = null;
+            this.btnLogout.onHoverState.IconRightImage = null;
+            this.btnLogout.OnIdleState.BorderColor = System.Drawing.Color.Transparent;
+            this.btnLogout.OnIdleState.BorderRadius = 0;
+            this.btnLogout.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnLogout.OnIdleState.BorderThickness = 0;
+            this.btnLogout.OnIdleState.FillColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnLogout.OnIdleState.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.btnLogout.OnIdleState.IconLeftImage = global::CarBuyAndSell.Properties.Resources.log_out;
+            this.btnLogout.OnIdleState.IconRightImage = null;
+            this.btnLogout.OnPressedState.BorderColor = System.Drawing.Color.Transparent;
+            this.btnLogout.OnPressedState.BorderRadius = 0;
+            this.btnLogout.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnLogout.OnPressedState.BorderThickness = 0;
+            this.btnLogout.OnPressedState.FillColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnLogout.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnLogout.OnPressedState.IconLeftImage = null;
+            this.btnLogout.OnPressedState.IconRightImage = null;
+            this.btnLogout.Size = new System.Drawing.Size(237, 55);
+            this.btnLogout.TabIndex = 8;
+            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogout.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnLogout.TextMarginLeft = 0;
+            this.btnLogout.TextPadding = new System.Windows.Forms.Padding(85, 0, 0, 0);
+            this.btnLogout.UseDefaultRadiusAndThickness = true;
+            this.btnLogout.Click += new System.EventHandler(this.BtnLogoutClick);
             // 
             // btnUsers
             // 
@@ -278,11 +410,11 @@ namespace CarBuyAndSell
             this.btnUsers.ColorContrastOnClick = 45;
             this.btnUsers.ColorContrastOnHover = 45;
             this.btnUsers.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btnUsers.CustomizableEdges = borderEdges1;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.btnUsers.CustomizableEdges = borderEdges2;
             this.btnUsers.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnUsers.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnUsers.DisabledFillColor = System.Drawing.Color.Empty;
@@ -372,11 +504,11 @@ namespace CarBuyAndSell
             this.btnTransactions.ColorContrastOnClick = 45;
             this.btnTransactions.ColorContrastOnHover = 45;
             this.btnTransactions.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.btnTransactions.CustomizableEdges = borderEdges2;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.btnTransactions.CustomizableEdges = borderEdges3;
             this.btnTransactions.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnTransactions.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnTransactions.DisabledFillColor = System.Drawing.Color.Empty;
@@ -466,11 +598,11 @@ namespace CarBuyAndSell
             this.btnBids.ColorContrastOnClick = 45;
             this.btnBids.ColorContrastOnHover = 45;
             this.btnBids.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.btnBids.CustomizableEdges = borderEdges3;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.btnBids.CustomizableEdges = borderEdges4;
             this.btnBids.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnBids.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnBids.DisabledFillColor = System.Drawing.Color.Empty;
@@ -560,11 +692,11 @@ namespace CarBuyAndSell
             this.btnListings.ColorContrastOnClick = 45;
             this.btnListings.ColorContrastOnHover = 45;
             this.btnListings.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges4.BottomLeft = true;
-            borderEdges4.BottomRight = true;
-            borderEdges4.TopLeft = true;
-            borderEdges4.TopRight = true;
-            this.btnListings.CustomizableEdges = borderEdges4;
+            borderEdges5.BottomLeft = true;
+            borderEdges5.BottomRight = true;
+            borderEdges5.TopLeft = true;
+            borderEdges5.TopRight = true;
+            this.btnListings.CustomizableEdges = borderEdges5;
             this.btnListings.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnListings.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnListings.DisabledFillColor = System.Drawing.Color.Empty;
@@ -654,11 +786,11 @@ namespace CarBuyAndSell
             this.btnVehicles.ColorContrastOnClick = 45;
             this.btnVehicles.ColorContrastOnHover = 45;
             this.btnVehicles.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges5.BottomLeft = true;
-            borderEdges5.BottomRight = true;
-            borderEdges5.TopLeft = true;
-            borderEdges5.TopRight = true;
-            this.btnVehicles.CustomizableEdges = borderEdges5;
+            borderEdges6.BottomLeft = true;
+            borderEdges6.BottomRight = true;
+            borderEdges6.TopLeft = true;
+            borderEdges6.TopRight = true;
+            this.btnVehicles.CustomizableEdges = borderEdges6;
             this.btnVehicles.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnVehicles.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnVehicles.DisabledFillColor = System.Drawing.Color.Empty;
@@ -748,11 +880,11 @@ namespace CarBuyAndSell
             this.btnMarket.ColorContrastOnClick = 45;
             this.btnMarket.ColorContrastOnHover = 45;
             this.btnMarket.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges6.BottomLeft = true;
-            borderEdges6.BottomRight = true;
-            borderEdges6.TopLeft = true;
-            borderEdges6.TopRight = true;
-            this.btnMarket.CustomizableEdges = borderEdges6;
+            borderEdges7.BottomLeft = true;
+            borderEdges7.BottomRight = true;
+            borderEdges7.TopLeft = true;
+            borderEdges7.TopRight = true;
+            this.btnMarket.CustomizableEdges = borderEdges7;
             this.btnMarket.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnMarket.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnMarket.DisabledFillColor = System.Drawing.Color.Empty;
@@ -842,11 +974,11 @@ namespace CarBuyAndSell
             this.btnDashboard.ColorContrastOnClick = 45;
             this.btnDashboard.ColorContrastOnHover = 45;
             this.btnDashboard.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges7.BottomLeft = true;
-            borderEdges7.BottomRight = true;
-            borderEdges7.TopLeft = true;
-            borderEdges7.TopRight = true;
-            this.btnDashboard.CustomizableEdges = borderEdges7;
+            borderEdges8.BottomLeft = true;
+            borderEdges8.BottomRight = true;
+            borderEdges8.TopLeft = true;
+            borderEdges8.TopRight = true;
+            this.btnDashboard.CustomizableEdges = borderEdges8;
             this.btnDashboard.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnDashboard.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnDashboard.DisabledFillColor = System.Drawing.Color.Empty;
@@ -950,22 +1082,6 @@ namespace CarBuyAndSell
             this.lblAppName.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblAppName.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // bunifuPanel1
-            // 
-            this.bunifuPanel1.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
-            this.bunifuPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel1.BackgroundImage")));
-            this.bunifuPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
-            this.bunifuPanel1.BorderRadius = 3;
-            this.bunifuPanel1.BorderThickness = 1;
-            this.bunifuPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuPanel1.Location = new System.Drawing.Point(0, 498);
-            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(0);
-            this.bunifuPanel1.Name = "bunifuPanel1";
-            this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(277, 80);
-            this.bunifuPanel1.TabIndex = 2;
-            // 
             // lblHeader
             // 
             this.lblHeader.AllowParentOverrides = false;
@@ -980,45 +1096,6 @@ namespace CarBuyAndSell
             this.lblHeader.Text = "Vehicle";
             this.lblHeader.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblHeader.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuVScrollBar1
-            // 
-            this.bunifuVScrollBar1.AllowCursorChanges = true;
-            this.bunifuVScrollBar1.AllowHomeEndKeysDetection = false;
-            this.bunifuVScrollBar1.AllowIncrementalClickMoves = true;
-            this.bunifuVScrollBar1.AllowMouseDownEffects = true;
-            this.bunifuVScrollBar1.AllowMouseHoverEffects = true;
-            this.bunifuVScrollBar1.AllowScrollingAnimations = true;
-            this.bunifuVScrollBar1.AllowScrollKeysDetection = true;
-            this.bunifuVScrollBar1.AllowScrollOptionsMenu = true;
-            this.bunifuVScrollBar1.AllowShrinkingOnFocusLost = false;
-            this.bunifuVScrollBar1.BackgroundColor = System.Drawing.Color.Silver;
-            this.bunifuVScrollBar1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuVScrollBar1.BackgroundImage")));
-            this.bunifuVScrollBar1.BindingContainer = this.pnlUserControl;
-            this.bunifuVScrollBar1.BorderColor = System.Drawing.Color.Silver;
-            this.bunifuVScrollBar1.BorderRadius = 14;
-            this.bunifuVScrollBar1.BorderThickness = 1;
-            this.bunifuVScrollBar1.DurationBeforeShrink = 2000;
-            this.bunifuVScrollBar1.LargeChange = 10;
-            this.bunifuVScrollBar1.Location = new System.Drawing.Point(615, 50);
-            this.bunifuVScrollBar1.Maximum = 100;
-            this.bunifuVScrollBar1.Minimum = 0;
-            this.bunifuVScrollBar1.MinimumThumbLength = 18;
-            this.bunifuVScrollBar1.Name = "bunifuVScrollBar1";
-            this.bunifuVScrollBar1.OnDisable.ScrollBarBorderColor = System.Drawing.Color.Silver;
-            this.bunifuVScrollBar1.OnDisable.ScrollBarColor = System.Drawing.Color.Transparent;
-            this.bunifuVScrollBar1.OnDisable.ThumbColor = System.Drawing.Color.Silver;
-            this.bunifuVScrollBar1.ScrollBarBorderColor = System.Drawing.Color.Silver;
-            this.bunifuVScrollBar1.ScrollBarColor = System.Drawing.Color.Silver;
-            this.bunifuVScrollBar1.ShrinkSizeLimit = 3;
-            this.bunifuVScrollBar1.Size = new System.Drawing.Size(10, 365);
-            this.bunifuVScrollBar1.SmallChange = 1;
-            this.bunifuVScrollBar1.TabIndex = 2;
-            this.bunifuVScrollBar1.ThumbColor = System.Drawing.Color.Gray;
-            this.bunifuVScrollBar1.ThumbLength = 36;
-            this.bunifuVScrollBar1.ThumbMargin = 1;
-            this.bunifuVScrollBar1.ThumbStyle = Bunifu.UI.WinForms.BunifuVScrollBar.ThumbStyles.Proportional;
-            this.bunifuVScrollBar1.Value = 0;
             // 
             // MainForm
             // 
@@ -1066,10 +1143,10 @@ namespace CarBuyAndSell
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnDashboard;
         private Bunifu.UI.WinForms.BunifuPanel pnlLogo;
         private Bunifu.UI.WinForms.BunifuLabel lblAppName;
-        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
         private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel1;
         private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel2;
         private Bunifu.UI.WinForms.BunifuVScrollBar bunifuVScrollBar1;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnLogout;
     }
 }
 

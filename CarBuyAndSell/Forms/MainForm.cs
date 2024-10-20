@@ -168,6 +168,19 @@ namespace CarBuyAndSell
         {
             Application.Exit();
         }
+
+        private void BtnLogoutClick(object sender, EventArgs e)
+        {
+            LoginInfo.UserId = 0;
+            LoginInfo.Username = "";
+            LoginInfo.Password = "";
+            LoginInfo.Role = "";
+
+            Form form = new LoginForm();
+            form.Show();
+
+            this.Hide();
+        }
     }
 }
 
