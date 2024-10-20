@@ -128,6 +128,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cards\VehicleCardView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cards\VehicleCardView.Designer.cs">
+      <DependentUpon>VehicleCardView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dto\BidDto.cs" />
     <Compile Include="Dto\ListingDto.cs" />
     <Compile Include="Dto\TransactionDto.cs" />
@@ -158,6 +164,7 @@
       <DependentUpon>VehicleForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GlobalProcedure.cs" />
+    <Compile Include="Helper Functions\ImageManager.cs" />
     <Compile Include="LoginInfo.cs" />
     <Compile Include="Models\Bid.cs" />
     <Compile Include="Models\Brand.cs" />
@@ -222,6 +229,9 @@
     <Compile Include="UserControls\UsersViewControl.Designer.cs">
       <DependentUpon>UsersViewControl.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Cards\VehicleCardView.resx">
+      <DependentUpon>VehicleCardView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\VehicleDetailsForm.resx">
       <DependentUpon>VehicleDetailsForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -293,6 +303,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\transfer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

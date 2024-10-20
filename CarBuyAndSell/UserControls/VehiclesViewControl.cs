@@ -33,6 +33,9 @@ namespace CarBuyAndSell
             if (!this.globalProcedure.FncConnectToDatabase())
                 MessageBox.Show("Not Connected");
 
+            carTableLayoutPanel.ColumnCount = this.Width / 310;
+            carTableLayoutPanel.RowCount = (cars.Count + carTableLayoutPanel.ColumnCount - 1) / carTableLayoutPanel.ColumnCount;
+
             cars = globalProcedure.ProcGetVehicles(currentPage, carsPerPage);
             totalRecords = globalProcedure.ProcCountVehicles(searchBox.Text.ToLower());
             SetPlaceholder();
@@ -231,6 +234,12 @@ namespace CarBuyAndSell
                 // Return a default image if no image is found
                 return Properties.Resources.DefaultVehicleImage;
             }
+        }
+
+        private void UsrCtrlResize(object sender, EventArgs e)
+        {
+            carTableLayoutPanel.ColumnCount = this.Width / 310;
+            carTableLayoutPanel.RowCount = (cars.Count + carTableLayoutPanel.ColumnCount - 1)/ carTableLayoutPanel.ColumnCount;
         }
     }
 }
