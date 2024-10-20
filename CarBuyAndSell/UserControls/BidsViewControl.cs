@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CarBuyAndSell.Dto;
+using CarBuyAndSell.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +14,7 @@ namespace CarBuyAndSell
 {
     public partial class BidsViewControl : UserControl
     {
-        private List<Car> cars = new List<Car>();
+        private List<VehicleDto> cars = new List<VehicleDto>();
         private int currentPage = 1;
         private const int carsPerPage = 10;
 
@@ -28,8 +30,8 @@ namespace CarBuyAndSell
         private void LoadCars()
         {
             // Load car data for testing purposes
-            cars.Add(new Car(1, "Toyota", "Corolla", 15000, "Listed"));
-            cars.Add(new Car(2, "Honda", "Civic", 20000, "Sold"));
+            //cars.Add(new Car(1, "Toyota", "Corolla", 15000, "Listed"));
+            //cars.Add(new Car(2, "Honda", "Civic", 20000, "Sold"));
             // Add more car data...
 
             DisplayCars();
@@ -45,7 +47,7 @@ namespace CarBuyAndSell
             for (int i = start; i < end; i++)
             {
                 var car = cars[i];
-                carsDataGridView.Rows.Add(car.ItemNo, car.BrandName, car.Model, car.Price, car.SellStatus);
+                //carsDataGridView.Rows.Add(car.ItemNo, car.BrandName, car.Model, car.Price, car.SellStatus);
             }
 
             UpdatePaginationButtons();
@@ -67,7 +69,7 @@ namespace CarBuyAndSell
 
         private void SearchButton_Click(object sender, EventArgs e)
         {
-            // Implement search functionality here
+           
         }
 
         private void FirstPageBtn_Click(object sender, EventArgs e)
@@ -105,13 +107,6 @@ namespace CarBuyAndSell
         {
             currentPage = (int)pageSelector.Value;
             DisplayCars();
-        }
-
-        private void SellButton_Click(object sender, EventArgs e)
-        {
-            // Open the Sell Form
-            //SellForm sellForm = new SellForm();
-            //sellForm.ShowDialog();
         }
     }
 }

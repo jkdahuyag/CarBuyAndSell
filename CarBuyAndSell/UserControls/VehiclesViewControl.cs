@@ -1,9 +1,14 @@
-﻿using ReaLTaiizor;
+﻿using CarBuyAndSell.Dto;
+using CarBuyAndSell.Forms;
+using CarBuyAndSell.Models;
+using MySql.Data.MySqlClient;
+using ReaLTaiizor;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,33 +18,35 @@ namespace CarBuyAndSell
 {
     public partial class VehiclesViewControl : UserControl
     {
-        private List<string> cars = new List<string>();
+
+        GlobalProcedure globalProcedure = new GlobalProcedure();
+        private List<VehicleDto> cars = new List<VehicleDto>();
+        private int totalRecords = 0;
         private int currentPage = 1;
         private const int carsPerPage = 10;
+        private bool initial = true;
 
         public VehiclesViewControl()
         {
             InitializeComponent();
+            initial = true;
+            if (!this.globalProcedure.FncConnectToDatabase())
+                MessageBox.Show("Not Connected");
 
-            // Simulate placeholder text
+            cars = globalProcedure.ProcGetVehicles(currentPage, carsPerPage);
+            totalRecords = globalProcedure.ProcCountVehicles(searchBox.Text.ToLower());
             SetPlaceholder();
             searchBox.Enter += RemovePlaceholder;
             searchBox.Leave += SetPlaceholder;
-
             searchButton.Click += SearchButton_Click;
-
             prevPageBtn.Click += PrevPageBtn_Click;
-
             nextPageBtn.Click += NextPageBtn_Click;
             firstPageBtn.Click += FirstPageBtn_Click;
             lastPageBtn.Click += LastPageBtn_Click;
-
-            //pageSelector.ValueChanged += PageSelector_ValueChanged;
-            // Load data and display initial car list
-            LoadCars();
+            
             DisplayCars();
         }
-        
+
         // Event handler to set the placeholder text
         private void SetPlaceholder(object sender = null, EventArgs e = null)
         {
@@ -50,78 +57,127 @@ namespace CarBuyAndSell
             }
         }
 
-        // Event handler to remove the placeholder text when user starts typing
         private void RemovePlaceholder(object sender, EventArgs e)
         {
             if (searchBox.Text == "Search...")
             {
+                initial = false;
                 searchBox.Text = "";
                 searchBox.ForeColor = Color.Black;
             }
         }
         private void SearchButton_Click(object sender, EventArgs e)
         {
-            // Get the search query from the searchBox
+            currentPage = 1; // Reset to the first page
             string searchQuery = searchBox.Text.ToLower();
-            SearchCars(searchQuery); // Implement search logic
+            if (initial) searchQuery = "";
+            totalRecords = globalProcedure.ProcCountVehicles(searchQuery);
+            SearchCars();
         }
 
-        private void SearchCars(string searchQuery)
+        private void SearchCars()
         {
-            // Filter the car list based on the search query
-            List<string> filteredCars = cars
-                .Where(car => car.ToLower().Contains(searchQuery))
-                .ToList();
-
+            string searchQuery = searchBox.Text.ToLower();
+            if(initial) searchQuery = "";
+            List<VehicleDto> filteredCars = globalProcedure.ProcSearchVehicles(searchQuery, currentPage, carsPerPage);
             if (filteredCars.Count > 0)
             {
-                // Replace the original car list with the filtered list
                 cars = filteredCars;
-                currentPage = 1; // Reset to the first page
                 DisplayCars();
             }
             else
             {
                 MessageBox.Show("No cars found matching your search.");
             }
-        }
-        private void LoadCars()
-        {
-            for (int i = 1; i <= 100; i++)
-            {
-                cars.Add("Car " + i);
-            }
-        }
+        } 
 
-        // Display cars in 5 columns, 2 rows (10 cars per page)
         private void DisplayCars()
         {
-            carTableLayoutPanel.Controls.Clear(); // Clear previous cars
+            carTableLayoutPanel.Controls.Clear();
 
-            int start = (currentPage - 1) * carsPerPage;
-            int end = Math.Min(start + carsPerPage, cars.Count);
-
-            for (int i = start; i < end; i++)
+            if (cars.Count > 0)
             {
-                System.Windows.Forms.GroupBox carCard = new System.Windows.Forms.GroupBox();
-                carCard.Text = cars[i];
-                carCard.Padding = new Padding(10);
-                carCard.Dock = DockStyle.Fill;
+                for (int i = 0; i < cars.Count; i++)
+                {
+                    var car = cars[i];
+                    System.Windows.Forms.Panel cardPanel = new System.Windows.Forms.Panel
+                    {
+                        BorderStyle = BorderStyle.FixedSingle,
+                        Margin = new Padding(5),
+                        Dock = DockStyle.Fill
+                    };
 
-                Label carDetails = new Label();
-                carDetails.Text = $"Car details for {cars[i]}";
-                carDetails.AutoSize = true;
-                carCard.Controls.Add(carDetails);
+                    PictureBox carImage = new PictureBox
+                    {
+                        SizeMode = PictureBoxSizeMode.StretchImage,
+                        Dock = DockStyle.Top,
+                        Image = LoadCarImage("")
+                    };
+                    cardPanel.Controls.Add(carImage);
 
-                carTableLayoutPanel.Controls.Add(carCard);
+                    Label lblOwner = new Label
+                    {
+                        Text = "Owner: " + car.OwnerName,
+                        Dock = DockStyle.Bottom,
+                        TextAlign = ContentAlignment.MiddleCenter,
+                        Padding = new Padding(0, 5, 0, 0)
+                    };
+                    cardPanel.Controls.Add(lblOwner);
+
+                    Label lblBrand = new Label
+                    {
+                        Text = "Brand: " + car.BrandName,
+                        Dock = DockStyle.Bottom,
+                        TextAlign = ContentAlignment.MiddleCenter,
+                        Padding = new Padding(0, 5, 0, 0)
+                    };
+                    cardPanel.Controls.Add(lblBrand);
+
+                    Label lblModel = new Label
+                    {
+                        Text = "Model: " + car.Model,
+                        Dock = DockStyle.Bottom,
+                        TextAlign = ContentAlignment.MiddleCenter,
+                        Padding = new Padding(0, 5, 0, 0)
+                    };
+                    cardPanel.Controls.Add(lblModel);
+                    cardPanel.Click += ShowVehicleDetails(car.VehicleId);
+                    // Add the card to the grid
+                    carTableLayoutPanel.Controls.Add(cardPanel);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Record not found!");
             }
 
+            this.globalProcedure.sqlAdapter.Dispose();
+            this.globalProcedure.datCarBuyAndSellMgr.Dispose();
+
             UpdatePaginationButtons();
+
+        }
+
+
+
+
+        private EventHandler ShowVehicleDetails(int vehicleId)
+        {
+            return (sender, e) =>
+            {
+                VehicleDetailsForm vehicleDetailsForm = new VehicleDetailsForm(vehicleId);
+                vehicleDetailsForm.Show();
+            };
+        }
+
+        private void BtnAddVehicle_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void UpdatePaginationButtons()
         {
-            int totalPages = (cars.Count + carsPerPage - 1) / carsPerPage;
+            int totalPages = (totalRecords + carsPerPage - 1) / carsPerPage;
 
             prevPageBtn.Enabled = currentPage > 1;
             firstPageBtn.Enabled = currentPage > 1;
@@ -129,14 +185,14 @@ namespace CarBuyAndSell
             lastPageBtn.Enabled = currentPage < totalPages;
 
             pageLabel.Text = $"Page {currentPage} of {totalPages}";
-           // pageSelector.Maximum = totalPages;
+            // pageSelector.Maximum = totalPages;
             //pageSelector.Value = currentPage;
         }
 
         private void FirstPageBtn_Click(object sender, EventArgs e)
         {
             currentPage = 1;
-            DisplayCars();
+            SearchCars();
         }
 
         private void PrevPageBtn_Click(object sender, EventArgs e)
@@ -144,31 +200,37 @@ namespace CarBuyAndSell
             if (currentPage > 1)
             {
                 currentPage--;
-                DisplayCars();
+                SearchCars();
             }
         }
 
         private void NextPageBtn_Click(object sender, EventArgs e)
         {
-            int totalPages = (cars.Count + carsPerPage - 1) / carsPerPage;
+            int totalPages = (totalRecords + carsPerPage - 1) / carsPerPage;
             if (currentPage < totalPages)
             {
                 currentPage++;
-                DisplayCars();
+                SearchCars();
             }
         }
 
         private void LastPageBtn_Click(object sender, EventArgs e)
         {
-            currentPage = (cars.Count + carsPerPage - 1) / carsPerPage;
-            DisplayCars();
+            currentPage = (totalRecords + carsPerPage - 1) / carsPerPage;
+            SearchCars();
         }
 
-        //private void PageSelector_ValueChanged(object sender, EventArgs e)
-        //{
-        //    currentPage = (int)pageSelector.Value;
-        //    DisplayCars();
-        //}
+        private Image LoadCarImage(string imagePath)
+        {
+            if (File.Exists(imagePath))
+            {
+                return Image.FromFile(imagePath);
+            }
+            else
+            {
+                // Return a default image if no image is found
+                return Properties.Resources.DefaultVehicleImage;
+            }
+        }
     }
-
 }
