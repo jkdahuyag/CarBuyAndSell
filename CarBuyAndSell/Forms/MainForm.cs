@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CarBuyAndSell.UserControls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -101,6 +102,20 @@ namespace CarBuyAndSell
             pnlUserControl.Controls.Add(bidView);
         }
 
+
+        private void ShowTransactionsView()
+        {
+            Panel pnlUserControl = this.Controls.Find("pnlUserControl", true)[0] as Panel;
+            lblHeader.Text = "Transactions";
+
+            ClearAndDisposeControls(pnlUserControl);
+
+            TransactionsViewControl transactionsView = new TransactionsViewControl();
+            transactionsView.Dock = DockStyle.Fill;
+            pnlUserControl.Controls.Add(transactionsView);
+        }
+
+
         private void BtnMarket_Click(object sender, EventArgs e)
         {
             ShowMarketView();
@@ -134,6 +149,10 @@ namespace CarBuyAndSell
             ShowAdminDashboardView();
         }
 
+        private void BtnTransactions_Click(object sender, EventArgs e)
+        {
+            ShowTransactionsView();
+        }
 
         // Helper function to safely clear and dispose controls
         private void ClearAndDisposeControls(Control parent)
@@ -148,11 +167,6 @@ namespace CarBuyAndSell
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
-        }
-
-        private void lblAppName_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

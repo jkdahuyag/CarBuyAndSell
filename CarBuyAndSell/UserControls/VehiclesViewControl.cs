@@ -20,16 +20,21 @@ namespace CarBuyAndSell
     {
 
         GlobalProcedure globalProcedure = new GlobalProcedure();
-        private List<string> cars = new List<string>();
+        private List<VehicleDto> cars = new List<VehicleDto>();
+        private int totalRecords = 0;
         private int currentPage = 1;
         private const int carsPerPage = 10;
+        private bool initial = true;
 
         public VehiclesViewControl()
         {
             InitializeComponent();
+            initial = true;
             if (!this.globalProcedure.FncConnectToDatabase())
                 MessageBox.Show("Not Connected");
 
+            cars = globalProcedure.ProcGetVehicles(currentPage, carsPerPage);
+            totalRecords = globalProcedure.ProcCountVehicles(searchBox.Text.ToLower());
             SetPlaceholder();
             searchBox.Enter += RemovePlaceholder;
             searchBox.Leave += SetPlaceholder;
@@ -38,9 +43,7 @@ namespace CarBuyAndSell
             nextPageBtn.Click += NextPageBtn_Click;
             firstPageBtn.Click += FirstPageBtn_Click;
             lastPageBtn.Click += LastPageBtn_Click;
-
-            //pageSelector.ValueChanged += PageSelector_ValueChanged;
-            LoadCars();
+            
             DisplayCars();
         }
 
@@ -58,52 +61,45 @@ namespace CarBuyAndSell
         {
             if (searchBox.Text == "Search...")
             {
+                initial = false;
                 searchBox.Text = "";
                 searchBox.ForeColor = Color.Black;
             }
         }
         private void SearchButton_Click(object sender, EventArgs e)
         {
+            currentPage = 1; // Reset to the first page
             string searchQuery = searchBox.Text.ToLower();
-            SearchCars(searchQuery);
+            if (initial) searchQuery = "";
+            totalRecords = globalProcedure.ProcCountVehicles(searchQuery);
+            SearchCars();
         }
 
-        private void SearchCars(string searchQuery)
+        private void SearchCars()
         {
-            List<string> filteredCars = cars
-                .Where(car => car.ToLower().Contains(searchQuery))
-                .ToList();
-
+            string searchQuery = searchBox.Text.ToLower();
+            if(initial) searchQuery = "";
+            List<VehicleDto> filteredCars = globalProcedure.ProcSearchVehicles(searchQuery, currentPage, carsPerPage);
             if (filteredCars.Count > 0)
             {
                 cars = filteredCars;
-                currentPage = 1; // Reset to the first page
                 DisplayCars();
             }
             else
             {
                 MessageBox.Show("No cars found matching your search.");
             }
-        }
-        private void LoadCars()
-        {
-            for (int i = 1; i <= 100; i++)
-            {
-                cars.Add("Car " + i);
-            }
-        }
+        } 
 
         private void DisplayCars()
         {
             carTableLayoutPanel.Controls.Clear();
 
-            List<VehicleDto> vehicles = globalProcedure.ProcGetVehicles(currentPage,carsPerPage);
-            int totalRecords = vehicles.Count;
-            if (totalRecords > 0)
+            if (cars.Count > 0)
             {
-                for (int i = 0; i < totalRecords; i++)
+                for (int i = 0; i < cars.Count; i++)
                 {
-                    var car = vehicles[i];
+                    var car = cars[i];
                     System.Windows.Forms.Panel cardPanel = new System.Windows.Forms.Panel
                     {
                         BorderStyle = BorderStyle.FixedSingle,
@@ -181,7 +177,7 @@ namespace CarBuyAndSell
 
         private void UpdatePaginationButtons()
         {
-            int totalPages = (cars.Count + carsPerPage - 1) / carsPerPage;
+            int totalPages = (totalRecords + carsPerPage - 1) / carsPerPage;
 
             prevPageBtn.Enabled = currentPage > 1;
             firstPageBtn.Enabled = currentPage > 1;
@@ -196,7 +192,7 @@ namespace CarBuyAndSell
         private void FirstPageBtn_Click(object sender, EventArgs e)
         {
             currentPage = 1;
-            DisplayCars();
+            SearchCars();
         }
 
         private void PrevPageBtn_Click(object sender, EventArgs e)
@@ -204,24 +200,24 @@ namespace CarBuyAndSell
             if (currentPage > 1)
             {
                 currentPage--;
-                DisplayCars();
+                SearchCars();
             }
         }
 
         private void NextPageBtn_Click(object sender, EventArgs e)
         {
-            int totalPages = (cars.Count + carsPerPage - 1) / carsPerPage;
+            int totalPages = (totalRecords + carsPerPage - 1) / carsPerPage;
             if (currentPage < totalPages)
             {
                 currentPage++;
-                DisplayCars();
+                SearchCars();
             }
         }
 
         private void LastPageBtn_Click(object sender, EventArgs e)
         {
-            currentPage = (cars.Count + carsPerPage - 1) / carsPerPage;
-            DisplayCars();
+            currentPage = (totalRecords + carsPerPage - 1) / carsPerPage;
+            SearchCars();
         }
 
         private Image LoadCarImage(string imagePath)

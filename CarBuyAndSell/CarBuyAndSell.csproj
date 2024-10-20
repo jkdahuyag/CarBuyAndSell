@@ -172,6 +172,12 @@
     <Compile Include="UserControls\BidsViewControl.Designer.cs">
       <DependentUpon>BidsViewControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\TransactionsViewControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\TransactionsViewControl.Designer.cs">
+      <DependentUpon>TransactionsViewControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\VehiclesViewControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -218,6 +224,9 @@
     </Compile>
     <EmbeddedResource Include="Forms\VehicleDetailsForm.resx">
       <DependentUpon>VehicleDetailsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\TransactionsViewControl.resx">
+      <DependentUpon>TransactionsViewControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\VehiclesViewControl.resx">
       <DependentUpon>VehiclesViewControl.cs</DependentUpon>

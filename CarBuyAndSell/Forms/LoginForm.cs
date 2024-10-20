@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CarBuyAndSell.Dto;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,14 @@ namespace CarBuyAndSell
 {
     public partial class LoginForm : Form
     {
+        GlobalProcedure globalProcedure = new GlobalProcedure();
+
+
         public LoginForm()
         {
             InitializeComponent();
+            if (!this.globalProcedure.FncConnectToDatabase())
+                MessageBox.Show("Not Connected");
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -22,26 +28,30 @@ namespace CarBuyAndSell
             string username = txtUsername.Text;
             string password = txtPassword.Text;
 
-            // Example: Hard-coded user credentials (replace with database check in real apps)
             if (IsValidUser(username, password))
             {
-                // Open the main form upon successful login
                 MainForm mainForm = new MainForm();
                 mainForm.Show();
-                this.Hide(); // Hide the login form
-            }
-            else
-            {
-                // Show error message if login fails
-                MessageBox.Show("Invalid username or password!", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Hide(); 
             }
         }
 
         // Simulate user validation (replace with real user validation logic)
         private bool IsValidUser(string username, string password)
         {
-            // In a real app, replace this logic with a database check
-            return username == "admin" && password == "password123";
+            UserDto user = globalProcedure.ProcValidateUser(username, password);
+
+            if (user != null)
+            {
+                // Store user info in LoginInfo class for use in other forms
+                LoginInfo.UserId = user.UserId;
+                LoginInfo.Username = user.Username;
+                LoginInfo.Password = user.Password;
+                LoginInfo.Role = user.RoleName;
+            }
+
+            
+            return user != null;
         }
 
         private void LoginForm_FormClosing(object sender, FormClosingEventArgs e)

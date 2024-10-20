@@ -46,6 +46,7 @@ namespace CarBuyAndSell
             this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
             this.lblViewName = new Bunifu.UI.WinForms.BunifuLabel();
             this.pnlUserControl = new Bunifu.UI.WinForms.BunifuPanel();
+            this.bunifuShadowPanel1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.tblLayoutSideNavPartition = new System.Windows.Forms.TableLayoutPanel();
             this.pnlSideBar = new Bunifu.UI.WinForms.BunifuPanel();
             this.btnUsers = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -59,7 +60,6 @@ namespace CarBuyAndSell
             this.lblAppName = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.lblHeader = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuShadowPanel1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.tblLayoutMainDivider.SuspendLayout();
             this.pnlHeader.SuspendLayout();
             this.tblLayoutContentSide.SuspendLayout();
@@ -168,6 +168,27 @@ namespace CarBuyAndSell
             this.pnlUserControl.ShowBorders = true;
             this.pnlUserControl.Size = new System.Drawing.Size(625, 480);
             this.pnlUserControl.TabIndex = 3;
+            // 
+            // bunifuShadowPanel1
+            // 
+            this.bunifuShadowPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuShadowPanel1.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.bunifuShadowPanel1.BorderRadius = 1;
+            this.bunifuShadowPanel1.BorderThickness = 1;
+            this.bunifuShadowPanel1.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
+            this.bunifuShadowPanel1.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
+            this.bunifuShadowPanel1.Location = new System.Drawing.Point(3, 50);
+            this.bunifuShadowPanel1.Name = "bunifuShadowPanel1";
+            this.bunifuShadowPanel1.PanelColor = System.Drawing.Color.WhiteSmoke;
+            this.bunifuShadowPanel1.PanelColor2 = System.Drawing.Color.WhiteSmoke;
+            this.bunifuShadowPanel1.ShadowColor = System.Drawing.Color.DarkGray;
+            this.bunifuShadowPanel1.ShadowDept = 2;
+            this.bunifuShadowPanel1.ShadowDepth = 5;
+            this.bunifuShadowPanel1.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
+            this.bunifuShadowPanel1.ShadowTopLeftVisible = false;
+            this.bunifuShadowPanel1.Size = new System.Drawing.Size(300, 230);
+            this.bunifuShadowPanel1.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
+            this.bunifuShadowPanel1.TabIndex = 0;
             // 
             // tblLayoutSideNavPartition
             // 
@@ -302,6 +323,7 @@ namespace CarBuyAndSell
             this.btnUsers.TextMarginLeft = 0;
             this.btnUsers.TextPadding = new System.Windows.Forms.Padding(85, 0, 0, 0);
             this.btnUsers.UseDefaultRadiusAndThickness = true;
+            this.btnUsers.Click += new System.EventHandler(this.BtnUserList_Click);
             // 
             // btnTransactions
             // 
@@ -395,6 +417,7 @@ namespace CarBuyAndSell
             this.btnTransactions.TextMarginLeft = 0;
             this.btnTransactions.TextPadding = new System.Windows.Forms.Padding(85, 0, 0, 0);
             this.btnTransactions.UseDefaultRadiusAndThickness = true;
+            this.btnTransactions.Click += new System.EventHandler(this.BtnTransactions_Click);
             // 
             // btnBids
             // 
@@ -488,6 +511,7 @@ namespace CarBuyAndSell
             this.btnBids.TextMarginLeft = 0;
             this.btnBids.TextPadding = new System.Windows.Forms.Padding(85, 0, 0, 0);
             this.btnBids.UseDefaultRadiusAndThickness = true;
+            this.btnBids.Click += new System.EventHandler(this.BtnBid_Click);
             // 
             // btnListings
             // 
@@ -581,6 +605,7 @@ namespace CarBuyAndSell
             this.btnListings.TextMarginLeft = 0;
             this.btnListings.TextPadding = new System.Windows.Forms.Padding(85, 0, 0, 0);
             this.btnListings.UseDefaultRadiusAndThickness = true;
+            this.btnListings.Click += new System.EventHandler(this.BtnListing_Click);
             // 
             // btnVehicles
             // 
@@ -674,6 +699,7 @@ namespace CarBuyAndSell
             this.btnVehicles.TextMarginLeft = 0;
             this.btnVehicles.TextPadding = new System.Windows.Forms.Padding(85, 0, 0, 0);
             this.btnVehicles.UseDefaultRadiusAndThickness = true;
+            this.btnVehicles.Click += new System.EventHandler(this.BtnVehicles_Click);
             // 
             // btnMarket
             // 
@@ -767,6 +793,7 @@ namespace CarBuyAndSell
             this.btnMarket.TextMarginLeft = 0;
             this.btnMarket.TextPadding = new System.Windows.Forms.Padding(85, 0, 0, 0);
             this.btnMarket.UseDefaultRadiusAndThickness = true;
+            this.btnMarket.Click += new System.EventHandler(this.BtnMarket_Click);
             // 
             // btnDashboard
             // 
@@ -860,6 +887,7 @@ namespace CarBuyAndSell
             this.btnDashboard.TextMarginLeft = 0;
             this.btnDashboard.TextPadding = new System.Windows.Forms.Padding(85, 0, 0, 0);
             this.btnDashboard.UseDefaultRadiusAndThickness = true;
+            this.btnDashboard.Click += new System.EventHandler(this.BtnAdmin_Click);
             // 
             // pnlLogo
             // 
@@ -924,27 +952,6 @@ namespace CarBuyAndSell
             this.lblHeader.Text = "Vehicle";
             this.lblHeader.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblHeader.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuShadowPanel1
-            // 
-            this.bunifuShadowPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel1.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.bunifuShadowPanel1.BorderRadius = 1;
-            this.bunifuShadowPanel1.BorderThickness = 1;
-            this.bunifuShadowPanel1.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
-            this.bunifuShadowPanel1.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel1.Location = new System.Drawing.Point(3, 50);
-            this.bunifuShadowPanel1.Name = "bunifuShadowPanel1";
-            this.bunifuShadowPanel1.PanelColor = System.Drawing.Color.WhiteSmoke;
-            this.bunifuShadowPanel1.PanelColor2 = System.Drawing.Color.WhiteSmoke;
-            this.bunifuShadowPanel1.ShadowColor = System.Drawing.Color.DarkGray;
-            this.bunifuShadowPanel1.ShadowDept = 2;
-            this.bunifuShadowPanel1.ShadowDepth = 5;
-            this.bunifuShadowPanel1.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
-            this.bunifuShadowPanel1.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel1.Size = new System.Drawing.Size(300, 230);
-            this.bunifuShadowPanel1.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
-            this.bunifuShadowPanel1.TabIndex = 0;
             // 
             // MainForm
             // 

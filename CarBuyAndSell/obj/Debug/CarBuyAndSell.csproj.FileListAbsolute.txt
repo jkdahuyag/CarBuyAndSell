@@ -61,3 +61,4 @@ C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\bin\Debug\System.CodeDom.
 C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\bin\Debug\System.Text.Encodings.Web.xml
 C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\bin\Debug\System.Text.Json.xml
 C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\bin\Debug\System.ValueTuple.xml
+C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\obj\Debug\CarBuyAndSell.UserControls.TransactionsViewControl.resources
