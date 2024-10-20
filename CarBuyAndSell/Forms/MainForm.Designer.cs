@@ -60,6 +60,7 @@ namespace CarBuyAndSell
             this.lblAppName = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.lblHeader = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuShadowPanel2 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.tblLayoutMainDivider.SuspendLayout();
             this.pnlHeader.SuspendLayout();
             this.tblLayoutContentSide.SuspendLayout();
@@ -113,6 +114,7 @@ namespace CarBuyAndSell
             this.tblLayoutContentSide.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblLayoutContentSide.Location = new System.Drawing.Point(0, 0);
             this.tblLayoutContentSide.Margin = new System.Windows.Forms.Padding(0);
+            this.tblLayoutContentSide.MinimumSize = new System.Drawing.Size(705, 578);
             this.tblLayoutContentSide.Name = "tblLayoutContentSide";
             this.tblLayoutContentSide.RowCount = 2;
             this.tblLayoutContentSide.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -132,6 +134,7 @@ namespace CarBuyAndSell
             this.bunifuPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuPanel2.Location = new System.Drawing.Point(0, 0);
             this.bunifuPanel2.Margin = new System.Windows.Forms.Padding(0);
+            this.bunifuPanel2.MinimumSize = new System.Drawing.Size(705, 78);
             this.bunifuPanel2.Name = "bunifuPanel2";
             this.bunifuPanel2.ShowBorders = true;
             this.bunifuPanel2.Size = new System.Drawing.Size(705, 78);
@@ -160,6 +163,7 @@ namespace CarBuyAndSell
             this.pnlUserControl.BorderColor = System.Drawing.Color.Transparent;
             this.pnlUserControl.BorderRadius = 0;
             this.pnlUserControl.BorderThickness = 0;
+            this.pnlUserControl.Controls.Add(this.bunifuShadowPanel2);
             this.pnlUserControl.Controls.Add(this.bunifuShadowPanel1);
             this.pnlUserControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlUserControl.Location = new System.Drawing.Point(40, 83);
@@ -177,7 +181,7 @@ namespace CarBuyAndSell
             this.bunifuShadowPanel1.BorderThickness = 1;
             this.bunifuShadowPanel1.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel1.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel1.Location = new System.Drawing.Point(3, 50);
+            this.bunifuShadowPanel1.Location = new System.Drawing.Point(0, 50);
             this.bunifuShadowPanel1.Name = "bunifuShadowPanel1";
             this.bunifuShadowPanel1.PanelColor = System.Drawing.Color.WhiteSmoke;
             this.bunifuShadowPanel1.PanelColor2 = System.Drawing.Color.WhiteSmoke;
@@ -225,6 +229,7 @@ namespace CarBuyAndSell
             this.pnlSideBar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlSideBar.Location = new System.Drawing.Point(0, 0);
             this.pnlSideBar.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlSideBar.MinimumSize = new System.Drawing.Size(277, 498);
             this.pnlSideBar.Name = "pnlSideBar";
             this.pnlSideBar.Padding = new System.Windows.Forms.Padding(20, 20, 20, 0);
             this.pnlSideBar.ShowBorders = true;
@@ -953,10 +958,32 @@ namespace CarBuyAndSell
             this.lblHeader.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblHeader.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
+            // bunifuShadowPanel2
+            // 
+            this.bunifuShadowPanel2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuShadowPanel2.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.bunifuShadowPanel2.BorderRadius = 1;
+            this.bunifuShadowPanel2.BorderThickness = 1;
+            this.bunifuShadowPanel2.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
+            this.bunifuShadowPanel2.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
+            this.bunifuShadowPanel2.Location = new System.Drawing.Point(322, 50);
+            this.bunifuShadowPanel2.Name = "bunifuShadowPanel2";
+            this.bunifuShadowPanel2.PanelColor = System.Drawing.Color.WhiteSmoke;
+            this.bunifuShadowPanel2.PanelColor2 = System.Drawing.Color.WhiteSmoke;
+            this.bunifuShadowPanel2.ShadowColor = System.Drawing.Color.DarkGray;
+            this.bunifuShadowPanel2.ShadowDept = 2;
+            this.bunifuShadowPanel2.ShadowDepth = 5;
+            this.bunifuShadowPanel2.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
+            this.bunifuShadowPanel2.ShadowTopLeftVisible = false;
+            this.bunifuShadowPanel2.Size = new System.Drawing.Size(300, 230);
+            this.bunifuShadowPanel2.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
+            this.bunifuShadowPanel2.TabIndex = 1;
+            // 
             // MainForm
             // 
             this.ClientSize = new System.Drawing.Size(982, 578);
             this.Controls.Add(this.tblLayoutMainDivider);
+            this.MinimumSize = new System.Drawing.Size(1000, 625);
             this.Name = "MainForm";
             this.Text = "Cargadong Car";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
@@ -1000,6 +1027,7 @@ namespace CarBuyAndSell
         private Bunifu.UI.WinForms.BunifuLabel lblAppName;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
         private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel1;
+        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel2;
     }
 }
 
