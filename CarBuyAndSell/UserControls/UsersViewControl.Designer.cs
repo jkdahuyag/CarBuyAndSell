@@ -31,13 +31,6 @@ namespace CarBuyAndSell
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UsersViewControl));
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.bigLabel4 = new ReaLTaiizor.BigLabel();
-            this.bigLabel1 = new ReaLTaiizor.BigLabel();
-            this.bigLabel3 = new ReaLTaiizor.BigLabel();
-            this.bigLabel2 = new ReaLTaiizor.BigLabel();
-            this.lblTransactionId = new ReaLTaiizor.BigLabel();
-            this.lblBuyer = new ReaLTaiizor.BigLabel();
             this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.pnlHeader = new Bunifu.UI.WinForms.BunifuPanel();
             this.pnlTransactions = new Bunifu.UI.WinForms.BunifuPanel();
@@ -53,127 +46,20 @@ namespace CarBuyAndSell
             this.pageLabel = new System.Windows.Forms.Label();
             this.nextPageBtn = new System.Windows.Forms.Button();
             this.lastPageBtn = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblNumber = new ReaLTaiizor.BigLabel();
+            this.lblRole = new ReaLTaiizor.BigLabel();
+            this.lblUsername = new ReaLTaiizor.BigLabel();
+            this.lblAddress = new ReaLTaiizor.BigLabel();
+            this.lblUserId = new ReaLTaiizor.BigLabel();
+            this.lblName = new ReaLTaiizor.BigLabel();
             this.pnlHeader.SuspendLayout();
             this.pnlTransactions.SuspendLayout();
             this.mainLayoutPanel.SuspendLayout();
             this.searchPanel.SuspendLayout();
             this.paginationPanel.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutPanel1.ColumnCount = 6;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.055611F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.27806F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.27806F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.18807F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.18807F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.01213F));
-            this.tableLayoutPanel1.Controls.Add(this.bigLabel4, 5, 0);
-            this.tableLayoutPanel1.Controls.Add(this.bigLabel1, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.bigLabel3, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.bigLabel2, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lblTransactionId, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lblBuyer, 1, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(776, 44);
-            this.tableLayoutPanel1.TabIndex = 7;
-            // 
-            // bigLabel4
-            // 
-            this.bigLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bigLabel4.AutoSize = true;
-            this.bigLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.bigLabel4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bigLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.bigLabel4.Location = new System.Drawing.Point(684, 23);
-            this.bigLabel4.Name = "bigLabel4";
-            this.bigLabel4.Size = new System.Drawing.Size(89, 21);
-            this.bigLabel4.TabIndex = 5;
-            this.bigLabel4.Text = "Method";
-            this.bigLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // bigLabel1
-            // 
-            this.bigLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bigLabel1.AutoSize = true;
-            this.bigLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.bigLabel1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bigLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.bigLabel1.Location = new System.Drawing.Point(238, 23);
-            this.bigLabel1.Name = "bigLabel1";
-            this.bigLabel1.Size = new System.Drawing.Size(190, 21);
-            this.bigLabel1.TabIndex = 2;
-            this.bigLabel1.Text = "Seller";
-            this.bigLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // bigLabel3
-            // 
-            this.bigLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bigLabel3.AutoSize = true;
-            this.bigLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.bigLabel3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bigLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.bigLabel3.Location = new System.Drawing.Point(559, 23);
-            this.bigLabel3.Name = "bigLabel3";
-            this.bigLabel3.Size = new System.Drawing.Size(119, 21);
-            this.bigLabel3.TabIndex = 4;
-            this.bigLabel3.Text = "Date";
-            this.bigLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // bigLabel2
-            // 
-            this.bigLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bigLabel2.AutoSize = true;
-            this.bigLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.bigLabel2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bigLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.bigLabel2.Location = new System.Drawing.Point(434, 23);
-            this.bigLabel2.Name = "bigLabel2";
-            this.bigLabel2.Size = new System.Drawing.Size(119, 21);
-            this.bigLabel2.TabIndex = 3;
-            this.bigLabel2.Text = "Amount";
-            this.bigLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblTransactionId
-            // 
-            this.lblTransactionId.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTransactionId.AutoSize = true;
-            this.lblTransactionId.BackColor = System.Drawing.Color.Transparent;
-            this.lblTransactionId.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTransactionId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.lblTransactionId.Location = new System.Drawing.Point(3, 23);
-            this.lblTransactionId.Name = "lblTransactionId";
-            this.lblTransactionId.Size = new System.Drawing.Size(33, 21);
-            this.lblTransactionId.TabIndex = 0;
-            this.lblTransactionId.Text = "Id";
-            this.lblTransactionId.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblBuyer
-            // 
-            this.lblBuyer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblBuyer.AutoSize = true;
-            this.lblBuyer.BackColor = System.Drawing.Color.Transparent;
-            this.lblBuyer.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBuyer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.lblBuyer.Location = new System.Drawing.Point(42, 23);
-            this.lblBuyer.Name = "lblBuyer";
-            this.lblBuyer.Size = new System.Drawing.Size(190, 21);
-            this.lblBuyer.TabIndex = 1;
-            this.lblBuyer.Text = "Buyer";
-            this.lblBuyer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // bunifuSeparator1
             // 
@@ -229,6 +115,7 @@ namespace CarBuyAndSell
             // 
             // flwTransactions
             // 
+            this.flwTransactions.AutoScroll = true;
             this.flwTransactions.BackColor = System.Drawing.Color.Transparent;
             this.flwTransactions.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flwTransactions.Location = new System.Drawing.Point(0, 64);
@@ -352,6 +239,121 @@ namespace CarBuyAndSell
             this.lastPageBtn.TabIndex = 3;
             this.lastPageBtn.Text = "Last >>";
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.tableLayoutPanel1.ColumnCount = 7;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.479543F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.39771F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.151211F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.31798F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.3435F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.64339F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.Controls.Add(this.lblNumber, 5, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblRole, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblUsername, 4, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblAddress, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblUserId, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblName, 1, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(776, 44);
+            this.tableLayoutPanel1.TabIndex = 8;
+            // 
+            // lblNumber
+            // 
+            this.lblNumber.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblNumber.AutoSize = true;
+            this.lblNumber.BackColor = System.Drawing.Color.Transparent;
+            this.lblNumber.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.lblNumber.Location = new System.Drawing.Point(565, 23);
+            this.lblNumber.Name = "lblNumber";
+            this.lblNumber.Size = new System.Drawing.Size(76, 21);
+            this.lblNumber.TabIndex = 5;
+            this.lblNumber.Text = "Number";
+            this.lblNumber.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblRole
+            // 
+            this.lblRole.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblRole.AutoSize = true;
+            this.lblRole.BackColor = System.Drawing.Color.Transparent;
+            this.lblRole.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.lblRole.Location = new System.Drawing.Point(210, 23);
+            this.lblRole.Name = "lblRole";
+            this.lblRole.Size = new System.Drawing.Size(65, 21);
+            this.lblRole.TabIndex = 2;
+            this.lblRole.Text = "Role";
+            this.lblRole.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblUsername
+            // 
+            this.lblUsername.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblUsername.AutoSize = true;
+            this.lblUsername.BackColor = System.Drawing.Color.Transparent;
+            this.lblUsername.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.lblUsername.Location = new System.Drawing.Point(454, 23);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(105, 21);
+            this.lblUsername.TabIndex = 4;
+            this.lblUsername.Text = "Username";
+            this.lblUsername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblAddress
+            // 
+            this.lblAddress.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.BackColor = System.Drawing.Color.Transparent;
+            this.lblAddress.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.lblAddress.Location = new System.Drawing.Point(281, 23);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(167, 21);
+            this.lblAddress.TabIndex = 3;
+            this.lblAddress.Text = "Address";
+            this.lblAddress.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblUserId
+            // 
+            this.lblUserId.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblUserId.AutoSize = true;
+            this.lblUserId.BackColor = System.Drawing.Color.Transparent;
+            this.lblUserId.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.lblUserId.Location = new System.Drawing.Point(3, 23);
+            this.lblUserId.Name = "lblUserId";
+            this.lblUserId.Size = new System.Drawing.Size(28, 21);
+            this.lblUserId.TabIndex = 0;
+            this.lblUserId.Text = "Id";
+            this.lblUserId.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblName
+            // 
+            this.lblName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblName.AutoSize = true;
+            this.lblName.BackColor = System.Drawing.Color.Transparent;
+            this.lblName.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.lblName.Location = new System.Drawing.Point(37, 23);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(167, 21);
+            this.lblName.TabIndex = 1;
+            this.lblName.Text = "Name";
+            this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // UsersViewControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -359,27 +361,19 @@ namespace CarBuyAndSell
             this.Controls.Add(this.mainLayoutPanel);
             this.Name = "UsersViewControl";
             this.Size = new System.Drawing.Size(782, 553);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             this.pnlHeader.ResumeLayout(false);
             this.pnlTransactions.ResumeLayout(false);
             this.mainLayoutPanel.ResumeLayout(false);
             this.searchPanel.ResumeLayout(false);
             this.searchPanel.PerformLayout();
             this.paginationPanel.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private TableLayoutPanel tableLayoutPanel1;
-        private ReaLTaiizor.BigLabel bigLabel4;
-        private ReaLTaiizor.BigLabel bigLabel1;
-        private ReaLTaiizor.BigLabel bigLabel3;
-        private ReaLTaiizor.BigLabel bigLabel2;
-        private ReaLTaiizor.BigLabel lblTransactionId;
-        private ReaLTaiizor.BigLabel lblBuyer;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator1;
         private Bunifu.UI.WinForms.BunifuPanel pnlHeader;
         private Bunifu.UI.WinForms.BunifuPanel pnlTransactions;
@@ -395,5 +389,12 @@ namespace CarBuyAndSell
         private Label pageLabel;
         private Button nextPageBtn;
         private Button lastPageBtn;
+        private TableLayoutPanel tableLayoutPanel1;
+        private ReaLTaiizor.BigLabel lblNumber;
+        private ReaLTaiizor.BigLabel lblRole;
+        private ReaLTaiizor.BigLabel lblUsername;
+        private ReaLTaiizor.BigLabel lblAddress;
+        private ReaLTaiizor.BigLabel lblUserId;
+        private ReaLTaiizor.BigLabel lblName;
     }
 }

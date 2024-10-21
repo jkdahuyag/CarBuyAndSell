@@ -30,7 +30,7 @@ namespace CarBuyAndSell
                 MessageBox.Show("Not Connected");
 
             listings = globalProcedure.ProcGetListings(currentPage, carsPerPage, true);
-            totalRecords = globalProcedure.ProcCountVehicles(searchBox.Text.ToLower());
+            totalRecords = globalProcedure.ProcCountListings(searchBox.Text.ToLower(),false);
             SetPlaceholder();
             searchBox.Enter += RemovePlaceholder;
             searchBox.Leave += SetPlaceholder;
@@ -75,10 +75,10 @@ namespace CarBuyAndSell
         {
             string searchQuery = searchBox.Text.ToLower();
             if (initial) searchQuery = "";
-            List<ListingDto> filteredCars = globalProcedure.ProcSearchListings(searchQuery, currentPage, carsPerPage);
-            if (filteredCars.Count > 0)
+            List<ListingDto> filteredListings = globalProcedure.ProcSearchListings(searchQuery, currentPage, carsPerPage, true);
+            if (filteredListings.Count > 0)
             {
-                listings = filteredCars;
+                listings = filteredListings;
                 DisplayListings();
             }
             else

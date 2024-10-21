@@ -1,5 +1,6 @@
 ﻿using CarBuyAndSell.Dto;
 using CarBuyAndSell.Models;
+using CarBuyAndSell.Row_Instance;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,48 +15,62 @@ namespace CarBuyAndSell
 {
     public partial class BidsViewControl : UserControl
     {
-        private List<VehicleDto> cars = new List<VehicleDto>();
+        GlobalProcedure globalProcedure = new GlobalProcedure();
+        private bool initial = false;
+        private List<BidDto> bids = new List<BidDto>();
         private int currentPage = 1;
-        private const int carsPerPage = 10;
+        private const int rowsPerPage = 10;
+        private int totalRecords = 0;
 
         public BidsViewControl()
         {
             InitializeComponent();
+            initial = true;
+            if (!this.globalProcedure.FncConnectToDatabase())
+                MessageBox.Show("Not Connected");
 
-            // Load example data for the cars table
-            LoadCars();
-            DisplayCars();
-        }
-
-        private void LoadCars()
-        {
-            // Load car data for testing purposes
-            //cars.Add(new Car(1, "Toyota", "Corolla", 15000, "Listed"));
-            //cars.Add(new Car(2, "Honda", "Civic", 20000, "Sold"));
-            // Add more car data...
+            bids = globalProcedure.ProcGetBids(currentPage, rowsPerPage);
+            totalRecords = globalProcedure.ProcCountBids(searchBox.Text.ToLower());
+            SetPlaceholder();
+            searchBox.Enter += RemovePlaceholder;
+            searchBox.Leave += SetPlaceholder;
+            searchButton.Click += SearchButton_Click;
+            prevPageBtn.Click += PrevPageBtn_Click;
+            nextPageBtn.Click += NextPageBtn_Click;
+            firstPageBtn.Click += FirstPageBtn_Click;
+            lastPageBtn.Click += LastPageBtn_Click;
 
             DisplayCars();
         }
 
         private void DisplayCars()
         {
-            carsDataGridView.Rows.Clear();
+            flwBids.Controls.Clear();
 
-            int start = (currentPage - 1) * carsPerPage;
-            int end = Math.Min(start + carsPerPage, cars.Count);
-
-            for (int i = start; i < end; i++)
+            if (bids.Count > 0)
             {
-                var car = cars[i];
-                //carsDataGridView.Rows.Add(car.ItemNo, car.BrandName, car.Model, car.Price, car.SellStatus);
+                for (int i = 0; i < bids.Count; i++)
+                {
+                    var bid = bids[i];
+                    BidDataRowInstance panel = new BidDataRowInstance(bid);
+                    // Add the card to the grid
+                    flwBids.Controls.Add(panel);
+                }
             }
+            else
+            {
+                MessageBox.Show("Record not found!");
+            }
+
+            this.globalProcedure.sqlAdapter.Dispose();
+            this.globalProcedure.datCarBuyAndSellMgr.Dispose();
 
             UpdatePaginationButtons();
         }
 
         private void UpdatePaginationButtons()
         {
-            int totalPages = (cars.Count + carsPerPage - 1) / carsPerPage;
+            int totalPages = (bids.Count + rowsPerPage - 1) / rowsPerPage;
 
             prevPageBtn.Enabled = currentPage > 1;
             firstPageBtn.Enabled = currentPage > 1;
@@ -63,13 +78,49 @@ namespace CarBuyAndSell
             lastPageBtn.Enabled = currentPage < totalPages;
 
             pageLabel.Text = $"Page {currentPage} of {totalPages}";
-            pageSelector.Maximum = totalPages;
-            pageSelector.Value = currentPage;
         }
 
+        // Event handler to set the placeholder text
+        private void SetPlaceholder(object sender = null, EventArgs e = null)
+        {
+            if (string.IsNullOrWhiteSpace(searchBox.Text))
+            {
+                searchBox.Text = "Search...";
+                searchBox.ForeColor = Color.Gray;
+            }
+        }
+
+        private void RemovePlaceholder(object sender, EventArgs e)
+        {
+            if (searchBox.Text == "Search...")
+            {
+                initial = false;
+                searchBox.Text = "";
+                searchBox.ForeColor = Color.Black;
+            }
+        }
         private void SearchButton_Click(object sender, EventArgs e)
         {
-           
+            currentPage = 1; // Reset to the first page
+            string searchQuery = searchBox.Text.ToLower();
+            if (initial) searchQuery = "";
+            totalRecords = globalProcedure.ProcCountVehicles(searchQuery);
+            SearchTransactions();
+        }
+        private void SearchTransactions()
+        {
+            string searchQuery = searchBox.Text.ToLower();
+            if (initial) searchQuery = "";
+            List<BidDto> filteredBids = globalProcedure.ProcSearchBids(searchQuery, currentPage, rowsPerPage);
+            if (filteredBids.Count > 0)
+            {
+                bids = filteredBids;
+                DisplayCars();
+            }
+            else
+            {
+                MessageBox.Show("No cars found matching your search.");
+            }
         }
 
         private void FirstPageBtn_Click(object sender, EventArgs e)
@@ -89,7 +140,7 @@ namespace CarBuyAndSell
 
         private void NextPageBtn_Click(object sender, EventArgs e)
         {
-            int totalPages = (cars.Count + carsPerPage - 1) / carsPerPage;
+            int totalPages = (bids.Count + rowsPerPage - 1) / rowsPerPage;
             if (currentPage < totalPages)
             {
                 currentPage++;
@@ -99,14 +150,15 @@ namespace CarBuyAndSell
 
         private void LastPageBtn_Click(object sender, EventArgs e)
         {
-            currentPage = (cars.Count + carsPerPage - 1) / carsPerPage;
+            currentPage = (bids.Count + rowsPerPage - 1) / rowsPerPage;
             DisplayCars();
         }
 
-        private void PageSelector_ValueChanged(object sender, EventArgs e)
+        private void SellButton_Click(object sender, EventArgs e)
         {
-            currentPage = (int)pageSelector.Value;
-            DisplayCars();
+            // Open the Sell Form
+            //SellForm sellForm = new SellForm();
+            //sellForm.ShowDialog();
         }
     }
 }

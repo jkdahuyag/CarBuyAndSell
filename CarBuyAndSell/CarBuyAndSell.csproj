@@ -191,6 +191,12 @@
     <Compile Include="Models\Transaction.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\Vehicle.cs" />
+    <Compile Include="Row Instance\BidDataRowInstance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Row Instance\BidDataRowInstance.Designer.cs">
+      <DependentUpon>BidDataRowInstance.cs</DependentUpon>
+    </Compile>
     <Compile Include="Row Instance\ListingDataRowInstance.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -202,6 +208,12 @@
     </Compile>
     <Compile Include="Row Instance\TransactionDataRowInstance.Designer.cs">
       <DependentUpon>TransactionDataRowInstance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Row Instance\UserDataRowInstance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Row Instance\UserDataRowInstance.Designer.cs">
+      <DependentUpon>UserDataRowInstance.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\BidsViewControl.cs">
       <SubType>UserControl</SubType>
@@ -268,11 +280,17 @@
     <EmbeddedResource Include="Forms\VehicleDetailsForm.resx">
       <DependentUpon>VehicleDetailsForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Row Instance\BidDataRowInstance.resx">
+      <DependentUpon>BidDataRowInstance.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Row Instance\ListingDataRowInstance.resx">
       <DependentUpon>ListingDataRowInstance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Row Instance\TransactionDataRowInstance.resx">
       <DependentUpon>TransactionDataRowInstance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Row Instance\UserDataRowInstance.resx">
+      <DependentUpon>UserDataRowInstance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\BidsViewControl.resx">
       <DependentUpon>BidsViewControl.cs</DependentUpon>

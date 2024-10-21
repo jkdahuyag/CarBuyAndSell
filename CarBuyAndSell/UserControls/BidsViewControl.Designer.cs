@@ -32,16 +32,14 @@ namespace CarBuyAndSell
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BidsViewControl));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.bigLabel4 = new ReaLTaiizor.BigLabel();
             this.bigLabel1 = new ReaLTaiizor.BigLabel();
             this.bigLabel3 = new ReaLTaiizor.BigLabel();
             this.bigLabel2 = new ReaLTaiizor.BigLabel();
-            this.lblTransactionId = new ReaLTaiizor.BigLabel();
             this.lblBuyer = new ReaLTaiizor.BigLabel();
             this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.pnlHeader = new Bunifu.UI.WinForms.BunifuPanel();
             this.pnlTransactions = new Bunifu.UI.WinForms.BunifuPanel();
-            this.flwTransactions = new System.Windows.Forms.FlowLayoutPanel();
+            this.flwBids = new System.Windows.Forms.FlowLayoutPanel();
             this.searchBox = new System.Windows.Forms.TextBox();
             this.mainLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.searchPanel = new System.Windows.Forms.Panel();
@@ -64,19 +62,16 @@ namespace CarBuyAndSell
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutPanel1.ColumnCount = 6;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.055611F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.27806F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.27806F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.18807F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.18807F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.01213F));
-            this.tableLayoutPanel1.Controls.Add(this.bigLabel4, 5, 0);
-            this.tableLayoutPanel1.Controls.Add(this.bigLabel1, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.bigLabel3, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.bigLabel2, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lblTransactionId, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lblBuyer, 1, 0);
+            this.tableLayoutPanel1.ColumnCount = 5;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.60823F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.00891F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.8581F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.8581F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.Controls.Add(this.bigLabel1, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.bigLabel3, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.bigLabel2, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblBuyer, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -84,21 +79,6 @@ namespace CarBuyAndSell
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(776, 44);
             this.tableLayoutPanel1.TabIndex = 7;
-            // 
-            // bigLabel4
-            // 
-            this.bigLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bigLabel4.AutoSize = true;
-            this.bigLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.bigLabel4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bigLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.bigLabel4.Location = new System.Drawing.Point(684, 23);
-            this.bigLabel4.Name = "bigLabel4";
-            this.bigLabel4.Size = new System.Drawing.Size(89, 21);
-            this.bigLabel4.TabIndex = 5;
-            this.bigLabel4.Text = "Method";
-            this.bigLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // bigLabel1
             // 
@@ -108,11 +88,11 @@ namespace CarBuyAndSell
             this.bigLabel1.BackColor = System.Drawing.Color.Transparent;
             this.bigLabel1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bigLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.bigLabel1.Location = new System.Drawing.Point(238, 23);
+            this.bigLabel1.Location = new System.Drawing.Point(100, 23);
             this.bigLabel1.Name = "bigLabel1";
-            this.bigLabel1.Size = new System.Drawing.Size(190, 21);
+            this.bigLabel1.Size = new System.Drawing.Size(234, 21);
             this.bigLabel1.TabIndex = 2;
-            this.bigLabel1.Text = "Seller";
+            this.bigLabel1.Text = "Bidder";
             this.bigLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // bigLabel3
@@ -123,9 +103,9 @@ namespace CarBuyAndSell
             this.bigLabel3.BackColor = System.Drawing.Color.Transparent;
             this.bigLabel3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bigLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.bigLabel3.Location = new System.Drawing.Point(559, 23);
+            this.bigLabel3.Location = new System.Drawing.Point(494, 23);
             this.bigLabel3.Name = "bigLabel3";
-            this.bigLabel3.Size = new System.Drawing.Size(119, 21);
+            this.bigLabel3.Size = new System.Drawing.Size(148, 21);
             this.bigLabel3.TabIndex = 4;
             this.bigLabel3.Text = "Date";
             this.bigLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -138,27 +118,12 @@ namespace CarBuyAndSell
             this.bigLabel2.BackColor = System.Drawing.Color.Transparent;
             this.bigLabel2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bigLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.bigLabel2.Location = new System.Drawing.Point(434, 23);
+            this.bigLabel2.Location = new System.Drawing.Point(340, 23);
             this.bigLabel2.Name = "bigLabel2";
-            this.bigLabel2.Size = new System.Drawing.Size(119, 21);
+            this.bigLabel2.Size = new System.Drawing.Size(148, 21);
             this.bigLabel2.TabIndex = 3;
             this.bigLabel2.Text = "Amount";
             this.bigLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblTransactionId
-            // 
-            this.lblTransactionId.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTransactionId.AutoSize = true;
-            this.lblTransactionId.BackColor = System.Drawing.Color.Transparent;
-            this.lblTransactionId.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTransactionId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.lblTransactionId.Location = new System.Drawing.Point(3, 23);
-            this.lblTransactionId.Name = "lblTransactionId";
-            this.lblTransactionId.Size = new System.Drawing.Size(33, 21);
-            this.lblTransactionId.TabIndex = 0;
-            this.lblTransactionId.Text = "Id";
-            this.lblTransactionId.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblBuyer
             // 
@@ -168,11 +133,11 @@ namespace CarBuyAndSell
             this.lblBuyer.BackColor = System.Drawing.Color.Transparent;
             this.lblBuyer.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBuyer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.lblBuyer.Location = new System.Drawing.Point(42, 23);
+            this.lblBuyer.Location = new System.Drawing.Point(3, 23);
             this.lblBuyer.Name = "lblBuyer";
-            this.lblBuyer.Size = new System.Drawing.Size(190, 21);
+            this.lblBuyer.Size = new System.Drawing.Size(91, 21);
             this.lblBuyer.TabIndex = 1;
-            this.lblBuyer.Text = "Buyer";
+            this.lblBuyer.Text = "Listing Id";
             this.lblBuyer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // bunifuSeparator1
@@ -218,7 +183,7 @@ namespace CarBuyAndSell
             this.pnlTransactions.BorderColor = System.Drawing.Color.Transparent;
             this.pnlTransactions.BorderRadius = 3;
             this.pnlTransactions.BorderThickness = 1;
-            this.pnlTransactions.Controls.Add(this.flwTransactions);
+            this.pnlTransactions.Controls.Add(this.flwBids);
             this.pnlTransactions.Controls.Add(this.pnlHeader);
             this.pnlTransactions.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlTransactions.Location = new System.Drawing.Point(3, 53);
@@ -227,14 +192,15 @@ namespace CarBuyAndSell
             this.pnlTransactions.Size = new System.Drawing.Size(776, 437);
             this.pnlTransactions.TabIndex = 3;
             // 
-            // flwTransactions
+            // flwBids
             // 
-            this.flwTransactions.BackColor = System.Drawing.Color.Transparent;
-            this.flwTransactions.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flwTransactions.Location = new System.Drawing.Point(0, 64);
-            this.flwTransactions.Name = "flwTransactions";
-            this.flwTransactions.Size = new System.Drawing.Size(776, 373);
-            this.flwTransactions.TabIndex = 5;
+            this.flwBids.AutoScroll = true;
+            this.flwBids.BackColor = System.Drawing.Color.Transparent;
+            this.flwBids.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flwBids.Location = new System.Drawing.Point(0, 64);
+            this.flwBids.Name = "flwBids";
+            this.flwBids.Size = new System.Drawing.Size(776, 373);
+            this.flwBids.TabIndex = 5;
             // 
             // searchBox
             // 
@@ -374,16 +340,14 @@ namespace CarBuyAndSell
         #endregion
 
         private TableLayoutPanel tableLayoutPanel1;
-        private ReaLTaiizor.BigLabel bigLabel4;
         private ReaLTaiizor.BigLabel bigLabel1;
         private ReaLTaiizor.BigLabel bigLabel3;
         private ReaLTaiizor.BigLabel bigLabel2;
-        private ReaLTaiizor.BigLabel lblTransactionId;
         private ReaLTaiizor.BigLabel lblBuyer;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator1;
         private Bunifu.UI.WinForms.BunifuPanel pnlHeader;
         private Bunifu.UI.WinForms.BunifuPanel pnlTransactions;
-        private FlowLayoutPanel flwTransactions;
+        private FlowLayoutPanel flwBids;
         private TextBox searchBox;
         private TableLayoutPanel mainLayoutPanel;
         private Panel searchPanel;

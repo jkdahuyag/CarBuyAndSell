@@ -44,13 +44,13 @@
             this.flwTransactions = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlHeader = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
-            this.lblBuyer = new ReaLTaiizor.BigLabel();
-            this.lblTransactionId = new ReaLTaiizor.BigLabel();
-            this.bigLabel2 = new ReaLTaiizor.BigLabel();
-            this.bigLabel3 = new ReaLTaiizor.BigLabel();
-            this.bigLabel1 = new ReaLTaiizor.BigLabel();
-            this.bigLabel4 = new ReaLTaiizor.BigLabel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.bigLabel4 = new ReaLTaiizor.BigLabel();
+            this.bigLabel1 = new ReaLTaiizor.BigLabel();
+            this.bigLabel3 = new ReaLTaiizor.BigLabel();
+            this.bigLabel2 = new ReaLTaiizor.BigLabel();
+            this.lblTransactionId = new ReaLTaiizor.BigLabel();
+            this.lblBuyer = new ReaLTaiizor.BigLabel();
             this.paginationPanel.SuspendLayout();
             this.searchPanel.SuspendLayout();
             this.mainLayoutPanel.SuspendLayout();
@@ -236,96 +236,6 @@
             this.bunifuSeparator1.Size = new System.Drawing.Size(776, 17);
             this.bunifuSeparator1.TabIndex = 6;
             // 
-            // lblBuyer
-            // 
-            this.lblBuyer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblBuyer.AutoSize = true;
-            this.lblBuyer.BackColor = System.Drawing.Color.Transparent;
-            this.lblBuyer.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBuyer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.lblBuyer.Location = new System.Drawing.Point(42, 23);
-            this.lblBuyer.Name = "lblBuyer";
-            this.lblBuyer.Size = new System.Drawing.Size(190, 21);
-            this.lblBuyer.TabIndex = 1;
-            this.lblBuyer.Text = "Buyer";
-            this.lblBuyer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblTransactionId
-            // 
-            this.lblTransactionId.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTransactionId.AutoSize = true;
-            this.lblTransactionId.BackColor = System.Drawing.Color.Transparent;
-            this.lblTransactionId.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTransactionId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.lblTransactionId.Location = new System.Drawing.Point(3, 23);
-            this.lblTransactionId.Name = "lblTransactionId";
-            this.lblTransactionId.Size = new System.Drawing.Size(33, 21);
-            this.lblTransactionId.TabIndex = 0;
-            this.lblTransactionId.Text = "Id";
-            this.lblTransactionId.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // bigLabel2
-            // 
-            this.bigLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bigLabel2.AutoSize = true;
-            this.bigLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.bigLabel2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bigLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.bigLabel2.Location = new System.Drawing.Point(434, 23);
-            this.bigLabel2.Name = "bigLabel2";
-            this.bigLabel2.Size = new System.Drawing.Size(119, 21);
-            this.bigLabel2.TabIndex = 3;
-            this.bigLabel2.Text = "Amount";
-            this.bigLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // bigLabel3
-            // 
-            this.bigLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bigLabel3.AutoSize = true;
-            this.bigLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.bigLabel3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bigLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.bigLabel3.Location = new System.Drawing.Point(559, 23);
-            this.bigLabel3.Name = "bigLabel3";
-            this.bigLabel3.Size = new System.Drawing.Size(119, 21);
-            this.bigLabel3.TabIndex = 4;
-            this.bigLabel3.Text = "Date";
-            this.bigLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // bigLabel1
-            // 
-            this.bigLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bigLabel1.AutoSize = true;
-            this.bigLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.bigLabel1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bigLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.bigLabel1.Location = new System.Drawing.Point(238, 23);
-            this.bigLabel1.Name = "bigLabel1";
-            this.bigLabel1.Size = new System.Drawing.Size(190, 21);
-            this.bigLabel1.TabIndex = 2;
-            this.bigLabel1.Text = "Seller";
-            this.bigLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // bigLabel4
-            // 
-            this.bigLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bigLabel4.AutoSize = true;
-            this.bigLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.bigLabel4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bigLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.bigLabel4.Location = new System.Drawing.Point(684, 23);
-            this.bigLabel4.Name = "bigLabel4";
-            this.bigLabel4.Size = new System.Drawing.Size(89, 21);
-            this.bigLabel4.TabIndex = 5;
-            this.bigLabel4.Text = "Method";
-            this.bigLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
@@ -350,10 +260,101 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(776, 44);
             this.tableLayoutPanel1.TabIndex = 7;
             // 
+            // bigLabel4
+            // 
+            this.bigLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bigLabel4.AutoSize = true;
+            this.bigLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.bigLabel4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bigLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.bigLabel4.Location = new System.Drawing.Point(684, 23);
+            this.bigLabel4.Name = "bigLabel4";
+            this.bigLabel4.Size = new System.Drawing.Size(89, 21);
+            this.bigLabel4.TabIndex = 5;
+            this.bigLabel4.Text = "Method";
+            this.bigLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // bigLabel1
+            // 
+            this.bigLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bigLabel1.AutoSize = true;
+            this.bigLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.bigLabel1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bigLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.bigLabel1.Location = new System.Drawing.Point(238, 23);
+            this.bigLabel1.Name = "bigLabel1";
+            this.bigLabel1.Size = new System.Drawing.Size(190, 21);
+            this.bigLabel1.TabIndex = 2;
+            this.bigLabel1.Text = "Seller";
+            this.bigLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // bigLabel3
+            // 
+            this.bigLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bigLabel3.AutoSize = true;
+            this.bigLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.bigLabel3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bigLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.bigLabel3.Location = new System.Drawing.Point(559, 23);
+            this.bigLabel3.Name = "bigLabel3";
+            this.bigLabel3.Size = new System.Drawing.Size(119, 21);
+            this.bigLabel3.TabIndex = 4;
+            this.bigLabel3.Text = "Date";
+            this.bigLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // bigLabel2
+            // 
+            this.bigLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bigLabel2.AutoSize = true;
+            this.bigLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.bigLabel2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bigLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.bigLabel2.Location = new System.Drawing.Point(434, 23);
+            this.bigLabel2.Name = "bigLabel2";
+            this.bigLabel2.Size = new System.Drawing.Size(119, 21);
+            this.bigLabel2.TabIndex = 3;
+            this.bigLabel2.Text = "Amount";
+            this.bigLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblTransactionId
+            // 
+            this.lblTransactionId.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTransactionId.AutoSize = true;
+            this.lblTransactionId.BackColor = System.Drawing.Color.Transparent;
+            this.lblTransactionId.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTransactionId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.lblTransactionId.Location = new System.Drawing.Point(3, 23);
+            this.lblTransactionId.Name = "lblTransactionId";
+            this.lblTransactionId.Size = new System.Drawing.Size(33, 21);
+            this.lblTransactionId.TabIndex = 0;
+            this.lblTransactionId.Text = "Id";
+            this.lblTransactionId.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblBuyer
+            // 
+            this.lblBuyer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblBuyer.AutoSize = true;
+            this.lblBuyer.BackColor = System.Drawing.Color.Transparent;
+            this.lblBuyer.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBuyer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.lblBuyer.Location = new System.Drawing.Point(42, 23);
+            this.lblBuyer.Name = "lblBuyer";
+            this.lblBuyer.Size = new System.Drawing.Size(190, 21);
+            this.lblBuyer.TabIndex = 1;
+            this.lblBuyer.Text = "Buyer";
+            this.lblBuyer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // TransactionsViewControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.Controls.Add(this.mainLayoutPanel);
             this.Name = "TransactionsViewControl";
             this.Size = new System.Drawing.Size(782, 553);

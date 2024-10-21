@@ -11,23 +11,20 @@ using System.Windows.Forms;
 
 namespace CarBuyAndSell.Row_Instance
 {
-    public partial class ListingDataRowInstance : UserControl
+    public partial class BidDataRowInstance : UserControl
     {
         GlobalProcedure globalProcedure = new GlobalProcedure();
-        private ListingDto listing;
-        public ListingDataRowInstance(ListingDto listing)
+        private BidDto bid;
+        public BidDataRowInstance(BidDto bid)
         {
             InitializeComponent();
-            this.listing = listing;
+            this.bid = bid;
             if (!this.globalProcedure.FncConnectToDatabase())
                 MessageBox.Show("Not Connected");
-            lblBuyer.Text = $"{listing.FirstName} {listing.LastName}";
-            lblDateListed.Text = $"{listing.DateListed}";
-            lblExpiry.Text = $"{listing.ListingExpiry}";
-            lblHighestBid.Text = $"100000";
-            lblStatus.Text = listing.StatusName;
-            lblListingId.Text = $"{listing.ListingId}";
-
+            lblAmount.Text = $"{bid.BidAmount:N3}";
+            lblBidder.Text = $"{bid.FirstName} {bid.LastName}";
+            lblBidDate.Text = bid.BidDate.ToString();
+            lblListingId.Text = $"Listing {bid.ListingId}";
         }
     }
 }

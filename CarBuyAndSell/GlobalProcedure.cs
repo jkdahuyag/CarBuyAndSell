@@ -115,34 +115,42 @@ namespace CarBuyAndSell
         public List<UserDto> ProcGetUsers(int pageNum, int pageSize)
         {
             List<UserDto> list = new List<UserDto>();
-            Dictionary<string, object> parameters = new Dictionary<string, object>
+            
+            try
             {
-                { "@p_page", pageNum },
-                { "@p_page_size", pageSize }
-            };
-            ExecuteStoredProcedure("procGetAllUsersInPage", parameters);
-
-            if (this.datCarBuyAndSellMgr.Rows.Count > 0)
-            {
-                for (int row = 0; row < datCarBuyAndSellMgr.Rows.Count; row++)
+                Dictionary<string, object> parameters = new Dictionary<string, object>
                 {
-                    var dataRow = this.datCarBuyAndSellMgr.Rows[row];
-                    list.Add(new UserDto(
-                        int.Parse(dataRow["user_id"].ToString()),
-                        dataRow["role_name"].ToString(),
-                        dataRow["first_name"].ToString(),
-                        dataRow["last_name"].ToString(),
-                        dataRow["address"].ToString(),
-                        dataRow["username"].ToString(),
-                        dataRow["password"].ToString(),
-                        dataRow["number"].ToString()
-                    ));
+                    { "@p_page", pageNum },
+                    { "@p_page_size", pageSize }
+                };
+                ExecuteStoredProcedure("procGetAllUsersInPage", parameters);
+                if (this.datCarBuyAndSellMgr.Rows.Count > 0)
+                {
+                    for (int row = 0; row < datCarBuyAndSellMgr.Rows.Count; row++)
+                    {
+                        var dataRow = this.datCarBuyAndSellMgr.Rows[row];
+                        list.Add(new UserDto(
+                            int.Parse(dataRow["user_id"].ToString()),
+                            dataRow["role_name"].ToString(),
+                            dataRow["first_name"].ToString(),
+                            dataRow["last_name"].ToString(),
+                            dataRow["address"].ToString(),
+                            dataRow["username"].ToString(),
+                            dataRow["password"].ToString(),
+                            dataRow["number"].ToString()
+                        ));
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No users found.");
                 }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("No users found.");
+                MessageBox.Show(ex.Message);
             }
+            
 
             ClearData();
             return list;
@@ -155,6 +163,7 @@ namespace CarBuyAndSell
             {
                 Dictionary<string, object> parameters = new Dictionary<string, object>
                 {
+                    {"@p_user_id", 1 },
                     { "@p_search_keyword", name },
                     { "@p_page_size", pageSize },
                     { "@p_page", page }
@@ -243,7 +252,7 @@ namespace CarBuyAndSell
                     { "@p_user_id", LoginInfo.UserId },
                     { "@p_search_keyword", searchKeyWord }
                 };
-                ExecuteStoredProcedure("procCountUsers");
+                ExecuteStoredProcedure("procCountUsers", parameters);
                 return int.Parse(this.datCarBuyAndSellMgr.Rows[0]["total_count"].ToString());
             }
             catch (Exception ex)
@@ -939,7 +948,7 @@ namespace CarBuyAndSell
             return list;
         }
 
-        public int ProcCountListings(string searchKeyWord)
+        public int ProcCountListings(string searchKeyWord, bool isMarket)
         {
             try
             {
@@ -948,6 +957,10 @@ namespace CarBuyAndSell
                     { "@p_user_id", LoginInfo.UserId },
                     { "@p_search_keyword", searchKeyWord }
                 };
+                if (isMarket)
+                {
+                    parameters["@p_user_id"] = 1;
+                }
                 ExecuteStoredProcedure("procCountListings", parameters);
                 return int.Parse(this.datCarBuyAndSellMgr.Rows[0]["total_count"].ToString());
             }
@@ -958,7 +971,7 @@ namespace CarBuyAndSell
             }
         }
 
-        public List<ListingDto> ProcSearchListings(string searchKeyWord, int pageNum, int pageSize)
+        public List<ListingDto> ProcSearchListings(string searchKeyWord, int pageNum, int pageSize, bool isMarket)
         {
             List<ListingDto> list = new List<ListingDto>();
             try
@@ -970,6 +983,10 @@ namespace CarBuyAndSell
                     { "@p_page_size", pageSize },
                     { "@p_search_keyword", searchKeyWord }
                 };
+                if(isMarket)
+                {
+                    parameters["@p_user_id"] = 1;
+                }
                 ExecuteStoredProcedure("procSearchListings", parameters);
 
                 if (this.datCarBuyAndSellMgr.Rows.Count > 0)
