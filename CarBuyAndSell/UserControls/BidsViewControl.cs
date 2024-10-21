@@ -49,11 +49,12 @@ namespace CarBuyAndSell
 
             if (bids.Count > 0)
             {
-                for (int i = 0; i < bids.Count; i++)
+                for (int i = bids.Count - 1; i >= 0; i--)
                 {
                     var bid = bids[i];
                     BidDataRowInstance panel = new BidDataRowInstance(bid);
-                    // Add the card to the grid
+                    panel.Dock = DockStyle.Top; 
+
                     flwBids.Controls.Add(panel);
                 }
             }

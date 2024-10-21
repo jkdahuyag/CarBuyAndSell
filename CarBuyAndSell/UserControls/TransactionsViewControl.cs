@@ -49,10 +49,11 @@ namespace CarBuyAndSell.UserControls
 
             if (transactions.Count > 0)
             {
-                for (int i = 0; i < transactions.Count; i++)
+                for (int i = transactions.Count - 1; i >= 0; i--)
                 {
                     var transaction = transactions[i];
                     TransactionDataRowInstance transactionPanel = new TransactionDataRowInstance(transaction);
+                    transactionPanel.Dock = DockStyle.Top;
                     // Add the card to the grid
                     flwTransactions.Controls.Add(transactionPanel);
                 }

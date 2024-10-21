@@ -28,5 +28,20 @@ namespace CarBuyAndSell.Row_Instance
             lblRole.Text = user.RoleName;
             lblUserId.Text = $"{user.UserId}";
         }
+
+        private void BtnDetails_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnEdit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

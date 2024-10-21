@@ -49,10 +49,11 @@ namespace CarBuyAndSell
 
             if (listings.Count > 0)
             {
-                for (int i = 0; i < listings.Count; i++)
+                for (int i = listings.Count - 1; i >= 0; i--)
                 {
                     var listing = listings[i];
                     ListingDataRowInstance panel = new ListingDataRowInstance(listing);
+                    panel.Dock = DockStyle.Top;
                     // Add the card to the grid
                     flwListings.Controls.Add(panel);
                 }

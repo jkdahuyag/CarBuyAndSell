@@ -44,16 +44,17 @@ namespace CarBuyAndSell
 
         private void DisplayCars()
         {
-            flwTransactions.Controls.Clear();
+            pnlUsers.Controls.Clear();
 
             if (users.Count > 0)
             {
-                for (int i = 0; i < users.Count; i++)
+                for (int i = users.Count - 1; i >= 0; i--)
                 {
                     var user = users[i];
                     UserDataRowInstance panel = new UserDataRowInstance(user);
+                    panel.Dock = DockStyle.Top;
                     // Add the card to the grid
-                    flwTransactions.Controls.Add(panel);
+                    pnlUsers.Controls.Add(panel);
                 }
             }
             else

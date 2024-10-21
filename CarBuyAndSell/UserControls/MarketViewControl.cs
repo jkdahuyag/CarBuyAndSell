@@ -28,7 +28,6 @@ namespace CarBuyAndSell
             initial = true;
             if (!this.globalProcedure.FncConnectToDatabase())
                 MessageBox.Show("Not Connected");
-
             listings = globalProcedure.ProcGetListings(currentPage, carsPerPage, true);
             totalRecords = globalProcedure.ProcCountListings(searchBox.Text.ToLower(),false);
             SetPlaceholder();
