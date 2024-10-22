@@ -40,12 +40,12 @@ namespace CarBuyAndSell.UserControls
             firstPageBtn.Click += FirstPageBtn_Click;
             lastPageBtn.Click += LastPageBtn_Click;
 
-            DisplayCars();
+            DisplayTransactions();
         }
 
-        private void DisplayCars()
+        private void DisplayTransactions()
         {
-            flwTransactions.Controls.Clear();
+            pnlTransactionsTable.Controls.Clear();
 
             if (transactions.Count > 0)
             {
@@ -55,7 +55,7 @@ namespace CarBuyAndSell.UserControls
                     TransactionDataRowInstance transactionPanel = new TransactionDataRowInstance(transaction);
                     transactionPanel.Dock = DockStyle.Top;
                     // Add the card to the grid
-                    flwTransactions.Controls.Add(transactionPanel);
+                    pnlTransactionsTable.Controls.Add(transactionPanel);
                 }
             }
             else
@@ -116,18 +116,18 @@ namespace CarBuyAndSell.UserControls
             if (filteredTransactions.Count > 0)
             {
                 transactions = filteredTransactions;
-                DisplayCars();
+                DisplayTransactions();
             }
             else
             {
-                MessageBox.Show("No cars found matching your search.");
+                MessageBox.Show("No transaction found matching your search.");
             }
         }
 
         private void FirstPageBtn_Click(object sender, EventArgs e)
         {
             currentPage = 1;
-            DisplayCars();
+            DisplayTransactions();
         }
 
         private void PrevPageBtn_Click(object sender, EventArgs e)
@@ -135,7 +135,7 @@ namespace CarBuyAndSell.UserControls
             if (currentPage > 1)
             {
                 currentPage--;
-                DisplayCars();
+                DisplayTransactions();
             }
         }
 
@@ -145,22 +145,19 @@ namespace CarBuyAndSell.UserControls
             if (currentPage < totalPages)
             {
                 currentPage++;
-                DisplayCars();
+                DisplayTransactions();
             }
         }
 
         private void LastPageBtn_Click(object sender, EventArgs e)
         {
             currentPage = (transactions.Count + rowsPerPage - 1) / rowsPerPage;
-            DisplayCars();
+            DisplayTransactions();
         }
 
-        private void SellButton_Click(object sender, EventArgs e)
+        private void BtnMakeTransaction_Click(object sender, EventArgs e)
         {
-            // Open the Sell Form
-            //SellForm sellForm = new SellForm();
-            //sellForm.ShowDialog();
-        }
 
+        }
     }
 }

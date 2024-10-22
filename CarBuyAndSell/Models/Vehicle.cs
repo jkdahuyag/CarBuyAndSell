@@ -13,27 +13,23 @@ namespace CarBuyAndSell.Models
         public int BrandId { get; set; }
         public int ConditionId { get; set; }
         public int TransmissionTypeId { get; set; }
-        public int StatusId { get; set; }
-        public string LocationStored { get; set; }
+        public string FileName { get; set; }
         public string Model { get; set; }
         public DateTime ManufactureYear { get; set; }
         public string PlateNumber { get; set; }
-        public DateTime DateListed { get; set; }
         public double Mileage { get; set; }
 
-        public Vehicle(int vehicleId, int brandId, int conditionId, int transmissionTypeId, int statusId, string locationStored, string model, DateTime manufactureYear, string plateNumber, DateTime dateListed, double mileage, int ownerId)
+        public Vehicle(int vehicleId, int brandId, int conditionId, int transmissionTypeId, string fileName, string model, DateTime manufactureYear, string plateNumber, double mileage, int ownerId)
         {
             VehicleId = vehicleId;
             OwnerId = ownerId;
             BrandId = brandId;
             ConditionId = conditionId;
             TransmissionTypeId = transmissionTypeId;
-            StatusId = statusId;
-            LocationStored = locationStored;
+            FileName = fileName;
             Model = model;
             ManufactureYear = manufactureYear;
             PlateNumber = plateNumber;
-            DateListed = dateListed;
             Mileage = mileage;
         }
     }

@@ -31,7 +31,6 @@ namespace CarBuyAndSell
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MarketViewControl));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.mainLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.searchPanel = new System.Windows.Forms.Panel();
             this.searchBox = new System.Windows.Forms.TextBox();
@@ -42,7 +41,6 @@ namespace CarBuyAndSell
             this.pageLabel = new System.Windows.Forms.Label();
             this.nextPageBtn = new System.Windows.Forms.Button();
             this.lastPageBtn = new System.Windows.Forms.Button();
-            this.btnAddListing = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.pnlVehicles = new Bunifu.UI.WinForms.BunifuPanel();
             this.flwMarket = new System.Windows.Forms.FlowLayoutPanel();
@@ -101,7 +99,6 @@ namespace CarBuyAndSell
             // 
             // paginationPanel
             // 
-            this.paginationPanel.Controls.Add(this.btnAddListing);
             this.paginationPanel.Controls.Add(this.firstPageBtn);
             this.paginationPanel.Controls.Add(this.prevPageBtn);
             this.paginationPanel.Controls.Add(this.pageLabel);
@@ -165,98 +162,6 @@ namespace CarBuyAndSell
             this.lastPageBtn.Size = new System.Drawing.Size(75, 44);
             this.lastPageBtn.TabIndex = 3;
             this.lastPageBtn.Text = "Last >>";
-            // 
-            // btnAddListing
-            // 
-            this.btnAddListing.AllowAnimations = true;
-            this.btnAddListing.AllowMouseEffects = true;
-            this.btnAddListing.AllowToggling = false;
-            this.btnAddListing.AnimationSpeed = 200;
-            this.btnAddListing.AutoGenerateColors = false;
-            this.btnAddListing.AutoRoundBorders = false;
-            this.btnAddListing.AutoSizeLeftIcon = true;
-            this.btnAddListing.AutoSizeRightIcon = true;
-            this.btnAddListing.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddListing.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
-            this.btnAddListing.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddListing.BackgroundImage")));
-            this.btnAddListing.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnAddListing.ButtonText = "Add Vehicle";
-            this.btnAddListing.ButtonTextMarginLeft = 0;
-            this.btnAddListing.ColorContrastOnClick = 45;
-            this.btnAddListing.ColorContrastOnHover = 45;
-            this.btnAddListing.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btnAddListing.CustomizableEdges = borderEdges1;
-            this.btnAddListing.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnAddListing.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnAddListing.DisabledFillColor = System.Drawing.Color.Empty;
-            this.btnAddListing.DisabledForecolor = System.Drawing.Color.Empty;
-            this.btnAddListing.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnAddListing.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btnAddListing.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddListing.ForeColor = System.Drawing.Color.White;
-            this.btnAddListing.IconLeft = null;
-            this.btnAddListing.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddListing.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btnAddListing.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.btnAddListing.IconMarginLeft = 11;
-            this.btnAddListing.IconPadding = 10;
-            this.btnAddListing.IconRight = null;
-            this.btnAddListing.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAddListing.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btnAddListing.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.btnAddListing.IconSize = 25;
-            this.btnAddListing.IdleBorderColor = System.Drawing.Color.Empty;
-            this.btnAddListing.IdleBorderRadius = 0;
-            this.btnAddListing.IdleBorderThickness = 0;
-            this.btnAddListing.IdleFillColor = System.Drawing.Color.Empty;
-            this.btnAddListing.IdleIconLeftImage = null;
-            this.btnAddListing.IdleIconRightImage = null;
-            this.btnAddListing.IndicateFocus = false;
-            this.btnAddListing.Location = new System.Drawing.Point(0, 0);
-            this.btnAddListing.Name = "btnAddListing";
-            this.btnAddListing.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnAddListing.OnDisabledState.BorderRadius = 1;
-            this.btnAddListing.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnAddListing.OnDisabledState.BorderThickness = 1;
-            this.btnAddListing.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnAddListing.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnAddListing.OnDisabledState.IconLeftImage = null;
-            this.btnAddListing.OnDisabledState.IconRightImage = null;
-            this.btnAddListing.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
-            this.btnAddListing.onHoverState.BorderRadius = 1;
-            this.btnAddListing.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnAddListing.onHoverState.BorderThickness = 1;
-            this.btnAddListing.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
-            this.btnAddListing.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.btnAddListing.onHoverState.IconLeftImage = null;
-            this.btnAddListing.onHoverState.IconRightImage = null;
-            this.btnAddListing.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.btnAddListing.OnIdleState.BorderRadius = 1;
-            this.btnAddListing.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnAddListing.OnIdleState.BorderThickness = 1;
-            this.btnAddListing.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
-            this.btnAddListing.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btnAddListing.OnIdleState.IconLeftImage = null;
-            this.btnAddListing.OnIdleState.IconRightImage = null;
-            this.btnAddListing.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnAddListing.OnPressedState.BorderRadius = 1;
-            this.btnAddListing.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnAddListing.OnPressedState.BorderThickness = 1;
-            this.btnAddListing.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnAddListing.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.btnAddListing.OnPressedState.IconLeftImage = null;
-            this.btnAddListing.OnPressedState.IconRightImage = null;
-            this.btnAddListing.Size = new System.Drawing.Size(150, 44);
-            this.btnAddListing.TabIndex = 5;
-            this.btnAddListing.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAddListing.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnAddListing.TextMarginLeft = 0;
-            this.btnAddListing.TextPadding = new System.Windows.Forms.Padding(0);
-            this.btnAddListing.UseDefaultRadiusAndThickness = true;
             // 
             // bunifuPanel1
             // 
@@ -324,7 +229,6 @@ namespace CarBuyAndSell
         private TextBox searchBox;
         private Button searchButton;
         private Panel paginationPanel;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnAddListing;
         private Button firstPageBtn;
         private Button prevPageBtn;
         private Label pageLabel;

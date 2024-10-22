@@ -123,6 +123,16 @@ namespace CarBuyAndSell.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap defaultUserImage {
+            get {
+                object obj = ResourceManager.GetObject("defaultUserImage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap DefaultVehicleImage {
             get {
                 object obj = ResourceManager.GetObject("DefaultVehicleImage", resourceCulture);

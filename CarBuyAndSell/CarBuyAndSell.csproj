@@ -145,6 +145,7 @@
     <Compile Include="Dto\TransactionDto.cs" />
     <Compile Include="Dto\UserDto.cs" />
     <Compile Include="Dto\VehicleDto.cs" />
+    <Compile Include="Enums.cs" />
     <Compile Include="Forms\BidForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -277,8 +278,20 @@
     <EmbeddedResource Include="Cards\VehicleCardView.resx">
       <DependentUpon>VehicleCardView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BidForm.resx">
+      <DependentUpon>BidForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ListingForm.resx">
+      <DependentUpon>ListingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserForm.resx">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\VehicleDetailsForm.resx">
       <DependentUpon>VehicleDetailsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VehicleForm.resx">
+      <DependentUpon>VehicleForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Row Instance\BidDataRowInstance.resx">
       <DependentUpon>BidDataRowInstance.cs</DependentUpon>
@@ -373,9 +386,7 @@
   <ItemGroup>
     <None Include="Resources\transfer.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Images\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\log-out.png" />
   </ItemGroup>
@@ -393,6 +404,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DefaultUserImage.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\default.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

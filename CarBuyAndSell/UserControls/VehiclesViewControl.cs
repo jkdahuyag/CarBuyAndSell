@@ -119,7 +119,8 @@ namespace CarBuyAndSell
 
         private void BtnAddVehicle_Click(object sender, EventArgs e)
         {
-
+            VehicleForm form = new VehicleForm(null);
+            form.ShowDialog();
         }
 
         private void UpdatePaginationButtons()

@@ -1,4 +1,5 @@
 ﻿using CarBuyAndSell.Dto;
+using CarBuyAndSell.Forms;
 using CarBuyAndSell.Row_Instance;
 using System;
 using System.Collections.Generic;
@@ -39,10 +40,10 @@ namespace CarBuyAndSell
             firstPageBtn.Click += FirstPageBtn_Click;
             lastPageBtn.Click += LastPageBtn_Click;
 
-            DisplayCars();
+            DisplayUsers();
         }
 
-        private void DisplayCars()
+        private void DisplayUsers()
         {
             pnlUsers.Controls.Clear();
 
@@ -87,6 +88,7 @@ namespace CarBuyAndSell
             {
                 searchBox.Text = "Search...";
                 searchBox.ForeColor = Color.Gray;
+                initial = true;
             }
         }
 
@@ -103,30 +105,29 @@ namespace CarBuyAndSell
         {
             currentPage = 1; // Reset to the first page
             string searchQuery = searchBox.Text.ToLower();
-            if (initial) searchQuery = "";
-            totalRecords = globalProcedure.ProcCountVehicles(searchQuery);
+            totalRecords = globalProcedure.ProcCountUsers(searchQuery);
             SearchTransactions();
         }
         private void SearchTransactions()
         {
             string searchQuery = searchBox.Text.ToLower();
             if (initial) searchQuery = "";
-            List<UserDto> filteredUsers = globalProcedure.ProcSearchUsers(searchQuery, currentPage, rowsPerPage);
+            List<UserDto> filteredUsers = globalProcedure.ProcSearchUsers(searchQuery, rowsPerPage, currentPage);
             if (filteredUsers.Count > 0)
             {
                 users = filteredUsers;
-                DisplayCars();
+                DisplayUsers();
             }
             else
             {
-                MessageBox.Show("No cars found matching your search.");
+                MessageBox.Show("No users found matching your search.");
             }
         }
 
         private void FirstPageBtn_Click(object sender, EventArgs e)
         {
             currentPage = 1;
-            DisplayCars();
+            DisplayUsers();
         }
 
         private void PrevPageBtn_Click(object sender, EventArgs e)
@@ -134,7 +135,7 @@ namespace CarBuyAndSell
             if (currentPage > 1)
             {
                 currentPage--;
-                DisplayCars();
+                DisplayUsers();
             }
         }
 
@@ -144,21 +145,20 @@ namespace CarBuyAndSell
             if (currentPage < totalPages)
             {
                 currentPage++;
-                DisplayCars();
+                DisplayUsers();
             }
         }
 
         private void LastPageBtn_Click(object sender, EventArgs e)
         {
             currentPage = (users.Count + rowsPerPage - 1) / rowsPerPage;
-            DisplayCars();
+            DisplayUsers();
         }
 
-        private void SellButton_Click(object sender, EventArgs e)
+        private void BtnAddUser_Click(object sender, EventArgs e)
         {
-            // Open the Sell Form
-            //SellForm sellForm = new SellForm();
-            //sellForm.ShowDialog();
+            UserForm form = new UserForm(null); 
+            form.ShowDialog();
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using CarBuyAndSell.Dto;
+using CarBuyAndSell.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,18 +31,30 @@ namespace CarBuyAndSell.Row_Instance
         }
 
         private void BtnDetails_Click(object sender, EventArgs e)
-        {
-
+        { 
+            this.Parent.Parent.Controls.Clear();
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
-
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this user?", "Delete User", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                globalProcedure.ProcDeleteUser(user.UserId);
+                MessageBox.Show("User Deleted");
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do nothing
+            }
+            this.Parent.Invalidate();
         }
 
         private void BtnEdit_Click(object sender, EventArgs e)
         {
-
+            UserForm form = new UserForm(user);
+            form.ShowDialog();
+            this.Parent.Invalidate();
         }
     }
 }

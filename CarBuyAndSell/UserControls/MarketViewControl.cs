@@ -29,7 +29,7 @@ namespace CarBuyAndSell
             if (!this.globalProcedure.FncConnectToDatabase())
                 MessageBox.Show("Not Connected");
             listings = globalProcedure.ProcGetListings(currentPage, carsPerPage, true);
-            totalRecords = globalProcedure.ProcCountListings(searchBox.Text.ToLower(),false);
+            totalRecords = globalProcedure.ProcCountListings(searchBox.Text.ToLower(), true);
             SetPlaceholder();
             searchBox.Enter += RemovePlaceholder;
             searchBox.Leave += SetPlaceholder;
@@ -49,6 +49,7 @@ namespace CarBuyAndSell
             {
                 searchBox.Text = "Search...";
                 searchBox.ForeColor = Color.Gray;
+                initial = true;
             }
         }
 
@@ -82,7 +83,7 @@ namespace CarBuyAndSell
             }
             else
             {
-                MessageBox.Show("No cars found matching your search.");
+                MessageBox.Show("No listing found matching your search.");
             }
         }
 
@@ -161,18 +162,6 @@ namespace CarBuyAndSell
             currentPage = (totalRecords + carsPerPage - 1) / carsPerPage;
             SearchMarketListings();
         }
-
-        private Image LoadCarImage(string imagePath)
-        {
-            if (File.Exists(imagePath))
-            {
-                return Image.FromFile(imagePath);
-            }
-            else
-            {
-                // Return a default image if no image is found
-                return Properties.Resources.DefaultVehicleImage;
-            }
-        }
     }
 }
+

@@ -9,26 +9,28 @@ using System.Windows.Forms;
 
 namespace CarBuyAndSell.Helper_Functions
 {
-    public class ImageManager
+    public static class ImageManager
     {
-        private string currentDir = Environment.CurrentDirectory;
-        private string imageFolderDir = @"\Images\";
-        private string imagePath = "";
-        // create functions to read and write images from file path
-        public ImageManager() { }
-        public string GenerateImagePathFromFileManager()
+        private static string currentDir = Environment.CurrentDirectory;
+        private static string imageFolderDir = @"\Images\";
+        private static string imagePath = "";
+
+        public static string FileName { get; set; }
+
+        public static string GenerateImagePathFromFileManager()
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp; *.avif;)|*.jpg; *.jpeg; *.gif; *.bmp; *.avif;";
+            openFileDialog.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp; *.png;)|*.jpg; *.jpeg; *.gif; *.bmp; *.png;";
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                return GenerateImagePathFromName(openFileDialog.FileName);
+                FileName = openFileDialog.FileName;
+                return GenerateImagePathFromName(FileName);
             }
             return "";
         }
-        public string GenerateImagePathFromName(string imageName) 
+        public static string GenerateImagePathFromName(string imageName) 
         { 
-            imageFolderDir = Path.Combine(currentDir, @"../../Images\");
+            imageFolderDir = Path.Combine(currentDir, @"..\..\Images\");
             imagePath = Path.Combine(imageFolderDir, imageName);
             return imagePath;
         }

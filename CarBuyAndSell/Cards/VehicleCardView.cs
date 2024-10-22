@@ -23,12 +23,13 @@ namespace CarBuyAndSell.Cards
             if (!this.globalProcedure.FncConnectToDatabase())
                 MessageBox.Show("Not Connected");
             lblBrandAndModel.Text = vehicle.BrandName + " " + vehicle.Model;
-            lblValue.Text = $"{vehicle.MarketValue:N3}";
+            lblValue.Text = $"Php {vehicle.MarketValue:N3}";
             lblOwner.Text = vehicle.OwnerName;
+
             if (vehicle.FileName != "")
-                pcBoxVehicleImage.ImageLocation = vehicle.FileName;
+                picBoxVehicleImage.ImageLocation = vehicle.FileName;
             else
-                pcBoxVehicleImage.Image = Properties.Resources.DefaultVehicleImage;
+                picBoxVehicleImage.Image = Properties.Resources.DefaultVehicleImage;
         }
 
         private void BtnSellClick(object sender, EventArgs e)
@@ -41,6 +42,28 @@ namespace CarBuyAndSell.Cards
         {
             Form form = new VehicleForm(vehicle);
             form.ShowDialog();
+        }
+
+        private void BtnEdit_Click(object sender, EventArgs e)
+        {
+            Form form = new VehicleForm(vehicle);
+            form.ShowDialog();
+            this.Parent.Invalidate();
+        }
+
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this vehicle?", "Delete Vehicle", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                globalProcedure.ProcDeleteVehicle(vehicle.VehicleId);
+                MessageBox.Show("Vehicle Deleted");
+                this.Parent.Invalidate();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do nothing
+            }
         }
     }
 }

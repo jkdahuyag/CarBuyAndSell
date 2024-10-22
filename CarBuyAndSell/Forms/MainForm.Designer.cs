@@ -42,6 +42,8 @@ namespace CarBuyAndSell
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.tblLayoutMainDivider = new System.Windows.Forms.TableLayoutPanel();
+            this.tblLayoutSideNavPartition = new System.Windows.Forms.TableLayoutPanel();
+            this.lblHeader = new Bunifu.UI.WinForms.BunifuLabel();
             this.pnlHeader = new Bunifu.UI.WinForms.BunifuPanel();
             this.tblLayoutContentSide = new System.Windows.Forms.TableLayoutPanel();
             this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
@@ -50,7 +52,6 @@ namespace CarBuyAndSell
             this.bunifuVScrollBar1 = new Bunifu.UI.WinForms.BunifuVScrollBar();
             this.bunifuShadowPanel2 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.bunifuShadowPanel1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
-            this.tblLayoutSideNavPartition = new System.Windows.Forms.TableLayoutPanel();
             this.pnlSideBar = new Bunifu.UI.WinForms.BunifuPanel();
             this.btnLogout = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnUsers = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -62,13 +63,12 @@ namespace CarBuyAndSell
             this.btnDashboard = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.pnlLogo = new Bunifu.UI.WinForms.BunifuPanel();
             this.lblAppName = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lblHeader = new Bunifu.UI.WinForms.BunifuLabel();
             this.tblLayoutMainDivider.SuspendLayout();
+            this.tblLayoutSideNavPartition.SuspendLayout();
             this.pnlHeader.SuspendLayout();
             this.tblLayoutContentSide.SuspendLayout();
             this.bunifuPanel2.SuspendLayout();
             this.pnlUserControl.SuspendLayout();
-            this.tblLayoutSideNavPartition.SuspendLayout();
             this.pnlSideBar.SuspendLayout();
             this.pnlLogo.SuspendLayout();
             this.SuspendLayout();
@@ -89,6 +89,35 @@ namespace CarBuyAndSell
             this.tblLayoutMainDivider.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 66F));
             this.tblLayoutMainDivider.Size = new System.Drawing.Size(982, 578);
             this.tblLayoutMainDivider.TabIndex = 0;
+            // 
+            // tblLayoutSideNavPartition
+            // 
+            this.tblLayoutSideNavPartition.ColumnCount = 1;
+            this.tblLayoutSideNavPartition.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tblLayoutSideNavPartition.Controls.Add(this.pnlSideBar, 0, 0);
+            this.tblLayoutSideNavPartition.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tblLayoutSideNavPartition.Location = new System.Drawing.Point(0, 0);
+            this.tblLayoutSideNavPartition.Margin = new System.Windows.Forms.Padding(0);
+            this.tblLayoutSideNavPartition.Name = "tblLayoutSideNavPartition";
+            this.tblLayoutSideNavPartition.RowCount = 1;
+            this.tblLayoutSideNavPartition.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tblLayoutSideNavPartition.Size = new System.Drawing.Size(277, 578);
+            this.tblLayoutSideNavPartition.TabIndex = 2;
+            // 
+            // lblHeader
+            // 
+            this.lblHeader.AllowParentOverrides = false;
+            this.lblHeader.AutoEllipsis = false;
+            this.lblHeader.CursorType = null;
+            this.lblHeader.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeader.Location = new System.Drawing.Point(21, 12);
+            this.lblHeader.Name = "lblHeader";
+            this.lblHeader.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblHeader.Size = new System.Drawing.Size(93, 29);
+            this.lblHeader.TabIndex = 1;
+            this.lblHeader.Text = "Vehicle";
+            this.lblHeader.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblHeader.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // pnlHeader
             // 
@@ -256,20 +285,6 @@ namespace CarBuyAndSell
             this.bunifuShadowPanel1.Size = new System.Drawing.Size(300, 230);
             this.bunifuShadowPanel1.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel1.TabIndex = 0;
-            // 
-            // tblLayoutSideNavPartition
-            // 
-            this.tblLayoutSideNavPartition.ColumnCount = 1;
-            this.tblLayoutSideNavPartition.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tblLayoutSideNavPartition.Controls.Add(this.pnlSideBar, 0, 0);
-            this.tblLayoutSideNavPartition.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tblLayoutSideNavPartition.Location = new System.Drawing.Point(0, 0);
-            this.tblLayoutSideNavPartition.Margin = new System.Windows.Forms.Padding(0);
-            this.tblLayoutSideNavPartition.Name = "tblLayoutSideNavPartition";
-            this.tblLayoutSideNavPartition.RowCount = 1;
-            this.tblLayoutSideNavPartition.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tblLayoutSideNavPartition.Size = new System.Drawing.Size(277, 578);
-            this.tblLayoutSideNavPartition.TabIndex = 2;
             // 
             // pnlSideBar
             // 
@@ -1082,36 +1097,22 @@ namespace CarBuyAndSell
             this.lblAppName.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblAppName.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // lblHeader
-            // 
-            this.lblHeader.AllowParentOverrides = false;
-            this.lblHeader.AutoEllipsis = false;
-            this.lblHeader.CursorType = null;
-            this.lblHeader.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHeader.Location = new System.Drawing.Point(21, 12);
-            this.lblHeader.Name = "lblHeader";
-            this.lblHeader.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblHeader.Size = new System.Drawing.Size(93, 29);
-            this.lblHeader.TabIndex = 1;
-            this.lblHeader.Text = "Vehicle";
-            this.lblHeader.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblHeader.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
             // MainForm
             // 
             this.ClientSize = new System.Drawing.Size(982, 578);
             this.Controls.Add(this.tblLayoutMainDivider);
+            this.DoubleBuffered = true;
             this.MinimumSize = new System.Drawing.Size(1000, 625);
             this.Name = "MainForm";
             this.Text = "Cargadong Car";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.tblLayoutMainDivider.ResumeLayout(false);
+            this.tblLayoutSideNavPartition.ResumeLayout(false);
             this.pnlHeader.ResumeLayout(false);
             this.tblLayoutContentSide.ResumeLayout(false);
             this.bunifuPanel2.ResumeLayout(false);
             this.bunifuPanel2.PerformLayout();
             this.pnlUserControl.ResumeLayout(false);
-            this.tblLayoutSideNavPartition.ResumeLayout(false);
             this.pnlSideBar.ResumeLayout(false);
             this.pnlLogo.ResumeLayout(false);
             this.pnlLogo.PerformLayout();

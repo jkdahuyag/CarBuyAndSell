@@ -25,7 +25,7 @@ namespace CarBuyAndSell.Cards
                 MessageBox.Show("Not Connected");
             vehicle = globalProcedure.ProcGetVehicleById(listing.VehicleId)[0];
             lblBrandAndModel.Text = vehicle.BrandName + " " + vehicle.Model;
-            lblValue.Text = $"{vehicle.MarketValue:N3}";
+            lblValue.Text = $"Php {listing.AskingPrice:N3}";
             lblOwner.Text = vehicle.OwnerName;
             if (vehicle.FileName != "")
                 pcBoxVehicleImage.ImageLocation = vehicle.FileName;

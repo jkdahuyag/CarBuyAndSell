@@ -45,7 +45,7 @@ namespace CarBuyAndSell
 
         private void DisplayCars()
         {
-            flwBids.Controls.Clear();
+            pnlBids.Controls.Clear();
 
             if (bids.Count > 0)
             {
@@ -53,9 +53,9 @@ namespace CarBuyAndSell
                 {
                     var bid = bids[i];
                     BidDataRowInstance panel = new BidDataRowInstance(bid);
-                    panel.Dock = DockStyle.Top; 
+                    panel.Dock = DockStyle.Top;
 
-                    flwBids.Controls.Add(panel);
+                    pnlBids.Controls.Add(panel);
                 }
             }
             else
@@ -88,6 +88,7 @@ namespace CarBuyAndSell
             {
                 searchBox.Text = "Search...";
                 searchBox.ForeColor = Color.Gray;
+                initial = true;
             }
         }
 

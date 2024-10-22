@@ -40,12 +40,12 @@ namespace CarBuyAndSell
             firstPageBtn.Click += FirstPageBtn_Click;
             lastPageBtn.Click += LastPageBtn_Click;
 
-            DisplayCars();
+            DisplayListings();
         }
 
-        private void DisplayCars()
+        private void DisplayListings()
         {
-            flwListings.Controls.Clear();
+            pnlListings.Controls.Clear();
 
             if (listings.Count > 0)
             {
@@ -55,7 +55,7 @@ namespace CarBuyAndSell
                     ListingDataRowInstance panel = new ListingDataRowInstance(listing);
                     panel.Dock = DockStyle.Top;
                     // Add the card to the grid
-                    flwListings.Controls.Add(panel);
+                    pnlListings.Controls.Add(panel);
                 }
             }
             else
@@ -88,6 +88,7 @@ namespace CarBuyAndSell
             {
                 searchBox.Text = "Search...";
                 searchBox.ForeColor = Color.Gray;
+                initial = true;
             }
         }
 
@@ -116,18 +117,18 @@ namespace CarBuyAndSell
             if (filteredListings.Count > 0)
             {
                 listings = filteredListings;
-                DisplayCars();
+                DisplayListings();
             }
             else
             {
-                MessageBox.Show("No cars found matching your search.");
+                MessageBox.Show("No listings found matching your search.");
             }
         }
 
         private void FirstPageBtn_Click(object sender, EventArgs e)
         {
             currentPage = 1;
-            DisplayCars();
+            DisplayListings();
         }
 
         private void PrevPageBtn_Click(object sender, EventArgs e)
@@ -135,7 +136,7 @@ namespace CarBuyAndSell
             if (currentPage > 1)
             {
                 currentPage--;
-                DisplayCars();
+                DisplayListings();
             }
         }
 
@@ -145,14 +146,14 @@ namespace CarBuyAndSell
             if (currentPage < totalPages)
             {
                 currentPage++;
-                DisplayCars();
+                DisplayListings();
             }
         }
 
         private void LastPageBtn_Click(object sender, EventArgs e)
         {
             currentPage = (listings.Count + rowsPerPage - 1) / rowsPerPage;
-            DisplayCars();
+            DisplayListings();
         }
 
         private void SellButton_Click(object sender, EventArgs e)

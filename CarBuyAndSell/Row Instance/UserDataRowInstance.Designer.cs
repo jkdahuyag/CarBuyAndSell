@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserDataRowInstance));
+            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
             this.pnlTransactions = new Bunifu.UI.WinForms.BunifuPanel();
             this.flwTransactions = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlHeader = new Bunifu.UI.WinForms.BunifuPanel();
@@ -43,9 +43,9 @@
             this.lblUserId = new ReaLTaiizor.BigLabel();
             this.lblName = new ReaLTaiizor.BigLabel();
             this.pnlControls = new Bunifu.UI.WinForms.BunifuPanel();
+            this.btnDelete = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton();
             this.btnEdit = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton();
             this.btnDetails = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton();
-            this.btnDelete = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton();
             this.pnlTransactions.SuspendLayout();
             this.pnlHeader.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -108,7 +108,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.30889F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.18877F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.40874F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 132F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 156F));
             this.tableLayoutPanel1.Controls.Add(this.lblNumber, 5, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblRole, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblUsername, 4, 0);
@@ -130,9 +130,9 @@
             this.lblNumber.BackColor = System.Drawing.Color.Transparent;
             this.lblNumber.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.lblNumber.Location = new System.Drawing.Point(526, 23);
+            this.lblNumber.Location = new System.Drawing.Point(506, 23);
             this.lblNumber.Name = "lblNumber";
-            this.lblNumber.Size = new System.Drawing.Size(112, 17);
+            this.lblNumber.Size = new System.Drawing.Size(108, 17);
             this.lblNumber.TabIndex = 5;
             this.lblNumber.Text = "Number";
             this.lblNumber.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -144,9 +144,9 @@
             this.lblRole.BackColor = System.Drawing.Color.Transparent;
             this.lblRole.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.lblRole.Location = new System.Drawing.Point(190, 23);
+            this.lblRole.Location = new System.Drawing.Point(183, 23);
             this.lblRole.Name = "lblRole";
-            this.lblRole.Size = new System.Drawing.Size(64, 17);
+            this.lblRole.Size = new System.Drawing.Size(61, 17);
             this.lblRole.TabIndex = 2;
             this.lblRole.Text = "Role";
             this.lblRole.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -158,9 +158,9 @@
             this.lblUsername.BackColor = System.Drawing.Color.Transparent;
             this.lblUsername.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.lblUsername.Location = new System.Drawing.Point(403, 23);
+            this.lblUsername.Location = new System.Drawing.Point(388, 23);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(117, 17);
+            this.lblUsername.Size = new System.Drawing.Size(112, 17);
             this.lblUsername.TabIndex = 4;
             this.lblUsername.Text = "Username";
             this.lblUsername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -172,9 +172,9 @@
             this.lblAddress.BackColor = System.Drawing.Color.Transparent;
             this.lblAddress.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.lblAddress.Location = new System.Drawing.Point(260, 23);
+            this.lblAddress.Location = new System.Drawing.Point(250, 23);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(137, 17);
+            this.lblAddress.Size = new System.Drawing.Size(132, 17);
             this.lblAddress.TabIndex = 3;
             this.lblAddress.Text = "Address";
             this.lblAddress.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -188,7 +188,7 @@
             this.lblUserId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.lblUserId.Location = new System.Drawing.Point(3, 23);
             this.lblUserId.Name = "lblUserId";
-            this.lblUserId.Size = new System.Drawing.Size(40, 17);
+            this.lblUserId.Size = new System.Drawing.Size(38, 17);
             this.lblUserId.TabIndex = 0;
             this.lblUserId.Text = "Id";
             this.lblUserId.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -200,9 +200,9 @@
             this.lblName.BackColor = System.Drawing.Color.Transparent;
             this.lblName.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.lblName.Location = new System.Drawing.Point(49, 23);
+            this.lblName.Location = new System.Drawing.Point(47, 23);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(135, 17);
+            this.lblName.Size = new System.Drawing.Size(130, 17);
             this.lblName.TabIndex = 1;
             this.lblName.Text = "Name";
             this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -218,12 +218,46 @@
             this.pnlControls.Controls.Add(this.btnDelete);
             this.pnlControls.Controls.Add(this.btnEdit);
             this.pnlControls.Controls.Add(this.btnDetails);
-            this.pnlControls.Location = new System.Drawing.Point(644, 3);
+            this.pnlControls.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlControls.Location = new System.Drawing.Point(620, 3);
             this.pnlControls.Name = "pnlControls";
             this.pnlControls.Padding = new System.Windows.Forms.Padding(12, 12, 0, 0);
             this.pnlControls.ShowBorders = true;
-            this.pnlControls.Size = new System.Drawing.Size(126, 58);
+            this.pnlControls.Size = new System.Drawing.Size(153, 58);
             this.pnlControls.TabIndex = 6;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.AllowAnimations = true;
+            this.btnDelete.AllowBorderColorChanges = true;
+            this.btnDelete.AllowMouseEffects = true;
+            this.btnDelete.AnimationSpeed = 200;
+            this.btnDelete.BackColor = System.Drawing.Color.Transparent;
+            this.btnDelete.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btnDelete.BorderColor = System.Drawing.Color.Transparent;
+            this.btnDelete.BorderRadius = 1;
+            this.btnDelete.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderStyles.Solid;
+            this.btnDelete.BorderThickness = 1;
+            this.btnDelete.ColorContrastOnClick = 30;
+            this.btnDelete.ColorContrastOnHover = 30;
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btnDelete.CustomizableEdges = borderEdges1;
+            this.btnDelete.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnDelete.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnDelete.Image = global::CarBuyAndSell.Properties.Resources.delete_symbol;
+            this.btnDelete.ImageMargin = new System.Windows.Forms.Padding(0);
+            this.btnDelete.Location = new System.Drawing.Point(76, 12);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.RoundBorders = true;
+            this.btnDelete.ShowBorders = true;
+            this.btnDelete.Size = new System.Drawing.Size(32, 32);
+            this.btnDelete.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Round;
+            this.btnDelete.TabIndex = 10;
+            this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // btnEdit
             // 
@@ -239,7 +273,7 @@
             this.btnEdit.BorderThickness = 1;
             this.btnEdit.ColorContrastOnClick = 30;
             this.btnEdit.ColorContrastOnHover = 30;
-            this.btnEdit.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges2.BottomLeft = true;
             borderEdges2.BottomRight = true;
             borderEdges2.TopLeft = true;
@@ -272,7 +306,7 @@
             this.btnDetails.BorderThickness = 1;
             this.btnDetails.ColorContrastOnClick = 30;
             this.btnDetails.ColorContrastOnHover = 30;
-            this.btnDetails.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnDetails.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges3.BottomLeft = true;
             borderEdges3.BottomRight = true;
             borderEdges3.TopLeft = true;
@@ -292,44 +326,12 @@
             this.btnDetails.TabIndex = 7;
             this.btnDetails.Click += new System.EventHandler(this.BtnDetails_Click);
             // 
-            // btnDelete
-            // 
-            this.btnDelete.AllowAnimations = true;
-            this.btnDelete.AllowBorderColorChanges = true;
-            this.btnDelete.AllowMouseEffects = true;
-            this.btnDelete.AnimationSpeed = 200;
-            this.btnDelete.BackColor = System.Drawing.Color.Transparent;
-            this.btnDelete.BackgroundColor = System.Drawing.Color.Transparent;
-            this.btnDelete.BorderColor = System.Drawing.Color.Transparent;
-            this.btnDelete.BorderRadius = 1;
-            this.btnDelete.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderStyles.Solid;
-            this.btnDelete.BorderThickness = 1;
-            this.btnDelete.ColorContrastOnClick = 30;
-            this.btnDelete.ColorContrastOnHover = 30;
-            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btnDelete.CustomizableEdges = borderEdges1;
-            this.btnDelete.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnDelete.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnDelete.Image = global::CarBuyAndSell.Properties.Resources.delete_symbol;
-            this.btnDelete.ImageMargin = new System.Windows.Forms.Padding(0);
-            this.btnDelete.Location = new System.Drawing.Point(76, 12);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.RoundBorders = true;
-            this.btnDelete.ShowBorders = true;
-            this.btnDelete.Size = new System.Drawing.Size(32, 32);
-            this.btnDelete.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Round;
-            this.btnDelete.TabIndex = 10;
-            this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
-            // 
             // UserDataRowInstance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pnlTransactions);
+            this.DoubleBuffered = true;
             this.Name = "UserDataRowInstance";
             this.Size = new System.Drawing.Size(776, 64);
             this.pnlTransactions.ResumeLayout(false);

@@ -72,3 +72,7 @@ C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\obj\Debug\CarBuyAndSell.R
 C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\obj\Debug\CarBuyAndSell.BidsViewControl.resources
 C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\obj\Debug\CarBuyAndSell.ListingViewControl.resources
 C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\obj\Debug\CarBuyAndSell.UsersViewControl.resources
+C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\obj\Debug\CarBuyAndSell.Forms.UserForm.resources
+C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\obj\Debug\CarBuyAndSell.Forms.BidForm.resources
+C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\obj\Debug\CarBuyAndSell.Forms.VehicleForm.resources
+C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\obj\Debug\CarBuyAndSell.Forms.ListingForm.resources

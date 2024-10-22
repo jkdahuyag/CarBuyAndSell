@@ -48,6 +48,7 @@ namespace CarBuyAndSell
                 LoginInfo.Username = user.Username;
                 LoginInfo.Password = user.Password;
                 LoginInfo.Role = user.RoleName;
+                LoginInfo.ProfilePicture = user.ProfilePicture;
             }
 
             

@@ -137,7 +137,8 @@ namespace CarBuyAndSell
                             dataRow["address"].ToString(),
                             dataRow["username"].ToString(),
                             dataRow["password"].ToString(),
-                            dataRow["number"].ToString()
+                            dataRow["number"].ToString(),
+                            dataRow["profile_picture"].ToString()
                         ));
                     }
                 }
@@ -177,13 +178,14 @@ namespace CarBuyAndSell
                         var dataRow = this.datCarBuyAndSellMgr.Rows[row];
                         list.Add(new UserDto(
                         int.Parse(dataRow["user_id"].ToString()),
-                        dataRow["role_name"].ToString(),
-                        dataRow["first_name"].ToString(),
-                        dataRow["last_name"].ToString(),
-                        dataRow["address"].ToString(),
-                        dataRow["username"].ToString(),
-                        dataRow["password"].ToString(),
-                        dataRow["number"].ToString()
+                            dataRow["role_name"].ToString(),
+                            dataRow["first_name"].ToString(),
+                            dataRow["last_name"].ToString(),
+                            dataRow["address"].ToString(),
+                            dataRow["username"].ToString(),
+                            dataRow["password"].ToString(),
+                            dataRow["number"].ToString(),
+                            dataRow["profile_picture"].ToString()
                         ));
                     }
                 }
@@ -225,7 +227,8 @@ namespace CarBuyAndSell
                             dataRow["address"].ToString(),
                             dataRow["username"].ToString(),
                             dataRow["password"].ToString(),
-                            dataRow["number"].ToString()
+                            dataRow["number"].ToString(),
+                            dataRow["profile_picture"].ToString()
                         ));
                     }
                 }
@@ -262,30 +265,6 @@ namespace CarBuyAndSell
             }
         }
 
-        public bool ProcInsertUser(User user)
-        {
-            try
-            {
-                Dictionary<string, object> parameters = new Dictionary<string, object>
-                {
-                    { "@p_first_name", user.FirstName },
-                    { "@p_last_name", user.LastName },
-                    { "@p_username", user.Username },
-                    { "@p_role", user.RoleId },
-                    { "@p_address", user.Address },
-                    { "@p_number", user.Number },
-                    { "@p_password", user.Password }
-                };
-                ExecuteStoredProcedure("procCreateUser", parameters);
-                return true;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                return false;
-            }
-        }
-
         public UserDto ProcValidateUser(string username, string password)
         {
             UserDto user = null;
@@ -309,7 +288,8 @@ namespace CarBuyAndSell
                         dataRow["address"].ToString(),
                         dataRow["username"].ToString(),
                         dataRow["password"].ToString(),
-                        dataRow["number"].ToString()
+                        dataRow["number"].ToString(),
+                        dataRow["profile_picture"].ToString()
                     );
                 }
                 else
@@ -325,7 +305,32 @@ namespace CarBuyAndSell
             }
             return user;
         }
-        
+
+        public bool ProcCreateUser(User user)
+        {
+            try
+            {
+                Dictionary<string, object> parameters = new Dictionary<string, object>
+                {
+                    { "@p_first_name", user.FirstName },
+                    { "@p_last_name", user.LastName },
+                    { "@p_username", user.Username },
+                    { "@p_role", user.RoleId },
+                    { "@p_address", user.Address },
+                    { "@p_number", user.Number },
+                    { "@p_password", user.Password },
+                    { "@p_profile_picture", user.ProfilePicture }
+                };
+                ExecuteStoredProcedure("procCreateUser", parameters);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
+
         public bool ProcUpdateUser(User user)
         {
             try
@@ -339,7 +344,8 @@ namespace CarBuyAndSell
                     { "@p_role", user.RoleId },
                     { "@p_address", user.Address },
                     { "@p_number", user.Number },
-                    { "@p_password", user.Password }
+                    { "@p_password", user.Password },
+                    { "@p_profile_picture", user.ProfilePicture }
                 };
                 ExecuteStoredProcedure("procUpdateUser", parameters);
                 return true;
@@ -523,24 +529,22 @@ namespace CarBuyAndSell
 
         }
 
-        public bool ProcInsertVehicle(Vehicle vehicle)
+        public bool ProcCreateVehicle(Vehicle vehicle)
         {
             try
             {
                 Dictionary<string, object> parameters = new Dictionary<string, object>
-            {
-                { "@p_brand_id", vehicle.BrandId },
-                { "@p_condition_id", vehicle.ConditionId },
-                { "@p_transmission_type_id", vehicle.TransmissionTypeId },
-                { "@p_status_id", vehicle.StatusId },
-                { "@p_location_stored", vehicle.LocationStored },
-                { "@p_model", vehicle.Model },
-                { "@p_manufacture_year", vehicle.ManufactureYear },
-                { "@p_plate_number", vehicle.PlateNumber },
-                { "@p_date_listed", vehicle.DateListed },
-                { "@p_mileage", vehicle.Mileage },
-                { "@p_owner_id", vehicle.OwnerId }
-            };
+                {
+                    { "@p_brand_id", vehicle.BrandId },
+                    { "@p_condition_id", vehicle.ConditionId },
+                    { "@p_transmission_type_id", vehicle.TransmissionTypeId },
+                    { "@p_model", vehicle.Model },
+                    { "@p_manufacture_year", vehicle.ManufactureYear },
+                    { "@p_plate_number", vehicle.PlateNumber },
+                    { "@p_mileage", vehicle.Mileage },
+                    { "@p_owner_id", vehicle.OwnerId },
+                    { "@p_file_name", vehicle.FileName }
+                };
                 ExecuteStoredProcedure("procCreateVehicle", parameters);
                 return true;
             }
@@ -556,20 +560,17 @@ namespace CarBuyAndSell
             try
             {
                 Dictionary<string, object> parameters = new Dictionary<string, object>
-            {
-                { "@p_vehicle_id", vehicle.VehicleId },
-                { "@p_brand_id", vehicle.BrandId },
-                { "@p_condition_id", vehicle.ConditionId },
-                { "@p_transmission_type_id", vehicle.TransmissionTypeId },
-                { "@p_status_id", vehicle.StatusId },
-                { "@p_location_stored", vehicle.LocationStored },
-                { "@p_model", vehicle.Model },
-                { "@p_manufacture_year", vehicle.ManufactureYear },
-                { "@p_plate_number", vehicle.PlateNumber },
-                { "@p_date_listed", vehicle.DateListed },
-                { "@p_mileage", vehicle.Mileage },
-                { "@p_owner_id", vehicle.OwnerId }
-            };
+                {
+                    { "@p_brand_id", vehicle.BrandId },
+                    { "@p_condition_id", vehicle.ConditionId },
+                    { "@p_transmission_type_id", vehicle.TransmissionTypeId },
+                    { "@p_model", vehicle.Model },
+                    { "@p_manufacture_year", vehicle.ManufactureYear },
+                    { "@p_plate_number", vehicle.PlateNumber },
+                    { "@p_mileage", vehicle.Mileage },
+                    { "@p_owner_id", vehicle.OwnerId },
+                    { "@p_file_name", vehicle.FileName }
+                };
                 ExecuteStoredProcedure("procUpdateVehicle", parameters);
                 return true;
             }
@@ -675,6 +676,48 @@ namespace CarBuyAndSell
             return list;
         }
 
+
+        public List<BidDto> ProcGetBidsByListingId(int listingId)
+        {
+            List<BidDto> list = new List<BidDto>();
+            try
+            {
+                Dictionary<string, object> parameters = new Dictionary<string, object>
+                {
+                    { "@p_listing_id", listingId }
+                };
+                ExecuteStoredProcedure("procGetBidsByListingId", parameters);
+
+                if (this.datCarBuyAndSellMgr.Rows.Count > 0)
+                {
+                    for (int row = 0; row < datCarBuyAndSellMgr.Rows.Count; row++)
+                    {
+                        var dataRow = this.datCarBuyAndSellMgr.Rows[row];
+                        list.Add(new BidDto(
+                            int.Parse(dataRow["bid_id"].ToString()),
+                            dataRow["first_name"].ToString(),
+                            dataRow["last_name"].ToString(),
+                            int.Parse(dataRow["listing_id"].ToString()),
+                            double.Parse(dataRow["bid_amount"].ToString()),
+                            DateTime.Parse(dataRow["bid_date"].ToString()),
+                            int.Parse(dataRow["bidder_id"].ToString())
+                        ));
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No bids found.");
+                }
+
+                ClearData();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return list;
+        }
+
         public int ProcCountBids(string searchKeyWord)
         {
             try
@@ -737,7 +780,7 @@ namespace CarBuyAndSell
             }
             return list;
         }
-        public bool ProcInsertBid(Bid bid)
+        public bool ProcCreateBid(Bid bid)
         {
             try
             {
@@ -749,6 +792,27 @@ namespace CarBuyAndSell
                     { "@p_bid_date", bid.BidDate }
                 };
                 ExecuteStoredProcedure("procCreateBid", parameters);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
+
+        public bool ProcUpdateBid(Bid bid)
+        {
+            try
+            {
+                Dictionary<string, object> parameters = new Dictionary<string, object>
+                {
+                    { "@p_user_id", bid.UserId },
+                    { "@p_listing_id", bid.ListingId },
+                    { "@p_bid_amount", bid.BidAmount },
+                    { "@p_bid_date", bid.BidDate }
+                };
+                ExecuteStoredProcedure("procUpdateBid", parameters);
                 return true;
             }
             catch (Exception ex)
@@ -875,12 +939,13 @@ namespace CarBuyAndSell
                 for (int row = 0; row < datCarBuyAndSellMgr.Rows.Count; row++)
                 {
                     var dataRow = this.datCarBuyAndSellMgr.Rows[row];
+                    DateTime.TryParse(dataRow["listing_expiry"].ToString(), out DateTime expiryDate);
                     list.Add(new ListingDto(
                         int.Parse(dataRow["listing_id"].ToString()),
                         int.Parse(dataRow["vehicle_id"].ToString()),
-                        DateTime.Parse(dataRow["listing_date"].ToString()),
+                        DateTime.Parse(dataRow["date_listed"].ToString()),
                         double.Parse(dataRow["asking_price"].ToString()),
-                        DateTime.Parse(dataRow["listing_expiry"].ToString()),
+                        expiryDate,
                         dataRow["description"].ToString(),
                         dataRow["first_name"].ToString(),
                         dataRow["last_name"].ToString(),
@@ -898,7 +963,7 @@ namespace CarBuyAndSell
             return list;
         }
 
-        public List<ListingDto> FncGetListingById(int listingId)
+        public List<ListingDto> ProcGetListingById(int listingId)
         {
             List<ListingDto> list = new List<ListingDto>();
             try
@@ -919,12 +984,13 @@ namespace CarBuyAndSell
                     {
                         var dataRow = this.datCarBuyAndSellMgr.Rows[row];
 
+                        DateTime.TryParse(dataRow["listing_expiry"].ToString(), out DateTime expiryDate);
                         list.Add(new ListingDto(
                             int.Parse(dataRow["listing_id"].ToString()),
                             int.Parse(dataRow["vehicle_id"].ToString()),
-                            DateTime.Parse(dataRow["listing_date"].ToString()),
+                            DateTime.Parse(dataRow["date_listed"].ToString()),
                             double.Parse(dataRow["asking_price"].ToString()),
-                            DateTime.Parse(dataRow["listing_expiry"].ToString()),
+                            expiryDate,
                             dataRow["description"].ToString(),
                             dataRow["first_name"].ToString(),
                             dataRow["last_name"].ToString(),
@@ -994,12 +1060,14 @@ namespace CarBuyAndSell
                     for (int row = 0; row < datCarBuyAndSellMgr.Rows.Count; row++)
                     {
                         var dataRow = this.datCarBuyAndSellMgr.Rows[row];
+
+                        DateTime.TryParse(dataRow["listing_expiry"].ToString(), out DateTime expiryDate);
                         list.Add(new ListingDto(
                             int.Parse(dataRow["listing_id"].ToString()),
                             int.Parse(dataRow["vehicle_id"].ToString()),
                             DateTime.Parse(dataRow["listing_date"].ToString()),
                             double.Parse(dataRow["asking_price"].ToString()),
-                            DateTime.Parse(dataRow["listing_expiry"].ToString()),
+                            expiryDate,
                             dataRow["description"].ToString(),
                             dataRow["first_name"].ToString(),
                             dataRow["last_name"].ToString(),
@@ -1022,18 +1090,46 @@ namespace CarBuyAndSell
             return list;
         }
 
-        public bool ProcInsertListing(Listing listing)
+        public bool ProcCreateListing(Listing listing)
         {
             try
             {
                 Dictionary<string, object> parameters = new Dictionary<string, object>
                 {
                     { "@p_vehicle_id", listing.VehicleId },
-                    { "@p_seller_id", listing.UserId },
-                    { "@p_starting_price", listing.AskingPrice },
-                    { "@p_listing_date", listing.DateListed }
+                    { "@p_user_id", listing.UserId },
+                    { "@p_description", listing.Description },
+                    { "@p_asking_price", listing.AskingPrice },
+                    { "@p_date_listed", listing.DateListed },
+                    { "@p_status_id", listing.StatusId },
+                    { "@p_listing_expiry", listing.ListingExpiry }
                 };
                 ExecuteStoredProcedure("procCreateListing", parameters);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
+
+
+        public bool ProcUpdateListing(Listing listing)
+        {
+            try
+            {
+                Dictionary<string, object> parameters = new Dictionary<string, object>
+                {
+                    { "@p_vehicle_id", listing.VehicleId },
+                    { "@p_user_id", listing.UserId },
+                    { "@p_description", listing.Description },
+                    { "@p_asking_price", listing.AskingPrice },
+                    { "@p_date_listed", listing.DateListed },
+                    { "@p_status_id", listing.StatusId },
+                    { "@p_listing_expiry", listing.ListingExpiry }
+                };
+                ExecuteStoredProcedure("procUpdateListing", parameters);
                 return true;
             }
             catch (Exception ex)
@@ -1306,7 +1402,7 @@ namespace CarBuyAndSell
             return list;
         }
 
-        public bool ProcInsertTransaction(Transaction transaction)
+        public bool ProcCreateTransaction(Transaction transaction)
         {
             try
             {
