@@ -36,7 +36,7 @@ namespace CarBuyAndSell
             Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
             this.pnlTotalUsers = new Bunifu.UI.WinForms.BunifuPanel();
-            this.chrtTransactionsAndEarningsPerMonth = new LiveChartsCore.SkiaSharpView.WinForms.CartesianChart();
+            this.chrtEarningsPerMonth = new LiveChartsCore.SkiaSharpView.WinForms.CartesianChart();
             this.bigLabel1 = new ReaLTaiizor.BigLabel();
             this.lblTotalUsers = new ReaLTaiizor.BigLabel();
             this.bunifuIconButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton();
@@ -50,9 +50,9 @@ namespace CarBuyAndSell
             this.bigLabel6 = new ReaLTaiizor.BigLabel();
             this.bunifuPanel3 = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuIconButton4 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton();
-            this.totalPlatformEarnings = new ReaLTaiizor.BigLabel();
+            this.lblTotalPlatformEarnings = new ReaLTaiizor.BigLabel();
             this.bigLabel8 = new ReaLTaiizor.BigLabel();
-            this.pChrtBrandDistribution = new LiveChartsCore.SkiaSharpView.WinForms.PieChart();
+            this.chrtTransactionsPerMonth = new LiveChartsCore.SkiaSharpView.WinForms.CartesianChart();
             this.pnlTotalUsers.SuspendLayout();
             this.bunifuPanel1.SuspendLayout();
             this.bunifuPanel2.SuspendLayout();
@@ -64,7 +64,7 @@ namespace CarBuyAndSell
             this.pnlTotalUsers.BackgroundColor = System.Drawing.Color.Transparent;
             this.pnlTotalUsers.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlTotalUsers.BackgroundImage")));
             this.pnlTotalUsers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlTotalUsers.BorderColor = System.Drawing.Color.Transparent;
+            this.pnlTotalUsers.BorderColor = System.Drawing.SystemColors.ActiveBorder;
             this.pnlTotalUsers.BorderRadius = 3;
             this.pnlTotalUsers.BorderThickness = 1;
             this.pnlTotalUsers.Controls.Add(this.bunifuIconButton1);
@@ -76,12 +76,14 @@ namespace CarBuyAndSell
             this.pnlTotalUsers.Size = new System.Drawing.Size(209, 125);
             this.pnlTotalUsers.TabIndex = 0;
             // 
-            // chrtTransactionsAndEarningsPerMonth
+            // chrtEarningsPerMonth
             // 
-            this.chrtTransactionsAndEarningsPerMonth.Location = new System.Drawing.Point(33, 183);
-            this.chrtTransactionsAndEarningsPerMonth.Name = "chrtTransactionsAndEarningsPerMonth";
-            this.chrtTransactionsAndEarningsPerMonth.Size = new System.Drawing.Size(436, 293);
-            this.chrtTransactionsAndEarningsPerMonth.TabIndex = 2;
+            this.chrtEarningsPerMonth.BackColor = System.Drawing.Color.MintCream;
+            this.chrtEarningsPerMonth.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.chrtEarningsPerMonth.Location = new System.Drawing.Point(33, 183);
+            this.chrtEarningsPerMonth.Name = "chrtEarningsPerMonth";
+            this.chrtEarningsPerMonth.Size = new System.Drawing.Size(436, 328);
+            this.chrtEarningsPerMonth.TabIndex = 2;
             // 
             // bigLabel1
             // 
@@ -143,7 +145,7 @@ namespace CarBuyAndSell
             this.bunifuPanel1.BackgroundColor = System.Drawing.Color.Transparent;
             this.bunifuPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel1.BackgroundImage")));
             this.bunifuPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
+            this.bunifuPanel1.BorderColor = System.Drawing.SystemColors.ActiveBorder;
             this.bunifuPanel1.BorderRadius = 3;
             this.bunifuPanel1.BorderThickness = 1;
             this.bunifuPanel1.Controls.Add(this.bunifuIconButton2);
@@ -215,7 +217,7 @@ namespace CarBuyAndSell
             this.bunifuPanel2.BackgroundColor = System.Drawing.Color.Transparent;
             this.bunifuPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel2.BackgroundImage")));
             this.bunifuPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel2.BorderColor = System.Drawing.Color.Transparent;
+            this.bunifuPanel2.BorderColor = System.Drawing.SystemColors.ActiveBorder;
             this.bunifuPanel2.BorderRadius = 3;
             this.bunifuPanel2.BorderThickness = 1;
             this.bunifuPanel2.Controls.Add(this.bunifuIconButton3);
@@ -287,11 +289,11 @@ namespace CarBuyAndSell
             this.bunifuPanel3.BackgroundColor = System.Drawing.Color.Transparent;
             this.bunifuPanel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel3.BackgroundImage")));
             this.bunifuPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel3.BorderColor = System.Drawing.Color.Transparent;
+            this.bunifuPanel3.BorderColor = System.Drawing.SystemColors.ActiveBorder;
             this.bunifuPanel3.BorderRadius = 3;
             this.bunifuPanel3.BorderThickness = 1;
             this.bunifuPanel3.Controls.Add(this.bunifuIconButton4);
-            this.bunifuPanel3.Controls.Add(this.totalPlatformEarnings);
+            this.bunifuPanel3.Controls.Add(this.lblTotalPlatformEarnings);
             this.bunifuPanel3.Controls.Add(this.bigLabel8);
             this.bunifuPanel3.Location = new System.Drawing.Point(721, 34);
             this.bunifuPanel3.Name = "bunifuPanel3";
@@ -330,17 +332,17 @@ namespace CarBuyAndSell
             this.bunifuIconButton4.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Round;
             this.bunifuIconButton4.TabIndex = 2;
             // 
-            // totalPlatformEarnings
+            // lblTotalPlatformEarnings
             // 
-            this.totalPlatformEarnings.AutoSize = true;
-            this.totalPlatformEarnings.BackColor = System.Drawing.Color.Transparent;
-            this.totalPlatformEarnings.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalPlatformEarnings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.totalPlatformEarnings.Location = new System.Drawing.Point(7, 53);
-            this.totalPlatformEarnings.Name = "totalPlatformEarnings";
-            this.totalPlatformEarnings.Size = new System.Drawing.Size(151, 34);
-            this.totalPlatformEarnings.TabIndex = 1;
-            this.totalPlatformEarnings.Text = "bigLabel7";
+            this.lblTotalPlatformEarnings.AutoSize = true;
+            this.lblTotalPlatformEarnings.BackColor = System.Drawing.Color.Transparent;
+            this.lblTotalPlatformEarnings.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalPlatformEarnings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.lblTotalPlatformEarnings.Location = new System.Drawing.Point(7, 53);
+            this.lblTotalPlatformEarnings.Name = "lblTotalPlatformEarnings";
+            this.lblTotalPlatformEarnings.Size = new System.Drawing.Size(151, 34);
+            this.lblTotalPlatformEarnings.TabIndex = 1;
+            this.lblTotalPlatformEarnings.Text = "bigLabel7";
             // 
             // bigLabel8
             // 
@@ -354,31 +356,27 @@ namespace CarBuyAndSell
             this.bigLabel8.TabIndex = 0;
             this.bigLabel8.Text = "Platform Earnings";
             // 
-            // pChrtBrandDistribution
+            // chrtTransactionsPerMonth
             // 
-            this.pChrtBrandDistribution.InitialRotation = 0D;
-            this.pChrtBrandDistribution.IsClockwise = true;
-            this.pChrtBrandDistribution.Location = new System.Drawing.Point(494, 183);
-            this.pChrtBrandDistribution.MaxAngle = 360D;
-            this.pChrtBrandDistribution.MaxValue = null;
-            this.pChrtBrandDistribution.MinValue = 0D;
-            this.pChrtBrandDistribution.Name = "pChrtBrandDistribution";
-            this.pChrtBrandDistribution.Size = new System.Drawing.Size(436, 293);
-            this.pChrtBrandDistribution.TabIndex = 4;
-            this.pChrtBrandDistribution.Total = null;
+            this.chrtTransactionsPerMonth.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.chrtTransactionsPerMonth.Location = new System.Drawing.Point(494, 193);
+            this.chrtTransactionsPerMonth.Name = "chrtTransactionsPerMonth";
+            this.chrtTransactionsPerMonth.Size = new System.Drawing.Size(436, 318);
+            this.chrtTransactionsPerMonth.TabIndex = 5;
             // 
             // DashboardViewControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.pChrtBrandDistribution);
+            this.BackColor = System.Drawing.Color.MintCream;
+            this.Controls.Add(this.chrtTransactionsPerMonth);
             this.Controls.Add(this.bunifuPanel2);
             this.Controls.Add(this.bunifuPanel1);
             this.Controls.Add(this.bunifuPanel3);
-            this.Controls.Add(this.chrtTransactionsAndEarningsPerMonth);
+            this.Controls.Add(this.chrtEarningsPerMonth);
             this.Controls.Add(this.pnlTotalUsers);
             this.Name = "DashboardViewControl";
-            this.Size = new System.Drawing.Size(960, 529);
+            this.Size = new System.Drawing.Size(960, 553);
             this.pnlTotalUsers.ResumeLayout(false);
             this.pnlTotalUsers.PerformLayout();
             this.bunifuPanel1.ResumeLayout(false);
@@ -394,7 +392,7 @@ namespace CarBuyAndSell
         #endregion
 
         private Bunifu.UI.WinForms.BunifuPanel pnlTotalUsers;
-        private LiveChartsCore.SkiaSharpView.WinForms.CartesianChart chrtTransactionsAndEarningsPerMonth;
+        private LiveChartsCore.SkiaSharpView.WinForms.CartesianChart chrtEarningsPerMonth;
         private Bunifu.UI.WinForms.BunifuButton.BunifuIconButton bunifuIconButton1;
         private ReaLTaiizor.BigLabel lblTotalUsers;
         private ReaLTaiizor.BigLabel bigLabel1;
@@ -408,8 +406,8 @@ namespace CarBuyAndSell
         private ReaLTaiizor.BigLabel bigLabel6;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel3;
         private Bunifu.UI.WinForms.BunifuButton.BunifuIconButton bunifuIconButton4;
-        private ReaLTaiizor.BigLabel totalPlatformEarnings;
+        private ReaLTaiizor.BigLabel lblTotalPlatformEarnings;
         private ReaLTaiizor.BigLabel bigLabel8;
-        private LiveChartsCore.SkiaSharpView.WinForms.PieChart pChrtBrandDistribution;
+        private LiveChartsCore.SkiaSharpView.WinForms.CartesianChart chrtTransactionsPerMonth;
     }
 }

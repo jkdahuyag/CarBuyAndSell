@@ -31,8 +31,8 @@ namespace CarBuyAndSell
         /// </summary>
         private void InitializeComponent()
         {
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VehiclesViewControl));
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.mainLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.searchPanel = new System.Windows.Forms.Panel();
             this.searchBox = new System.Windows.Forms.TextBox();
@@ -133,11 +133,11 @@ namespace CarBuyAndSell
             this.btnAddVehicle.ColorContrastOnClick = 45;
             this.btnAddVehicle.ColorContrastOnHover = 45;
             this.btnAddVehicle.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.btnAddVehicle.CustomizableEdges = borderEdges2;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btnAddVehicle.CustomizableEdges = borderEdges1;
             this.btnAddVehicle.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnAddVehicle.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnAddVehicle.DisabledFillColor = System.Drawing.Color.Empty;
@@ -299,6 +299,7 @@ namespace CarBuyAndSell
             this.flwVehicles.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flwVehicles.Location = new System.Drawing.Point(0, 0);
             this.flwVehicles.Name = "flwVehicles";
+            this.flwVehicles.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
             this.flwVehicles.Size = new System.Drawing.Size(776, 447);
             this.flwVehicles.TabIndex = 0;
             // 

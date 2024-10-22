@@ -108,6 +108,105 @@ namespace CarBuyAndSell
             }
         }
 
+        // -----------------------------------
+        // Dashboard
+        // -----------------------------------
+        public double ProcGetTotalEarnings()
+        {
+            try
+            {
+                ExecuteStoredProcedure("ProcGetTotalEarnings");
+                return double.Parse(this.datCarBuyAndSellMgr.Rows[0]["total_earnings"].ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                throw;
+            }
+        }
+
+        public List<BrandDistribution> ProcGetBrandDistribution()
+        {
+            List<BrandDistribution> list = new List<BrandDistribution>();
+            try
+            {
+                ExecuteStoredProcedure("ProcGetBrandDistribution");
+                if (this.datCarBuyAndSellMgr.Rows.Count > 0)
+                {
+                    for (int row = 0; row < datCarBuyAndSellMgr.Rows.Count; row++)
+                    {
+                        var dataRow = this.datCarBuyAndSellMgr.Rows[row];
+                        list.Add(new BrandDistribution(
+                            dataRow["brand_name"].ToString(),
+                            int.Parse(dataRow["brand_count"].ToString())
+                        ));
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No data found.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return list;
+        }
+
+        public Dictionary<DateTime, double> ProcGetEarningsPerMonth()
+        {
+            Dictionary<DateTime, double> earningsPerMonth = new Dictionary<DateTime, double>();
+            try
+            {
+                ExecuteStoredProcedure("ProcGetEarningsPerMonth");
+                if (this.datCarBuyAndSellMgr.Rows.Count > 0)
+                {
+                    for (int row = 0; row < datCarBuyAndSellMgr.Rows.Count; row++)
+                    {
+                        var dataRow = this.datCarBuyAndSellMgr.Rows[row];
+                        earningsPerMonth.Add(DateTime.Parse(dataRow["month"].ToString()), double.Parse(dataRow["monthly_earnings"].ToString()));
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No data found.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            ClearData();
+            return earningsPerMonth;
+        }
+
+        public Dictionary<DateTime, double> ProcGetTransactionsPerMonth()
+        {
+            Dictionary<DateTime, double> transactionsPerMonth = new Dictionary<DateTime, double>();
+            try
+            {
+                ExecuteStoredProcedure("ProcGetTransactionsPerMonth");
+                if (this.datCarBuyAndSellMgr.Rows.Count > 0)
+                {
+                    for (int row = 0; row < datCarBuyAndSellMgr.Rows.Count; row++)
+                    {
+                        var dataRow = this.datCarBuyAndSellMgr.Rows[row];
+                        transactionsPerMonth.Add(DateTime.Parse(dataRow["month"].ToString()), double.Parse(dataRow["total_transactions"].ToString()));
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No data found.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            ClearData();
+            return transactionsPerMonth;
+        }
 
         // -----------------------------------
         // Users

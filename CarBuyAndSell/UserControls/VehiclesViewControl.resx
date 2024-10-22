@@ -118,6 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnAddVehicle.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAJYAAAAsCAYAAACHUEHxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAD5SURBVHhe7d2xTcRAFEVRhxSBTTs0QAlbBD0grdkGaGO7
+        oAMa2AAhIQKQvhlvyiQ2etmxdCxr5odXDmeG9bl9rvtprtdpXhbYrzV0rMM1qrbw0Bbe/w7BduNcH+Ox
+        Hof2eusNwH71tf6xOhvwP8IiQlhECIsIYREhLCKERYSwiBAWEcIiQlhECIsIYREhLCKERYSwiBAWEcIi
+        QlhECIsIYREhLCKERYSwiBAWEcIiQlhECIsIYREhLCKERYSwiBAWEcIiQlhECIsIYREhLCKGca5LbwP2
+        ak39rOe8P7WPz94AbNV6+p7mOl9vpxhPdeoNwXZ1vntZbn4BuPDYlX2qOyQAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="bunifuPanel1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAwgAAAG/CAYAAAD8VfDzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -206,16 +216,6 @@
         xAgAAIhAAAAAbgIBAAC2aQIAACAmRgAAQAQCAABwEwgAALBNEwAAADExAgAAIhAAAICbQAAAgG2aAAAA
         iIkRAAAQgQAAANwEAgAAbNMEAABATIwAAIAIBAAA4CYQAABgmyYAAABiYgQAAEQgAAAAN4EAAADbNAEA
         AJCvQHg/fB4/32632+12u91ut3vjfv8DAAD88Xr9AvING3Wa58ZXAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="btnAddVehicle.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAJYAAAAsCAYAAACHUEHxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAD5SURBVHhe7d2xTcRAFEVRhxSBTTs0QAlbBD0grdkGaGO7
-        oAMa2AAhIQKQvhlvyiQ2etmxdCxr5odXDmeG9bl9rvtprtdpXhbYrzV0rMM1qrbw0Bbe/w7BduNcH+Ox
-        Hof2eusNwH71tf6xOhvwP8IiQlhECIsIYREhLCKERYSwiBAWEcIiQlhECIsIYREhLCKERYSwiBAWEcIi
-        QlhECIsIYREhLCKERYSwiBAWEcIiQlhECIsIYREhLCKERYSwiBAWEcIiQlhECIsIYREhLCKGca5LbwP2
-        ak39rOe8P7WPz94AbNV6+p7mOl9vpxhPdeoNwXZ1vntZbn4BuPDYlX2qOyQAAAAASUVORK5CYII=
 </value>
   </data>
 </root>

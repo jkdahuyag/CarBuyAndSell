@@ -86,9 +86,6 @@ C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\bin\Debug\x86\libSkiaShar
 C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\bin\Debug\x64\libSkiaSharp.dll
 C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\bin\Debug\arm64\libSkiaSharp.dll
 C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\bin\Debug\HarfBuzzSharp.dll
-C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\bin\Debug\LiveCharts.dll
-C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\bin\Debug\LiveCharts.WinForms.dll
-C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\bin\Debug\LiveCharts.Wpf.dll
 C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\bin\Debug\LiveChartsCore.dll
 C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\bin\Debug\LiveChartsCore.SkiaSharpView.dll
 C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\bin\Debug\LiveChartsCore.SkiaSharpView.WinForms.dll
@@ -101,12 +98,6 @@ C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\bin\Debug\SkiaSharp.Views
 C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\bin\Debug\System.Drawing.Common.dll
 C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\bin\Debug\HarfBuzzSharp.pdb
 C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\bin\Debug\HarfBuzzSharp.xml
-C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\bin\Debug\LiveCharts.pdb
-C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\bin\Debug\LiveCharts.xml
-C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\bin\Debug\LiveCharts.WinForms.pdb
-C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\bin\Debug\LiveCharts.WinForms.xml
-C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\bin\Debug\LiveCharts.Wpf.pdb
-C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\bin\Debug\LiveCharts.Wpf.xml
 C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\bin\Debug\LiveChartsCore.xml
 C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\bin\Debug\LiveChartsCore.SkiaSharpView.xml
 C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\bin\Debug\LiveChartsCore.SkiaSharpView.WinForms.xml
