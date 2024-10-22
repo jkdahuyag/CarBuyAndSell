@@ -36,8 +36,8 @@ namespace CarBuyAndSell.Forms
             cmbPaymentMethod.DataSource = Enum.GetValues(typeof(Enums.PaymentMethod));
             BidDto highestBid = globalProcedure.ProcGetBidsByListingId(listing.ListingId)[0];
             lblPartial.Text = highestBid.BidAmount.ToString();
-            lblService.Text = $"{(highestBid.BidAmount * 0.5f):N3}";
-            lblTotal.Text = $"{(highestBid.BidAmount * 1.5f):N3}";
+            lblService.Text = $"{(highestBid.BidAmount * 0.05f):N3}";
+            lblTotal.Text = $"{(highestBid.BidAmount * 1.05f):N3}";
         }
         // Save or Update vehicle data
         private void BtnContinue_Click(object sender, EventArgs e)

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using LiveChartsCore.SkiaSharpView;
+using LiveChartsCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,50 +20,7 @@ namespace CarBuyAndSell
         public DashboardViewControl()
         {
             InitializeComponent();
-            //InitializeDashboardLayout();
-           // LoadDashboardData();
-        }
-
-        private void InitializeDashboardLayout()
-        {
-            // Create a TableLayoutPanel for a structured layout
-            TableLayoutPanel dashboardLayout = new TableLayoutPanel();
-            dashboardLayout.Dock = DockStyle.Fill;
-            dashboardLayout.RowCount = 6;
-            dashboardLayout.ColumnCount = 2;
-
-            dashboardLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 15F));
-            dashboardLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 15F));
-            dashboardLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 15F));
-            dashboardLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 15F));
-            dashboardLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 200F)); // For monthly sales table
-            dashboardLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 40F)); // Expand remaining space
-
-            // Create labels for each statistic
-            dashboardLayout.Controls.Add(new Label { Text = "Total Cars Being Sold:", Anchor = AnchorStyles.Left }, 0, 0);
-            totalCarsBeingSoldLabel = new Label { Text = "0", Anchor = AnchorStyles.Right };
-            dashboardLayout.Controls.Add(totalCarsBeingSoldLabel, 1, 0);
-
-            dashboardLayout.Controls.Add(new Label { Text = "Total Cars Sold:", Anchor = AnchorStyles.Left }, 0, 1);
-            totalCarsSoldLabel = new Label { Text = "0", Anchor = AnchorStyles.Right };
-            dashboardLayout.Controls.Add(totalCarsSoldLabel, 1, 1);
-
-            dashboardLayout.Controls.Add(new Label { Text = "Average Profit:", Anchor = AnchorStyles.Left }, 0, 2);
-            avgProfitLabel = new Label { Text = "$0.00", Anchor = AnchorStyles.Right };
-            dashboardLayout.Controls.Add(avgProfitLabel, 1, 2);
-
-            dashboardLayout.Controls.Add(new Label { Text = "Number of Users:", Anchor = AnchorStyles.Left }, 0, 3);
-            numUsersLabel = new Label { Text = "0", Anchor = AnchorStyles.Right };
-            dashboardLayout.Controls.Add(numUsersLabel, 1, 3);
-
-            // Create table for average monthly sales
-            dashboardLayout.Controls.Add(new Label { Text = "Average Monthly Sales:", Anchor = AnchorStyles.Left }, 0, 4);
-            monthlySalesTable = new DataGridView();
-            InitializeMonthlySalesTable();
-            dashboardLayout.Controls.Add(monthlySalesTable, 0, 5);
-            dashboardLayout.SetColumnSpan(monthlySalesTable, 2);
-
-            this.Controls.Add(dashboardLayout);
+            LoadDashboardData();
         }
 
         private void InitializeMonthlySalesTable()
@@ -101,6 +60,14 @@ namespace CarBuyAndSell
 
         private void LoadMonthlySalesData()
         {
+            chrtTransactionsAndEarningsPerMonth.Series = new ISeries[]
+           {
+                new LineSeries<double>
+                {
+                    Values = new double[] { 2, 1, 3, 5, 3, 4, 6 },
+                    Fill = null
+                }
+           };
             // Replace with actual logic to get sales per month
             int[] sales = GetSalesForEachMonth();
 

@@ -30,281 +30,386 @@ namespace CarBuyAndSell
         /// </summary>
         private void InitializeComponent()
         {
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardViewControl));
+            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
+            this.pnlTotalUsers = new Bunifu.UI.WinForms.BunifuPanel();
+            this.chrtTransactionsAndEarningsPerMonth = new LiveChartsCore.SkiaSharpView.WinForms.CartesianChart();
             this.bigLabel1 = new ReaLTaiizor.BigLabel();
-            this.dungeonLabel1 = new ReaLTaiizor.DungeonLabel();
-            this.bigLabel2 = new ReaLTaiizor.BigLabel();
-            this.dungeonLabel2 = new ReaLTaiizor.DungeonLabel();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.bigLabel3 = new ReaLTaiizor.BigLabel();
-            this.dungeonLabel3 = new ReaLTaiizor.DungeonLabel();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblTotalUsers = new ReaLTaiizor.BigLabel();
+            this.bunifuIconButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton();
+            this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.bunifuIconButton2 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton();
+            this.lblTotalVehicles = new ReaLTaiizor.BigLabel();
             this.bigLabel4 = new ReaLTaiizor.BigLabel();
-            this.dungeonLabel4 = new ReaLTaiizor.DungeonLabel();
-            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
-            this.tableLayoutPanel5.SuspendLayout();
-            this.tableLayoutPanel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.bunifuIconButton3 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton();
+            this.lblTotalBrands = new ReaLTaiizor.BigLabel();
+            this.bigLabel6 = new ReaLTaiizor.BigLabel();
+            this.bunifuPanel3 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.bunifuIconButton4 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton();
+            this.totalPlatformEarnings = new ReaLTaiizor.BigLabel();
+            this.bigLabel8 = new ReaLTaiizor.BigLabel();
+            this.pChrtBrandDistribution = new LiveChartsCore.SkiaSharpView.WinForms.PieChart();
+            this.pnlTotalUsers.SuspendLayout();
+            this.bunifuPanel1.SuspendLayout();
+            this.bunifuPanel2.SuspendLayout();
+            this.bunifuPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tableLayoutPanel1
+            // pnlTotalUsers
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.dataGridView1, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(954, 523);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.pnlTotalUsers.BackgroundColor = System.Drawing.Color.Transparent;
+            this.pnlTotalUsers.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlTotalUsers.BackgroundImage")));
+            this.pnlTotalUsers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlTotalUsers.BorderColor = System.Drawing.Color.Transparent;
+            this.pnlTotalUsers.BorderRadius = 3;
+            this.pnlTotalUsers.BorderThickness = 1;
+            this.pnlTotalUsers.Controls.Add(this.bunifuIconButton1);
+            this.pnlTotalUsers.Controls.Add(this.lblTotalUsers);
+            this.pnlTotalUsers.Controls.Add(this.bigLabel1);
+            this.pnlTotalUsers.Location = new System.Drawing.Point(33, 34);
+            this.pnlTotalUsers.Name = "pnlTotalUsers";
+            this.pnlTotalUsers.ShowBorders = true;
+            this.pnlTotalUsers.Size = new System.Drawing.Size(209, 125);
+            this.pnlTotalUsers.TabIndex = 0;
             // 
-            // tableLayoutPanel2
+            // chrtTransactionsAndEarningsPerMonth
             // 
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel6, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel5, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel4, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(471, 517);
-            this.tableLayoutPanel2.TabIndex = 0;
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tableLayoutPanel3.ColumnCount = 1;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Controls.Add(this.bigLabel1, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.dungeonLabel1, 0, 1);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(17, 51);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 3;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(200, 155);
-            this.tableLayoutPanel3.TabIndex = 0;
+            this.chrtTransactionsAndEarningsPerMonth.Location = new System.Drawing.Point(33, 183);
+            this.chrtTransactionsAndEarningsPerMonth.Name = "chrtTransactionsAndEarningsPerMonth";
+            this.chrtTransactionsAndEarningsPerMonth.Size = new System.Drawing.Size(436, 293);
+            this.chrtTransactionsAndEarningsPerMonth.TabIndex = 2;
             // 
             // bigLabel1
             // 
-            this.bigLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bigLabel1.AutoSize = true;
             this.bigLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.bigLabel1.Font = new System.Drawing.Font("Segoe UI", 25F);
+            this.bigLabel1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bigLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.bigLabel1.Location = new System.Drawing.Point(42, 18);
+            this.bigLabel1.Location = new System.Drawing.Point(9, 93);
             this.bigLabel1.Name = "bigLabel1";
-            this.bigLabel1.Size = new System.Drawing.Size(116, 57);
+            this.bigLabel1.Size = new System.Drawing.Size(98, 21);
             this.bigLabel1.TabIndex = 0;
-            this.bigLabel1.Text = "hello";
-            this.bigLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bigLabel1.Text = "Total Users";
             // 
-            // dungeonLabel1
+            // lblTotalUsers
             // 
-            this.dungeonLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dungeonLabel1.AutoSize = true;
-            this.dungeonLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.dungeonLabel1.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.dungeonLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
-            this.dungeonLabel1.Location = new System.Drawing.Point(28, 101);
-            this.dungeonLabel1.Name = "dungeonLabel1";
-            this.dungeonLabel1.Size = new System.Drawing.Size(143, 25);
-            this.dungeonLabel1.TabIndex = 1;
-            this.dungeonLabel1.Text = "dungeonLabel1";
+            this.lblTotalUsers.AutoSize = true;
+            this.lblTotalUsers.BackColor = System.Drawing.Color.Transparent;
+            this.lblTotalUsers.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalUsers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.lblTotalUsers.Location = new System.Drawing.Point(7, 53);
+            this.lblTotalUsers.Name = "lblTotalUsers";
+            this.lblTotalUsers.Size = new System.Drawing.Size(151, 34);
+            this.lblTotalUsers.TabIndex = 1;
+            this.lblTotalUsers.Text = "bigLabel2";
             // 
-            // bigLabel2
+            // bunifuIconButton1
             // 
-            this.bigLabel2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bigLabel2.AutoSize = true;
-            this.bigLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.bigLabel2.Font = new System.Drawing.Font("Segoe UI", 25F);
-            this.bigLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.bigLabel2.Location = new System.Drawing.Point(42, 18);
-            this.bigLabel2.Name = "bigLabel2";
-            this.bigLabel2.Size = new System.Drawing.Size(116, 57);
-            this.bigLabel2.TabIndex = 0;
-            this.bigLabel2.Text = "hello";
-            this.bigLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuIconButton1.AllowAnimations = true;
+            this.bunifuIconButton1.AllowBorderColorChanges = true;
+            this.bunifuIconButton1.AllowMouseEffects = true;
+            this.bunifuIconButton1.AnimationSpeed = 200;
+            this.bunifuIconButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuIconButton1.BackgroundColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuIconButton1.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuIconButton1.BorderRadius = 1;
+            this.bunifuIconButton1.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderStyles.Solid;
+            this.bunifuIconButton1.BorderThickness = 1;
+            this.bunifuIconButton1.ColorContrastOnClick = 30;
+            this.bunifuIconButton1.ColorContrastOnHover = 30;
+            this.bunifuIconButton1.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.bunifuIconButton1.CustomizableEdges = borderEdges1;
+            this.bunifuIconButton1.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.bunifuIconButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuIconButton1.Image")));
+            this.bunifuIconButton1.ImageMargin = new System.Windows.Forms.Padding(0);
+            this.bunifuIconButton1.Location = new System.Drawing.Point(13, 15);
+            this.bunifuIconButton1.Name = "bunifuIconButton1";
+            this.bunifuIconButton1.RoundBorders = true;
+            this.bunifuIconButton1.ShowBorders = true;
+            this.bunifuIconButton1.Size = new System.Drawing.Size(35, 35);
+            this.bunifuIconButton1.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Round;
+            this.bunifuIconButton1.TabIndex = 2;
             // 
-            // dungeonLabel2
+            // bunifuPanel1
             // 
-            this.dungeonLabel2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dungeonLabel2.AutoSize = true;
-            this.dungeonLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.dungeonLabel2.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.dungeonLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
-            this.dungeonLabel2.Location = new System.Drawing.Point(28, 101);
-            this.dungeonLabel2.Name = "dungeonLabel2";
-            this.dungeonLabel2.Size = new System.Drawing.Size(143, 25);
-            this.dungeonLabel2.TabIndex = 1;
-            this.dungeonLabel2.Text = "dungeonLabel2";
+            this.bunifuPanel1.BackgroundColor = System.Drawing.Color.Transparent;
+            this.bunifuPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel1.BackgroundImage")));
+            this.bunifuPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
+            this.bunifuPanel1.BorderRadius = 3;
+            this.bunifuPanel1.BorderThickness = 1;
+            this.bunifuPanel1.Controls.Add(this.bunifuIconButton2);
+            this.bunifuPanel1.Controls.Add(this.lblTotalVehicles);
+            this.bunifuPanel1.Controls.Add(this.bigLabel4);
+            this.bunifuPanel1.Location = new System.Drawing.Point(260, 34);
+            this.bunifuPanel1.Name = "bunifuPanel1";
+            this.bunifuPanel1.ShowBorders = true;
+            this.bunifuPanel1.Size = new System.Drawing.Size(209, 125);
+            this.bunifuPanel1.TabIndex = 3;
             // 
-            // tableLayoutPanel4
+            // bunifuIconButton2
             // 
-            this.tableLayoutPanel4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tableLayoutPanel4.ColumnCount = 1;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Controls.Add(this.bigLabel2, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.dungeonLabel2, 0, 1);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(253, 51);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 3;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(200, 155);
-            this.tableLayoutPanel4.TabIndex = 2;
+            this.bunifuIconButton2.AllowAnimations = true;
+            this.bunifuIconButton2.AllowBorderColorChanges = true;
+            this.bunifuIconButton2.AllowMouseEffects = true;
+            this.bunifuIconButton2.AnimationSpeed = 200;
+            this.bunifuIconButton2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuIconButton2.BackgroundColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuIconButton2.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuIconButton2.BorderRadius = 1;
+            this.bunifuIconButton2.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderStyles.Solid;
+            this.bunifuIconButton2.BorderThickness = 1;
+            this.bunifuIconButton2.ColorContrastOnClick = 30;
+            this.bunifuIconButton2.ColorContrastOnHover = 30;
+            this.bunifuIconButton2.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.bunifuIconButton2.CustomizableEdges = borderEdges2;
+            this.bunifuIconButton2.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.bunifuIconButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuIconButton2.Image")));
+            this.bunifuIconButton2.ImageMargin = new System.Windows.Forms.Padding(0);
+            this.bunifuIconButton2.Location = new System.Drawing.Point(13, 15);
+            this.bunifuIconButton2.Name = "bunifuIconButton2";
+            this.bunifuIconButton2.RoundBorders = true;
+            this.bunifuIconButton2.ShowBorders = true;
+            this.bunifuIconButton2.Size = new System.Drawing.Size(35, 35);
+            this.bunifuIconButton2.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Round;
+            this.bunifuIconButton2.TabIndex = 2;
             // 
-            // bigLabel3
+            // lblTotalVehicles
             // 
-            this.bigLabel3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bigLabel3.AutoSize = true;
-            this.bigLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.bigLabel3.Font = new System.Drawing.Font("Segoe UI", 25F);
-            this.bigLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.bigLabel3.Location = new System.Drawing.Point(42, 18);
-            this.bigLabel3.Name = "bigLabel3";
-            this.bigLabel3.Size = new System.Drawing.Size(116, 57);
-            this.bigLabel3.TabIndex = 0;
-            this.bigLabel3.Text = "hello";
-            this.bigLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // dungeonLabel3
-            // 
-            this.dungeonLabel3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dungeonLabel3.AutoSize = true;
-            this.dungeonLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.dungeonLabel3.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.dungeonLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
-            this.dungeonLabel3.Location = new System.Drawing.Point(28, 101);
-            this.dungeonLabel3.Name = "dungeonLabel3";
-            this.dungeonLabel3.Size = new System.Drawing.Size(143, 25);
-            this.dungeonLabel3.TabIndex = 1;
-            this.dungeonLabel3.Text = "dungeonLabel3";
-            // 
-            // tableLayoutPanel5
-            // 
-            this.tableLayoutPanel5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tableLayoutPanel5.ColumnCount = 1;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Controls.Add(this.bigLabel3, 0, 0);
-            this.tableLayoutPanel5.Controls.Add(this.dungeonLabel3, 0, 1);
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(17, 310);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 3;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(200, 155);
-            this.tableLayoutPanel5.TabIndex = 2;
+            this.lblTotalVehicles.AutoSize = true;
+            this.lblTotalVehicles.BackColor = System.Drawing.Color.Transparent;
+            this.lblTotalVehicles.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalVehicles.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.lblTotalVehicles.Location = new System.Drawing.Point(7, 53);
+            this.lblTotalVehicles.Name = "lblTotalVehicles";
+            this.lblTotalVehicles.Size = new System.Drawing.Size(151, 34);
+            this.lblTotalVehicles.TabIndex = 1;
+            this.lblTotalVehicles.Text = "bigLabel3";
             // 
             // bigLabel4
             // 
-            this.bigLabel4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bigLabel4.AutoSize = true;
             this.bigLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.bigLabel4.Font = new System.Drawing.Font("Segoe UI", 25F);
+            this.bigLabel4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bigLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.bigLabel4.Location = new System.Drawing.Point(42, 25);
+            this.bigLabel4.Location = new System.Drawing.Point(9, 93);
             this.bigLabel4.Name = "bigLabel4";
-            this.bigLabel4.Size = new System.Drawing.Size(116, 57);
+            this.bigLabel4.Size = new System.Drawing.Size(125, 21);
             this.bigLabel4.TabIndex = 0;
-            this.bigLabel4.Text = "hello";
-            this.bigLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bigLabel4.Text = "Total Vehicles";
             // 
-            // dungeonLabel4
+            // bunifuPanel2
             // 
-            this.dungeonLabel4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dungeonLabel4.AutoSize = true;
-            this.dungeonLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.dungeonLabel4.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.dungeonLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
-            this.dungeonLabel4.Location = new System.Drawing.Point(28, 119);
-            this.dungeonLabel4.Name = "dungeonLabel4";
-            this.dungeonLabel4.Size = new System.Drawing.Size(143, 25);
-            this.dungeonLabel4.TabIndex = 1;
-            this.dungeonLabel4.Text = "dungeonLabel4";
+            this.bunifuPanel2.BackgroundColor = System.Drawing.Color.Transparent;
+            this.bunifuPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel2.BackgroundImage")));
+            this.bunifuPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuPanel2.BorderColor = System.Drawing.Color.Transparent;
+            this.bunifuPanel2.BorderRadius = 3;
+            this.bunifuPanel2.BorderThickness = 1;
+            this.bunifuPanel2.Controls.Add(this.bunifuIconButton3);
+            this.bunifuPanel2.Controls.Add(this.lblTotalBrands);
+            this.bunifuPanel2.Controls.Add(this.bigLabel6);
+            this.bunifuPanel2.Location = new System.Drawing.Point(494, 34);
+            this.bunifuPanel2.Name = "bunifuPanel2";
+            this.bunifuPanel2.ShowBorders = true;
+            this.bunifuPanel2.Size = new System.Drawing.Size(209, 125);
+            this.bunifuPanel2.TabIndex = 3;
             // 
-            // tableLayoutPanel6
+            // bunifuIconButton3
             // 
-            this.tableLayoutPanel6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tableLayoutPanel6.ColumnCount = 1;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Controls.Add(this.bigLabel4, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.dungeonLabel4, 0, 1);
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(253, 310);
-            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 2;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(200, 155);
-            this.tableLayoutPanel6.TabIndex = 2;
+            this.bunifuIconButton3.AllowAnimations = true;
+            this.bunifuIconButton3.AllowBorderColorChanges = true;
+            this.bunifuIconButton3.AllowMouseEffects = true;
+            this.bunifuIconButton3.AnimationSpeed = 200;
+            this.bunifuIconButton3.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuIconButton3.BackgroundColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuIconButton3.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuIconButton3.BorderRadius = 1;
+            this.bunifuIconButton3.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderStyles.Solid;
+            this.bunifuIconButton3.BorderThickness = 1;
+            this.bunifuIconButton3.ColorContrastOnClick = 30;
+            this.bunifuIconButton3.ColorContrastOnHover = 30;
+            this.bunifuIconButton3.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.bunifuIconButton3.CustomizableEdges = borderEdges3;
+            this.bunifuIconButton3.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.bunifuIconButton3.Image = ((System.Drawing.Image)(resources.GetObject("bunifuIconButton3.Image")));
+            this.bunifuIconButton3.ImageMargin = new System.Windows.Forms.Padding(0);
+            this.bunifuIconButton3.Location = new System.Drawing.Point(13, 15);
+            this.bunifuIconButton3.Name = "bunifuIconButton3";
+            this.bunifuIconButton3.RoundBorders = true;
+            this.bunifuIconButton3.ShowBorders = true;
+            this.bunifuIconButton3.Size = new System.Drawing.Size(35, 35);
+            this.bunifuIconButton3.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Round;
+            this.bunifuIconButton3.TabIndex = 2;
             // 
-            // dataGridView1
+            // lblTotalBrands
             // 
-            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView1.ColumnHeadersHeight = 29;
-            this.dataGridView1.Location = new System.Drawing.Point(557, 118);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(317, 287);
-            this.dataGridView1.TabIndex = 0;
+            this.lblTotalBrands.AutoSize = true;
+            this.lblTotalBrands.BackColor = System.Drawing.Color.Transparent;
+            this.lblTotalBrands.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalBrands.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.lblTotalBrands.Location = new System.Drawing.Point(7, 53);
+            this.lblTotalBrands.Name = "lblTotalBrands";
+            this.lblTotalBrands.Size = new System.Drawing.Size(151, 34);
+            this.lblTotalBrands.TabIndex = 1;
+            this.lblTotalBrands.Text = "bigLabel5";
+            // 
+            // bigLabel6
+            // 
+            this.bigLabel6.AutoSize = true;
+            this.bigLabel6.BackColor = System.Drawing.Color.Transparent;
+            this.bigLabel6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bigLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.bigLabel6.Location = new System.Drawing.Point(9, 93);
+            this.bigLabel6.Name = "bigLabel6";
+            this.bigLabel6.Size = new System.Drawing.Size(112, 21);
+            this.bigLabel6.TabIndex = 0;
+            this.bigLabel6.Text = "Total Brands";
+            // 
+            // bunifuPanel3
+            // 
+            this.bunifuPanel3.BackgroundColor = System.Drawing.Color.Transparent;
+            this.bunifuPanel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel3.BackgroundImage")));
+            this.bunifuPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuPanel3.BorderColor = System.Drawing.Color.Transparent;
+            this.bunifuPanel3.BorderRadius = 3;
+            this.bunifuPanel3.BorderThickness = 1;
+            this.bunifuPanel3.Controls.Add(this.bunifuIconButton4);
+            this.bunifuPanel3.Controls.Add(this.totalPlatformEarnings);
+            this.bunifuPanel3.Controls.Add(this.bigLabel8);
+            this.bunifuPanel3.Location = new System.Drawing.Point(721, 34);
+            this.bunifuPanel3.Name = "bunifuPanel3";
+            this.bunifuPanel3.ShowBorders = true;
+            this.bunifuPanel3.Size = new System.Drawing.Size(209, 125);
+            this.bunifuPanel3.TabIndex = 3;
+            // 
+            // bunifuIconButton4
+            // 
+            this.bunifuIconButton4.AllowAnimations = true;
+            this.bunifuIconButton4.AllowBorderColorChanges = true;
+            this.bunifuIconButton4.AllowMouseEffects = true;
+            this.bunifuIconButton4.AnimationSpeed = 200;
+            this.bunifuIconButton4.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuIconButton4.BackgroundColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuIconButton4.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuIconButton4.BorderRadius = 1;
+            this.bunifuIconButton4.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderStyles.Solid;
+            this.bunifuIconButton4.BorderThickness = 1;
+            this.bunifuIconButton4.ColorContrastOnClick = 30;
+            this.bunifuIconButton4.ColorContrastOnHover = 30;
+            this.bunifuIconButton4.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.bunifuIconButton4.CustomizableEdges = borderEdges4;
+            this.bunifuIconButton4.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.bunifuIconButton4.Image = ((System.Drawing.Image)(resources.GetObject("bunifuIconButton4.Image")));
+            this.bunifuIconButton4.ImageMargin = new System.Windows.Forms.Padding(0);
+            this.bunifuIconButton4.Location = new System.Drawing.Point(13, 15);
+            this.bunifuIconButton4.Name = "bunifuIconButton4";
+            this.bunifuIconButton4.RoundBorders = true;
+            this.bunifuIconButton4.ShowBorders = true;
+            this.bunifuIconButton4.Size = new System.Drawing.Size(35, 35);
+            this.bunifuIconButton4.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Round;
+            this.bunifuIconButton4.TabIndex = 2;
+            // 
+            // totalPlatformEarnings
+            // 
+            this.totalPlatformEarnings.AutoSize = true;
+            this.totalPlatformEarnings.BackColor = System.Drawing.Color.Transparent;
+            this.totalPlatformEarnings.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalPlatformEarnings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.totalPlatformEarnings.Location = new System.Drawing.Point(7, 53);
+            this.totalPlatformEarnings.Name = "totalPlatformEarnings";
+            this.totalPlatformEarnings.Size = new System.Drawing.Size(151, 34);
+            this.totalPlatformEarnings.TabIndex = 1;
+            this.totalPlatformEarnings.Text = "bigLabel7";
+            // 
+            // bigLabel8
+            // 
+            this.bigLabel8.AutoSize = true;
+            this.bigLabel8.BackColor = System.Drawing.Color.Transparent;
+            this.bigLabel8.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bigLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.bigLabel8.Location = new System.Drawing.Point(9, 93);
+            this.bigLabel8.Name = "bigLabel8";
+            this.bigLabel8.Size = new System.Drawing.Size(150, 21);
+            this.bigLabel8.TabIndex = 0;
+            this.bigLabel8.Text = "Platform Earnings";
+            // 
+            // pChrtBrandDistribution
+            // 
+            this.pChrtBrandDistribution.InitialRotation = 0D;
+            this.pChrtBrandDistribution.IsClockwise = true;
+            this.pChrtBrandDistribution.Location = new System.Drawing.Point(494, 183);
+            this.pChrtBrandDistribution.MaxAngle = 360D;
+            this.pChrtBrandDistribution.MaxValue = null;
+            this.pChrtBrandDistribution.MinValue = 0D;
+            this.pChrtBrandDistribution.Name = "pChrtBrandDistribution";
+            this.pChrtBrandDistribution.Size = new System.Drawing.Size(436, 293);
+            this.pChrtBrandDistribution.TabIndex = 4;
+            this.pChrtBrandDistribution.Total = null;
             // 
             // DashboardViewControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.pChrtBrandDistribution);
+            this.Controls.Add(this.bunifuPanel2);
+            this.Controls.Add(this.bunifuPanel1);
+            this.Controls.Add(this.bunifuPanel3);
+            this.Controls.Add(this.chrtTransactionsAndEarningsPerMonth);
+            this.Controls.Add(this.pnlTotalUsers);
             this.Name = "DashboardViewControl";
             this.Size = new System.Drawing.Size(960, 529);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel3.PerformLayout();
-            this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel4.PerformLayout();
-            this.tableLayoutPanel5.ResumeLayout(false);
-            this.tableLayoutPanel5.PerformLayout();
-            this.tableLayoutPanel6.ResumeLayout(false);
-            this.tableLayoutPanel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.pnlTotalUsers.ResumeLayout(false);
+            this.pnlTotalUsers.PerformLayout();
+            this.bunifuPanel1.ResumeLayout(false);
+            this.bunifuPanel1.PerformLayout();
+            this.bunifuPanel2.ResumeLayout(false);
+            this.bunifuPanel2.PerformLayout();
+            this.bunifuPanel3.ResumeLayout(false);
+            this.bunifuPanel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private TableLayoutPanel tableLayoutPanel1;
-        private TableLayoutPanel tableLayoutPanel2;
-        private TableLayoutPanel tableLayoutPanel3;
+        private Bunifu.UI.WinForms.BunifuPanel pnlTotalUsers;
+        private LiveChartsCore.SkiaSharpView.WinForms.CartesianChart chrtTransactionsAndEarningsPerMonth;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuIconButton bunifuIconButton1;
+        private ReaLTaiizor.BigLabel lblTotalUsers;
         private ReaLTaiizor.BigLabel bigLabel1;
-        private TableLayoutPanel tableLayoutPanel6;
+        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuIconButton bunifuIconButton2;
+        private ReaLTaiizor.BigLabel lblTotalVehicles;
         private ReaLTaiizor.BigLabel bigLabel4;
-        private ReaLTaiizor.DungeonLabel dungeonLabel4;
-        private TableLayoutPanel tableLayoutPanel5;
-        private ReaLTaiizor.BigLabel bigLabel3;
-        private ReaLTaiizor.DungeonLabel dungeonLabel3;
-        private TableLayoutPanel tableLayoutPanel4;
-        private ReaLTaiizor.BigLabel bigLabel2;
-        private ReaLTaiizor.DungeonLabel dungeonLabel2;
-        private ReaLTaiizor.DungeonLabel dungeonLabel1;
-        private DataGridView dataGridView1;
+        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel2;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuIconButton bunifuIconButton3;
+        private ReaLTaiizor.BigLabel lblTotalBrands;
+        private ReaLTaiizor.BigLabel bigLabel6;
+        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel3;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuIconButton bunifuIconButton4;
+        private ReaLTaiizor.BigLabel totalPlatformEarnings;
+        private ReaLTaiizor.BigLabel bigLabel8;
+        private LiveChartsCore.SkiaSharpView.WinForms.PieChart pChrtBrandDistribution;
     }
 }
