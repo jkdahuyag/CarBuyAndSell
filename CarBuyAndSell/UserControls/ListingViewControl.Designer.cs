@@ -30,42 +30,52 @@ namespace CarBuyAndSell
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListingViewControl));
+            this.searchBox = new System.Windows.Forms.TextBox();
             this.mainLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.searchPanel = new System.Windows.Forms.Panel();
-            this.searchBox = new System.Windows.Forms.TextBox();
             this.searchButton = new System.Windows.Forms.Button();
-            this.carsDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.editButton = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.deleteButton = new System.Windows.Forms.DataGridViewButtonColumn();
             this.paginationPanel = new System.Windows.Forms.Panel();
             this.firstPageBtn = new System.Windows.Forms.Button();
             this.prevPageBtn = new System.Windows.Forms.Button();
             this.pageLabel = new System.Windows.Forms.Label();
             this.nextPageBtn = new System.Windows.Forms.Button();
             this.lastPageBtn = new System.Windows.Forms.Button();
-            this.pageSelector = new System.Windows.Forms.NumericUpDown();
-            this.sellButton = new System.Windows.Forms.Button();
+            this.pnlTransactions = new Bunifu.UI.WinForms.BunifuPanel();
+            this.pnlListings = new System.Windows.Forms.Panel();
+            this.pnlHeader = new Bunifu.UI.WinForms.BunifuPanel();
+            this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblStatus = new ReaLTaiizor.BigLabel();
+            this.lblDateListed = new ReaLTaiizor.BigLabel();
+            this.lblExpiry = new ReaLTaiizor.BigLabel();
+            this.lblHighestBid = new ReaLTaiizor.BigLabel();
+            this.lblTransactionId = new ReaLTaiizor.BigLabel();
+            this.lblBuyer = new ReaLTaiizor.BigLabel();
+            this.lblListingOwner = new ReaLTaiizor.BigLabel();
             this.mainLayoutPanel.SuspendLayout();
             this.searchPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.carsDataGridView)).BeginInit();
             this.paginationPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pageSelector)).BeginInit();
+            this.pnlTransactions.SuspendLayout();
+            this.pnlHeader.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // searchBox
+            // 
+            this.searchBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.searchBox.Location = new System.Drawing.Point(491, 10);
+            this.searchBox.Name = "searchBox";
+            this.searchBox.Size = new System.Drawing.Size(200, 22);
+            this.searchBox.TabIndex = 0;
             // 
             // mainLayoutPanel
             // 
             this.mainLayoutPanel.ColumnCount = 1;
-            this.mainLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
+            this.mainLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 782F));
             this.mainLayoutPanel.Controls.Add(this.searchPanel, 0, 0);
-            this.mainLayoutPanel.Controls.Add(this.carsDataGridView, 0, 1);
             this.mainLayoutPanel.Controls.Add(this.paginationPanel, 0, 2);
+            this.mainLayoutPanel.Controls.Add(this.pnlTransactions, 0, 1);
             this.mainLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainLayoutPanel.Location = new System.Drawing.Point(0, 0);
             this.mainLayoutPanel.Name = "mainLayoutPanel";
@@ -74,7 +84,7 @@ namespace CarBuyAndSell
             this.mainLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.mainLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.mainLayoutPanel.Size = new System.Drawing.Size(782, 553);
-            this.mainLayoutPanel.TabIndex = 0;
+            this.mainLayoutPanel.TabIndex = 3;
             // 
             // searchPanel
             // 
@@ -87,14 +97,6 @@ namespace CarBuyAndSell
             this.searchPanel.Size = new System.Drawing.Size(776, 44);
             this.searchPanel.TabIndex = 0;
             // 
-            // searchBox
-            // 
-            this.searchBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.searchBox.Location = new System.Drawing.Point(491, 10);
-            this.searchBox.Name = "searchBox";
-            this.searchBox.Size = new System.Drawing.Size(200, 22);
-            this.searchBox.TabIndex = 0;
-            // 
             // searchButton
             // 
             this.searchButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -104,76 +106,8 @@ namespace CarBuyAndSell
             this.searchButton.TabIndex = 1;
             this.searchButton.Text = "Search";
             // 
-            // carsDataGridView
-            // 
-            this.carsDataGridView.AllowUserToAddRows = false;
-            this.carsDataGridView.ColumnHeadersHeight = 29;
-            this.carsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.editButton,
-            this.deleteButton});
-            this.carsDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.carsDataGridView.Location = new System.Drawing.Point(3, 53);
-            this.carsDataGridView.Name = "carsDataGridView";
-            this.carsDataGridView.RowHeadersWidth = 51;
-            this.carsDataGridView.Size = new System.Drawing.Size(776, 437);
-            this.carsDataGridView.TabIndex = 1;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 125;
-            // 
-            // editButton
-            // 
-            this.editButton.HeaderText = "";
-            this.editButton.MinimumWidth = 6;
-            this.editButton.Name = "editButton";
-            this.editButton.Text = "Edit";
-            this.editButton.UseColumnTextForButtonValue = true;
-            this.editButton.Width = 125;
-            // 
-            // deleteButton
-            // 
-            this.deleteButton.HeaderText = "";
-            this.deleteButton.MinimumWidth = 6;
-            this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Text = "Delete";
-            this.deleteButton.UseColumnTextForButtonValue = true;
-            this.deleteButton.Width = 125;
-            // 
             // paginationPanel
             // 
-            this.paginationPanel.Controls.Add(this.sellButton);
             this.paginationPanel.Controls.Add(this.firstPageBtn);
             this.paginationPanel.Controls.Add(this.prevPageBtn);
             this.paginationPanel.Controls.Add(this.pageLabel);
@@ -233,55 +167,241 @@ namespace CarBuyAndSell
             this.lastPageBtn.TabIndex = 3;
             this.lastPageBtn.Text = "Last >>";
             // 
-            // pageSelector
+            // pnlTransactions
             // 
-            this.pageSelector.Location = new System.Drawing.Point(0, 0);
-            this.pageSelector.Name = "pageSelector";
-            this.pageSelector.Size = new System.Drawing.Size(120, 22);
-            this.pageSelector.TabIndex = 0;
+            this.pnlTransactions.BackgroundColor = System.Drawing.Color.MintCream;
+            this.pnlTransactions.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlTransactions.BackgroundImage")));
+            this.pnlTransactions.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlTransactions.BorderColor = System.Drawing.Color.Transparent;
+            this.pnlTransactions.BorderRadius = 3;
+            this.pnlTransactions.BorderThickness = 1;
+            this.pnlTransactions.Controls.Add(this.pnlListings);
+            this.pnlTransactions.Controls.Add(this.pnlHeader);
+            this.pnlTransactions.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlTransactions.Location = new System.Drawing.Point(3, 53);
+            this.pnlTransactions.Name = "pnlTransactions";
+            this.pnlTransactions.ShowBorders = true;
+            this.pnlTransactions.Size = new System.Drawing.Size(776, 437);
+            this.pnlTransactions.TabIndex = 3;
             // 
-            // sellButton
+            // pnlListings
             // 
-            this.sellButton.Dock = System.Windows.Forms.DockStyle.Left;
-            this.sellButton.Location = new System.Drawing.Point(0, 0);
-            this.sellButton.Name = "sellButton";
-            this.sellButton.Text = "Sell";
-            this.sellButton.Size = new System.Drawing.Size(75, 23);
-            this.sellButton.TabIndex = 0;
+            this.pnlListings.BackColor = System.Drawing.Color.Transparent;
+            this.pnlListings.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlListings.Location = new System.Drawing.Point(0, 64);
+            this.pnlListings.Name = "pnlListings";
+            this.pnlListings.Size = new System.Drawing.Size(776, 373);
+            this.pnlListings.TabIndex = 5;
             // 
-            // SellViewControl
+            // pnlHeader
+            // 
+            this.pnlHeader.BackgroundColor = System.Drawing.Color.MintCream;
+            this.pnlHeader.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlHeader.BackgroundImage")));
+            this.pnlHeader.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlHeader.BorderColor = System.Drawing.Color.Transparent;
+            this.pnlHeader.BorderRadius = 3;
+            this.pnlHeader.BorderThickness = 1;
+            this.pnlHeader.Controls.Add(this.bunifuSeparator1);
+            this.pnlHeader.Controls.Add(this.tableLayoutPanel1);
+            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
+            this.pnlHeader.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlHeader.Name = "pnlHeader";
+            this.pnlHeader.ShowBorders = true;
+            this.pnlHeader.Size = new System.Drawing.Size(776, 64);
+            this.pnlHeader.TabIndex = 4;
+            // 
+            // bunifuSeparator1
+            // 
+            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator1.BackgroundImage")));
+            this.bunifuSeparator1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuSeparator1.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
+            this.bunifuSeparator1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bunifuSeparator1.LineColor = System.Drawing.Color.Silver;
+            this.bunifuSeparator1.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
+            this.bunifuSeparator1.LineThickness = 5;
+            this.bunifuSeparator1.Location = new System.Drawing.Point(0, 44);
+            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuSeparator1.Name = "bunifuSeparator1";
+            this.bunifuSeparator1.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
+            this.bunifuSeparator1.Size = new System.Drawing.Size(776, 40);
+            this.bunifuSeparator1.TabIndex = 6;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.tableLayoutPanel1.ColumnCount = 8;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.094046F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.05758F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.38316F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.14741F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.14741F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.39144F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.77896F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 136F));
+            this.tableLayoutPanel1.Controls.Add(this.lblStatus, 6, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblDateListed, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblExpiry, 5, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblHighestBid, 4, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblTransactionId, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblBuyer, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblListingOwner, 3, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(776, 44);
+            this.tableLayoutPanel1.TabIndex = 7;
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.BackColor = System.Drawing.Color.Transparent;
+            this.lblStatus.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.lblStatus.Location = new System.Drawing.Point(565, 23);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(69, 21);
+            this.lblStatus.TabIndex = 5;
+            this.lblStatus.Text = "Status";
+            this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblDateListed
+            // 
+            this.lblDateListed.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblDateListed.AutoSize = true;
+            this.lblDateListed.BackColor = System.Drawing.Color.Transparent;
+            this.lblDateListed.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDateListed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.lblDateListed.Location = new System.Drawing.Point(163, 2);
+            this.lblDateListed.Name = "lblDateListed";
+            this.lblDateListed.Size = new System.Drawing.Size(79, 42);
+            this.lblDateListed.TabIndex = 2;
+            this.lblDateListed.Text = "Listed On";
+            this.lblDateListed.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblExpiry
+            // 
+            this.lblExpiry.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblExpiry.AutoSize = true;
+            this.lblExpiry.BackColor = System.Drawing.Color.Transparent;
+            this.lblExpiry.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExpiry.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.lblExpiry.Location = new System.Drawing.Point(480, 2);
+            this.lblExpiry.Name = "lblExpiry";
+            this.lblExpiry.Size = new System.Drawing.Size(79, 42);
+            this.lblExpiry.TabIndex = 4;
+            this.lblExpiry.Text = "Listing Expiry";
+            this.lblExpiry.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblHighestBid
+            // 
+            this.lblHighestBid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblHighestBid.AutoSize = true;
+            this.lblHighestBid.BackColor = System.Drawing.Color.Transparent;
+            this.lblHighestBid.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHighestBid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.lblHighestBid.Location = new System.Drawing.Point(364, 2);
+            this.lblHighestBid.Name = "lblHighestBid";
+            this.lblHighestBid.Size = new System.Drawing.Size(110, 42);
+            this.lblHighestBid.TabIndex = 3;
+            this.lblHighestBid.Text = "Highest Bidder";
+            this.lblHighestBid.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblTransactionId
+            // 
+            this.lblTransactionId.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTransactionId.AutoSize = true;
+            this.lblTransactionId.BackColor = System.Drawing.Color.Transparent;
+            this.lblTransactionId.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTransactionId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.lblTransactionId.Location = new System.Drawing.Point(3, 23);
+            this.lblTransactionId.Name = "lblTransactionId";
+            this.lblTransactionId.Size = new System.Drawing.Size(39, 21);
+            this.lblTransactionId.TabIndex = 0;
+            this.lblTransactionId.Text = "Id";
+            this.lblTransactionId.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblBuyer
+            // 
+            this.lblBuyer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblBuyer.AutoSize = true;
+            this.lblBuyer.BackColor = System.Drawing.Color.Transparent;
+            this.lblBuyer.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBuyer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.lblBuyer.Location = new System.Drawing.Point(48, 23);
+            this.lblBuyer.Name = "lblBuyer";
+            this.lblBuyer.Size = new System.Drawing.Size(109, 21);
+            this.lblBuyer.TabIndex = 1;
+            this.lblBuyer.Text = "Vehicle";
+            this.lblBuyer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblListingOwner
+            // 
+            this.lblListingOwner.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblListingOwner.AutoSize = true;
+            this.lblListingOwner.BackColor = System.Drawing.Color.Transparent;
+            this.lblListingOwner.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblListingOwner.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.lblListingOwner.Location = new System.Drawing.Point(248, 23);
+            this.lblListingOwner.Name = "lblListingOwner";
+            this.lblListingOwner.Size = new System.Drawing.Size(110, 21);
+            this.lblListingOwner.TabIndex = 6;
+            this.lblListingOwner.Text = "Owner";
+            this.lblListingOwner.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ListingViewControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.mainLayoutPanel);
-            this.Name = "SellViewControl";
+            this.Name = "ListingViewControl";
             this.Size = new System.Drawing.Size(782, 553);
             this.mainLayoutPanel.ResumeLayout(false);
             this.searchPanel.ResumeLayout(false);
             this.searchPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.carsDataGridView)).EndInit();
             this.paginationPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pageSelector)).EndInit();
+            this.pnlTransactions.ResumeLayout(false);
+            this.pnlHeader.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private TableLayoutPanel tableLayoutPanel1;
+        private ReaLTaiizor.BigLabel lblStatus;
+        private ReaLTaiizor.BigLabel lblDateListed;
+        private ReaLTaiizor.BigLabel lblExpiry;
+        private ReaLTaiizor.BigLabel lblHighestBid;
+        private ReaLTaiizor.BigLabel lblTransactionId;
+        private ReaLTaiizor.BigLabel lblBuyer;
+        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator1;
+        private Bunifu.UI.WinForms.BunifuPanel pnlHeader;
+        private Bunifu.UI.WinForms.BunifuPanel pnlTransactions;
         private TextBox searchBox;
-        private Button searchButton, sellButton;
-        private DataGridView carsDataGridView;
-        private Button firstPageBtn, prevPageBtn, nextPageBtn, lastPageBtn;
-        private Label pageLabel;
-        private NumericUpDown pageSelector;
         private TableLayoutPanel mainLayoutPanel;
         private Panel searchPanel;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private DataGridViewButtonColumn editButton;
-        private DataGridViewButtonColumn deleteButton;
+        private Button searchButton;
         private Panel paginationPanel;
+        private Button firstPageBtn;
+        private Button prevPageBtn;
+        private Label pageLabel;
+        private Button nextPageBtn;
+        private Button lastPageBtn;
+        private ReaLTaiizor.BigLabel lblListingOwner;
+        private Panel pnlListings;
     }
 }

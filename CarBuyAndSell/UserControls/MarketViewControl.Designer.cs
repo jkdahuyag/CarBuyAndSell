@@ -30,29 +30,34 @@ namespace CarBuyAndSell
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MarketViewControl));
             this.mainLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.searchPanel = new System.Windows.Forms.Panel();
             this.searchBox = new System.Windows.Forms.TextBox();
             this.searchButton = new System.Windows.Forms.Button();
-            this.carTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.paginationPanel = new System.Windows.Forms.Panel();
             this.firstPageBtn = new System.Windows.Forms.Button();
             this.prevPageBtn = new System.Windows.Forms.Button();
             this.pageLabel = new System.Windows.Forms.Label();
             this.nextPageBtn = new System.Windows.Forms.Button();
             this.lastPageBtn = new System.Windows.Forms.Button();
+            this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.pnlVehicles = new Bunifu.UI.WinForms.BunifuPanel();
+            this.flwMarket = new System.Windows.Forms.FlowLayoutPanel();
             this.mainLayoutPanel.SuspendLayout();
             this.searchPanel.SuspendLayout();
             this.paginationPanel.SuspendLayout();
+            this.bunifuPanel1.SuspendLayout();
+            this.pnlVehicles.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainLayoutPanel
             // 
             this.mainLayoutPanel.ColumnCount = 1;
-            this.mainLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.mainLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 782F));
             this.mainLayoutPanel.Controls.Add(this.searchPanel, 0, 0);
-            this.mainLayoutPanel.Controls.Add(this.carTableLayoutPanel, 0, 1);
             this.mainLayoutPanel.Controls.Add(this.paginationPanel, 0, 2);
+            this.mainLayoutPanel.Controls.Add(this.bunifuPanel1, 0, 1);
             this.mainLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainLayoutPanel.Location = new System.Drawing.Point(0, 0);
             this.mainLayoutPanel.Name = "mainLayoutPanel";
@@ -61,7 +66,7 @@ namespace CarBuyAndSell
             this.mainLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.mainLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.mainLayoutPanel.Size = new System.Drawing.Size(782, 553);
-            this.mainLayoutPanel.TabIndex = 0;
+            this.mainLayoutPanel.TabIndex = 1;
             // 
             // searchPanel
             // 
@@ -85,28 +90,12 @@ namespace CarBuyAndSell
             // searchButton
             // 
             this.searchButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.searchButton.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchButton.Location = new System.Drawing.Point(691, 9);
             this.searchButton.Name = "searchButton";
             this.searchButton.Size = new System.Drawing.Size(75, 25);
             this.searchButton.TabIndex = 1;
             this.searchButton.Text = "Search";
-            // 
-            // carTableLayoutPanel
-            // 
-            this.carTableLayoutPanel.ColumnCount = 5;
-            this.carTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.carTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.carTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.carTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.carTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.carTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.carTableLayoutPanel.Location = new System.Drawing.Point(3, 53);
-            this.carTableLayoutPanel.Name = "carTableLayoutPanel";
-            this.carTableLayoutPanel.RowCount = 2;
-            this.carTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.carTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.carTableLayoutPanel.Size = new System.Drawing.Size(776, 447);
-            this.carTableLayoutPanel.TabIndex = 1;
             // 
             // paginationPanel
             // 
@@ -124,6 +113,7 @@ namespace CarBuyAndSell
             // firstPageBtn
             // 
             this.firstPageBtn.Dock = System.Windows.Forms.DockStyle.Right;
+            this.firstPageBtn.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.firstPageBtn.Location = new System.Drawing.Point(376, 0);
             this.firstPageBtn.Name = "firstPageBtn";
             this.firstPageBtn.Size = new System.Drawing.Size(75, 44);
@@ -134,6 +124,7 @@ namespace CarBuyAndSell
             // 
             this.prevPageBtn.Dock = System.Windows.Forms.DockStyle.Right;
             this.prevPageBtn.Enabled = false;
+            this.prevPageBtn.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prevPageBtn.Location = new System.Drawing.Point(451, 0);
             this.prevPageBtn.Name = "prevPageBtn";
             this.prevPageBtn.Size = new System.Drawing.Size(75, 44);
@@ -143,6 +134,7 @@ namespace CarBuyAndSell
             // pageLabel
             // 
             this.pageLabel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pageLabel.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pageLabel.Location = new System.Drawing.Point(526, 0);
             this.pageLabel.Name = "pageLabel";
             this.pageLabel.Size = new System.Drawing.Size(100, 44);
@@ -154,6 +146,7 @@ namespace CarBuyAndSell
             // 
             this.nextPageBtn.Dock = System.Windows.Forms.DockStyle.Right;
             this.nextPageBtn.Enabled = false;
+            this.nextPageBtn.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nextPageBtn.Location = new System.Drawing.Point(626, 0);
             this.nextPageBtn.Name = "nextPageBtn";
             this.nextPageBtn.Size = new System.Drawing.Size(75, 44);
@@ -163,13 +156,55 @@ namespace CarBuyAndSell
             // lastPageBtn
             // 
             this.lastPageBtn.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lastPageBtn.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lastPageBtn.Location = new System.Drawing.Point(701, 0);
             this.lastPageBtn.Name = "lastPageBtn";
             this.lastPageBtn.Size = new System.Drawing.Size(75, 44);
             this.lastPageBtn.TabIndex = 3;
             this.lastPageBtn.Text = "Last >>";
             // 
-            // BuyViewControl
+            // bunifuPanel1
+            // 
+            this.bunifuPanel1.BackgroundColor = System.Drawing.Color.Transparent;
+            this.bunifuPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel1.BackgroundImage")));
+            this.bunifuPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
+            this.bunifuPanel1.BorderRadius = 3;
+            this.bunifuPanel1.BorderThickness = 1;
+            this.bunifuPanel1.Controls.Add(this.pnlVehicles);
+            this.bunifuPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bunifuPanel1.Location = new System.Drawing.Point(3, 53);
+            this.bunifuPanel1.Name = "bunifuPanel1";
+            this.bunifuPanel1.ShowBorders = true;
+            this.bunifuPanel1.Size = new System.Drawing.Size(776, 447);
+            this.bunifuPanel1.TabIndex = 3;
+            // 
+            // pnlVehicles
+            // 
+            this.pnlVehicles.BackgroundColor = System.Drawing.Color.Transparent;
+            this.pnlVehicles.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlVehicles.BackgroundImage")));
+            this.pnlVehicles.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlVehicles.BorderColor = System.Drawing.Color.Transparent;
+            this.pnlVehicles.BorderRadius = 3;
+            this.pnlVehicles.BorderThickness = 1;
+            this.pnlVehicles.Controls.Add(this.flwMarket);
+            this.pnlVehicles.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlVehicles.Location = new System.Drawing.Point(0, 0);
+            this.pnlVehicles.Name = "pnlVehicles";
+            this.pnlVehicles.ShowBorders = true;
+            this.pnlVehicles.Size = new System.Drawing.Size(776, 447);
+            this.pnlVehicles.TabIndex = 4;
+            // 
+            // flwMarket
+            // 
+            this.flwMarket.AutoScroll = true;
+            this.flwMarket.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flwMarket.Location = new System.Drawing.Point(0, 0);
+            this.flwMarket.Name = "flwMarket";
+            this.flwMarket.Size = new System.Drawing.Size(776, 447);
+            this.flwMarket.TabIndex = 0;
+            // 
+            // MarketViewControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -180,20 +215,26 @@ namespace CarBuyAndSell
             this.searchPanel.ResumeLayout(false);
             this.searchPanel.PerformLayout();
             this.paginationPanel.ResumeLayout(false);
+            this.bunifuPanel1.ResumeLayout(false);
+            this.pnlVehicles.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private TableLayoutPanel carTableLayoutPanel;
-        private System.Windows.Forms.Button firstPageBtn, prevPageBtn, nextPageBtn, lastPageBtn;
-        private Label pageLabel;
-        private TextBox searchBox;
-        private System.Windows.Forms.Button searchButton;
-        //private NumericUpDown pageSelector;
+        private FlowLayoutPanel flwMarket;
         private TableLayoutPanel mainLayoutPanel;
-        private System.Windows.Forms.Panel searchPanel;
-        private System.Windows.Forms.Panel paginationPanel;
+        private Panel searchPanel;
+        private TextBox searchBox;
+        private Button searchButton;
+        private Panel paginationPanel;
+        private Button firstPageBtn;
+        private Button prevPageBtn;
+        private Label pageLabel;
+        private Button nextPageBtn;
+        private Button lastPageBtn;
+        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
+        private Bunifu.UI.WinForms.BunifuPanel pnlVehicles;
     }
 }

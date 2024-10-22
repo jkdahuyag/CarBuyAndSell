@@ -1,8 +1,11 @@
-﻿using System;
+﻿using CarBuyAndSell.Cards;
+using CarBuyAndSell.Dto;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,31 +15,31 @@ namespace CarBuyAndSell
 {
     public partial class MarketViewControl : UserControl
     {
-        private List<string> cars = new List<string>();
+        GlobalProcedure globalProcedure = new GlobalProcedure();
+        private List<ListingDto> listings = new List<ListingDto>();
+        private int totalRecords = 0;
         private int currentPage = 1;
         private const int carsPerPage = 10;
+        private bool initial = true;
 
         public MarketViewControl()
         {
             InitializeComponent();
-
-            // Simulate placeholder text
+            initial = true;
+            if (!this.globalProcedure.FncConnectToDatabase())
+                MessageBox.Show("Not Connected");
+            listings = globalProcedure.ProcGetListings(currentPage, carsPerPage, true);
+            totalRecords = globalProcedure.ProcCountListings(searchBox.Text.ToLower(), true);
             SetPlaceholder();
             searchBox.Enter += RemovePlaceholder;
             searchBox.Leave += SetPlaceholder;
-
             searchButton.Click += SearchButton_Click;
-
             prevPageBtn.Click += PrevPageBtn_Click;
-
             nextPageBtn.Click += NextPageBtn_Click;
             firstPageBtn.Click += FirstPageBtn_Click;
             lastPageBtn.Click += LastPageBtn_Click;
 
-            //pageSelector.ValueChanged += PageSelector_ValueChanged;
-            // Load data and display initial car list
-            LoadCars();
-            DisplayCars();
+            DisplayListings();
         }
 
         // Event handler to set the placeholder text
@@ -46,81 +49,78 @@ namespace CarBuyAndSell
             {
                 searchBox.Text = "Search...";
                 searchBox.ForeColor = Color.Gray;
+                initial = true;
             }
         }
 
-        // Event handler to remove the placeholder text when user starts typing
         private void RemovePlaceholder(object sender, EventArgs e)
         {
             if (searchBox.Text == "Search...")
             {
+                initial = false;
                 searchBox.Text = "";
                 searchBox.ForeColor = Color.Black;
             }
         }
         private void SearchButton_Click(object sender, EventArgs e)
         {
-            // Get the search query from the searchBox
+            currentPage = 1; // Reset to the first page
             string searchQuery = searchBox.Text.ToLower();
-            SearchCars(searchQuery); // Implement search logic
+            if (initial) searchQuery = "";
+            totalRecords = globalProcedure.ProcCountVehicles(searchQuery);
+            SearchMarketListings();
         }
 
-        private void SearchCars(string searchQuery)
+        private void SearchMarketListings()
         {
-            // Filter the car list based on the search query
-            List<string> filteredCars = cars
-                .Where(car => car.ToLower().Contains(searchQuery))
-                .ToList();
-
-            if (filteredCars.Count > 0)
+            string searchQuery = searchBox.Text.ToLower();
+            if (initial) searchQuery = "";
+            List<ListingDto> filteredListings = globalProcedure.ProcSearchListings(searchQuery, currentPage, carsPerPage, true);
+            if (filteredListings.Count > 0)
             {
-                // Replace the original car list with the filtered list
-                cars = filteredCars;
-                currentPage = 1; // Reset to the first page
-                DisplayCars();
+                listings = filteredListings;
+                DisplayListings();
             }
             else
             {
-                MessageBox.Show("No cars found matching your search.");
-            }
-        }
-        private void LoadCars()
-        {
-            for (int i = 1; i <= 100; i++)
-            {
-                cars.Add("Car " + i);
+                MessageBox.Show("No listing found matching your search.");
             }
         }
 
-        // Display cars in 5 columns, 2 rows (10 cars per page)
-        private void DisplayCars()
+        private void DisplayListings()
         {
-            carTableLayoutPanel.Controls.Clear(); // Clear previous cars
+            flwMarket.Controls.Clear();
 
-            int start = (currentPage - 1) * carsPerPage;
-            int end = Math.Min(start + carsPerPage, cars.Count);
-
-            for (int i = start; i < end; i++)
+            if (listings.Count > 0)
             {
-                System.Windows.Forms.GroupBox carCard = new System.Windows.Forms.GroupBox();
-                carCard.Text = cars[i];
-                carCard.Padding = new Padding(10);
-                carCard.Dock = DockStyle.Fill;
-
-                Label carDetails = new Label();
-                carDetails.Text = $"Car details for {cars[i]}";
-                carDetails.AutoSize = true;
-                carCard.Controls.Add(carDetails);
-
-                carTableLayoutPanel.Controls.Add(carCard);
+                for (int i = 0; i < listings.Count; i++)
+                {
+                    var listing = listings[i];
+                    ListingCardView cardPanel = new ListingCardView(listing);
+                    // Add the card to the grid
+                    flwMarket.Controls.Add(cardPanel);
+                }
             }
+            else
+            {
+                MessageBox.Show("Record not found!");
+            }
+
+            this.globalProcedure.sqlAdapter.Dispose();
+            this.globalProcedure.datCarBuyAndSellMgr.Dispose();
 
             UpdatePaginationButtons();
+
+        }
+
+        private void BtnAddVehicle_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void UpdatePaginationButtons()
         {
-            int totalPages = (cars.Count + carsPerPage - 1) / carsPerPage;
+            int totalPages = (totalRecords + carsPerPage - 1) / carsPerPage;
 
             prevPageBtn.Enabled = currentPage > 1;
             firstPageBtn.Enabled = currentPage > 1;
@@ -135,7 +135,7 @@ namespace CarBuyAndSell
         private void FirstPageBtn_Click(object sender, EventArgs e)
         {
             currentPage = 1;
-            DisplayCars();
+            SearchMarketListings();
         }
 
         private void PrevPageBtn_Click(object sender, EventArgs e)
@@ -143,24 +143,25 @@ namespace CarBuyAndSell
             if (currentPage > 1)
             {
                 currentPage--;
-                DisplayCars();
+                SearchMarketListings();
             }
         }
 
         private void NextPageBtn_Click(object sender, EventArgs e)
         {
-            int totalPages = (cars.Count + carsPerPage - 1) / carsPerPage;
+            int totalPages = (totalRecords + carsPerPage - 1) / carsPerPage;
             if (currentPage < totalPages)
             {
                 currentPage++;
-                DisplayCars();
+                SearchMarketListings();
             }
         }
 
         private void LastPageBtn_Click(object sender, EventArgs e)
         {
-            currentPage = (cars.Count + carsPerPage - 1) / carsPerPage;
-            DisplayCars();
+            currentPage = (totalRecords + carsPerPage - 1) / carsPerPage;
+            SearchMarketListings();
         }
     }
 }
+

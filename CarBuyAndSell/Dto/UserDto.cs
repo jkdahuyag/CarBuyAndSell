@@ -10,8 +10,9 @@
         public string Username { get; set; }
         public string Password { get; set; }
         public string Number { get; set; }
+        public string ProfilePicture { get; set; }
 
-        public UserDto(int userId, string roleName, string firstName, string lastName, string address, string username, string password, string number)
+        public UserDto(int userId, string roleName, string firstName, string lastName, string address, string username, string password, string number, string profilePicture)
         {
             UserId = userId;
             RoleName = roleName;
@@ -21,6 +22,7 @@
             Username = username;
             Password = password;
             Number = number;
+            ProfilePicture = profilePicture;
         }
 
     }

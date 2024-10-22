@@ -13,8 +13,9 @@ namespace CarBuyAndSell.Dto
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string StatusName { get; set; }
+        public int OwnerId { get; set; }
 
-        public ListingDto(int listingId, int vehicleId, DateTime dateListed, double askingPrice, DateTime? listingExpiry, string description, string firstName, string lastName, string statusName)
+        public ListingDto(int listingId, int vehicleId, DateTime dateListed, double askingPrice, DateTime? listingExpiry, string description, string firstName, string lastName, string statusName, int ownerId)
         {
             ListingId = listingId;
             VehicleId = vehicleId;
@@ -25,6 +26,7 @@ namespace CarBuyAndSell.Dto
             FirstName = firstName;
             LastName = lastName;
             StatusName = statusName;
+            OwnerId = ownerId;
         }
     }
 }

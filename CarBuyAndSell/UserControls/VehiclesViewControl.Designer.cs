@@ -37,26 +37,30 @@ namespace CarBuyAndSell
             this.searchPanel = new System.Windows.Forms.Panel();
             this.searchBox = new System.Windows.Forms.TextBox();
             this.searchButton = new System.Windows.Forms.Button();
-            this.carTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.paginationPanel = new System.Windows.Forms.Panel();
+            this.btnAddVehicle = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.firstPageBtn = new System.Windows.Forms.Button();
             this.prevPageBtn = new System.Windows.Forms.Button();
             this.pageLabel = new System.Windows.Forms.Label();
             this.nextPageBtn = new System.Windows.Forms.Button();
             this.lastPageBtn = new System.Windows.Forms.Button();
-            this.btnAddVehicle = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.pnlVehicles = new Bunifu.UI.WinForms.BunifuPanel();
+            this.flwVehicles = new System.Windows.Forms.FlowLayoutPanel();
             this.mainLayoutPanel.SuspendLayout();
             this.searchPanel.SuspendLayout();
             this.paginationPanel.SuspendLayout();
+            this.bunifuPanel1.SuspendLayout();
+            this.pnlVehicles.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainLayoutPanel
             // 
             this.mainLayoutPanel.ColumnCount = 1;
-            this.mainLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.mainLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 782F));
             this.mainLayoutPanel.Controls.Add(this.searchPanel, 0, 0);
-            this.mainLayoutPanel.Controls.Add(this.carTableLayoutPanel, 0, 1);
             this.mainLayoutPanel.Controls.Add(this.paginationPanel, 0, 2);
+            this.mainLayoutPanel.Controls.Add(this.bunifuPanel1, 0, 1);
             this.mainLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainLayoutPanel.Location = new System.Drawing.Point(0, 0);
             this.mainLayoutPanel.Name = "mainLayoutPanel";
@@ -96,23 +100,6 @@ namespace CarBuyAndSell
             this.searchButton.TabIndex = 1;
             this.searchButton.Text = "Search";
             // 
-            // carTableLayoutPanel
-            // 
-            this.carTableLayoutPanel.ColumnCount = 5;
-            this.carTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.carTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.carTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.carTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.carTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.carTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.carTableLayoutPanel.Location = new System.Drawing.Point(3, 53);
-            this.carTableLayoutPanel.Name = "carTableLayoutPanel";
-            this.carTableLayoutPanel.RowCount = 2;
-            this.carTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.carTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.carTableLayoutPanel.Size = new System.Drawing.Size(776, 447);
-            this.carTableLayoutPanel.TabIndex = 1;
-            // 
             // paginationPanel
             // 
             this.paginationPanel.Controls.Add(this.btnAddVehicle);
@@ -126,59 +113,6 @@ namespace CarBuyAndSell
             this.paginationPanel.Name = "paginationPanel";
             this.paginationPanel.Size = new System.Drawing.Size(776, 44);
             this.paginationPanel.TabIndex = 2;
-            // 
-            // firstPageBtn
-            // 
-            this.firstPageBtn.Dock = System.Windows.Forms.DockStyle.Right;
-            this.firstPageBtn.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.firstPageBtn.Location = new System.Drawing.Point(376, 0);
-            this.firstPageBtn.Name = "firstPageBtn";
-            this.firstPageBtn.Size = new System.Drawing.Size(75, 44);
-            this.firstPageBtn.TabIndex = 0;
-            this.firstPageBtn.Text = "<< First";
-            // 
-            // prevPageBtn
-            // 
-            this.prevPageBtn.Dock = System.Windows.Forms.DockStyle.Right;
-            this.prevPageBtn.Enabled = false;
-            this.prevPageBtn.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.prevPageBtn.Location = new System.Drawing.Point(451, 0);
-            this.prevPageBtn.Name = "prevPageBtn";
-            this.prevPageBtn.Size = new System.Drawing.Size(75, 44);
-            this.prevPageBtn.TabIndex = 0;
-            this.prevPageBtn.Text = "Previous";
-            // 
-            // pageLabel
-            // 
-            this.pageLabel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pageLabel.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pageLabel.Location = new System.Drawing.Point(526, 0);
-            this.pageLabel.Name = "pageLabel";
-            this.pageLabel.Size = new System.Drawing.Size(100, 44);
-            this.pageLabel.TabIndex = 1;
-            this.pageLabel.Text = "Page 0 of 10";
-            this.pageLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // nextPageBtn
-            // 
-            this.nextPageBtn.Dock = System.Windows.Forms.DockStyle.Right;
-            this.nextPageBtn.Enabled = false;
-            this.nextPageBtn.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nextPageBtn.Location = new System.Drawing.Point(626, 0);
-            this.nextPageBtn.Name = "nextPageBtn";
-            this.nextPageBtn.Size = new System.Drawing.Size(75, 44);
-            this.nextPageBtn.TabIndex = 1;
-            this.nextPageBtn.Text = "Next";
-            // 
-            // lastPageBtn
-            // 
-            this.lastPageBtn.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lastPageBtn.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lastPageBtn.Location = new System.Drawing.Point(701, 0);
-            this.lastPageBtn.Name = "lastPageBtn";
-            this.lastPageBtn.Size = new System.Drawing.Size(75, 44);
-            this.lastPageBtn.TabIndex = 3;
-            this.lastPageBtn.Text = "Last >>";
             // 
             // btnAddVehicle
             // 
@@ -233,7 +167,7 @@ namespace CarBuyAndSell
             this.btnAddVehicle.Location = new System.Drawing.Point(0, 0);
             this.btnAddVehicle.Name = "btnAddVehicle";
             this.btnAddVehicle.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnAddVehicle.OnDisabledState.BorderRadius = 1;
+            this.btnAddVehicle.OnDisabledState.BorderRadius = 5;
             this.btnAddVehicle.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnAddVehicle.OnDisabledState.BorderThickness = 1;
             this.btnAddVehicle.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -241,7 +175,7 @@ namespace CarBuyAndSell
             this.btnAddVehicle.OnDisabledState.IconLeftImage = null;
             this.btnAddVehicle.OnDisabledState.IconRightImage = null;
             this.btnAddVehicle.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
-            this.btnAddVehicle.onHoverState.BorderRadius = 1;
+            this.btnAddVehicle.onHoverState.BorderRadius = 5;
             this.btnAddVehicle.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnAddVehicle.onHoverState.BorderThickness = 1;
             this.btnAddVehicle.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
@@ -249,7 +183,7 @@ namespace CarBuyAndSell
             this.btnAddVehicle.onHoverState.IconLeftImage = null;
             this.btnAddVehicle.onHoverState.IconRightImage = null;
             this.btnAddVehicle.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.btnAddVehicle.OnIdleState.BorderRadius = 1;
+            this.btnAddVehicle.OnIdleState.BorderRadius = 5;
             this.btnAddVehicle.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnAddVehicle.OnIdleState.BorderThickness = 1;
             this.btnAddVehicle.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
@@ -257,7 +191,7 @@ namespace CarBuyAndSell
             this.btnAddVehicle.OnIdleState.IconLeftImage = null;
             this.btnAddVehicle.OnIdleState.IconRightImage = null;
             this.btnAddVehicle.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnAddVehicle.OnPressedState.BorderRadius = 1;
+            this.btnAddVehicle.OnPressedState.BorderRadius = 5;
             this.btnAddVehicle.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnAddVehicle.OnPressedState.BorderThickness = 1;
             this.btnAddVehicle.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
@@ -271,6 +205,103 @@ namespace CarBuyAndSell
             this.btnAddVehicle.TextMarginLeft = 0;
             this.btnAddVehicle.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnAddVehicle.UseDefaultRadiusAndThickness = true;
+            this.btnAddVehicle.Click += new System.EventHandler(this.BtnAddVehicle_Click);
+            // 
+            // firstPageBtn
+            // 
+            this.firstPageBtn.Dock = System.Windows.Forms.DockStyle.Right;
+            this.firstPageBtn.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.firstPageBtn.Location = new System.Drawing.Point(376, 0);
+            this.firstPageBtn.Name = "firstPageBtn";
+            this.firstPageBtn.Size = new System.Drawing.Size(75, 44);
+            this.firstPageBtn.TabIndex = 0;
+            this.firstPageBtn.Text = "<< First";
+            // 
+            // prevPageBtn
+            // 
+            this.prevPageBtn.Dock = System.Windows.Forms.DockStyle.Right;
+            this.prevPageBtn.Enabled = false;
+            this.prevPageBtn.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prevPageBtn.Location = new System.Drawing.Point(451, 0);
+            this.prevPageBtn.Name = "prevPageBtn";
+            this.prevPageBtn.Size = new System.Drawing.Size(75, 44);
+            this.prevPageBtn.TabIndex = 0;
+            this.prevPageBtn.Text = "Previous";
+            // 
+            // pageLabel
+            // 
+            this.pageLabel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pageLabel.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pageLabel.Location = new System.Drawing.Point(526, 0);
+            this.pageLabel.Name = "pageLabel";
+            this.pageLabel.Size = new System.Drawing.Size(100, 44);
+            this.pageLabel.TabIndex = 1;
+            this.pageLabel.Text = "Page 0 of 10";
+            this.pageLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // nextPageBtn
+            // 
+            this.nextPageBtn.Dock = System.Windows.Forms.DockStyle.Right;
+            this.nextPageBtn.Enabled = false;
+            this.nextPageBtn.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nextPageBtn.Location = new System.Drawing.Point(626, 0);
+            this.nextPageBtn.Name = "nextPageBtn";
+            this.nextPageBtn.Size = new System.Drawing.Size(75, 44);
+            this.nextPageBtn.TabIndex = 1;
+            this.nextPageBtn.Text = "Next";
+            // 
+            // lastPageBtn
+            // 
+            this.lastPageBtn.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lastPageBtn.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lastPageBtn.Location = new System.Drawing.Point(701, 0);
+            this.lastPageBtn.Name = "lastPageBtn";
+            this.lastPageBtn.Size = new System.Drawing.Size(75, 44);
+            this.lastPageBtn.TabIndex = 3;
+            this.lastPageBtn.Text = "Last >>";
+            // 
+            // bunifuPanel1
+            // 
+            this.bunifuPanel1.BackgroundColor = System.Drawing.Color.Transparent;
+            this.bunifuPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel1.BackgroundImage")));
+            this.bunifuPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
+            this.bunifuPanel1.BorderRadius = 3;
+            this.bunifuPanel1.BorderThickness = 1;
+            this.bunifuPanel1.Controls.Add(this.pnlVehicles);
+            this.bunifuPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bunifuPanel1.Location = new System.Drawing.Point(3, 53);
+            this.bunifuPanel1.Name = "bunifuPanel1";
+            this.bunifuPanel1.ShowBorders = true;
+            this.bunifuPanel1.Size = new System.Drawing.Size(776, 447);
+            this.bunifuPanel1.TabIndex = 3;
+            // 
+            // pnlVehicles
+            // 
+            this.pnlVehicles.BackgroundColor = System.Drawing.Color.Transparent;
+            this.pnlVehicles.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlVehicles.BackgroundImage")));
+            this.pnlVehicles.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlVehicles.BorderColor = System.Drawing.Color.Transparent;
+            this.pnlVehicles.BorderRadius = 3;
+            this.pnlVehicles.BorderThickness = 1;
+            this.pnlVehicles.Controls.Add(this.flwVehicles);
+            this.pnlVehicles.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlVehicles.Location = new System.Drawing.Point(0, 0);
+            this.pnlVehicles.Name = "pnlVehicles";
+            this.pnlVehicles.ShowBorders = true;
+            this.pnlVehicles.Size = new System.Drawing.Size(776, 447);
+            this.pnlVehicles.TabIndex = 4;
+            // 
+            // flwVehicles
+            // 
+            this.flwVehicles.AutoScroll = true;
+            this.flwVehicles.BackColor = System.Drawing.Color.MintCream;
+            this.flwVehicles.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flwVehicles.Location = new System.Drawing.Point(0, 0);
+            this.flwVehicles.Name = "flwVehicles";
+            this.flwVehicles.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.flwVehicles.Size = new System.Drawing.Size(776, 447);
+            this.flwVehicles.TabIndex = 0;
             // 
             // VehiclesViewControl
             // 
@@ -283,13 +314,13 @@ namespace CarBuyAndSell
             this.searchPanel.ResumeLayout(false);
             this.searchPanel.PerformLayout();
             this.paginationPanel.ResumeLayout(false);
+            this.bunifuPanel1.ResumeLayout(false);
+            this.pnlVehicles.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private TableLayoutPanel carTableLayoutPanel;
         private System.Windows.Forms.Button firstPageBtn, prevPageBtn, nextPageBtn, lastPageBtn;
         private Label pageLabel;
         private TextBox searchBox;
@@ -299,5 +330,8 @@ namespace CarBuyAndSell
         private System.Windows.Forms.Panel searchPanel;
         private System.Windows.Forms.Panel paginationPanel;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnAddVehicle;
+        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
+        private Bunifu.UI.WinForms.BunifuPanel pnlVehicles;
+        private FlowLayoutPanel flwVehicles;
     }
 }

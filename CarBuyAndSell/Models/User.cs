@@ -16,8 +16,9 @@ namespace CarBuyAndSell.Models
         public string Username { get; set; }
         public string Password { get; set; }
         public string Number { get; set; }
+        public string ProfilePicture { get; set; }
 
-        public User(int userId, int role, string firstName, string lastName, string address, string username, string password, string number)
+        public User(int userId, int role, string firstName, string lastName, string address, string username, string password, string number, string profilePicture)
         {
             UserId = userId;
             RoleId = role;
@@ -27,6 +28,7 @@ namespace CarBuyAndSell.Models
             Username = username;
             Password = password;
             Number = number;
+            ProfilePicture = profilePicture;
         }
     }
 

@@ -19,13 +19,27 @@ namespace CarBuyAndSell
             InitializeComponent();
             btnVehicles.Select();
             ShowVehiclesView();
+            if (LoginInfo.Role == "Admin")
+            {
+                btnDashboard.Visible = true;
+                btnDashboard.Text = "Dashboard";
+                btnBids.Text = "Bids";
+                btnListings.Text = "Listings";
+                btnUsers.Text = "Users";
+                btnTransactions.Text = "Transactions";
+                btnVehicles.Text = "Vehicles";
+            }
+            else
+            {
+                btnDashboard.Visible = false;
+            }
         }
 
 
         private void ShowUserListView()
         {
             Panel pnlUserControl = this.Controls.Find("pnlUserControl", true)[0] as Panel;
-            lblHeader.Text = "User List";
+            lblViewName.Text = "User List";
             ClearAndDisposeControls(pnlUserControl);
 
             UsersViewControl userListView = new UsersViewControl();
@@ -36,10 +50,11 @@ namespace CarBuyAndSell
         private void ShowVehiclesView()
         {
             Panel pnlUserControl = this.Controls.Find("pnlUserControl", true)[0] as Panel;
-            // if admin 
-            // lblHeader.Text = "Vehicles";
-            // else
-            lblHeader.Text = "My Vehicles";
+
+            if (LoginInfo.Role == "admin")
+                lblViewName.Text = "Vehicles";
+            else
+                lblViewName.Text = "My Vehicles";
 
             ClearAndDisposeControls(pnlUserControl);
 
@@ -51,10 +66,11 @@ namespace CarBuyAndSell
         private void ShowListingView()
         {
             Panel pnlUserControl = this.Controls.Find("pnlUserControl", true)[0] as Panel;
-            // if admin 
-            // lblHeader.Text = "Listings";
-            // else
-            lblHeader.Text = "My Listings";
+
+            if (LoginInfo.Role == "admin")
+                lblViewName.Text = "Listings";
+            else
+                lblViewName.Text = "My Listings";
 
             ClearAndDisposeControls(pnlUserControl);
 
@@ -66,7 +82,8 @@ namespace CarBuyAndSell
         private void ShowAdminDashboardView()
         {
             Panel pnlUserControl = this.Controls.Find("pnlUserControl", true)[0] as Panel;
-            lblHeader.Text = "Dashboard";
+            
+            lblViewName.Text = "Dashboard";
 
             ClearAndDisposeControls(pnlUserControl);
 
@@ -78,7 +95,7 @@ namespace CarBuyAndSell
         private void ShowMarketView()
         {
             Panel pnlUserControl = this.Controls.Find("pnlUserControl", true)[0] as Panel;
-            lblHeader.Text = "Market";
+            lblViewName.Text = "Market";
 
             ClearAndDisposeControls(pnlUserControl);
 
@@ -93,7 +110,7 @@ namespace CarBuyAndSell
             // if admin 
             // lblHeader.Text = "Bids";
             // else
-            lblHeader.Text = "My Bids";
+            lblViewName.Text = "My Bids";
 
             ClearAndDisposeControls(pnlUserControl);
 
@@ -106,7 +123,7 @@ namespace CarBuyAndSell
         private void ShowTransactionsView()
         {
             Panel pnlUserControl = this.Controls.Find("pnlUserControl", true)[0] as Panel;
-            lblHeader.Text = "Transactions";
+            lblViewName.Text = "Transactions";
 
             ClearAndDisposeControls(pnlUserControl);
 
@@ -167,6 +184,19 @@ namespace CarBuyAndSell
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void BtnLogoutClick(object sender, EventArgs e)
+        {
+            LoginInfo.UserId = 0;
+            LoginInfo.Username = "";
+            LoginInfo.Password = "";
+            LoginInfo.Role = "";
+
+            Form form = new LoginForm();
+            form.Show();
+
+            this.Hide();
         }
     }
 }

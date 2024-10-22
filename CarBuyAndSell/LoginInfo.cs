@@ -12,5 +12,6 @@ namespace CarBuyAndSell
         public static string Username { get; set; }
         public static string Password { get; set; }
         public static string Role { get; set; }
+        public static string ProfilePicture { get; internal set; }
     }
 }
