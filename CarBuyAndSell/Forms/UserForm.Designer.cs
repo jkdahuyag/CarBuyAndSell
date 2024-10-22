@@ -259,11 +259,11 @@ namespace CarBuyAndSell.Forms
             this.btnSave.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btnSave.OnDisabledState.IconLeftImage = null;
             this.btnSave.OnDisabledState.IconRightImage = null;
-            this.btnSave.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnSave.onHoverState.BorderColor = System.Drawing.Color.DarkOrange;
             this.btnSave.onHoverState.BorderRadius = 10;
             this.btnSave.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnSave.onHoverState.BorderThickness = 1;
-            this.btnSave.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnSave.onHoverState.FillColor = System.Drawing.Color.DarkOrange;
             this.btnSave.onHoverState.ForeColor = System.Drawing.Color.White;
             this.btnSave.onHoverState.IconLeftImage = null;
             this.btnSave.onHoverState.IconRightImage = null;

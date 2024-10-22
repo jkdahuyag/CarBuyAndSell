@@ -233,7 +233,7 @@ namespace CarBuyAndSell
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.21069F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.82972F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.82972F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 146F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 147F));
             this.tableLayoutPanel1.Controls.Add(this.bigLabel1, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.bigLabel3, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.bigLabel2, 2, 0);
@@ -269,9 +269,9 @@ namespace CarBuyAndSell
             this.bigLabel3.BackColor = System.Drawing.Color.Transparent;
             this.bigLabel3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bigLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.bigLabel3.Location = new System.Drawing.Point(482, 23);
+            this.bigLabel3.Location = new System.Drawing.Point(481, 23);
             this.bigLabel3.Name = "bigLabel3";
-            this.bigLabel3.Size = new System.Drawing.Size(144, 21);
+            this.bigLabel3.Size = new System.Drawing.Size(143, 21);
             this.bigLabel3.TabIndex = 4;
             this.bigLabel3.Text = "Date";
             this.bigLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -286,7 +286,7 @@ namespace CarBuyAndSell
             this.bigLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.bigLabel2.Location = new System.Drawing.Point(332, 23);
             this.bigLabel2.Name = "bigLabel2";
-            this.bigLabel2.Size = new System.Drawing.Size(144, 21);
+            this.bigLabel2.Size = new System.Drawing.Size(143, 21);
             this.bigLabel2.TabIndex = 3;
             this.bigLabel2.Text = "Amount";
             this.bigLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

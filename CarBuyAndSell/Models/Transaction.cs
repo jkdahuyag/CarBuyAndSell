@@ -11,17 +11,17 @@ namespace CarBuyAndSell.Models
         public int TransactionId { get; set; }
         public int SellerId { get; set; }
         public int BuyerId { get; set; }
-        public int VehicleId { get; set; }
+        public int ListingId { get; set; }
         public DateTime TransactionDate { get; set; }
         public double SalePrice { get; set; }
         public int PaymentMethodId { get; set; }
 
-        public Transaction(int transactionId, int sellerId, int buyerId, int vehicleId, DateTime transactionDate, double salePrice, int paymentMethodId)
+        public Transaction(int transactionId, int sellerId, int buyerId, int listingId, DateTime transactionDate, double salePrice, int paymentMethodId)
         {
             TransactionId = transactionId;
             SellerId = sellerId;
             BuyerId = buyerId;
-            VehicleId = vehicleId;
+            ListingId = listingId;
             TransactionDate = transactionDate;
             SalePrice = salePrice;
             PaymentMethodId = paymentMethodId;

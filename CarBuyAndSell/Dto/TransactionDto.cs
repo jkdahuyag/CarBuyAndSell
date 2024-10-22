@@ -14,8 +14,9 @@ namespace CarBuyAndSell.Dto
         public string PaymentMethodName { get; set; }
         public int BuyerId { get; set; }
         public int SellerId { get; set; }
+        public int ListingId { get; set; }
 
-        public TransactionDto(int transactionId, string buyerFirstName, string buyerLastName, string sellerFirstName, string sellerLastName, double amount, DateTime transactionDate, string paymentMethodName, int buyerId, int sellerId)
+        public TransactionDto(int transactionId, string buyerFirstName, string buyerLastName, string sellerFirstName, string sellerLastName, double amount, DateTime transactionDate, string paymentMethodName, int buyerId, int sellerId, int listingId)
         {
             TransactionId = transactionId;
             BuyerFirstName = buyerFirstName;
@@ -27,6 +28,7 @@ namespace CarBuyAndSell.Dto
             PaymentMethodName = paymentMethodName;
             BuyerId = buyerId;
             SellerId = sellerId;
+            ListingId = listingId;
         }
     }
 }

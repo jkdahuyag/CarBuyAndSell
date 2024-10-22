@@ -1184,7 +1184,8 @@ namespace CarBuyAndSell
                         DateTime.Parse(dataRow["transaction_date"].ToString()),
                         dataRow["payment_method_name"].ToString(),
                         int.Parse(dataRow["buyer_id"].ToString()),
-                        int.Parse(dataRow["seller_id"].ToString())
+                        int.Parse(dataRow["seller_id"].ToString()),
+                        int.Parse(dataRow["listing_id"].ToString())
                     ));
                 }
             }
@@ -1225,7 +1226,8 @@ namespace CarBuyAndSell
                             DateTime.Parse(dataRow["transaction_date"].ToString()),
                             dataRow["payment_method_name"].ToString(),
                             int.Parse(dataRow["buyer_id"].ToString()),
-                            int.Parse(dataRow["seller_id"].ToString())
+                            int.Parse(dataRow["seller_id"].ToString()),
+                            int.Parse(dataRow["listing_id"].ToString())
                         ));
                     }
                 }
@@ -1272,7 +1274,8 @@ namespace CarBuyAndSell
                             DateTime.Parse(dataRow["transaction_date"].ToString()),
                             dataRow["payment_method_name"].ToString(),
                             int.Parse(dataRow["buyer_id"].ToString()),
-                            int.Parse(dataRow["seller_id"].ToString())
+                            int.Parse(dataRow["seller_id"].ToString()),
+                            int.Parse(dataRow["listing_id"].ToString())
                         ));
                     }
                 }
@@ -1318,7 +1321,8 @@ namespace CarBuyAndSell
                             DateTime.Parse(dataRow["transaction_date"].ToString()),
                             dataRow["payment_method_name"].ToString(),
                             int.Parse(dataRow["buyer_id"].ToString()),
-                            int.Parse(dataRow["seller_id"].ToString())
+                            int.Parse(dataRow["seller_id"].ToString()),
+                            int.Parse(dataRow["listing_id"].ToString())
                         ));
                     }
                 }
@@ -1384,7 +1388,8 @@ namespace CarBuyAndSell
                             DateTime.Parse(dataRow["transaction_date"].ToString()),
                             dataRow["payment_method_name"].ToString(),
                             int.Parse(dataRow["buyer_id"].ToString()),
-                            int.Parse(dataRow["seller_id"].ToString())
+                            int.Parse(dataRow["seller_id"].ToString()),
+                            int.Parse(dataRow["listing_id"].ToString())
                         ));
                     }
                 }
@@ -1410,7 +1415,7 @@ namespace CarBuyAndSell
                 {
                     { "@p_seller_id", transaction.SellerId },
                     { "@p_buyer_id", transaction.BuyerId },
-                    { "@p_vehicle_id", transaction.VehicleId },
+                    { "@p_listing_id", transaction.ListingId },
                     { "@p_date", transaction.TransactionDate },
                     { "@p_sale_price", transaction.SalePrice },
                     { "@p_payment_method_id", transaction.PaymentMethodId }

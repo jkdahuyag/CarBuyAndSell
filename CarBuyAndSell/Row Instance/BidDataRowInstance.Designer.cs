@@ -51,7 +51,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.21069F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.82972F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.82972F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 132F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 134F));
             this.tableLayoutPanel1.Controls.Add(this.lblBidder, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblBidDate, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblAmount, 2, 0);
@@ -74,7 +74,7 @@
             this.lblBidder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.lblBidder.Location = new System.Drawing.Point(100, 21);
             this.lblBidder.Name = "lblBidder";
-            this.lblBidder.Size = new System.Drawing.Size(233, 21);
+            this.lblBidder.Size = new System.Drawing.Size(232, 21);
             this.lblBidder.TabIndex = 2;
             this.lblBidder.Text = "Bidder";
             this.lblBidder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -86,9 +86,9 @@
             this.lblBidDate.BackColor = System.Drawing.Color.Transparent;
             this.lblBidDate.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBidDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.lblBidDate.Location = new System.Drawing.Point(492, 21);
+            this.lblBidDate.Location = new System.Drawing.Point(490, 21);
             this.lblBidDate.Name = "lblBidDate";
-            this.lblBidDate.Size = new System.Drawing.Size(147, 21);
+            this.lblBidDate.Size = new System.Drawing.Size(146, 21);
             this.lblBidDate.TabIndex = 4;
             this.lblBidDate.Text = "Date";
             this.lblBidDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -100,9 +100,9 @@
             this.lblAmount.BackColor = System.Drawing.Color.Transparent;
             this.lblAmount.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAmount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.lblAmount.Location = new System.Drawing.Point(339, 21);
+            this.lblAmount.Location = new System.Drawing.Point(338, 21);
             this.lblAmount.Name = "lblAmount";
-            this.lblAmount.Size = new System.Drawing.Size(147, 21);
+            this.lblAmount.Size = new System.Drawing.Size(146, 21);
             this.lblAmount.TabIndex = 3;
             this.lblAmount.Text = "Amount";
             this.lblAmount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -132,11 +132,11 @@
             this.pnlControls.Controls.Add(this.btnDelete);
             this.pnlControls.Controls.Add(this.btnDetails);
             this.pnlControls.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlControls.Location = new System.Drawing.Point(645, 3);
+            this.pnlControls.Location = new System.Drawing.Point(642, 3);
             this.pnlControls.Name = "pnlControls";
             this.pnlControls.Padding = new System.Windows.Forms.Padding(12, 12, 0, 0);
             this.pnlControls.ShowBorders = true;
-            this.pnlControls.Size = new System.Drawing.Size(128, 58);
+            this.pnlControls.Size = new System.Drawing.Size(131, 58);
             this.pnlControls.TabIndex = 7;
             // 
             // btnDelete
@@ -144,6 +144,8 @@
             this.btnDelete.AllowAnimations = true;
             this.btnDelete.AllowBorderColorChanges = true;
             this.btnDelete.AllowMouseEffects = true;
+            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.btnDelete.AnimationSpeed = 200;
             this.btnDelete.BackColor = System.Drawing.Color.Transparent;
             this.btnDelete.BackgroundColor = System.Drawing.Color.Transparent;
@@ -160,7 +162,6 @@
             borderEdges1.TopRight = true;
             this.btnDelete.CustomizableEdges = borderEdges1;
             this.btnDelete.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnDelete.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnDelete.Image = global::CarBuyAndSell.Properties.Resources.delete_symbol;
             this.btnDelete.ImageMargin = new System.Windows.Forms.Padding(0);
             this.btnDelete.Location = new System.Drawing.Point(44, 12);
@@ -170,12 +171,15 @@
             this.btnDelete.Size = new System.Drawing.Size(32, 32);
             this.btnDelete.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Round;
             this.btnDelete.TabIndex = 10;
+            this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // btnDetails
             // 
             this.btnDetails.AllowAnimations = true;
             this.btnDetails.AllowBorderColorChanges = true;
             this.btnDetails.AllowMouseEffects = true;
+            this.btnDetails.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.btnDetails.AnimationSpeed = 200;
             this.btnDetails.BackColor = System.Drawing.Color.Transparent;
             this.btnDetails.BackgroundColor = System.Drawing.Color.Transparent;
@@ -192,7 +196,6 @@
             borderEdges2.TopRight = true;
             this.btnDetails.CustomizableEdges = borderEdges2;
             this.btnDetails.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnDetails.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnDetails.Image = global::CarBuyAndSell.Properties.Resources.info;
             this.btnDetails.ImageMargin = new System.Windows.Forms.Padding(0);
             this.btnDetails.Location = new System.Drawing.Point(12, 12);

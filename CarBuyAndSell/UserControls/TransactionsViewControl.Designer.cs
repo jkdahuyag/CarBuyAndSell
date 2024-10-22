@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TransactionsViewControl));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.paginationPanel = new System.Windows.Forms.Panel();
-            this.btnMakeTransaction = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.firstPageBtn = new System.Windows.Forms.Button();
             this.prevPageBtn = new System.Windows.Forms.Button();
             this.pageLabel = new System.Windows.Forms.Label();
@@ -62,7 +60,6 @@
             // 
             // paginationPanel
             // 
-            this.paginationPanel.Controls.Add(this.btnMakeTransaction);
             this.paginationPanel.Controls.Add(this.firstPageBtn);
             this.paginationPanel.Controls.Add(this.prevPageBtn);
             this.paginationPanel.Controls.Add(this.pageLabel);
@@ -73,99 +70,6 @@
             this.paginationPanel.Name = "paginationPanel";
             this.paginationPanel.Size = new System.Drawing.Size(776, 54);
             this.paginationPanel.TabIndex = 2;
-            // 
-            // btnMakeTransaction
-            // 
-            this.btnMakeTransaction.AllowAnimations = true;
-            this.btnMakeTransaction.AllowMouseEffects = true;
-            this.btnMakeTransaction.AllowToggling = false;
-            this.btnMakeTransaction.AnimationSpeed = 200;
-            this.btnMakeTransaction.AutoGenerateColors = false;
-            this.btnMakeTransaction.AutoRoundBorders = false;
-            this.btnMakeTransaction.AutoSizeLeftIcon = true;
-            this.btnMakeTransaction.AutoSizeRightIcon = true;
-            this.btnMakeTransaction.BackColor = System.Drawing.Color.Transparent;
-            this.btnMakeTransaction.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
-            this.btnMakeTransaction.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMakeTransaction.BackgroundImage")));
-            this.btnMakeTransaction.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnMakeTransaction.ButtonText = "Send Money";
-            this.btnMakeTransaction.ButtonTextMarginLeft = 0;
-            this.btnMakeTransaction.ColorContrastOnClick = 45;
-            this.btnMakeTransaction.ColorContrastOnHover = 45;
-            this.btnMakeTransaction.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btnMakeTransaction.CustomizableEdges = borderEdges1;
-            this.btnMakeTransaction.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnMakeTransaction.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnMakeTransaction.DisabledFillColor = System.Drawing.Color.Empty;
-            this.btnMakeTransaction.DisabledForecolor = System.Drawing.Color.Empty;
-            this.btnMakeTransaction.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnMakeTransaction.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btnMakeTransaction.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMakeTransaction.ForeColor = System.Drawing.Color.White;
-            this.btnMakeTransaction.IconLeft = null;
-            this.btnMakeTransaction.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMakeTransaction.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btnMakeTransaction.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.btnMakeTransaction.IconMarginLeft = 11;
-            this.btnMakeTransaction.IconPadding = 10;
-            this.btnMakeTransaction.IconRight = null;
-            this.btnMakeTransaction.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnMakeTransaction.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btnMakeTransaction.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.btnMakeTransaction.IconSize = 25;
-            this.btnMakeTransaction.IdleBorderColor = System.Drawing.Color.Empty;
-            this.btnMakeTransaction.IdleBorderRadius = 0;
-            this.btnMakeTransaction.IdleBorderThickness = 0;
-            this.btnMakeTransaction.IdleFillColor = System.Drawing.Color.Empty;
-            this.btnMakeTransaction.IdleIconLeftImage = null;
-            this.btnMakeTransaction.IdleIconRightImage = null;
-            this.btnMakeTransaction.IndicateFocus = false;
-            this.btnMakeTransaction.Location = new System.Drawing.Point(0, 0);
-            this.btnMakeTransaction.Name = "btnMakeTransaction";
-            this.btnMakeTransaction.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnMakeTransaction.OnDisabledState.BorderRadius = 1;
-            this.btnMakeTransaction.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnMakeTransaction.OnDisabledState.BorderThickness = 1;
-            this.btnMakeTransaction.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnMakeTransaction.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnMakeTransaction.OnDisabledState.IconLeftImage = null;
-            this.btnMakeTransaction.OnDisabledState.IconRightImage = null;
-            this.btnMakeTransaction.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
-            this.btnMakeTransaction.onHoverState.BorderRadius = 1;
-            this.btnMakeTransaction.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnMakeTransaction.onHoverState.BorderThickness = 1;
-            this.btnMakeTransaction.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
-            this.btnMakeTransaction.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.btnMakeTransaction.onHoverState.IconLeftImage = null;
-            this.btnMakeTransaction.onHoverState.IconRightImage = null;
-            this.btnMakeTransaction.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.btnMakeTransaction.OnIdleState.BorderRadius = 1;
-            this.btnMakeTransaction.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnMakeTransaction.OnIdleState.BorderThickness = 1;
-            this.btnMakeTransaction.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
-            this.btnMakeTransaction.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btnMakeTransaction.OnIdleState.IconLeftImage = null;
-            this.btnMakeTransaction.OnIdleState.IconRightImage = null;
-            this.btnMakeTransaction.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnMakeTransaction.OnPressedState.BorderRadius = 1;
-            this.btnMakeTransaction.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnMakeTransaction.OnPressedState.BorderThickness = 1;
-            this.btnMakeTransaction.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnMakeTransaction.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.btnMakeTransaction.OnPressedState.IconLeftImage = null;
-            this.btnMakeTransaction.OnPressedState.IconRightImage = null;
-            this.btnMakeTransaction.Size = new System.Drawing.Size(150, 54);
-            this.btnMakeTransaction.TabIndex = 4;
-            this.btnMakeTransaction.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnMakeTransaction.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnMakeTransaction.TextMarginLeft = 0;
-            this.btnMakeTransaction.TextPadding = new System.Windows.Forms.Padding(0);
-            this.btnMakeTransaction.UseDefaultRadiusAndThickness = true;
-            this.btnMakeTransaction.Click += new System.EventHandler(this.BtnMakeTransaction_Click);
             // 
             // firstPageBtn
             // 
@@ -483,6 +387,5 @@
         private ReaLTaiizor.BigLabel lblTransactionId;
         private ReaLTaiizor.BigLabel lblBuyer;
         private System.Windows.Forms.Panel pnlTransactionsTable;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnMakeTransaction;
     }
 }

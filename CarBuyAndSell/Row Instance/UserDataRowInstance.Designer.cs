@@ -108,7 +108,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.30889F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.18877F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.40874F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 156F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 159F));
             this.tableLayoutPanel1.Controls.Add(this.lblNumber, 5, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblRole, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblUsername, 4, 0);
@@ -130,9 +130,9 @@
             this.lblNumber.BackColor = System.Drawing.Color.Transparent;
             this.lblNumber.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.lblNumber.Location = new System.Drawing.Point(506, 23);
+            this.lblNumber.Location = new System.Drawing.Point(504, 23);
             this.lblNumber.Name = "lblNumber";
-            this.lblNumber.Size = new System.Drawing.Size(108, 17);
+            this.lblNumber.Size = new System.Drawing.Size(107, 17);
             this.lblNumber.TabIndex = 5;
             this.lblNumber.Text = "Number";
             this.lblNumber.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -144,7 +144,7 @@
             this.lblRole.BackColor = System.Drawing.Color.Transparent;
             this.lblRole.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.lblRole.Location = new System.Drawing.Point(183, 23);
+            this.lblRole.Location = new System.Drawing.Point(182, 23);
             this.lblRole.Name = "lblRole";
             this.lblRole.Size = new System.Drawing.Size(61, 17);
             this.lblRole.TabIndex = 2;
@@ -158,7 +158,7 @@
             this.lblUsername.BackColor = System.Drawing.Color.Transparent;
             this.lblUsername.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.lblUsername.Location = new System.Drawing.Point(388, 23);
+            this.lblUsername.Location = new System.Drawing.Point(386, 23);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(112, 17);
             this.lblUsername.TabIndex = 4;
@@ -172,9 +172,9 @@
             this.lblAddress.BackColor = System.Drawing.Color.Transparent;
             this.lblAddress.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.lblAddress.Location = new System.Drawing.Point(250, 23);
+            this.lblAddress.Location = new System.Drawing.Point(249, 23);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(132, 17);
+            this.lblAddress.Size = new System.Drawing.Size(131, 17);
             this.lblAddress.TabIndex = 3;
             this.lblAddress.Text = "Address";
             this.lblAddress.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -202,7 +202,7 @@
             this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.lblName.Location = new System.Drawing.Point(47, 23);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(130, 17);
+            this.lblName.Size = new System.Drawing.Size(129, 17);
             this.lblName.TabIndex = 1;
             this.lblName.Text = "Name";
             this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -219,11 +219,11 @@
             this.pnlControls.Controls.Add(this.btnEdit);
             this.pnlControls.Controls.Add(this.btnDetails);
             this.pnlControls.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlControls.Location = new System.Drawing.Point(620, 3);
+            this.pnlControls.Location = new System.Drawing.Point(617, 3);
             this.pnlControls.Name = "pnlControls";
             this.pnlControls.Padding = new System.Windows.Forms.Padding(12, 12, 0, 0);
             this.pnlControls.ShowBorders = true;
-            this.pnlControls.Size = new System.Drawing.Size(153, 58);
+            this.pnlControls.Size = new System.Drawing.Size(156, 58);
             this.pnlControls.TabIndex = 6;
             // 
             // btnDelete
@@ -231,6 +231,8 @@
             this.btnDelete.AllowAnimations = true;
             this.btnDelete.AllowBorderColorChanges = true;
             this.btnDelete.AllowMouseEffects = true;
+            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.btnDelete.AnimationSpeed = 200;
             this.btnDelete.BackColor = System.Drawing.Color.Transparent;
             this.btnDelete.BackgroundColor = System.Drawing.Color.Transparent;
@@ -247,7 +249,6 @@
             borderEdges1.TopRight = true;
             this.btnDelete.CustomizableEdges = borderEdges1;
             this.btnDelete.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnDelete.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnDelete.Image = global::CarBuyAndSell.Properties.Resources.delete_symbol;
             this.btnDelete.ImageMargin = new System.Windows.Forms.Padding(0);
             this.btnDelete.Location = new System.Drawing.Point(76, 12);
@@ -264,6 +265,8 @@
             this.btnEdit.AllowAnimations = true;
             this.btnEdit.AllowBorderColorChanges = true;
             this.btnEdit.AllowMouseEffects = true;
+            this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.btnEdit.AnimationSpeed = 200;
             this.btnEdit.BackColor = System.Drawing.Color.Transparent;
             this.btnEdit.BackgroundColor = System.Drawing.Color.Empty;
@@ -280,7 +283,6 @@
             borderEdges2.TopRight = true;
             this.btnEdit.CustomizableEdges = borderEdges2;
             this.btnEdit.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnEdit.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnEdit.Image = global::CarBuyAndSell.Properties.Resources.edit;
             this.btnEdit.ImageMargin = new System.Windows.Forms.Padding(0);
             this.btnEdit.Location = new System.Drawing.Point(44, 12);
@@ -297,6 +299,8 @@
             this.btnDetails.AllowAnimations = true;
             this.btnDetails.AllowBorderColorChanges = true;
             this.btnDetails.AllowMouseEffects = true;
+            this.btnDetails.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.btnDetails.AnimationSpeed = 200;
             this.btnDetails.BackColor = System.Drawing.Color.Transparent;
             this.btnDetails.BackgroundColor = System.Drawing.Color.Transparent;
@@ -313,7 +317,6 @@
             borderEdges3.TopRight = true;
             this.btnDetails.CustomizableEdges = borderEdges3;
             this.btnDetails.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnDetails.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnDetails.Image = global::CarBuyAndSell.Properties.Resources.info;
             this.btnDetails.ImageMargin = new System.Windows.Forms.Padding(0);
             this.btnDetails.Location = new System.Drawing.Point(12, 12);

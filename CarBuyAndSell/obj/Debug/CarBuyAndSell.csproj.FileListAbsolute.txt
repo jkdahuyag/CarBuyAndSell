@@ -76,3 +76,4 @@ C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\obj\Debug\CarBuyAndSell.F
 C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\obj\Debug\CarBuyAndSell.Forms.BidForm.resources
 C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\obj\Debug\CarBuyAndSell.Forms.VehicleForm.resources
 C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\obj\Debug\CarBuyAndSell.Forms.ListingForm.resources
+C:\Users\user\source\repos\CarBuyAndSell\CarBuyAndSell\obj\Debug\CarBuyAndSell.Forms.TransactionForm.resources

@@ -29,7 +29,6 @@ namespace CarBuyAndSell.Row_Instance
             lblHighestBid.Text = $"100000";
             lblStatus.Text = listing.StatusName;
             lblListingId.Text = $"{listing.ListingId}";
-
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)

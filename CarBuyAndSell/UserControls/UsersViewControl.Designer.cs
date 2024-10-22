@@ -252,7 +252,7 @@ namespace CarBuyAndSell
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.30777F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.18808F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.40816F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 145F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 159F));
             this.tableLayoutPanel1.Controls.Add(this.lblNumber, 5, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblRole, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblUsername, 4, 0);
@@ -275,9 +275,9 @@ namespace CarBuyAndSell
             this.lblNumber.BackColor = System.Drawing.Color.Transparent;
             this.lblNumber.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.lblNumber.Location = new System.Drawing.Point(515, 23);
+            this.lblNumber.Location = new System.Drawing.Point(504, 23);
             this.lblNumber.Name = "lblNumber";
-            this.lblNumber.Size = new System.Drawing.Size(110, 21);
+            this.lblNumber.Size = new System.Drawing.Size(107, 21);
             this.lblNumber.TabIndex = 5;
             this.lblNumber.Text = "Number";
             this.lblNumber.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -290,9 +290,9 @@ namespace CarBuyAndSell
             this.lblRole.BackColor = System.Drawing.Color.Transparent;
             this.lblRole.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.lblRole.Location = new System.Drawing.Point(186, 23);
+            this.lblRole.Location = new System.Drawing.Point(182, 23);
             this.lblRole.Name = "lblRole";
-            this.lblRole.Size = new System.Drawing.Size(62, 21);
+            this.lblRole.Size = new System.Drawing.Size(61, 21);
             this.lblRole.TabIndex = 2;
             this.lblRole.Text = "Role";
             this.lblRole.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -305,9 +305,9 @@ namespace CarBuyAndSell
             this.lblUsername.BackColor = System.Drawing.Color.Transparent;
             this.lblUsername.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.lblUsername.Location = new System.Drawing.Point(394, 23);
+            this.lblUsername.Location = new System.Drawing.Point(386, 23);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(115, 21);
+            this.lblUsername.Size = new System.Drawing.Size(112, 21);
             this.lblUsername.TabIndex = 4;
             this.lblUsername.Text = "Username";
             this.lblUsername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -320,9 +320,9 @@ namespace CarBuyAndSell
             this.lblAddress.BackColor = System.Drawing.Color.Transparent;
             this.lblAddress.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.lblAddress.Location = new System.Drawing.Point(254, 23);
+            this.lblAddress.Location = new System.Drawing.Point(249, 23);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(134, 21);
+            this.lblAddress.Size = new System.Drawing.Size(131, 21);
             this.lblAddress.TabIndex = 3;
             this.lblAddress.Text = "Address";
             this.lblAddress.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -337,7 +337,7 @@ namespace CarBuyAndSell
             this.lblUserId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.lblUserId.Location = new System.Drawing.Point(3, 23);
             this.lblUserId.Name = "lblUserId";
-            this.lblUserId.Size = new System.Drawing.Size(39, 21);
+            this.lblUserId.Size = new System.Drawing.Size(38, 21);
             this.lblUserId.TabIndex = 0;
             this.lblUserId.Text = "Id";
             this.lblUserId.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -350,9 +350,9 @@ namespace CarBuyAndSell
             this.lblName.BackColor = System.Drawing.Color.Transparent;
             this.lblName.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.lblName.Location = new System.Drawing.Point(48, 23);
+            this.lblName.Location = new System.Drawing.Point(47, 23);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(132, 21);
+            this.lblName.Size = new System.Drawing.Size(129, 21);
             this.lblName.TabIndex = 1;
             this.lblName.Text = "Name";
             this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
