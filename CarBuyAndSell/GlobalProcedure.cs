@@ -121,8 +121,9 @@ namespace CarBuyAndSell
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                throw;
             }
+            ClearData();
+            return 0;
         }
 
         public List<BrandDistribution> ProcGetBrandDistribution()
@@ -151,6 +152,7 @@ namespace CarBuyAndSell
             {
                 MessageBox.Show(ex.Message);
             }
+            ClearData();
             return list;
         }
 
@@ -360,8 +362,9 @@ namespace CarBuyAndSell
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                return 0;
             }
+            ClearData();
+            return 0;
         }
 
         public UserDto ProcValidateUser(string username, string password)
@@ -426,8 +429,9 @@ namespace CarBuyAndSell
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                return false;
             }
+            ClearData();
+            return false;
         }
 
         public bool ProcUpdateUser(User user)
@@ -452,8 +456,9 @@ namespace CarBuyAndSell
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                return false;
             }
+            ClearData();
+            return false;
         }
 
         public bool ProcDeleteUser(int userId)
@@ -467,8 +472,9 @@ namespace CarBuyAndSell
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                return false;
             }
+            ClearData();
+            return false;
         }
 
         // -----------------------------------
@@ -646,6 +652,7 @@ namespace CarBuyAndSell
                     { "@p_file_name", vehicle.FileName }
                 };
                 ExecuteStoredProcedure("procCreateVehicle", parameters);
+                ClearData();
                 return true;
             }
             catch (Exception ex)
@@ -673,6 +680,7 @@ namespace CarBuyAndSell
                     { "@p_file_name", vehicle.FileName }
                 };
                 ExecuteStoredProcedure("procUpdateVehicle", parameters);
+                ClearData();
                 return true;
             }
             catch (Exception ex)
@@ -688,6 +696,7 @@ namespace CarBuyAndSell
             {
                 Dictionary<string, object> parameters = new Dictionary<string, object> { { "@p_vehicle_id", vehicleId } };
                 ExecuteStoredProcedure("procDeleteVehicle", parameters);
+                ClearData();
                 return true;
             }
             catch (Exception ex)
@@ -915,6 +924,7 @@ namespace CarBuyAndSell
                     { "@p_bid_date", bid.BidDate }
                 };
                 ExecuteStoredProcedure("procUpdateBid", parameters);
+                ClearData();
                 return true;
             }
             catch (Exception ex)
