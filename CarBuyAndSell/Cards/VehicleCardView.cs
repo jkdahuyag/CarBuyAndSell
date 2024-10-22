@@ -1,5 +1,6 @@
 ﻿using CarBuyAndSell.Dto;
 using CarBuyAndSell.Forms;
+using CarBuyAndSell.Helper_Functions;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,7 +28,7 @@ namespace CarBuyAndSell.Cards
             lblOwner.Text = vehicle.OwnerName;
 
             if (vehicle.FileName != "")
-                picBoxVehicleImage.ImageLocation = vehicle.FileName;
+                picBoxVehicleImage.ImageLocation = ImageManager.GenerateImagePathFromName(vehicle.FileName);
             else
                 picBoxVehicleImage.Image = Properties.Resources.DefaultVehicleImage;
         }
@@ -48,7 +49,6 @@ namespace CarBuyAndSell.Cards
         {
             Form form = new VehicleForm(vehicle);
             form.ShowDialog();
-            this.Parent.Invalidate();
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)
@@ -58,7 +58,6 @@ namespace CarBuyAndSell.Cards
             {
                 globalProcedure.ProcDeleteVehicle(vehicle.VehicleId);
                 MessageBox.Show("Vehicle Deleted");
-                this.Parent.Invalidate();
             }
             else if (dialogResult == DialogResult.No)
             {

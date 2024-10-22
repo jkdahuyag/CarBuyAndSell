@@ -23,7 +23,7 @@ namespace CarBuyAndSell.Row_Instance
             this.transaction = transaction;
             if (!this.globalProcedure.FncConnectToDatabase())
                 MessageBox.Show("Not Connected");
-            lblTransactionId.Text = $"Id No. {transaction.TransactionId}";
+            lblTransactionId.Text = $"{transaction.TransactionId}";
             lblBuyer.Text = $"{transaction.BuyerFirstName} {transaction.BuyerLastName}";
             lblSeller.Text = $"{transaction.SellerFirstName} {transaction.SellerLastName}";
             lblAmount.Text = $"{transaction.Amount:N3}";

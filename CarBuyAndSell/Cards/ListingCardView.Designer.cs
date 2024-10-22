@@ -31,10 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListingCardView));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.bunifuShadowPanel1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.btnBid = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.lblOwner = new ReaLTaiizor.BigLabel();
             this.lblValue = new ReaLTaiizor.BigLabel();
             this.lblBrandAndModel = new ReaLTaiizor.BigLabel();
-            this.btnBid = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.pcBoxVehicleImage = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcBoxVehicleImage)).BeginInit();
@@ -54,65 +54,20 @@
             this.bunifuShadowPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuShadowPanel1.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel1.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel1.Location = new System.Drawing.Point(0, 30);
+            this.bunifuShadowPanel1.Location = new System.Drawing.Point(0, 0);
             this.bunifuShadowPanel1.Name = "bunifuShadowPanel1";
             this.bunifuShadowPanel1.Padding = new System.Windows.Forms.Padding(15);
-            this.bunifuShadowPanel1.PanelColor = System.Drawing.Color.WhiteSmoke;
-            this.bunifuShadowPanel1.PanelColor2 = System.Drawing.Color.WhiteSmoke;
+            this.bunifuShadowPanel1.PanelColor = System.Drawing.Color.MintCream;
+            this.bunifuShadowPanel1.PanelColor2 = System.Drawing.Color.MintCream;
             this.bunifuShadowPanel1.ShadowColor = System.Drawing.Color.DarkGray;
             this.bunifuShadowPanel1.ShadowDept = 2;
             this.bunifuShadowPanel1.ShadowDepth = 3;
             this.bunifuShadowPanel1.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.ForwardDiagonal;
             this.bunifuShadowPanel1.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel1.Size = new System.Drawing.Size(350, 335);
+            this.bunifuShadowPanel1.Size = new System.Drawing.Size(350, 365);
             this.bunifuShadowPanel1.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel1.TabIndex = 1;
             this.bunifuShadowPanel1.Click += new System.EventHandler(this.ShowVehicleForm);
-            // 
-            // lblOwner
-            // 
-            this.lblOwner.BackColor = System.Drawing.Color.Transparent;
-            this.lblOwner.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblOwner.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOwner.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.lblOwner.Location = new System.Drawing.Point(15, 238);
-            this.lblOwner.Margin = new System.Windows.Forms.Padding(3, 20, 3, 10);
-            this.lblOwner.Name = "lblOwner";
-            this.lblOwner.Size = new System.Drawing.Size(320, 46);
-            this.lblOwner.TabIndex = 3;
-            this.lblOwner.Text = "bigLabel1";
-            this.lblOwner.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblOwner.Click += new System.EventHandler(this.ShowVehicleForm);
-            // 
-            // lblValue
-            // 
-            this.lblValue.BackColor = System.Drawing.Color.Transparent;
-            this.lblValue.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblValue.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.lblValue.Location = new System.Drawing.Point(15, 198);
-            this.lblValue.Margin = new System.Windows.Forms.Padding(3, 20, 3, 10);
-            this.lblValue.Name = "lblValue";
-            this.lblValue.Size = new System.Drawing.Size(320, 40);
-            this.lblValue.TabIndex = 2;
-            this.lblValue.Text = "bigLabel1";
-            this.lblValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblValue.Click += new System.EventHandler(this.ShowVehicleForm);
-            // 
-            // lblBrandAndModel
-            // 
-            this.lblBrandAndModel.BackColor = System.Drawing.Color.Transparent;
-            this.lblBrandAndModel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblBrandAndModel.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBrandAndModel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.lblBrandAndModel.Location = new System.Drawing.Point(15, 162);
-            this.lblBrandAndModel.Margin = new System.Windows.Forms.Padding(3, 20, 3, 10);
-            this.lblBrandAndModel.Name = "lblBrandAndModel";
-            this.lblBrandAndModel.Size = new System.Drawing.Size(320, 36);
-            this.lblBrandAndModel.TabIndex = 1;
-            this.lblBrandAndModel.Text = "bigLabel1";
-            this.lblBrandAndModel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblBrandAndModel.Click += new System.EventHandler(this.ShowVehicleForm);
             // 
             // btnBid
             // 
@@ -205,6 +160,51 @@
             this.btnBid.UseDefaultRadiusAndThickness = true;
             this.btnBid.Click += new System.EventHandler(this.BtnBiddingClick);
             // 
+            // lblOwner
+            // 
+            this.lblOwner.BackColor = System.Drawing.Color.Transparent;
+            this.lblOwner.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblOwner.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOwner.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.lblOwner.Location = new System.Drawing.Point(15, 238);
+            this.lblOwner.Margin = new System.Windows.Forms.Padding(3, 20, 3, 10);
+            this.lblOwner.Name = "lblOwner";
+            this.lblOwner.Size = new System.Drawing.Size(320, 46);
+            this.lblOwner.TabIndex = 3;
+            this.lblOwner.Text = "bigLabel1";
+            this.lblOwner.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblOwner.Click += new System.EventHandler(this.ShowVehicleForm);
+            // 
+            // lblValue
+            // 
+            this.lblValue.BackColor = System.Drawing.Color.Transparent;
+            this.lblValue.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblValue.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.lblValue.Location = new System.Drawing.Point(15, 198);
+            this.lblValue.Margin = new System.Windows.Forms.Padding(3, 20, 3, 10);
+            this.lblValue.Name = "lblValue";
+            this.lblValue.Size = new System.Drawing.Size(320, 40);
+            this.lblValue.TabIndex = 2;
+            this.lblValue.Text = "bigLabel1";
+            this.lblValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblValue.Click += new System.EventHandler(this.ShowVehicleForm);
+            // 
+            // lblBrandAndModel
+            // 
+            this.lblBrandAndModel.BackColor = System.Drawing.Color.Transparent;
+            this.lblBrandAndModel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblBrandAndModel.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBrandAndModel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.lblBrandAndModel.Location = new System.Drawing.Point(15, 162);
+            this.lblBrandAndModel.Margin = new System.Windows.Forms.Padding(3, 20, 3, 10);
+            this.lblBrandAndModel.Name = "lblBrandAndModel";
+            this.lblBrandAndModel.Size = new System.Drawing.Size(320, 36);
+            this.lblBrandAndModel.TabIndex = 1;
+            this.lblBrandAndModel.Text = "bigLabel1";
+            this.lblBrandAndModel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblBrandAndModel.Click += new System.EventHandler(this.ShowVehicleForm);
+            // 
             // pcBoxVehicleImage
             // 
             this.pcBoxVehicleImage.AllowFocused = false;
@@ -226,10 +226,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.bunifuShadowPanel1);
             this.DoubleBuffered = true;
             this.Name = "ListingCardView";
-            this.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
             this.Size = new System.Drawing.Size(350, 365);
             this.bunifuShadowPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pcBoxVehicleImage)).EndInit();

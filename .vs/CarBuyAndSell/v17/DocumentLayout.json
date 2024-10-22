@@ -3,60 +3,268 @@
   "WorkspaceRootPath": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|c:\\users\\user\\source\\repos\\carbuyandsell\\carbuyandsell\\sellviewcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\sellviewcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|c:\\users\\user\\source\\repos\\carbuyandsell\\carbuyandsell\\forms\\bidform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\forms\\bidform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\dashboardviewcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\dashboardviewcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\forms\\bidform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\forms\\bidform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\buyviewcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\buyviewcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\forms\\listingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\forms\\listingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\buyviewcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\buyviewcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\usercontrols\\marketviewcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\usercontrols\\marketviewcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\buyviewcontrol.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\buyviewcontrol.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\usercontrols\\marketviewcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\usercontrols\\marketviewcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\sellviewcontrol.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\sellviewcontrol.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\usercontrols\\listingviewcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\usercontrols\\listingviewcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\sellviewcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\sellviewcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\globalprocedure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\globalprocedure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\row instance\\listingdatarowinstance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\row instance\\listingdatarowinstance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\row instance\\listingdatarowinstance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\row instance\\listingdatarowinstance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\row instance\\biddatarowinstance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\row instance\\biddatarowinstance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\userlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\userlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\row instance\\transactiondatarowinstance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\row instance\\transactiondatarowinstance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\row instance\\transactiondatarowinstance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\row instance\\transactiondatarowinstance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\mainform.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
-      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\mainform.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\forms\\userform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\forms\\userform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\row instance\\userdatarowinstance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\row instance\\userdatarowinstance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\row instance\\userdatarowinstance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\row instance\\userdatarowinstance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\usercontrols\\usersviewcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\usercontrols\\usersviewcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\usercontrols\\usersviewcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\usercontrols\\usersviewcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\usercontrols\\vehiclesviewcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\usercontrols\\vehiclesviewcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\cards\\listingcardview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\cards\\listingcardview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\cards\\vehiclecardview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\cards\\vehiclecardview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\usercontrols\\bidsviewcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\usercontrols\\bidsviewcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\usercontrols\\dashboardviewcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\usercontrols\\dashboardviewcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\usercontrols\\transactionsviewcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\usercontrols\\transactionsviewcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\usercontrols\\listingviewcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\usercontrols\\listingviewcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\cards\\listingcardview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\cards\\listingcardview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\forms\\listingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\forms\\listingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\cards\\vehiclecardview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\cards\\vehiclecardview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\usercontrols\\vehiclesviewcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\usercontrols\\vehiclesviewcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\forms\\vehicleform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\forms\\vehicleform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\helper functions\\imagemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\helper functions\\imagemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\forms\\vehicleform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\forms\\vehicleform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\forms\\vehicledetailsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\forms\\vehicledetailsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\usercontrols\\dashboardviewcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\usercontrols\\dashboardviewcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\branddistribution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\branddistribution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\forms\\transactionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\forms\\transactionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\forms\\transactionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\forms\\transactionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\row instance\\biddatarowinstance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\row instance\\biddatarowinstance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\dto\\transactiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\dto\\transactiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\models\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\models\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\forms\\userform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\forms\\userform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\forms\\vehicleform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\forms\\vehicleform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\forms\\userform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\forms\\userform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\usercontrols\\transactionsviewcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\usercontrols\\transactionsviewcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\dto\\listingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\dto\\listingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\usercontrols\\bidsviewcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\usercontrols\\bidsviewcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\properties\\resources.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\properties\\resources.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\forms\\vehicledetailsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\forms\\vehicledetailsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\properties\\resources.resx||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\properties\\resources.resx||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\models\\vehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\models\\vehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\dto\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\dto\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\usercontrols\\bidsviewcontrol.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\usercontrols\\bidsviewcontrol.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\usercontrols\\listingviewcontrol.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\usercontrols\\listingviewcontrol.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\usercontrols\\marketviewcontrol.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\usercontrols\\marketviewcontrol.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\row instance\\userdatarowinstance.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\row instance\\userdatarowinstance.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\cards\\listingcardview.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\cards\\listingcardview.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\cards\\vehiclecardview.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\cards\\vehiclecardview.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\dto\\biddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\dto\\biddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\usercontrols\\vehiclesviewcontrol.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\usercontrols\\vehiclesviewcontrol.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|C:\\Users\\user\\source\\repos\\CarBuyAndSell\\carbuyandsell\\dto\\vehicledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83D167F2-C634-4F8A-9D62-9FD3DF5B360B}|CarBuyAndSell\\CarBuyAndSell.csproj|solutionrelative:carbuyandsell\\dto\\vehicledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -65,9 +273,22 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "DockedWidth": 203,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UserForm.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Forms\\UserForm.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\Forms\\UserForm.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Forms\\UserForm.cs",
+              "RelativeToolTip": "CarBuyAndSell\\Forms\\UserForm.cs",
+              "ViewState": "AQIAAHQAAAAAAAAAAAAQwH0AAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T19:35:01.443Z",
+              "IsPinned": true
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -82,169 +303,767 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "SellViewControl.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\SellViewControl.cs",
-              "RelativeDocumentMoniker": "CarBuyAndSell\\SellViewControl.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\SellViewControl.cs",
-              "RelativeToolTip": "CarBuyAndSell\\SellViewControl.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAAABQAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T07:36:40.035Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "SellViewControl.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\SellViewControl.Designer.cs",
-              "RelativeDocumentMoniker": "CarBuyAndSell\\SellViewControl.Designer.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\SellViewControl.Designer.cs",
-              "RelativeToolTip": "CarBuyAndSell\\SellViewControl.Designer.cs",
-              "ViewState": "AQIAAFsAAAAAAAAAAAAAAGwAAABDAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T07:36:33.569Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "UserList.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\UserList.cs",
-              "RelativeDocumentMoniker": "CarBuyAndSell\\UserList.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\UserList.cs [Design]",
-              "RelativeToolTip": "CarBuyAndSell\\UserList.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-24T15:13:38.664Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DashboardViewControl.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\DashboardViewControl.cs",
-              "RelativeDocumentMoniker": "CarBuyAndSell\\DashboardViewControl.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\DashboardViewControl.cs [Design]",
-              "RelativeToolTip": "CarBuyAndSell\\DashboardViewControl.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-24T15:08:52.705Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "SellViewControl.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\SellViewControl.cs",
-              "RelativeDocumentMoniker": "CarBuyAndSell\\SellViewControl.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\SellViewControl.cs [Design]",
-              "RelativeToolTip": "CarBuyAndSell\\SellViewControl.cs [Design]",
+              "Title": "BidForm.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Forms\\BidForm.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\Forms\\BidForm.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Forms\\BidForm.cs",
+              "RelativeToolTip": "CarBuyAndSell\\Forms\\BidForm.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAAADQAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-24T15:08:27.705Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-10-20T16:01:50.706Z",
+              "EditorCaption": ""
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BuyViewControl.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\BuyViewControl.cs",
-              "RelativeDocumentMoniker": "CarBuyAndSell\\BuyViewControl.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\BuyViewControl.cs",
-              "RelativeToolTip": "CarBuyAndSell\\BuyViewControl.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAGoAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-24T14:13:13.455Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "BuyViewControl.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\BuyViewControl.Designer.cs",
-              "RelativeDocumentMoniker": "CarBuyAndSell\\BuyViewControl.Designer.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\BuyViewControl.Designer.cs",
-              "RelativeToolTip": "CarBuyAndSell\\BuyViewControl.Designer.cs",
-              "ViewState": "AQIAAFoAAAAAAAAAAAAAAGEAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-24T14:13:04.837Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "BuyViewControl.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\BuyViewControl.cs",
-              "RelativeDocumentMoniker": "CarBuyAndSell\\BuyViewControl.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\BuyViewControl.cs [Design]",
-              "RelativeToolTip": "CarBuyAndSell\\BuyViewControl.cs [Design]",
+              "Title": "MarketViewControl.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\UserControls\\MarketViewControl.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\UserControls\\MarketViewControl.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\UserControls\\MarketViewControl.cs",
+              "RelativeToolTip": "CarBuyAndSell\\UserControls\\MarketViewControl.cs",
+              "ViewState": "AQIAADsAAAAAAAAAAAAAAEcAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-24T14:12:57.833Z"
+              "WhenOpened": "2024-10-20T15:29:34.559Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "MainForm.resx",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\MainForm.resx",
-              "RelativeDocumentMoniker": "CarBuyAndSell\\MainForm.resx",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\MainForm.resx",
-              "RelativeToolTip": "CarBuyAndSell\\MainForm.resx",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2024-09-24T01:53:43.828Z"
+              "DocumentIndex": 2,
+              "Title": "ListingForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Forms\\ListingForm.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\Forms\\ListingForm.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Forms\\ListingForm.cs [Design]",
+              "RelativeToolTip": "CarBuyAndSell\\Forms\\ListingForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T15:56:23.67Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "App.config",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\App.config",
-              "RelativeDocumentMoniker": "CarBuyAndSell\\App.config",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\App.config",
-              "RelativeToolTip": "CarBuyAndSell\\App.config",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-09-24T01:47:20.92Z",
-              "EditorCaption": ""
+              "DocumentIndex": 1,
+              "Title": "BidForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Forms\\BidForm.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\Forms\\BidForm.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Forms\\BidForm.cs [Design]",
+              "RelativeToolTip": "CarBuyAndSell\\Forms\\BidForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T16:07:01.956Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MarketViewControl.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\UserControls\\MarketViewControl.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\UserControls\\MarketViewControl.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\UserControls\\MarketViewControl.cs [Design]",
+              "RelativeToolTip": "CarBuyAndSell\\UserControls\\MarketViewControl.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T05:51:28.777Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ListingViewControl.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\UserControls\\ListingViewControl.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\UserControls\\ListingViewControl.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\UserControls\\ListingViewControl.cs [Design]",
+              "RelativeToolTip": "CarBuyAndSell\\UserControls\\ListingViewControl.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T07:03:13.141Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "MainForm.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\MainForm.cs",
-              "RelativeDocumentMoniker": "CarBuyAndSell\\MainForm.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\MainForm.cs",
-              "RelativeToolTip": "CarBuyAndSell\\MainForm.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAAADkAAAAwAAAA",
+              "Title": "ListingDataRowInstance.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Row Instance\\ListingDataRowInstance.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\Row Instance\\ListingDataRowInstance.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Row Instance\\ListingDataRowInstance.cs",
+              "RelativeToolTip": "CarBuyAndSell\\Row Instance\\ListingDataRowInstance.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAAB4AAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-24T01:44:36.673Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "MainForm.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\MainForm.Designer.cs",
-              "RelativeDocumentMoniker": "CarBuyAndSell\\MainForm.Designer.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\MainForm.Designer.cs",
-              "RelativeToolTip": "CarBuyAndSell\\MainForm.Designer.cs",
-              "ViewState": "AQIAAFwAAAAAAAAAAAAgwG8AAABAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-24T01:44:28.623Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Program.cs",
-              "RelativeDocumentMoniker": "CarBuyAndSell\\Program.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Program.cs",
-              "RelativeToolTip": "CarBuyAndSell\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-24T01:31:27.978Z"
+              "WhenOpened": "2024-10-21T04:16:59.075Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "MainForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\MainForm.cs",
-              "RelativeDocumentMoniker": "CarBuyAndSell\\MainForm.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\MainForm.cs [Design]",
-              "RelativeToolTip": "CarBuyAndSell\\MainForm.cs [Design]",
+              "Title": "GlobalProcedure.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\GlobalProcedure.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\GlobalProcedure.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\GlobalProcedure.cs",
+              "RelativeToolTip": "CarBuyAndSell\\GlobalProcedure.cs",
+              "ViewState": "AQIAAAgDAAAAAAAAAAAowCEDAABLAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-22T04:12:07.315Z"
+              "WhenOpened": "2024-10-20T13:17:10.045Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TransactionDataRowInstance.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Row Instance\\TransactionDataRowInstance.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\Row Instance\\TransactionDataRowInstance.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Row Instance\\TransactionDataRowInstance.cs",
+              "RelativeToolTip": "CarBuyAndSell\\Row Instance\\TransactionDataRowInstance.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T17:15:41.582Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MainForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Forms\\MainForm.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\Forms\\MainForm.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Forms\\MainForm.cs [Design]",
+              "RelativeToolTip": "CarBuyAndSell\\Forms\\MainForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T16:43:22.767Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "BidDataRowInstance.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Row Instance\\BidDataRowInstance.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\Row Instance\\BidDataRowInstance.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Row Instance\\BidDataRowInstance.cs [Design]",
+              "RelativeToolTip": "CarBuyAndSell\\Row Instance\\BidDataRowInstance.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T16:32:55.934Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ListingDataRowInstance.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Row Instance\\ListingDataRowInstance.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\Row Instance\\ListingDataRowInstance.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Row Instance\\ListingDataRowInstance.cs [Design]",
+              "RelativeToolTip": "CarBuyAndSell\\Row Instance\\ListingDataRowInstance.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T16:33:16.461Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "TransactionDataRowInstance.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Row Instance\\TransactionDataRowInstance.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\Row Instance\\TransactionDataRowInstance.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Row Instance\\TransactionDataRowInstance.cs [Design]",
+              "RelativeToolTip": "CarBuyAndSell\\Row Instance\\TransactionDataRowInstance.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T10:00:39.336Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UserDataRowInstance.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Row Instance\\UserDataRowInstance.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\Row Instance\\UserDataRowInstance.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Row Instance\\UserDataRowInstance.cs",
+              "RelativeToolTip": "CarBuyAndSell\\Row Instance\\UserDataRowInstance.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACEAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T02:48:11.24Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "UserDataRowInstance.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Row Instance\\UserDataRowInstance.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\Row Instance\\UserDataRowInstance.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Row Instance\\UserDataRowInstance.cs [Design]",
+              "RelativeToolTip": "CarBuyAndSell\\Row Instance\\UserDataRowInstance.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T10:02:27.9Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "UsersViewControl.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\UserControls\\UsersViewControl.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\UserControls\\UsersViewControl.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\UserControls\\UsersViewControl.cs",
+              "RelativeToolTip": "CarBuyAndSell\\UserControls\\UsersViewControl.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAlwCwAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T02:31:44.621Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "UsersViewControl.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\UserControls\\UsersViewControl.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\UserControls\\UsersViewControl.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\UserControls\\UsersViewControl.cs [Design]",
+              "RelativeToolTip": "CarBuyAndSell\\UserControls\\UsersViewControl.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T16:25:36.019Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "VehiclesViewControl.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\UserControls\\VehiclesViewControl.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\UserControls\\VehiclesViewControl.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\UserControls\\VehiclesViewControl.cs [Design]",
+              "RelativeToolTip": "CarBuyAndSell\\UserControls\\VehiclesViewControl.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T05:51:55.1Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ListingCardView.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Cards\\ListingCardView.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\Cards\\ListingCardView.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Cards\\ListingCardView.cs [Design]",
+              "RelativeToolTip": "CarBuyAndSell\\Cards\\ListingCardView.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T15:38:41.27Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "VehicleCardView.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Cards\\VehicleCardView.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\Cards\\VehicleCardView.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Cards\\VehicleCardView.cs [Design]",
+              "RelativeToolTip": "CarBuyAndSell\\Cards\\VehicleCardView.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T13:12:11.668Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "BidsViewControl.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\UserControls\\BidsViewControl.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\UserControls\\BidsViewControl.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\UserControls\\BidsViewControl.cs [Design]",
+              "RelativeToolTip": "CarBuyAndSell\\UserControls\\BidsViewControl.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T16:09:09.632Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "DashboardViewControl.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\UserControls\\DashboardViewControl.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\UserControls\\DashboardViewControl.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\UserControls\\DashboardViewControl.cs [Design]",
+              "RelativeToolTip": "CarBuyAndSell\\UserControls\\DashboardViewControl.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T17:55:08.631Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "TransactionsViewControl.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\UserControls\\TransactionsViewControl.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\UserControls\\TransactionsViewControl.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\UserControls\\TransactionsViewControl.cs [Design]",
+              "RelativeToolTip": "CarBuyAndSell\\UserControls\\TransactionsViewControl.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T09:57:24.737Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ListingViewControl.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\UserControls\\ListingViewControl.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\UserControls\\ListingViewControl.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\UserControls\\ListingViewControl.cs",
+              "RelativeToolTip": "CarBuyAndSell\\UserControls\\ListingViewControl.cs",
+              "ViewState": "AQIAAF8AAAAAAAAAAAAlwHMAAABSAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T02:36:36.013Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ListingCardView.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Cards\\ListingCardView.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\Cards\\ListingCardView.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Cards\\ListingCardView.cs",
+              "RelativeToolTip": "CarBuyAndSell\\Cards\\ListingCardView.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAEwB8AAABqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T15:44:18.088Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ListingForm.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Forms\\ListingForm.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\Forms\\ListingForm.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Forms\\ListingForm.cs",
+              "RelativeToolTip": "CarBuyAndSell\\Forms\\ListingForm.cs",
+              "ViewState": "AQIAAF0AAAAAAAAAAAAAAHYAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T14:34:43.689Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "VehicleCardView.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Cards\\VehicleCardView.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\Cards\\VehicleCardView.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Cards\\VehicleCardView.cs",
+              "RelativeToolTip": "CarBuyAndSell\\Cards\\VehicleCardView.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAAADIAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T12:17:46.664Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "LoginForm.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Forms\\LoginForm.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\Forms\\LoginForm.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Forms\\LoginForm.cs",
+              "RelativeToolTip": "CarBuyAndSell\\Forms\\LoginForm.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAACUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T21:44:38.375Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "LoginForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Forms\\LoginForm.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\Forms\\LoginForm.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Forms\\LoginForm.cs [Design]",
+              "RelativeToolTip": "CarBuyAndSell\\Forms\\LoginForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T15:07:43.241Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "VehiclesViewControl.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\UserControls\\VehiclesViewControl.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\UserControls\\VehiclesViewControl.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\UserControls\\VehiclesViewControl.cs",
+              "RelativeToolTip": "CarBuyAndSell\\UserControls\\VehiclesViewControl.cs",
+              "ViewState": "AQIAAFIAAAAAAAAAAAAQwGEAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T10:52:18.457Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "VehicleForm.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Forms\\VehicleForm.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\Forms\\VehicleForm.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Forms\\VehicleForm.cs",
+              "RelativeToolTip": "CarBuyAndSell\\Forms\\VehicleForm.cs",
+              "ViewState": "AQIAAEkAAAAAAAAAAAAgwDwAAABTAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T14:33:39.553Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Enums.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Enums.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\Enums.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Enums.cs",
+              "RelativeToolTip": "CarBuyAndSell\\Enums.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAABIAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T20:42:54.209Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "ImageManager.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Helper Functions\\ImageManager.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\Helper Functions\\ImageManager.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Helper Functions\\ImageManager.cs",
+              "RelativeToolTip": "CarBuyAndSell\\Helper Functions\\ImageManager.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAACIAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T12:32:05.453Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "VehicleDetailsForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Forms\\VehicleDetailsForm.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\Forms\\VehicleDetailsForm.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Forms\\VehicleDetailsForm.cs [Design]",
+              "RelativeToolTip": "CarBuyAndSell\\Forms\\VehicleDetailsForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T12:58:11.991Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "VehicleForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Forms\\VehicleForm.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\Forms\\VehicleForm.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Forms\\VehicleForm.cs [Design]",
+              "RelativeToolTip": "CarBuyAndSell\\Forms\\VehicleForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T01:30:34.601Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "DashboardViewControl.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\UserControls\\DashboardViewControl.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\UserControls\\DashboardViewControl.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\UserControls\\DashboardViewControl.cs",
+              "RelativeToolTip": "CarBuyAndSell\\UserControls\\DashboardViewControl.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAtwDUAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T10:57:05.34Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "BrandDistribution.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\BrandDistribution.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\BrandDistribution.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\BrandDistribution.cs",
+              "RelativeToolTip": "CarBuyAndSell\\BrandDistribution.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T11:49:17.214Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "TransactionForm.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Forms\\TransactionForm.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\Forms\\TransactionForm.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Forms\\TransactionForm.cs",
+              "RelativeToolTip": "CarBuyAndSell\\Forms\\TransactionForm.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T09:28:31.361Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "TransactionForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Forms\\TransactionForm.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\Forms\\TransactionForm.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Forms\\TransactionForm.cs [Design]",
+              "RelativeToolTip": "CarBuyAndSell\\Forms\\TransactionForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T16:16:49.783Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "BidDataRowInstance.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Row Instance\\BidDataRowInstance.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\Row Instance\\BidDataRowInstance.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Row Instance\\BidDataRowInstance.cs",
+              "RelativeToolTip": "CarBuyAndSell\\Row Instance\\BidDataRowInstance.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACsAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T02:46:19.174Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "TransactionDto.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Dto\\TransactionDto.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\Dto\\TransactionDto.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Dto\\TransactionDto.cs",
+              "RelativeToolTip": "CarBuyAndSell\\Dto\\TransactionDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T15:19:10.916Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "Transaction.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Models\\Transaction.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\Models\\Transaction.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Models\\Transaction.cs",
+              "RelativeToolTip": "CarBuyAndSell\\Models\\Transaction.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T09:50:07.393Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "UserForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Forms\\UserForm.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\Forms\\UserForm.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Forms\\UserForm.cs [Design]",
+              "RelativeToolTip": "CarBuyAndSell\\Forms\\UserForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T20:36:49.246Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "VehicleForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Forms\\VehicleForm.Designer.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\Forms\\VehicleForm.Designer.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Forms\\VehicleForm.Designer.cs",
+              "RelativeToolTip": "CarBuyAndSell\\Forms\\VehicleForm.Designer.cs",
+              "ViewState": "AQIAAEoAAAAAAAAAAAAlwFsAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T05:23:19.691Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "UserForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Forms\\UserForm.Designer.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\Forms\\UserForm.Designer.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Forms\\UserForm.Designer.cs",
+              "RelativeToolTip": "CarBuyAndSell\\Forms\\UserForm.Designer.cs",
+              "ViewState": "AQIAAJMAAAAAAAAAAAAlwKkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T19:34:03.301Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "TransactionsViewControl.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\UserControls\\TransactionsViewControl.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\UserControls\\TransactionsViewControl.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\UserControls\\TransactionsViewControl.cs",
+              "RelativeToolTip": "CarBuyAndSell\\UserControls\\TransactionsViewControl.cs",
+              "ViewState": "AQIAAF4AAAAAAAAAAAAAAHoAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T16:36:44.24Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "ListingDto.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Dto\\ListingDto.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\Dto\\ListingDto.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Dto\\ListingDto.cs",
+              "RelativeToolTip": "CarBuyAndSell\\Dto\\ListingDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T15:18:21.482Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "BidsViewControl.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\UserControls\\BidsViewControl.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\UserControls\\BidsViewControl.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\UserControls\\BidsViewControl.cs",
+              "RelativeToolTip": "CarBuyAndSell\\UserControls\\BidsViewControl.cs",
+              "ViewState": "AQIAAEEAAAAAAAAAAAAmwFQAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T02:36:21.423Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "Resources.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Properties\\Resources.Designer.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\Properties\\Resources.Designer.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Properties\\Resources.Designer.cs",
+              "RelativeToolTip": "CarBuyAndSell\\Properties\\Resources.Designer.cs",
+              "ViewState": "AQIAAGcAAAAAAAAAAAAAAIkAAABLAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T04:46:11.488Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "Resources.resx",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Properties\\Resources.resx",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\Properties\\Resources.resx",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Properties\\Resources.resx",
+              "RelativeToolTip": "CarBuyAndSell\\Properties\\Resources.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-10-22T05:02:58.102Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "VehicleDetailsForm.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Forms\\VehicleDetailsForm.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\Forms\\VehicleDetailsForm.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Forms\\VehicleDetailsForm.cs",
+              "RelativeToolTip": "CarBuyAndSell\\Forms\\VehicleDetailsForm.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAACQAAABLAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T04:54:40.485Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "Resources.resx",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Properties\\Resources.resx",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\Properties\\Resources.resx",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Properties\\Resources.resx",
+              "RelativeToolTip": "CarBuyAndSell\\Properties\\Resources.resx",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwLQAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-10-22T04:46:17.224Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "Vehicle.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Models\\Vehicle.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\Models\\Vehicle.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Models\\Vehicle.cs",
+              "RelativeToolTip": "CarBuyAndSell\\Models\\Vehicle.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAmwBUAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T21:10:17.546Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Forms\\MainForm.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\Forms\\MainForm.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Forms\\MainForm.cs",
+              "RelativeToolTip": "CarBuyAndSell\\Forms\\MainForm.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABcAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T10:39:24.38Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Models\\User.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Models\\User.cs",
+              "RelativeToolTip": "CarBuyAndSell\\Models\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T21:42:22.612Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Dto\\UserDto.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\Dto\\UserDto.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Dto\\UserDto.cs",
+              "RelativeToolTip": "CarBuyAndSell\\Dto\\UserDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T21:44:22.941Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "BidsViewControl.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\UserControls\\BidsViewControl.Designer.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\UserControls\\BidsViewControl.Designer.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\UserControls\\BidsViewControl.Designer.cs",
+              "RelativeToolTip": "CarBuyAndSell\\UserControls\\BidsViewControl.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T15:05:21.574Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "ListingViewControl.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\UserControls\\ListingViewControl.Designer.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\UserControls\\ListingViewControl.Designer.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\UserControls\\ListingViewControl.Designer.cs",
+              "RelativeToolTip": "CarBuyAndSell\\UserControls\\ListingViewControl.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T14:21:10.023Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "MarketViewControl.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\UserControls\\MarketViewControl.Designer.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\UserControls\\MarketViewControl.Designer.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\UserControls\\MarketViewControl.Designer.cs",
+              "RelativeToolTip": "CarBuyAndSell\\UserControls\\MarketViewControl.Designer.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAOIAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T13:32:07.466Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "UserDataRowInstance.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Row Instance\\UserDataRowInstance.Designer.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\Row Instance\\UserDataRowInstance.Designer.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Row Instance\\UserDataRowInstance.Designer.cs",
+              "RelativeToolTip": "CarBuyAndSell\\Row Instance\\UserDataRowInstance.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAxwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T04:05:34.783Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "ListingCardView.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Cards\\ListingCardView.Designer.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\Cards\\ListingCardView.Designer.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Cards\\ListingCardView.Designer.cs",
+              "RelativeToolTip": "CarBuyAndSell\\Cards\\ListingCardView.Designer.cs",
+              "ViewState": "AQIAAI8AAAAAAAAAAAAswJ8AAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T16:03:09.86Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "VehicleCardView.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Cards\\VehicleCardView.Designer.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\Cards\\VehicleCardView.Designer.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Cards\\VehicleCardView.Designer.cs",
+              "RelativeToolTip": "CarBuyAndSell\\Cards\\VehicleCardView.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAHB4wBYAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T15:56:36.624Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "BidDto.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Dto\\BidDto.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\Dto\\BidDto.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Dto\\BidDto.cs",
+              "RelativeToolTip": "CarBuyAndSell\\Dto\\BidDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T15:17:27.829Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "VehiclesViewControl.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\UserControls\\VehiclesViewControl.Designer.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\UserControls\\VehiclesViewControl.Designer.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\UserControls\\VehiclesViewControl.Designer.cs",
+              "RelativeToolTip": "CarBuyAndSell\\UserControls\\VehiclesViewControl.Designer.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAIBZwBkAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T10:37:02.214Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "VehicleDto.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Dto\\VehicleDto.cs",
+              "RelativeDocumentMoniker": "CarBuyAndSell\\Dto\\VehicleDto.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CarBuyAndSell\\CarBuyAndSell\\Dto\\VehicleDto.cs",
+              "RelativeToolTip": "CarBuyAndSell\\Dto\\VehicleDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T13:16:50.254Z"
             }
           ]
         }

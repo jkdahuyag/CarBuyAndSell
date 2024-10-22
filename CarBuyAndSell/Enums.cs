@@ -16,7 +16,7 @@ namespace CarBuyAndSell
 
         public enum Condition
         {
-            New = 1,
+            BrandNew = 1,
             ExtraClean = 2,
             Clean = 3,
             Average = 4,

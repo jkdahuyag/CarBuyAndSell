@@ -634,6 +634,7 @@ namespace CarBuyAndSell
             {
                 Dictionary<string, object> parameters = new Dictionary<string, object>
                 {
+                    { "@p_market_value", new Random().Next(100000,2000000) },
                     { "@p_brand_id", vehicle.BrandId },
                     { "@p_condition_id", vehicle.ConditionId },
                     { "@p_transmission_type_id", vehicle.TransmissionTypeId },
@@ -660,6 +661,7 @@ namespace CarBuyAndSell
             {
                 Dictionary<string, object> parameters = new Dictionary<string, object>
                 {
+                    { "@p_vehicle_id", vehicle.VehicleId},
                     { "@p_brand_id", vehicle.BrandId },
                     { "@p_condition_id", vehicle.ConditionId },
                     { "@p_transmission_type_id", vehicle.TransmissionTypeId },
@@ -906,6 +908,7 @@ namespace CarBuyAndSell
             {
                 Dictionary<string, object> parameters = new Dictionary<string, object>
                 {
+                    { "@p_bid_id", bid.BidId },
                     { "@p_user_id", bid.UserId },
                     { "@p_listing_id", bid.ListingId },
                     { "@p_bid_amount", bid.BidAmount },
@@ -1164,7 +1167,7 @@ namespace CarBuyAndSell
                         list.Add(new ListingDto(
                             int.Parse(dataRow["listing_id"].ToString()),
                             int.Parse(dataRow["vehicle_id"].ToString()),
-                            DateTime.Parse(dataRow["listing_date"].ToString()),
+                            DateTime.Parse(dataRow["date_listed"].ToString()),
                             double.Parse(dataRow["asking_price"].ToString()),
                             expiryDate,
                             dataRow["description"].ToString(),
@@ -1220,6 +1223,7 @@ namespace CarBuyAndSell
             {
                 Dictionary<string, object> parameters = new Dictionary<string, object>
                 {
+                    { "@p_listing_id", listing.ListingId },
                     { "@p_vehicle_id", listing.VehicleId },
                     { "@p_user_id", listing.UserId },
                     { "@p_description", listing.Description },

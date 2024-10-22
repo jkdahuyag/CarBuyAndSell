@@ -31,10 +31,10 @@ namespace CarBuyAndSell
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardViewControl));
-            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
             this.pnlTotalUsers = new Bunifu.UI.WinForms.BunifuPanel();
             this.chrtEarningsPerMonth = new LiveChartsCore.SkiaSharpView.WinForms.CartesianChart();
             this.bigLabel1 = new ReaLTaiizor.BigLabel();
@@ -124,11 +124,11 @@ namespace CarBuyAndSell
             this.bunifuIconButton1.ColorContrastOnClick = 30;
             this.bunifuIconButton1.ColorContrastOnHover = 30;
             this.bunifuIconButton1.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.bunifuIconButton1.CustomizableEdges = borderEdges1;
+            borderEdges5.BottomLeft = true;
+            borderEdges5.BottomRight = true;
+            borderEdges5.TopLeft = true;
+            borderEdges5.TopRight = true;
+            this.bunifuIconButton1.CustomizableEdges = borderEdges5;
             this.bunifuIconButton1.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuIconButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuIconButton1.Image")));
             this.bunifuIconButton1.ImageMargin = new System.Windows.Forms.Padding(0);
@@ -172,11 +172,11 @@ namespace CarBuyAndSell
             this.bunifuIconButton2.ColorContrastOnClick = 30;
             this.bunifuIconButton2.ColorContrastOnHover = 30;
             this.bunifuIconButton2.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.bunifuIconButton2.CustomizableEdges = borderEdges2;
+            borderEdges6.BottomLeft = true;
+            borderEdges6.BottomRight = true;
+            borderEdges6.TopLeft = true;
+            borderEdges6.TopRight = true;
+            this.bunifuIconButton2.CustomizableEdges = borderEdges6;
             this.bunifuIconButton2.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuIconButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuIconButton2.Image")));
             this.bunifuIconButton2.ImageMargin = new System.Windows.Forms.Padding(0);
@@ -244,11 +244,11 @@ namespace CarBuyAndSell
             this.bunifuIconButton3.ColorContrastOnClick = 30;
             this.bunifuIconButton3.ColorContrastOnHover = 30;
             this.bunifuIconButton3.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.bunifuIconButton3.CustomizableEdges = borderEdges3;
+            borderEdges7.BottomLeft = true;
+            borderEdges7.BottomRight = true;
+            borderEdges7.TopLeft = true;
+            borderEdges7.TopRight = true;
+            this.bunifuIconButton3.CustomizableEdges = borderEdges7;
             this.bunifuIconButton3.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuIconButton3.Image = ((System.Drawing.Image)(resources.GetObject("bunifuIconButton3.Image")));
             this.bunifuIconButton3.ImageMargin = new System.Windows.Forms.Padding(0);
@@ -316,11 +316,11 @@ namespace CarBuyAndSell
             this.bunifuIconButton4.ColorContrastOnClick = 30;
             this.bunifuIconButton4.ColorContrastOnHover = 30;
             this.bunifuIconButton4.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges4.BottomLeft = true;
-            borderEdges4.BottomRight = true;
-            borderEdges4.TopLeft = true;
-            borderEdges4.TopRight = true;
-            this.bunifuIconButton4.CustomizableEdges = borderEdges4;
+            borderEdges8.BottomLeft = true;
+            borderEdges8.BottomRight = true;
+            borderEdges8.TopLeft = true;
+            borderEdges8.TopRight = true;
+            this.bunifuIconButton4.CustomizableEdges = borderEdges8;
             this.bunifuIconButton4.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuIconButton4.Image = ((System.Drawing.Image)(resources.GetObject("bunifuIconButton4.Image")));
             this.bunifuIconButton4.ImageMargin = new System.Windows.Forms.Padding(0);
@@ -359,9 +359,9 @@ namespace CarBuyAndSell
             // chrtTransactionsPerMonth
             // 
             this.chrtTransactionsPerMonth.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.chrtTransactionsPerMonth.Location = new System.Drawing.Point(494, 193);
+            this.chrtTransactionsPerMonth.Location = new System.Drawing.Point(494, 183);
             this.chrtTransactionsPerMonth.Name = "chrtTransactionsPerMonth";
-            this.chrtTransactionsPerMonth.Size = new System.Drawing.Size(436, 318);
+            this.chrtTransactionsPerMonth.Size = new System.Drawing.Size(436, 328);
             this.chrtTransactionsPerMonth.TabIndex = 5;
             // 
             // DashboardViewControl

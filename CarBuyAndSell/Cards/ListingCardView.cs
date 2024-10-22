@@ -1,5 +1,6 @@
 ﻿using CarBuyAndSell.Dto;
 using CarBuyAndSell.Forms;
+using CarBuyAndSell.Helper_Functions;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,7 +29,7 @@ namespace CarBuyAndSell.Cards
             lblValue.Text = $"Php {listing.AskingPrice:N3}";
             lblOwner.Text = vehicle.OwnerName;
             if (vehicle.FileName != "")
-                pcBoxVehicleImage.ImageLocation = vehicle.FileName;
+                pcBoxVehicleImage.ImageLocation = ImageManager.GenerateImagePathFromName(vehicle.FileName);
             else
                 pcBoxVehicleImage.Image = Properties.Resources.DefaultVehicleImage;
         }

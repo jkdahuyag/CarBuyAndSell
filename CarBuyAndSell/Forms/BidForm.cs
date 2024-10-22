@@ -52,7 +52,7 @@ namespace CarBuyAndSell.Forms
 
             if (bids.Count > 0)
             {
-                for (int i = bids.Count - 1; i >= 0; i--)
+                for (int i = 4; i >= 0; i--)
                 {
                     var bid = bids[i];
                     BidDataRowInstance panel = new BidDataRowInstance(bid, true);

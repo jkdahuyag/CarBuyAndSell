@@ -106,7 +106,7 @@ namespace CarBuyAndSell
             currentPage = 1; // Reset to the first page
             string searchQuery = searchBox.Text.ToLower();
             if (initial) searchQuery = "";
-            totalRecords = globalProcedure.ProcCountVehicles(searchQuery);
+            totalRecords = globalProcedure.ProcCountListings(searchQuery, false);
             SearchListings();
         }
         private void SearchListings()

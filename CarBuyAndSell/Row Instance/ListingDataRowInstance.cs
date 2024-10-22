@@ -16,6 +16,7 @@ namespace CarBuyAndSell.Row_Instance
     {
         GlobalProcedure globalProcedure = new GlobalProcedure();
         private ListingDto listing;
+        private BidDto highestBid;
         public ListingDataRowInstance(ListingDto listing)
         {
             InitializeComponent();
@@ -26,7 +27,16 @@ namespace CarBuyAndSell.Row_Instance
             lblVehicle.Text = $"{vehicle.BrandName} {vehicle.Model}";
             lblDateListed.Text = $"{listing.DateListed}";
             lblExpiry.Text = $"{listing.ListingExpiry}";
-            lblHighestBid.Text = $"100000";
+
+            highestBid = globalProcedure.ProcGetBidsByListingId(listing.ListingId).OrderByDescending(x => x.BidAmount).FirstOrDefault();
+            if (highestBid != null){
+                lblHighestBid.Text = $"{highestBid.BidAmount}";
+                lblHighestBidder.Text = $"{highestBid.FirstName} {highestBid.LastName}";
+            }
+            else{
+                lblHighestBid.Text = "No Bids Yet";
+                lblHighestBidder.Text = "No Bids Yet";
+            }
             lblStatus.Text = listing.StatusName;
             lblListingId.Text = $"{listing.ListingId}";
         }

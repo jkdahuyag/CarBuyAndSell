@@ -31,12 +31,12 @@ namespace CarBuyAndSell
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UsersViewControl));
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.searchBox = new System.Windows.Forms.TextBox();
             this.mainLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.searchPanel = new System.Windows.Forms.Panel();
             this.searchButton = new System.Windows.Forms.Button();
             this.paginationPanel = new System.Windows.Forms.Panel();
-            this.btnAddUser = new System.Windows.Forms.Button();
             this.firstPageBtn = new System.Windows.Forms.Button();
             this.prevPageBtn = new System.Windows.Forms.Button();
             this.pageLabel = new System.Windows.Forms.Label();
@@ -53,6 +53,7 @@ namespace CarBuyAndSell
             this.lblAddress = new ReaLTaiizor.BigLabel();
             this.lblUserId = new ReaLTaiizor.BigLabel();
             this.lblName = new ReaLTaiizor.BigLabel();
+            this.btnAddUser = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.mainLayoutPanel.SuspendLayout();
             this.searchPanel.SuspendLayout();
             this.paginationPanel.SuspendLayout();
@@ -119,16 +120,6 @@ namespace CarBuyAndSell
             this.paginationPanel.Name = "paginationPanel";
             this.paginationPanel.Size = new System.Drawing.Size(776, 54);
             this.paginationPanel.TabIndex = 2;
-            // 
-            // btnAddUser
-            // 
-            this.btnAddUser.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnAddUser.Location = new System.Drawing.Point(0, 0);
-            this.btnAddUser.Name = "btnAddUser";
-            this.btnAddUser.Size = new System.Drawing.Size(75, 54);
-            this.btnAddUser.TabIndex = 0;
-            this.btnAddUser.Text = "Add User";
-            this.btnAddUser.Click += new System.EventHandler(this.BtnAddUser_Click);
             // 
             // firstPageBtn
             // 
@@ -252,7 +243,7 @@ namespace CarBuyAndSell
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.30777F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.18808F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.40816F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 159F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 162F));
             this.tableLayoutPanel1.Controls.Add(this.lblNumber, 5, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblRole, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblUsername, 4, 0);
@@ -275,7 +266,7 @@ namespace CarBuyAndSell
             this.lblNumber.BackColor = System.Drawing.Color.Transparent;
             this.lblNumber.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.lblNumber.Location = new System.Drawing.Point(504, 23);
+            this.lblNumber.Location = new System.Drawing.Point(502, 23);
             this.lblNumber.Name = "lblNumber";
             this.lblNumber.Size = new System.Drawing.Size(107, 21);
             this.lblNumber.TabIndex = 5;
@@ -305,9 +296,9 @@ namespace CarBuyAndSell
             this.lblUsername.BackColor = System.Drawing.Color.Transparent;
             this.lblUsername.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.lblUsername.Location = new System.Drawing.Point(386, 23);
+            this.lblUsername.Location = new System.Drawing.Point(385, 23);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(112, 21);
+            this.lblUsername.Size = new System.Drawing.Size(111, 21);
             this.lblUsername.TabIndex = 4;
             this.lblUsername.Text = "Username";
             this.lblUsername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -322,7 +313,7 @@ namespace CarBuyAndSell
             this.lblAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.lblAddress.Location = new System.Drawing.Point(249, 23);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(131, 21);
+            this.lblAddress.Size = new System.Drawing.Size(130, 21);
             this.lblAddress.TabIndex = 3;
             this.lblAddress.Text = "Address";
             this.lblAddress.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -357,6 +348,99 @@ namespace CarBuyAndSell
             this.lblName.Text = "Name";
             this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnAddUser
+            // 
+            this.btnAddUser.AllowAnimations = true;
+            this.btnAddUser.AllowMouseEffects = true;
+            this.btnAddUser.AllowToggling = false;
+            this.btnAddUser.AnimationSpeed = 200;
+            this.btnAddUser.AutoGenerateColors = false;
+            this.btnAddUser.AutoRoundBorders = false;
+            this.btnAddUser.AutoSizeLeftIcon = true;
+            this.btnAddUser.AutoSizeRightIcon = true;
+            this.btnAddUser.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddUser.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            this.btnAddUser.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddUser.BackgroundImage")));
+            this.btnAddUser.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnAddUser.ButtonText = "Add User";
+            this.btnAddUser.ButtonTextMarginLeft = 0;
+            this.btnAddUser.ColorContrastOnClick = 45;
+            this.btnAddUser.ColorContrastOnHover = 45;
+            this.btnAddUser.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btnAddUser.CustomizableEdges = borderEdges1;
+            this.btnAddUser.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnAddUser.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnAddUser.DisabledFillColor = System.Drawing.Color.Empty;
+            this.btnAddUser.DisabledForecolor = System.Drawing.Color.Empty;
+            this.btnAddUser.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnAddUser.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.btnAddUser.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddUser.ForeColor = System.Drawing.Color.White;
+            this.btnAddUser.IconLeft = null;
+            this.btnAddUser.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddUser.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnAddUser.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btnAddUser.IconMarginLeft = 11;
+            this.btnAddUser.IconPadding = 10;
+            this.btnAddUser.IconRight = null;
+            this.btnAddUser.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAddUser.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnAddUser.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnAddUser.IconSize = 25;
+            this.btnAddUser.IdleBorderColor = System.Drawing.Color.Empty;
+            this.btnAddUser.IdleBorderRadius = 0;
+            this.btnAddUser.IdleBorderThickness = 0;
+            this.btnAddUser.IdleFillColor = System.Drawing.Color.Empty;
+            this.btnAddUser.IdleIconLeftImage = null;
+            this.btnAddUser.IdleIconRightImage = null;
+            this.btnAddUser.IndicateFocus = false;
+            this.btnAddUser.Location = new System.Drawing.Point(0, 0);
+            this.btnAddUser.Name = "btnAddUser";
+            this.btnAddUser.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnAddUser.OnDisabledState.BorderRadius = 5;
+            this.btnAddUser.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnAddUser.OnDisabledState.BorderThickness = 1;
+            this.btnAddUser.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnAddUser.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnAddUser.OnDisabledState.IconLeftImage = null;
+            this.btnAddUser.OnDisabledState.IconRightImage = null;
+            this.btnAddUser.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
+            this.btnAddUser.onHoverState.BorderRadius = 5;
+            this.btnAddUser.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnAddUser.onHoverState.BorderThickness = 1;
+            this.btnAddUser.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
+            this.btnAddUser.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnAddUser.onHoverState.IconLeftImage = null;
+            this.btnAddUser.onHoverState.IconRightImage = null;
+            this.btnAddUser.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnAddUser.OnIdleState.BorderRadius = 5;
+            this.btnAddUser.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnAddUser.OnIdleState.BorderThickness = 1;
+            this.btnAddUser.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
+            this.btnAddUser.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnAddUser.OnIdleState.IconLeftImage = null;
+            this.btnAddUser.OnIdleState.IconRightImage = null;
+            this.btnAddUser.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnAddUser.OnPressedState.BorderRadius = 5;
+            this.btnAddUser.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnAddUser.OnPressedState.BorderThickness = 1;
+            this.btnAddUser.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnAddUser.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnAddUser.OnPressedState.IconLeftImage = null;
+            this.btnAddUser.OnPressedState.IconRightImage = null;
+            this.btnAddUser.Size = new System.Drawing.Size(150, 54);
+            this.btnAddUser.TabIndex = 6;
+            this.btnAddUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAddUser.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnAddUser.TextMarginLeft = 0;
+            this.btnAddUser.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btnAddUser.UseDefaultRadiusAndThickness = true;
+            this.btnAddUser.Click += new System.EventHandler(this.BtnAddUser_Click);
+            // 
             // UsersViewControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -385,7 +469,6 @@ namespace CarBuyAndSell
         private Panel searchPanel;
         private Button searchButton;
         private Panel paginationPanel;
-        private Button btnAddUser;
         private Button firstPageBtn;
         private Button prevPageBtn;
         private Label pageLabel;
@@ -399,5 +482,6 @@ namespace CarBuyAndSell
         private ReaLTaiizor.BigLabel lblUserId;
         private ReaLTaiizor.BigLabel lblName;
         private Panel pnlUsers;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnAddUser;
     }
 }

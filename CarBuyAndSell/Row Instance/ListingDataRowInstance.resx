@@ -120,11 +120,12 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pnlControls.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAIUAAAA6CAYAAACeRpqcAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACkSURBVHhe7dTBCcMwFAVB9V+P+kvQQYGwCb8Az4CxpPPy
-        Fvy1937d//3cn3f/yAPA8TUOloJDFIQogJmlIERBiAKYWQpCFIQogJmlIERBiAKYWQpCFIQogJmlIERB
-        iAKYWQpCFIQogJmlIERBiAKYWQpCFIQogJmlIERBiAKYWQpCFIQogJmlIERBiAKYWQpCFIQogFnG4Tzc
-        x3t2f9b9nOGHtd6G5VMUDItVswAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAAIcAAAA6CAYAAACas0qhAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADGSURBVHhe7dRBCoNAEEVB738e75eQhdBBHvbeKhCdcfv4
+        Bzw6z/Nzva/H+X3nm/zBK+mB9BeHUkjiYLIcJD2QLAc74mCyHCQ9kCwHO+JgshwkPZAsBzviYLIcJD2Q
+        LAc74mCyHCQ9kCwHO+JgshwkPZAsBzviYLIcJD2QLAc74mCyHCQ9kCwHO+JgshwkPZAsBzviYLIcJD2Q
+        LAc74mCyHCQ9kCwHO+JgshwkPZAsBzviYLIcJD2QbnH8Lq7L69v5nWd4cBxfbmNZSl/PyPgAAAAASUVO
+        RK5CYII=
 </value>
   </data>
 </root>

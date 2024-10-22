@@ -28,6 +28,11 @@ namespace CarBuyAndSell.Row_Instance
             lblUsername.Text = user.Username;
             lblRole.Text = user.RoleName;
             lblUserId.Text = $"{user.UserId}";
+
+            if (LoginInfo.Role != "Admin")
+            {
+                pnlControls.Visible = false;
+            }
         }
 
         private void BtnDetails_Click(object sender, EventArgs e)

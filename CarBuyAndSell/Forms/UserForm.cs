@@ -37,16 +37,17 @@ namespace CarBuyAndSell.Forms
 
         private void LoadFormData()
         {
+            PicBoxProfilePicture.Image = Resources.defaultUserImage;
             cmbRole.DataSource = Enum.GetValues(typeof(Enums.Role));
-            cmbRole.SelectedIndex = 0;
-            string fileLoc = ImageManager.GenerateImagePathFromName(_user.ProfilePicture);
-            if (File.Exists(fileLoc))
-                PicBoxProfilePicture.ImageLocation = fileLoc;
-            else
-                PicBoxProfilePicture.Image = Resources.defaultUserImage;
             if (_isEditMode)
             {
-                cmbRole.SelectedIndex = _user.RoleName == "Admin"? 0 : 1;
+                cmbRole.SelectedIndex = 0;
+                string fileLoc = ImageManager.GenerateImagePathFromName(_user.ProfilePicture);
+
+                if (File.Exists(fileLoc))
+                    PicBoxProfilePicture.ImageLocation = fileLoc;
+
+                cmbRole.SelectedIndex = _user.RoleName == "Admin" ? 0 : 1;
                 txtFirstName.Text = _user.FirstName;
                 txtLastName.Text = _user.LastName;
                 txtAddress.Text = _user.Address;

@@ -59,6 +59,7 @@ namespace CarBuyAndSell
             this.mainLayoutPanel.Controls.Add(this.paginationPanel, 0, 2);
             this.mainLayoutPanel.Controls.Add(this.bunifuPanel1, 0, 1);
             this.mainLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainLayoutPanel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mainLayoutPanel.Location = new System.Drawing.Point(0, 0);
             this.mainLayoutPanel.Name = "mainLayoutPanel";
             this.mainLayoutPanel.RowCount = 3;
@@ -84,7 +85,7 @@ namespace CarBuyAndSell
             this.searchBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.searchBox.Location = new System.Drawing.Point(491, 10);
             this.searchBox.Name = "searchBox";
-            this.searchBox.Size = new System.Drawing.Size(200, 22);
+            this.searchBox.Size = new System.Drawing.Size(200, 28);
             this.searchBox.TabIndex = 0;
             // 
             // searchButton

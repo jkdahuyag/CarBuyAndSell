@@ -40,6 +40,11 @@ namespace CarBuyAndSell
             firstPageBtn.Click += FirstPageBtn_Click;
             lastPageBtn.Click += LastPageBtn_Click;
 
+            if(LoginInfo.Role != "Admin")
+            {
+                btnAddUser.Visible = false;
+            }
+
             DisplayUsers();
         }
 

@@ -52,7 +52,7 @@ namespace CarBuyAndSell
             this.lblHighestBid = new ReaLTaiizor.BigLabel();
             this.lblTransactionId = new ReaLTaiizor.BigLabel();
             this.lblBuyer = new ReaLTaiizor.BigLabel();
-            this.lblListingOwner = new ReaLTaiizor.BigLabel();
+            this.lblHighestBidder = new ReaLTaiizor.BigLabel();
             this.mainLayoutPanel.SuspendLayout();
             this.searchPanel.SuspendLayout();
             this.paginationPanel.SuspendLayout();
@@ -239,14 +239,14 @@ namespace CarBuyAndSell
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.14741F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.39144F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.77896F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 136F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 139F));
             this.tableLayoutPanel1.Controls.Add(this.lblStatus, 6, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblDateListed, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblExpiry, 5, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblHighestBid, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblTransactionId, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblBuyer, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lblListingOwner, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblHighestBidder, 3, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -263,7 +263,7 @@ namespace CarBuyAndSell
             this.lblStatus.BackColor = System.Drawing.Color.Transparent;
             this.lblStatus.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.lblStatus.Location = new System.Drawing.Point(565, 23);
+            this.lblStatus.Location = new System.Drawing.Point(563, 23);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(69, 21);
             this.lblStatus.TabIndex = 5;
@@ -293,7 +293,7 @@ namespace CarBuyAndSell
             this.lblExpiry.BackColor = System.Drawing.Color.Transparent;
             this.lblExpiry.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblExpiry.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.lblExpiry.Location = new System.Drawing.Point(480, 2);
+            this.lblExpiry.Location = new System.Drawing.Point(478, 2);
             this.lblExpiry.Name = "lblExpiry";
             this.lblExpiry.Size = new System.Drawing.Size(79, 42);
             this.lblExpiry.TabIndex = 4;
@@ -308,11 +308,11 @@ namespace CarBuyAndSell
             this.lblHighestBid.BackColor = System.Drawing.Color.Transparent;
             this.lblHighestBid.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHighestBid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.lblHighestBid.Location = new System.Drawing.Point(364, 2);
+            this.lblHighestBid.Location = new System.Drawing.Point(363, 23);
             this.lblHighestBid.Name = "lblHighestBid";
-            this.lblHighestBid.Size = new System.Drawing.Size(110, 42);
+            this.lblHighestBid.Size = new System.Drawing.Size(109, 21);
             this.lblHighestBid.TabIndex = 3;
-            this.lblHighestBid.Text = "Highest Bidder";
+            this.lblHighestBid.Text = "Highest Bid";
             this.lblHighestBid.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblTransactionId
@@ -345,20 +345,20 @@ namespace CarBuyAndSell
             this.lblBuyer.Text = "Vehicle";
             this.lblBuyer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblListingOwner
+            // lblHighestBidder
             // 
-            this.lblListingOwner.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblHighestBidder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblListingOwner.AutoSize = true;
-            this.lblListingOwner.BackColor = System.Drawing.Color.Transparent;
-            this.lblListingOwner.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblListingOwner.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.lblListingOwner.Location = new System.Drawing.Point(248, 23);
-            this.lblListingOwner.Name = "lblListingOwner";
-            this.lblListingOwner.Size = new System.Drawing.Size(110, 21);
-            this.lblListingOwner.TabIndex = 6;
-            this.lblListingOwner.Text = "Owner";
-            this.lblListingOwner.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblHighestBidder.AutoSize = true;
+            this.lblHighestBidder.BackColor = System.Drawing.Color.Transparent;
+            this.lblHighestBidder.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHighestBidder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.lblHighestBidder.Location = new System.Drawing.Point(248, 2);
+            this.lblHighestBidder.Name = "lblHighestBidder";
+            this.lblHighestBidder.Size = new System.Drawing.Size(109, 42);
+            this.lblHighestBidder.TabIndex = 6;
+            this.lblHighestBidder.Text = "Highest Bidder";
+            this.lblHighestBidder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ListingViewControl
             // 
@@ -401,7 +401,7 @@ namespace CarBuyAndSell
         private Label pageLabel;
         private Button nextPageBtn;
         private Button lastPageBtn;
-        private ReaLTaiizor.BigLabel lblListingOwner;
+        private ReaLTaiizor.BigLabel lblHighestBidder;
         private Panel pnlListings;
     }
 }

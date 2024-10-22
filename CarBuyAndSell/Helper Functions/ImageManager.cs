@@ -23,7 +23,7 @@ namespace CarBuyAndSell.Helper_Functions
             openFileDialog.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp; *.png;)|*.jpg; *.jpeg; *.gif; *.bmp; *.png;";
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                FileName = openFileDialog.FileName;
+                FileName = openFileDialog.SafeFileName;
                 return GenerateImagePathFromName(FileName);
             }
             return "";

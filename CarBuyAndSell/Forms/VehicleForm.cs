@@ -40,11 +40,7 @@ namespace CarBuyAndSell.Forms
 
         private void LoadFormData()
         {
-            string fileLoc = ImageManager.GenerateImagePathFromName(vehicle.FileName);
-            if (File.Exists(fileLoc))
-                PicBoxVehicleImage.ImageLocation = fileLoc;
-            else
-                PicBoxVehicleImage.Image = Resources.DefaultVehicleImage;
+            PicBoxVehicleImage.Image = Resources.DefaultVehicleImage;
 
             cmbCondition.DataSource = Enum.GetValues(typeof(Enums.Condition));
             cmbTransmissionType.DataSource = Enum.GetValues(typeof(Enums.TransmissionType));
@@ -55,7 +51,13 @@ namespace CarBuyAndSell.Forms
             cmbTransmissionType.SelectedIndex = 0;
 
             if (isEditMode)
-            { 
+            {
+                fileName = vehicle.FileName;
+                string fileLoc = ImageManager.GenerateImagePathFromName(vehicle.FileName);
+
+                if (File.Exists(fileLoc))
+                    PicBoxVehicleImage.ImageLocation = fileLoc;
+
                 cmbCondition.SelectedIndex = (int)Enum.Parse(typeof(Enums.Condition), String.Concat(vehicle.ConditionName.Split())) - 1;
                 cmbTransmissionType.SelectedIndex = (int)Enum.Parse(typeof(Enums.TransmissionType), String.Concat(vehicle.TransmissionTypeName.Split())) - 1;
                 cmbBrand.SelectedIndex = cmbBrand.FindStringExact(vehicle.BrandName);
@@ -96,19 +98,20 @@ namespace CarBuyAndSell.Forms
             return !string.IsNullOrEmpty(txtManufactureYear.Text) &&
                    !string.IsNullOrEmpty(txtMileage.Text) &&
                    !string.IsNullOrEmpty(txtModel.Text) &&
-                   !string.IsNullOrEmpty(txtPlateNumber.Text);
+                   !string.IsNullOrEmpty(txtPlateNumber.Text) &&
+                   (cmbBrand.SelectedItem != null);
         }
 
         private void AddNewVehicle()
         {
             Vehicle vehicle = new Vehicle(
                 0,
-                brands.Where(x => x.BrandName == cmbBrand.SelectedText).Select(x => x.BrandId).First(),
+                brands[cmbBrand.SelectedIndex].BrandId,
                 cmbCondition.SelectedIndex + 1,
                 cmbTransmissionType.SelectedIndex + 1,
                 fileName,
                 txtModel.Text,
-                DateTime.Parse(txtManufactureYear.Text),
+                new DateTime(int.Parse(txtManufactureYear.Text), 1, 1),
                 txtPlateNumber.Text,
                 double.Parse(txtMileage.Text),
                 LoginInfo.UserId
@@ -128,12 +131,12 @@ namespace CarBuyAndSell.Forms
         {
             Vehicle vehicle = new Vehicle(
                 this.vehicle.VehicleId,
-                brands.Where(x => x.BrandName == cmbBrand.SelectedText).Select(x => x.BrandId).First(),
+                brands[cmbBrand.SelectedIndex].BrandId,
                 cmbCondition.SelectedIndex + 1,
                 cmbTransmissionType.SelectedIndex + 1,
                 fileName,
                 txtModel.Text,
-                DateTime.Parse(txtManufactureYear.Text),
+                new DateTime(int.Parse(txtManufactureYear.Text),1,1),
                 txtPlateNumber.Text,
                 double.Parse(txtMileage.Text),
                 LoginInfo.UserId
