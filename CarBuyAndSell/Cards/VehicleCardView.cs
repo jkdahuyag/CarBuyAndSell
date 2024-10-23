@@ -23,9 +23,20 @@ namespace CarBuyAndSell.Cards
             this.vehicle = vehicle;
             if (!this.globalProcedure.FncConnectToDatabase())
                 MessageBox.Show("Not Connected");
+            LoadFormData();
+        }
+
+        private void LoadFormData()
+        {
             lblBrandAndModel.Text = vehicle.BrandName + " " + vehicle.Model;
             lblValue.Text = $"Php {vehicle.MarketValue:N3}";
             lblOwner.Text = vehicle.OwnerName;
+
+            if(globalProcedure.ProcCheckVehicleListingStatus(vehicle.VehicleId))
+            {
+                btnSell.Enabled = false;
+                btnSell.Text = "Already Listed";
+            }   
 
             if (vehicle.FileName != "")
                 picBoxVehicleImage.ImageLocation = ImageManager.GenerateImagePathFromName(vehicle.FileName);
@@ -35,8 +46,11 @@ namespace CarBuyAndSell.Cards
 
         private void BtnSellClick(object sender, EventArgs e)
         {
-            Form form = new ListingForm(vehicle);
-            form.ShowDialog();
+            if (globalProcedure.ProcCheckVehicleListingStatus(vehicle.VehicleId))
+            {
+                Form form = new ListingForm(vehicle);
+                form.ShowDialog();
+            }
         }
 
         private void ShowVehicleForm(object sender, EventArgs e)

@@ -143,10 +143,6 @@ namespace CarBuyAndSell
                         ));
                     }
                 }
-                else
-                {
-                    MessageBox.Show("No data found.");
-                }
             }
             catch (Exception ex)
             {
@@ -170,10 +166,6 @@ namespace CarBuyAndSell
                         earningsPerMonth.Add(DateTime.Parse(dataRow["month"].ToString()), double.Parse(dataRow["monthly_earnings"].ToString()));
                     }
                 }
-                else
-                {
-                    MessageBox.Show("No data found.");
-                }
             }
             catch (Exception ex)
             {
@@ -196,10 +188,6 @@ namespace CarBuyAndSell
                         var dataRow = this.datCarBuyAndSellMgr.Rows[row];
                         transactionsPerMonth.Add(DateTime.Parse(dataRow["month"].ToString()), double.Parse(dataRow["total_transactions"].ToString()));
                     }
-                }
-                else
-                {
-                    MessageBox.Show("No data found.");
                 }
             }
             catch (Exception ex)
@@ -242,10 +230,6 @@ namespace CarBuyAndSell
                             dataRow["profile_picture"].ToString()
                         ));
                     }
-                }
-                else
-                {
-                    MessageBox.Show("No users found.");
                 }
             }
             catch (Exception ex)
@@ -290,10 +274,6 @@ namespace CarBuyAndSell
                         ));
                     }
                 }
-                else
-                {
-                    MessageBox.Show("No users found.");
-                }
 
                 ClearData();
             }
@@ -332,10 +312,6 @@ namespace CarBuyAndSell
                             dataRow["profile_picture"].ToString()
                         ));
                     }
-                }
-                else
-                {
-                    MessageBox.Show("User not found.");
                 }
 
                 ClearData();
@@ -484,37 +460,41 @@ namespace CarBuyAndSell
         {
             List<VehicleDto> list = new List<VehicleDto>();
 
-            Dictionary<string, object> parameters = new Dictionary<string, object>
+            try
+            {
+
+                Dictionary<string, object> parameters = new Dictionary<string, object>
             {
                 { "@p_user_id", LoginInfo.UserId },
                 { "@p_page", pageNum },
                 { "@p_page_size", pageSize }
             };
-            ExecuteStoredProcedure("procGetAllVehicles",parameters);
+                ExecuteStoredProcedure("procGetAllVehicles", parameters);
 
-            if (this.datCarBuyAndSellMgr.Rows.Count > 0)
-            {
-                for (int row = 0; row < datCarBuyAndSellMgr.Rows.Count; row++)
+                if (this.datCarBuyAndSellMgr.Rows.Count > 0)
                 {
-                    var dataRow = this.datCarBuyAndSellMgr.Rows[row];
-                    list.Add(new VehicleDto(
-                        int.Parse(dataRow["vehicle_id"].ToString()),
-                        dataRow["brand_name"].ToString(),
-                        dataRow["transmission_type_name"].ToString(),
-                        dataRow["condition_name"].ToString(),
-                        dataRow["owner_name"].ToString(),
-                        dataRow["model"].ToString(),
-                        DateTime.Parse(dataRow["manufacture_year"].ToString()),
-                        dataRow["plate_number"].ToString(),
-                        double.Parse(dataRow["mileage"].ToString()),
-                        double.Parse(dataRow["market_value"].ToString()),
-                        dataRow["file_name"].ToString()
-                    ));
+                    for (int row = 0; row < datCarBuyAndSellMgr.Rows.Count; row++)
+                    {
+                        var dataRow = this.datCarBuyAndSellMgr.Rows[row];
+                        list.Add(new VehicleDto(
+                            int.Parse(dataRow["vehicle_id"].ToString()),
+                            dataRow["brand_name"].ToString(),
+                            dataRow["transmission_type_name"].ToString(),
+                            dataRow["condition_name"].ToString(),
+                            dataRow["owner_name"].ToString(),
+                            dataRow["model"].ToString(),
+                            DateTime.Parse(dataRow["manufacture_year"].ToString()),
+                            dataRow["plate_number"].ToString(),
+                            double.Parse(dataRow["mileage"].ToString()),
+                            double.Parse(dataRow["market_value"].ToString()),
+                            dataRow["file_name"].ToString()
+                        ));
+                    }
                 }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("No vehicles found.");
+                MessageBox.Show(ex.Message);
             }
 
             ClearData();
@@ -552,10 +532,6 @@ namespace CarBuyAndSell
                         ));
                     }
                 }
-                else
-                {
-                    MessageBox.Show("Vehicle not found.");
-                }
 
                 ClearData();
             }
@@ -564,6 +540,24 @@ namespace CarBuyAndSell
                 MessageBox.Show(ex.Message);
             }
             return list;
+        }
+
+        public bool ProcCheckVehicleListingStatus(int vehicleId)
+        {
+            try
+            {
+                Dictionary<string, object> parameters = new Dictionary<string, object>
+                {
+                    { "@p_vehicle_id", vehicleId }
+                };
+                ExecuteStoredProcedure("procCheckVehicleListingStatus", parameters);
+                return !(this.datCarBuyAndSellMgr.Rows[0]["listing_count"].ToString() == "0");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
         }
 
         public int ProcCountVehicles(string searchKeyWord)
@@ -619,11 +613,6 @@ namespace CarBuyAndSell
                         ));
                     }
                 }
-                else
-                {
-                    MessageBox.Show("No vehicles found.");
-                }
-
                 ClearData();
             }
             catch (Exception ex)
@@ -712,33 +701,36 @@ namespace CarBuyAndSell
         {
             List<BidDto> list = new List<BidDto>();
 
-            Dictionary<string, object> parameters = new Dictionary<string, object>
+            try
+            {
+                Dictionary<string, object> parameters = new Dictionary<string, object>
             {
                 { "@p_user_id", LoginInfo.UserId },
                 { "@p_page", pageNum },
                 { "@p_page_size", pageSize }
             };
-            ExecuteStoredProcedure("procGetAllBids",parameters);
+                ExecuteStoredProcedure("procGetAllBids", parameters);
 
-            if (this.datCarBuyAndSellMgr.Rows.Count > 0)
-            {
-                for (int row = 0; row < datCarBuyAndSellMgr.Rows.Count; row++)
+                if (this.datCarBuyAndSellMgr.Rows.Count > 0)
                 {
-                    var dataRow = this.datCarBuyAndSellMgr.Rows[row];
-                    list.Add(new BidDto(
-                        int.Parse(dataRow["bid_id"].ToString()),
-                        dataRow["first_name"].ToString(),
-                        dataRow["last_name"].ToString(),
-                        int.Parse(dataRow["listing_id"].ToString()),
-                        double.Parse(dataRow["bid_amount"].ToString()),
-                        DateTime.Parse(dataRow["bid_date"].ToString()),
-                        int.Parse(dataRow["bidder_id"].ToString())
-                    ));
+                    for (int row = 0; row < datCarBuyAndSellMgr.Rows.Count; row++)
+                    {
+                        var dataRow = this.datCarBuyAndSellMgr.Rows[row];
+                        list.Add(new BidDto(
+                            int.Parse(dataRow["bid_id"].ToString()),
+                            dataRow["first_name"].ToString(),
+                            dataRow["last_name"].ToString(),
+                            int.Parse(dataRow["listing_id"].ToString()),
+                            double.Parse(dataRow["bid_amount"].ToString()),
+                            DateTime.Parse(dataRow["bid_date"].ToString()),
+                            int.Parse(dataRow["bidder_id"].ToString())
+                        ));
+                    }
                 }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("No bids found.");
+                MessageBox.Show(ex.Message);
             }
 
             ClearData();
@@ -771,10 +763,6 @@ namespace CarBuyAndSell
                             int.Parse(dataRow["bidder_id"].ToString())
                         ));
                     }
-                }
-                else
-                {
-                    MessageBox.Show("Bid not found.");
                 }
 
                 ClearData();
@@ -813,10 +801,6 @@ namespace CarBuyAndSell
                             int.Parse(dataRow["bidder_id"].ToString())
                         ));
                     }
-                }
-                else
-                {
-                    MessageBox.Show("No bids found.");
                 }
 
                 ClearData();
@@ -876,10 +860,6 @@ namespace CarBuyAndSell
                             int.Parse(dataRow["bidder_id"].ToString())
                         ));
                     }
-                }
-                else
-                {
-                    MessageBox.Show("No bids found.");
                 }
 
                 ClearData();
@@ -968,11 +948,6 @@ namespace CarBuyAndSell
                     ));
                 }
             }
-            else
-            {
-                MessageBox.Show("No brands found.");
-            }
-
             ClearData();
             return list;
         }
@@ -997,10 +972,6 @@ namespace CarBuyAndSell
                             dataRow["brand_name"].ToString()
                         ));
                     }
-                }
-                else
-                {
-                    MessageBox.Show("Brand not found.");
                 }
 
                 ClearData();
@@ -1066,10 +1037,6 @@ namespace CarBuyAndSell
                     ));
                 }
             }
-            else
-            {
-                MessageBox.Show("No listings found.");
-            }
 
             ClearData();
             return list;
@@ -1111,11 +1078,6 @@ namespace CarBuyAndSell
                         ));
                     }
                 }
-                else
-                {
-                    MessageBox.Show("Listing not found.");
-                }
-
                 ClearData();
             }
             catch (Exception ex)
@@ -1188,11 +1150,6 @@ namespace CarBuyAndSell
                         ));
                     }
                 }
-                else
-                {
-                    MessageBox.Show("No listings found.");
-                }
-
                 ClearData();
             }
             catch (Exception ex)
@@ -1302,11 +1259,6 @@ namespace CarBuyAndSell
                     ));
                 }
             }
-            else
-            {
-                MessageBox.Show("No transactions found.");
-            }
-
             ClearData();
             return list;
         }
@@ -1344,11 +1296,6 @@ namespace CarBuyAndSell
                         ));
                     }
                 }
-                else
-                {
-                    MessageBox.Show("Transaction not found.");
-                }
-
                 ClearData();
             }
             catch (Exception ex)
@@ -1392,11 +1339,6 @@ namespace CarBuyAndSell
                         ));
                     }
                 }
-                else
-                {
-                    MessageBox.Show("No transactions found.");
-                }
-
                 ClearData();
             }
             catch (Exception ex)
@@ -1439,11 +1381,6 @@ namespace CarBuyAndSell
                         ));
                     }
                 }
-                else
-                {
-                    MessageBox.Show("No transactions found.");
-                }
-
                 ClearData();
             }
             catch (Exception ex)
@@ -1506,11 +1443,6 @@ namespace CarBuyAndSell
                         ));
                     }
                 }
-                else
-                {
-                    MessageBox.Show("No transactions found.");
-                }
-
                 ClearData();
             }
             catch (Exception ex)
@@ -1529,8 +1461,8 @@ namespace CarBuyAndSell
                     { "@p_seller_id", transaction.SellerId },
                     { "@p_buyer_id", transaction.BuyerId },
                     { "@p_listing_id", transaction.ListingId },
-                    { "@p_date", transaction.TransactionDate },
-                    { "@p_sale_price", transaction.SalePrice },
+                    { "@p_amount", transaction.SalePrice },
+                    { "@p_transaction_date", transaction.TransactionDate },
                     { "@p_payment_method_id", transaction.PaymentMethodId }
                 };
                 ExecuteStoredProcedure("procCreateTransaction", parameters);

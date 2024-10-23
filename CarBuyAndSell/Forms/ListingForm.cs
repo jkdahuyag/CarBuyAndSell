@@ -107,7 +107,8 @@ namespace CarBuyAndSell.Forms
                     DateTime.Now,
                     txtDescription.Text,
                     double.Parse(txtAskingPrice.Text),
-                    1
+                    1,
+                    DateTime.Now.AddDays(30)
                 );
 
             if (globalProcedure.ProcCreateListing(listing))

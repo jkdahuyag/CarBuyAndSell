@@ -13,6 +13,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace CarBuyAndSell.Forms
 {
@@ -30,12 +31,40 @@ namespace CarBuyAndSell.Forms
             this.listing = listing;
             vehicle = globalProcedure.ProcGetVehicleById(listing.VehicleId)[0];
             LoadFormData();
-            this.Text = "Add Bid";
-            this.btnSave.Text = "Add";
+            
         }
 
         private void LoadFormData()
         {
+            this.Text = "Add Bid";
+            this.btnSave.Text = "Add";
+
+            if (listing.StatusName == "Closed")
+            {
+                txtAskingPrice.Enabled = false;
+                btnAction.Enabled = false;
+                btnSave.Enabled = false;
+                btnSave.Text = "Closed";
+            }
+            else if (listing.ListingExpiry < DateTime.Now || listing.StatusName == "Expired")
+            {
+                txtAskingPrice.Enabled = false;
+                btnSave.Enabled = false;
+                btnSave.Text = "Expired";
+            }
+
+            if (listing.OwnerId == LoginInfo.UserId)
+            {
+                txtAskingPrice.Enabled = false;
+                btnSave.Enabled = false;
+                btnAction.Text = "Close Listing";
+                btnSave.Text = "Owner";
+            }
+            else
+            {
+                btnAction.Visible = false;
+            }
+
             string fileLoc = ImageManager.GenerateImagePathFromName(vehicle.FileName);
             if (File.Exists(fileLoc))
                 picBoxVehicleImage.ImageLocation = fileLoc;
@@ -52,6 +81,14 @@ namespace CarBuyAndSell.Forms
 
             if (bids.Count > 0)
             {
+                if (bids[0].BidderId == LoginInfo.UserId && (listing.StatusName == "Expired" || listing.StatusName == "Closed"))
+                {
+                    btnSave.Text = "Highest Bidder";
+                    btnAction.Visible = true;
+                    btnAction.Enabled = true;
+                    btnAction.Text = "Pay for Listing";
+                }
+
                 for (int i = bids.Count > 5? 4 : bids.Count - 1; i >= 0; i--)
                 {
                     var bid = bids[i];
@@ -102,19 +139,62 @@ namespace CarBuyAndSell.Forms
                     DateTime.Now
                 );
 
-            if (globalProcedure.ProcCreateBid(bid))
-            {
-                MessageBox.Show("Bid added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
+            if (!globalProcedure.ProcCreateBid(bid))
             {
                 MessageBox.Show("Failed to add bid.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            if (listing.StatusName == "Open")
+            {
+                UpdateListingStatus(2);
+            }
+
+            LoadFormData();
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void BtnAction_Click(object sender, EventArgs e)
+        {
+            if (btnAction.Text == "Close Listing")
+            {
+                UpdateListingStatus(3);
+            }
+            else if (btnAction.Text == "Pay for Listing")
+            {
+                int statusId = listing.StatusName == "Expired" ? 4 : 3;
+                TransactionForm form = new TransactionForm(listing);
+                if (form.ShowDialog() == DialogResult.OK)
+                {
+                    UpdateListingStatus(statusId);
+                }
+            }
+        }
+
+        private void UpdateListingStatus(int status)
+        {
+            Listing listing = new Listing(
+                    this.listing.ListingId,
+                    this.listing.OwnerId,
+                    this.listing.VehicleId,
+                    this.listing.DateListed,
+                    this.listing.Description,
+                    this.listing.AskingPrice,
+                    status,
+                    status == 4 ? DateTime.Now : this.listing.ListingExpiry
+                );
+
+            if (!globalProcedure.ProcUpdateListing(listing)) 
+            {
+                MessageBox.Show("Failed to update listing.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                MessageBox.Show("Listing updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }
